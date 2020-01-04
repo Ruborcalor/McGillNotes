@@ -1,0 +1,182 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+
+\begin{document}
+
+
+\section{Limit laws}
+
+\begin{example}
+  \begin{gather*}
+    a_n = \frac{n}{4^n}
+  \end{gather*}
+  Show that $\lim(a_n) = 0$ Try using bernoulli but here it doesn't help much.
+
+  \[4^n = (1 + 3)^n \geq 1 + 3n\]
+
+  $\Rightarrow |a_n - 0| = \frac{n}{4^n} \leq \frac{n}{1 + 3n} \to \frac{1}{3} \neq 0$
+  \newline
+
+  Unfortunately $\frac{n}{1 + 3n}$ does not converge to $0$ so this estimate is too weak to be useful. Note: This argument can be save (see next assignment).
+  \newline
+
+  Different approach: We'll show that $4^n \geq n^2$ for all $n \in \NN$ 
+
+  \begin{proof}[Proof by Induction].\newline
+    n = 1: $4^1 = 4 \geq 1 = 1^2$ 
+
+    $n \to n + 1:$ Assume that $4^n \geq n^2$, then 
+    \begin{gather*}
+      4^{n  + 1} = 4 \cdot 4^n \geq 4 \cdot n^2 = 2n^2 + n^2 + n^2 = 2n^2 + (n + 1)^2 + (n - 1)^n - 2 \\
+      = (2n^2 - 2) + (n - 1)^2 + (n + 1)^2 \geq (n + 1)^2 \\
+      \Rightarrow 4^n \geq n^2 \ \forall n \in \NN
+    \end{gather*}
+    Thus $|a_n - 0| = \frac{n}{4^n} \leq \frac{n}{n^2} \leq \frac{1}{n} \to 0$ \newline
+    Therefore $\lim(a_n) = 0$
+  \end{proof}
+\end{example}
+
+
+\begin{theorem}
+  Every convergent sequence is bounded.
+
+  \begin{proof}
+    Let $(a_n)$ be a sequence with $\lim(a_n) = L$, and let $\epsilon = 1$.
+
+    Then $\exists N \in \NN \ \forall n \geq N: |a_n - L| < \epsilon = 1$
+
+     \begin{gather*}
+       \Rightarrow |a_n| = |(a_n - L) + L| \leq |a_n - L| + |L| < 1 + |L| \quad \forall n \geq N
+    \end{gather*}
+    This proves that when $n  \geq N$, $a_n$ is bounded. \newline
+
+    Now let $M = \max\{|a_1|,|a_2|,\dots,|a_{N - 1}|,1 + |L|\}$
+
+    Then $|a_n| \leq M$ for \ul{all} $n \in \NN$.
+  \end{proof}
+  \begin{remark}
+    The convergence condition is essential. The sequence $(n) = (1, 2, 3, \dots)$ is unbounded.
+  \end{remark}
+\end{theorem}
+
+\begin{theorem}
+  Let $(a_n), (b_n)$ be convergent sequences. Then $(a_n + b_n)$ is convergent with $\lim(a_n + b_n) = \lim(a_n) + \lim(b_n)$
+  \begin{proof}
+    Let  $a = \lim(a_n), b = \lim(b_n).$ Let $\epsilon > 0$.
+
+    \[|a_n + b_n - (a + b)| = |(a_n - a) + (b_n - b)| \leq |a_n - a| + |b_n - b|\]
+
+    Since  $\lim(a_n) = a, \ \exists N_1 \in \NN \ \forall n \geq N_1: |a_n - a| < \epsilon / 2$ \newline
+
+    Similarly, because $\lim(b_n) = b,\ \exists N_2 \in \NN: \forall n \geq N_2:|b_n - b| < \frac{\epsilon}{2}$.\newline
+
+    Let $N = \max\{N_1, N_2\}$. Then
+    \[
+      \forall n \geq N: |a_n - a| < \frac{\epsilon}{2} \wedge |b_n - b| < \frac{\epsilon}{2}
+    \] \newline
+
+    Therefore
+    \[|a_n + b_n - (a + b)| = |(a_n - a) + (b_n - b)| \leq |a_n - a| + |b_n - b| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon \quad \forall n \geq N\]\newline
+
+    Thus $(a_n + b_n)$ converges and $\lim(a_n + b_n) = a + b = \lim(a_n) + \lim(b_n)$
+  \end{proof}
+  This is supposed to be relatively simple.
+\end{theorem}
+\begin{example}
+  \begin{gather*}
+    \lim(\frac{n + 1}{n}) = \lim(1 + \frac{1}{n}) = \lim(1) + \lim(\frac{1}{n}) = 1 + 0 = 1
+  \end{gather*}
+\end{example}
+
+\begin{theorem}
+  Let $(a_n), (b_n)$ be convergent. Then $(a_nb_n)$ converges and $\lim(a_nb_n) = \lim(a_n)\cdot\lim(b_n)$
+  \begin{proof}
+    Let  $a = \lim(a_n), b = \lim(b_n).$ Let $\epsilon > 0$.
+    \begin{align*}
+      |a_nb_n - ab| &= |a_nb_n - ab_n + ab_n - ab| \\
+                    &= |(a_n - a)b_n + a(b_n - b)| \\
+                    &\leq |a_n - a||b_n| + |a||b_n - b|
+    \end{align*}
+    Because $(b_n)$ converges, $(b_n)$ is bounded by a previous theorem. Thus $\exists M_1 > 0$ such that $|b_n| \leq M$ for all $n \in \NN$.
+    \begin{align*}
+      |a_nb_n - ab| &\leq M_1\cdot|a_n - a| + |a|\cdot|b_n - b| \\
+      \text{Let} \ M = \max\{M_1, |a|\} \\
+      &\leq M|a_n - a| + M|b_n - b| = M\left[|a_n - a| + |b_n - b|\right]
+    \end{align*}
+
+    Since  $\lim(a_n) = a, \ \exists N_1 \in \NN \ \forall n \geq N_1: |a_n - a| < \epsilon / 2M$ \newline
+
+    Similarly, because $\lim(b_n) = b,\ \exists N_2 \in \NN: \forall n \geq N_2:|b_n - b| < \frac{\epsilon}{2M}$.\newline
+
+    Let $N = \max\{N_1, N_2\}$. Then
+    \[
+      \forall n \geq N: |a_n - a| < \frac{\epsilon}{2M} \wedge |b_n - b| < \frac{\epsilon}{2M}
+    \] \newline
+
+    Therefore
+    \[|a_nb_n - ab| \leq M\left[|a_n - a| + |b_n - b|\right] < M ( \frac{\epsilon}{2M} + \frac{\epsilon}{2M}) = M \cdot \frac{\epsilon}{M} = \epsilon \quad \forall n \geq N\] \newline
+
+    Thus $(a_nb_n)$ converges and $\lim(a_nb_n) = ab = \lim(a_n)\cdot\lim(b_n)$
+  \end{proof}
+
+  This can be applied to finitely many sequences.
+\end{theorem}
+
+\begin{example}
+  $\lim(\frac{1}{n^b}) = 0$ for all $k \in \NN$
+  \begin{proof}
+    Because $(\frac{1}{n})$ converges to 0, $\lim(\frac{1}{n^k}) = \lim(\frac{1}{n})\cdots\lim(\frac{1}{n}) = 0$
+  \end{proof}
+\end{example}
+
+\begin{note}
+  Special case where $(b_n)$ is constant. i.e. $b_n = c$ for all $n \in \NN$. Let $(a_n)$ be convergent with $\lim(a_n) = a$. Then $\lim(c \cdot a_n) = \lim(c) \cdot \lim(a_n) = c \cdot \lim(a_n)$
+\end{note}
+
+\begin{example}
+  \begin{gather*}
+    \lim(\frac{n - 1}{n}) = \lim(1 - \frac{1}{n}) = \lim(1 + (-\frac{1}{n})) = \lim(1) + \lim(-\frac{1}{n}) \\
+    = 1 + \lim(-1 \cdot \frac{1}{n}) = 1 + -1 \cdot \lim(\frac{1}{n}) = 1 + -1 \cdot 0 = 1
+  \end{gather*}
+\end{example}
+
+\begin{theorem}
+  In general, if $(a_n), (b_n)$ converges, then $(a_n - b_n)$ converges and $\lim(a_n - b_n) = \lim(a_n) - \lim(b_n)$
+   \begin{proof}
+     \begin{gather*}
+       \lim(a_n - b_n) = \lim(a_n + (-b_n)) = \lim(a_n) + \lim(-b_n) = \lim(a_n) + -1\lim(b_n) = \lim(a_n) - \lim(b_n)
+     \end{gather*}
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Let $(a_n)$ be convergent with $\lim(a_n) \neq 0 \ \text{and} \ a_n \neq 0 \quad \forall n \in \NN$. Then $(\frac{1}{a_n)}$ converges and $\lim(\frac{1}{a_n}) = \frac{1}{\lim(a_n)}$
+  \begin{proof}
+    Let $\lim(a_n) = a, \quad a \neq 0.$ Let $\epsilon > 0$. Then
+    \begin{gather*}
+    |\frac{1}{a_n} - \frac{1}{a}| = |\frac{a - a_n}{a_n \cdot a}| = \frac{|a_n - a|}{|a_n|\cdot|a|} < \frac{|a_n - a|}{k|a|} = \frac{1}{k|a|} \cdot |a_n - a| = 0
+    \end{gather*}
+    By conv. criterion, $(\frac{1}{a_n})$ converges to $\frac{1}{a}$
+  \end{proof}
+  \begin{lemma}
+    Let $(a_n)$ be convergent with $a_n \neq 0 \quad \forall n \in \NN$ and $\lim(a_n) = a \neq 0$. Then there exists $M > 0$ such that $|\frac{1}{a_n}| \leq M \quad \forall n \in \NN$.
+    \begin{proof}
+      Let $a = \lim(a_n)$ and $\epsilon = \frac{1}{2}|a|$. Then $\exists n \in \NN$ such that $|a_n - a| < \epsilon = \frac{1}{2}|a|$ for all $n \geq N$, then $|a_n| = |a - (a - a_n)| \geq |a| - |a_n - a| > |a| - \frac{1}{2}|a| = \frac{1}{2}|a| > 0 \quad \forall n \geq N$
+
+      Let $k = \min\{|a_1|,|a_2|,\dots,|a_{n - 1}|,\frac{1}{2}|a|\} > 0$, then $|a_n| > k > 0 \quad \forall n \in \NN$
+
+      \[
+        \Rightarrow |\frac{1}{a_n}| < \frac{1}{k} = M \quad \forall n \in \NN
+      \]
+    \end{proof}
+  \end{lemma}
+\end{theorem}
+
+\begin{theorem}
+  Let $(a_n), (b_n)$ by convergent where $\forall n \in \NN \ b_n \neq 0$ and $\lim(b_n) \neq 0$. Then $\frac{a_n}{b_n}$ converges and $\lim(\frac{a_n}{b_n}) = \frac{\lim(a_n)}{\lim(b_n)}$
+\end{theorem}
+\end{document}

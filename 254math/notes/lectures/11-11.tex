@@ -1,0 +1,206 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-11}
+
+
+\begin{document}
+
+\section{Lecture 11-11}
+
+\begin{definition}[Weierstrass]
+  The $\epsilon$ definition of the limit of a function.
+  \\\\
+  Let $f: A \subseteq \RR \to \RR$, and $x_0 \in \RR$. We say that $L$ is a limit of $f$ as $x$ approaches $x_0$ if: 
+  \[\forall \epsilon > 0,\  \exists \delta > 0, \ \forall x \in A : 0 < |x - x_0| < \delta \Rightarrow |f(x) - L| < \epsilon
+  \]
+  \\\\
+  This can be rewritten in several ways:
+  \begin{enumerate}
+    \ii
+    \[
+      \forall \epsilon > 0,\ \exists \delta > 0 : x \in V_\delta^*(x_0) \cap A \Rightarrow f(x) \in V_\epsilon(L)
+    \]
+    \ii
+    \[
+      \forall \epsilon > 0,\ \exists \delta > 0 : f(V_\delta^*(x_0) \cap A) \subseteq V_\epsilon(L)
+    \]
+  \end{enumerate} 
+\end{definition} 
+
+\begin{theorem}
+  Let $f: A \to \RR$ be a function. Let $x_0 \in \RR$ and $L \in \RR$. Then:
+  \[
+    \lim_{x\to x_0}f(x) = L
+  \]
+  in the sequential sense if and only if this holds in the $\epsilon-\delta$ sense.
+  \begin{proof}
+    \begin{enumerate}
+      \ii[]
+      \ii
+      "$\epsilon-\delta \Rightarrow$ Sequential":
+      \\\\
+      Let $\epsilon > 0$. Let $\delta > 0$ be such that $f(V_\delta^*(x_0) \cap A) \subseteq V_\epsilon(L)$.
+      \\\\
+      Let $(x_n)$ be a sequence in $A \setminus \{x_0\}$ with $\lim(x_n) = x_0$. Then $\exists N \in \NN,\ \forall n \geq N : x_n \in V_\delta(x_0)$.
+      \\
+      We also have that $x_n \neq x_0$ and $x_n \in A$ for all $n \in \NN$. This implies that 
+      \begin{gather*}
+        \forall n \geq N : x_n \in V_\delta^*(x_n) \cap A \\
+        \Rightarrow
+        \forall n \geq N : f(x_n) \in V_\epsilon(L) \\
+        \Rightarrow
+        (f(x_n)) \ \text{converges} \  to L
+      \end{gather*} 
+      \ii
+      "Sequential $\Rightarrow \epsilon-\delta$":
+      \\\\
+      Assume that the sequential definition holds but that there exists $\epsilon > 0$ for which ul{no} $\delta > 0$ exists that satisfies $\epsilon-\delta$.
+      \\\\
+      i.e. assume that $f(V_\delta^*(x_0)\cap A) \not\subseteq V_\epsilon(L)$ for all $\delta >0$. Especially: 
+      \begin{gather*}
+        \delta = 1: \quad f(V_1^*(x_0) \cap A) \not\subseteq V_\epsilon(L) \\
+        \Rightarrow \exists x_1 \in V_1^*(x_0) \cap A \ \text{such that} \ f(x_1) \notin V_\epsilon(L)
+        \\\\
+        \delta = \frac{1}{2}: \quad f(V_{\frac{1}{2}}^*(x_0) \cap A) \not\subseteq V_\epsilon(L) \\
+        \Rightarrow \exists x_2 \in V_{\frac{1}{2}}^*(x_0) \cap A \ \text{such that} \ f(x_2) \notin V_\epsilon(L) \\
+        \vdots
+      \end{gather*}
+      We then obtain a sequence $(x_n)$ such that $x_n \in V_{\frac{1}{n}}^*(x_0) \cap A$ but $f(x_n) \notin V_\epsilon(L)$.
+      \\\\
+      Thus $\lim(x_n) = x_0$ but $(f(x_n))$ does \ul{not} converge to $L$. This contradicts the sequential definition of limit.
+      \\\\
+      Thus $\exists \delta > 0$ such that $f(V_\delta^*(x_0) \cap A) \subseteq V_\epsilon(L)$.
+    \end{enumerate} 
+  \end{proof} 
+\end{theorem} 
+\begin{example}
+  Show that:
+  \begin{gather*}
+    \lim_{x \to x_0}x^2 = x_0^2
+  \end{gather*} 
+  \begin{soln}
+    \begin{enumerate}
+      \ii[]
+      \ii Sequential:
+      \\\\
+      Let $(x_n)$ be a sequence in $\RR \setminus \{x_0\}$ with $\lim(x_n) = x_0$. Then $\lim(f(x_n)) = \lim(x_n^2) = [\lim(x_n)]^2 = x_0^2$
+      \ii $\epsilon-\delta$:
+      \\\\
+      Let $\epsilon > 0$. Let $\delta > 0$ be arbitrary for now and assume that $|x - x_0| < \delta$. Then
+      \begin{gather*}
+        |f(x) - f(x_0)| = |x^2 - x_0^2| = \underbrace{|x - x_0|}_{<\delta} \cdot |x + x_0| \\
+        \Rightarrow < |x + x_0| \delta = |x - x_0 + 2x_0| \delta \leq (|x - x_0| + 2|x_0|) \delta \\
+        < (\delta + 2|x_0|) \delta < (\delta + 2|x_0|) \cdot \delta < \epsilon
+      \end{gather*}
+      Assume that $\delta < 1$. Then $|f(x) - f(x_0)| < (\delta + 2|x_0|) \delta < (1 + 2|x_0|) \delta < \epsilon$ 
+      \\\\
+      Now let: 
+      \[
+        \delta < \min(1, \frac{\epsilon}{1 + 2|x_0|})
+      \]
+      Then if $|x - x_0| < \delta$, then $|f(x) - f(x_0)| < \epsilon \Rightarrow$
+      \[
+        \lim_{x \to x_0} x^2 = x_0^2
+      \]
+    \end{enumerate} 
+  \end{soln} 
+\end{example} 
+\begin{example}
+  \[
+    f: \RR \setminus \{0\} \to \RR, x \to \frac{1}{x}
+  \]
+  Let $x_0 \in \RR \setminus \{0\}$. Show that:
+  \[
+    \lim_{x \to x_0} \frac{1}{x} = \frac{1}{x_0}
+  \]
+  \begin{soln}
+    Solution
+    \begin{enumerate}
+      \ii[]
+      \ii Sequential:
+      \\\\
+      Let $(x_n)$ be a sequence in $\RR \setminus \{0, x_0\}$ with $\lim(x_n) = x_0$. Then:
+      \[
+        \lim(f(x_n)) = \lim(\frac{1}{x_n}) = \frac{1}{\lim(x_n)} = \frac{1}{x_0}
+      \]
+      \ii With $\epsilon-\delta$ :
+      \\\\
+      Let $\epsilon > 0$. Let $\delta > 0$ be arbitrary for now. Let $|x - x_0| < \delta$. Then:
+      \begin{gather*}
+        |f(x) - f(x_0)| = |\frac{1}{x} - \frac{1}{x_0}| = |\frac{x_0 - x}{x x_0}| \\
+        = \frac{|x - x_0|}{|x||x_0|} < \frac{\delta}{|x||x_0|}
+      \end{gather*}
+      Let $\delta < \frac{1}{2}|x_0|$. Then for all $x$ with $|x - x_0| < \delta$ we have:
+      \[
+        |x| = |(x - x_0) + x_0| \geq |x| - |x - x_0| > |x_0| - \frac{1}{2}|x_0| = \frac{1}{2}|x_0|
+      \]
+      i.e. $|x| \geq \frac{1}{2}|x_0|$ Now:
+      \begin{gather*}
+        |f(x) - f(x_0)| < \frac{\delta}{|x||x_0|} \leq \frac{\delta}{\frac{1}{2}|x_0||x_0|} = \frac{2\delta}{x_0^2} < \epsilon \\
+        \Leftrightarrow \delta < \frac{x_0^2}{2} \cdot \epsilon
+      \end{gather*}
+      Let $\delta < \min(\frac{1}{2}|x_0|, \frac{1}{2}x_0^2\epsilon)$. Then if $|x - x_0| < \delta$, we have that:
+      \begin{gather*}
+        |f(x) - f(x_0)| < \epsilon \Rightarrow \lim_{x \to x_0} \frac{1}{x} = \frac{1}{x_0}
+      \end{gather*} 
+    \end{enumerate} 
+  \end{soln} 
+\end{example} 
+
+\subsection{Limit Laws}
+
+\begin{theorem}[Limit of a Sum is the Sum of the Limits]
+  Let $f, g : A \to \RR$, and $x_0$ be a cluster point of $A$. Assume that $\lim_{x \to x_0}f(x) = L_1$ and that $\lim_{x \to x_0} g(x) = L_2$.
+  \\\\
+  Then 
+  \begin{gather*}
+    \lim_{x \to x_0}[(f + g)(x)] = \lim_{x \to x_0} [f(x) + g(x)] = L_1 + L_2 \\
+    = \lim_{x \to x_0}f(x) + \lim_{x \to x_0}g(x)
+  \end{gather*} 
+  i.e.
+  \[
+    \lim_{x \to x_0}[(f + g)(x)] = \lim_{x \to x_0}f(x) + \lim_{x \to x_0}g(x)
+  \]
+  \begin{proof}
+    We'll use the sequential criterion to prove this theorem. Let $(x_n)$ be a sequence in $A \setminus \{x_0\}$ with $\lim(x_n) = x_0$. Then
+    \begin{gather*}
+      \lim((f + g)(x_n)) = \lim(f(x_n) + g(x_n)) \\
+      = \lim(f(x_n)) + \lim(g(x_n)) = L_1 + L_2 = \lim_{x \to x_0}f(x) + \lim_{x \to x_0}g(x)
+    \end{gather*} 
+  \end{proof} 
+\end{theorem} 
+\begin{theorem}[Limit of a Product is the Product of the Limits]
+  Let $f, g: A \to \RR$ and $x_0$ be a cluster point of $A$. Assume that $\lim_{x \to x_0}$ and $\lim_{x \to x_0}g(x)$ exist. Then:
+  \begin{gather*}
+    \lim_{x \to x_0}[(f \cdot g)(x)] = \lim_{x \to x_0}[f(x) \cdot g(x)] = \lim_{x \to x_0}f(x) \cdot \lim_{x \to x_0}g(x)
+  \end{gather*} 
+  \begin{proof}
+    Let $(x_n)$ be a sequence in $A \setminus \{x_0\}$ with $\lim(x_n) = x_0$. Then:
+    \begin{gather*}
+      \lim_{x \to x_0}[(f \cdot g)(x)] = \lim(f(x_n) \cdot g(x_n)) = \lim(f(x_n)) \cdot \lim(g(x_n)) = \lim_{x \to x_0}f(x) \cdot \lim_{x \to x_0}g(x)
+    \end{gather*} 
+  \end{proof} \leavevmode \\\\ \noindent
+  Especially, let $c \in \RR$. Then
+  \begin{gather*}
+    \lim_{x \to x_0}[c \cdot f(x)] = c \cdot \lim_{x \to x_0}f(x) \quad \text{Think of it as choosing $g = c$}
+  \end{gather*} 
+  Therefore:
+  \begin{gather*}
+    \lim_{x \to x_0}[f(x) - g(x)] = \lim_{x \to x_0}[f(x) + (-1) \cdot g(x)] = \lim_{x \to x_0} f(x) + \lim[(-1)g(x)] \\
+    = \lim_{x \to x_0} f(x) + (-1) \lim_{x \to x_0} g(x) = \lim_{x \to x_0} f(x) - \lim_{x \to x_0} g(x) \\
+    \Rightarrow \lim_{x \to x_0}[f(x) - g(x)] = \lim_{x \to x_0} f(x) - \lim_{x \to x_0}g(x)
+  \end{gather*} 
+\end{theorem} 
+\begin{theorem}
+  Let $f, g : A \to \RR$ and $x_0$ be a cluster point of $A$. Furthermore, let $\forall x \in A,\ g(x) \neq 0$ and let $\lim_{x \to x_0}f(x), \lim_{x \to x_0}g(x)$ exist where $\lim_{x \to x_0}g(x) \neq 0$. Then:
+  \begin{gather*}
+    \lim_{x \to x_0} \frac{f(x)}{g(x)} = \frac{\lim_{x \to x_0}f(x)}{\lim_{x \to x_0}g(x)}
+  \end{gather*} 
+\end{theorem} 
+
+
+
+\end{document}

@@ -1,0 +1,220 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-04}
+
+
+\begin{document}
+
+\section{11-04}
+
+\begin{definition}
+  An element $a \in \RR$ is a \ul{zero-divisor} if $\exists b \neq 0$ such that $ab = 0$ or $ba = 0$. You can get more specific and declare a left zero-divisor or a right zero-divisor.
+\end{definition} 
+\begin{definition}
+  $u \in \RR$ is a \ul{unit} if $u$ has a multiplicative inverse.
+\end{definition} 
+
+\begin{lemma}
+  Let $R$ be a ring with unity. The set $U(R) = \RR^*$ of units of $R$ forms a group using multiplication.
+\end{lemma} 
+
+\begin{note}
+  Some people assume that when you say a ring, it means a ring with unity.
+\end{note} 
+
+\begin{recall}
+  $\ZZ[x]$ is a ring of polynomials. Variable is $x$ with coefficients in $\ZZ$.
+\end{recall} 
+
+\begin{lemma}
+  $\ZZ[x]$ is an integral domain. Because it is commutative, includes the identity element, and when $ab = 0$, either $a = 0$ or $b = 0$.
+\end{lemma} 
+\begin{lemma}
+  $\ZZ_p[x]$ is integral domain when $p$ is prime.
+\end{lemma} 
+\begin{example}
+  \[\ZZ_6[x] = \{2x^5 + 3x^4 + 5x^3 + 1x^2 + 0x^1 + 4x^0, \cdots\}\]
+  \[
+    (2x + 2)(3x + 3) = 0
+  \]
+  So $\ZZ_6[x]$ is not an integral domain. In general, $\ZZ_n[x]$ is not an integral domain when $n$ is composite.
+\end{example} 
+\begin{definition}
+  $M_{n \times n}(\RR)$ is the set of $n \times n$ matrices with real coefficients. Addition and multiplication of matrices as defined in linear algebra.
+  \begin{gather*}
+    1 = I = 
+    \begin{pmatrix}
+      1 & 0 \\
+      0 & 1
+    \end{pmatrix} 
+  \end{gather*}
+  Note that this ring is not an integral domain because it contains zero divisors.
+  \begin{gather*}
+    \underbrace{
+      \begin{pmatrix}
+        1 & 0 \\
+        0 & 0
+      \end{pmatrix} 
+      \begin{pmatrix}
+        0 & 0 \\
+        0 & 1
+      \end{pmatrix} 
+    }_{\text{Zero divisors}}
+    =
+    \begin{pmatrix}
+      0 & 0 \\
+      0 & 0
+    \end{pmatrix} 
+  \end{gather*} 
+  \begin{note}
+    $U(M_{n \times n}(\RR)) = \GL_n(\RR)$
+  \end{note} 
+  \begin{note}
+    $M_{n  \times n}(\ZZ_m)$ has $m^{n^{2}}$ elements and works very nicely when $n$ is prime.
+  \end{note} 
+  \begin{example}
+    \begin{gather*}
+      M_{2 \times 2}(\ZZ_2) =\\
+      %\left\{
+      \{
+        \begin{pmatrix}
+          1 & 1 \\
+          0 & 1
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          1 & 1 \\
+          1 & 1
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          1 & 0 \\
+          1 & 0
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          1 & 1 \\
+          0 & 0
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          1 & 0\\
+          1 & 1
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          0 & 1 \\
+          1 & 0
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          1 & 0 \\
+          0 & 0
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          0 & 0 \\
+          0 & 1
+        \end{pmatrix} , \\
+        \begin{pmatrix}
+          0 & 0 \\
+          0 & 0
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          1 & 0 \\
+          0 & 1
+        \end{pmatrix} ,
+        \begin{pmatrix}
+           0 & 0 \\
+           1 & 1
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          0 & 1 \\
+          0 & 1
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          1 & 1 \\
+          1 & 0
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          0 & 1 \\
+          1 & 1
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          0 & 1 \\
+          0 & 0
+        \end{pmatrix} ,
+        \begin{pmatrix}
+          0 & 0 \\
+          1 & 0
+        \end{pmatrix} 
+      \}
+        % \right\}
+      \\
+      \text{Example of multiplication:}\quad
+      \begin{pmatrix}
+        1 & 1\\
+        0 & 1
+      \end{pmatrix} 
+      \begin{pmatrix}
+        1 & 0 \\
+        1 & 0
+      \end{pmatrix} 
+      =
+      \begin{pmatrix}
+        0 & 0 \\
+        1 & 0
+      \end{pmatrix} 
+    \end{gather*} 
+  \end{example} 
+  \begin{note}
+    Each element is its own additive inverse.
+  \end{note} 
+  \[
+    (M_{2 \times 2}(\ZZ_2), +) \cong \ZZ_2 \times \ZZ_2 \times \ZZ_2 \times \ZZ_2
+  \]
+\end{definition} 
+
+\begin{definition}
+  The \ul{"real-quaternions"} $\RR Q$ forms a division ring that isn't a field (because it isn't commutative).
+  \[
+    \RR Q = \{a_1 + bi + cj + dk: a, b, c, d \in \RR\}
+  \]
+  Addition and multiplication works like in $\CC$. Let scalars commute with $i, j, k$.
+  \begin{gather*}
+    i^2 = j^2 = k^2 = -1 \\
+    ij = k \quad ji = -k \\
+    jk = i \quad kj = -i \\
+    ki = j \quad ik = -j 
+  \end{gather*} 
+  There is crazy algebra to show that:
+  \[
+    (a + bi + cj + dk)(a - bi - cj - dk) = a^2 + b^2 + c^2 + d^2
+  \]
+  Hence when $a^2 + b^2 + c^2 + d^2 \neq 0$, we get the following:
+  \[
+    (a + bi + cj + dk)^{-1} = \frac{a -bi - cj - dk}{a^2 + b^2 + c^2 + d^2}
+  \]
+\end{definition} 
+
+\begin{proposition}[16.8]
+  Let R be a ring and let $a, b \in R$.
+  \begin{enumerate}
+    \ii
+    $a 0 = 0 = 0a$
+    \ii
+    $a(-b) = (-a)(b) = -(ab)$ 
+    \ii
+    $(-a)(-b) = ab$
+  \end{enumerate} 
+  \begin{proof}
+    \begin{enumerate}
+      \ii[]
+      \ii
+      $a 0 = a(0 + 0) = a 0 + a 0 \Rightarrow 0 = a 0$\\
+      $0a = (0 + 0)a = 0a + 0a \Rightarrow 0 = 0a$ 
+      \ii 
+      $0 = a 0 = a(b + -b) = ab + a(-b)$ so $-(ab)$ is the additive inverse of $a(-b)$ i.e. $-(ab) = a(-b)$. \\
+      Similarly, $(-a)(b) = -(ab)$ because  $0 = 0b = (a + -a)b = ab + (-a)b \Rightarrow -(ab) = (-a)(b)$
+      \ii
+      $(-a)(-b) = -(-(a)b) = -(-(ab))$. But $-(-ab) = ab$ because inverse of inverse is itself. Note, use notation $a - b = a + -b$.
+    \end{enumerate} 
+  \end{proof} 
+\end{proposition} 
+\end{document}

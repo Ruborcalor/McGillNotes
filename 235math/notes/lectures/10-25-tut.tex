@@ -1,0 +1,172 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+
+
+\begin{document}
+
+\section{Isomorphisms}
+
+\begin{definition}
+  Let $G, H$ be groups and $\phi:G \to H$ where $\phi$ is bijective and $\phi(ab) = \phi(a)\phi(b)$. Then $\phi$ is an \ul{isomorphism}.
+\end{definition}
+\begin{example}
+  \[
+      (\ZZ_2, +): \quad
+      \setlength{\extrarowheight}{3pt}% local setting
+      \begin{array}{l|*{5}{l}}
+      \circ      & 0 & 1 \\
+      \hline
+      0           & 0 & 1 \\
+      1           & 1 & 0 \\
+      \end{array}
+  \]
+    
+  \[
+    (U(4) = \{1,3\}, \times): \quad
+      \setlength{\extrarowheight}{3pt}% local setting
+      \begin{array}{l|*{5}{l}}
+      \circ      & 1 & 3 \\
+      \hline
+      1           & 1 & 3 \\
+      3           & 3 & 1 \\
+      \end{array}
+  \]
+  \[
+    \ZZ_2 \cong U(4)
+  \]
+\end{example}
+
+\begin{example}
+  Show that $\phi:\CC \to \CC$ is an isomorphism, where $\phi(a + ib) = a - ib$.
+  \\\\
+  Surjective: Let $a + ib \in \CC$, then $\phi(a - ib) = a + ib$. So for every element in $\CC$, there exists an element in $\CC$ that maps to it via $\phi$.
+  \\\\
+  Injective: Let $\phi(a + ib) = \phi(c + id)$. This implies that $a - bi = c - di \Rightarrow a = c \ \text{and} \ b = d$.
+  \\\\
+  Homomorphism: Let $x,y \in \CC$. $x = a + bi \ \text{and} \ y = c + id$ for some $a,b,c,d \in \RR$.
+  \[
+    \phi(x + y) = \phi((a + c) + i(b + d)) = a + c - i(b + d) = (a - ib) + (c - id) = \phi(x) + \phi(y)
+  \]
+\end{example}
+\begin{theorem}
+  Let $G$ be cyclic such that $G = \langle a \rangle $. Let $H$ be a group isomorphic to $G$. Then $H$ is cyclic.
+  \begin{proof}
+    Let $h \in H$. Because $\phi$ is surjective, $\exists g \in G$ such that $\phi(g) = h$.
+    \\\\
+    $g \in G$, so $g = a^n$ for some $n$. Therefore $h = \phi(a^n) = (\phi(a)^n)$.
+    \\\\
+    Because $h$ is an arbitrary element in $H$, $ \langle \phi(a) \rangle = H$.
+  \end{proof}
+\end{theorem}
+
+
+\begin{remark}
+  Let $G = \langle a \rangle $ be cyclic. Let $\phi:G \to H$ be an isomorphism. Then $\phi$ is completely determined by $\phi(a)$.
+\end{remark}
+\begin{example}
+  $\phi:\ZZ_5\to\ZZ_5$. In this case we chose $\phi(1) = 2$. The rest is determined by this because if $\phi(a) = b$, then $\phi(a^2) = (b^2)$. Note: Only for cyclic groups.
+  \begin{gather*}
+    0 \to 0 \\
+    1 \to 2 \\
+    2 \to 4 \\
+    3 \to 1 \\
+    4 \to 3
+  \end{gather*}
+\end{example}
+
+\begin{example}
+  Prove or disprove that $\QQ$ is isomorphic to $\ZZ$.
+  \begin{answer}
+    NO. We know that $\QQ$ is not cyclic. Because $\ZZ$ is cyclic, $\ZZ \not\cong \QQ$.
+  \end{answer}
+\end{example}
+
+\begin{recall}
+  If $G = \langle b \rangle $, then $|b^k| = \frac{n}{\gcd(k,n)}$.
+\end{recall}
+\begin{exercise}
+  Find the order of the following.
+  \begin{enumerate}[label=(\alph*)]
+    \ii
+    $(3,4)$ in $\ZZ_4\times\ZZ_6$.
+    \\\\
+    $|3| = \frac{4}{\gcd(3,4)} = \frac{4}{1} = 4$ in $\ZZ_4$.
+    \\\\
+    $|4| = \frac{6}{\gcd(4,6)} = \frac{6}{2} = 3$ in $\ZZ_6$.
+    \\\\
+    $|(3,4)| = \lcm(4,3) = 12$.
+    \ii
+    $(5, 10, 15)$ in $\ZZ_{25} \times \ZZ_{25} \times \ZZ_{25}$.
+    \\\\
+    $|5| = 5$
+    \\\\
+    $|10| = 5$ 
+    \\\\
+    $|15| = 5$ 
+    \\\\
+    $|(5,10,15)| = \lcm(5,5,5) = 5$
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+  Show that $G$ is abelian if and only if $\phi: G \to G$ is an isomorphism where $\phi(x) = x^{-1}$.
+  \begin{itemize}
+    \ii[$(\Rightarrow)$ ]
+    Assume that $G$ is abelian.
+    \\\\
+    Surjectivity: Let $g \in G$. Then $\phi(g^{-1}) = (g^{-1})^{-1} = g$.
+    \\\\
+    Injectivity: Let $x, y \in G$ be such that $\phi(x) = \phi(y) \Rightarrow x^{-1} = y^{-1} \Rightarrow x = y$
+    \\\\
+    Homomorphism: Let $x,y \in G$. $\phi(xy) = (xy)^{-1} = y^{-1}x^{-1} \underbrace{=}_{G \text{ abelian}} x^{-1}y^{-1} = \phi(x)\phi(y)$
+    \ii[$(\Leftarrow)$ ]
+    Assume that $\phi:G \to G$ is an isomorphism. Let $a,b, \in G$. We want to show that $ab = ba$.
+    \[
+      ab = (b^{-1}a^{-1})^{-1} = (\phi(b)\phi(a))^{-1} = (\phi(ba))^{-1} = ((ba)^{-1})^{-1} = ba
+    \]
+  \end{itemize}
+\end{exercise}
+
+\begin{exercise}
+  Show that isomorphism preserves the order of elements. i.e. that if $\phi: G \to H$ is an isomorphism and $a \in G$, then $|a| = |\phi(a)|$.
+  \begin{proof}
+    Assume that $|a| = n \ \text{and} \ |\phi(a)| = m$.
+    \\\\
+    We know that $\phi(a)^n = \phi(a^n) = \phi(id) = id$. Then $m | n$, in particular $m \leq n$. Now assuming that $m < n$:
+    \[
+      id = \phi(a)^m = \phi(a^m) \Rightarrow a^m = id 
+    \]
+    This is a contradiction because $|a| = n > m$. Therefore $m = n$.
+  \end{proof}
+\end{exercise}
+
+\begin{exercise}
+  Find an isomorphism between $U(12)$ and a subgroup of $S_4$.
+  \[
+    U(12) = \{1, 5, 7, 11\}
+  \]
+  Begin by learning about the elements in the set: $|5| = 2, \quad |7| = 2, \quad |11| = 2,\quad 5 \cdot 7 = 11$.
+  \begin{remark}
+    Isomorphisms are not necessarily unique.
+  \end{remark}
+\end{exercise}
+
+\begin{theorem}
+  $\ZZ_{nm} \cong \ZZ_n \times \ZZ_m \Leftrightarrow \gcd(n, m) = 1$.
+  \begin{corollary}
+    You can do prime decomposition on $\ZZ_n$. This decomposes it into simple groups.
+  \end{corollary}
+\end{theorem}
+\begin{example}
+  Are the following isomorphic?
+  \begin{enumerate}[label=(\alph*)]
+    \ii
+    $\ZZ_{14} \times \ZZ_4 \times \ZZ_5 \ \text{and} \ \ZZ_{10} \times \ZZ_{28}$
+    \ii
+    $\ZZ_3 \times \ZZ_{16} \times \ZZ_9 \ \text{and} \ \ZZ_{27} \times \ZZ_2 \times ZZ_8$
+  \end{enumerate}
+\end{example}
+
+
+\end{document} 

@@ -1,0 +1,179 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+%\usepackage{nath}
+%\delimgrowth=1
+
+\date{2019-11-13}
+
+
+\begin{document}
+
+\section{Lecture 11-13}
+
+\subsection{Limits and Inequalities}
+
+\begin{theorem}[Bounded Limit Theorem for Functions]
+  Let $f: A \to \RR$, and $x_0$ bea cluster point of $A$. Assume that $\lim_{x \to x_0}f(x)$ exists.
+  \\\\
+  Furthermore, assume that $\exists a, b \in \RR$ such that $a \leq f(x) \leq b$ for all $x \in A \setminus \{x_0\}$. Then $a \leq \lim_{x \to x_0} f(x) \leq b$.
+  \begin{proof}
+    Let $\lim_{x \to x_0} f(x) = L$. Then $\forall (x_n)$ in $A \setminus \{x_0\}$ with $\lim(x_n) = x_0$, it holds that $\lim(f(x_n)) = L$.
+    \\\\
+    Since $\forall n \in \NN : x_n \in A \setminus \{x_0\}$, we have that 
+    \begin{gather*}
+      a \leq f(x_n) \leq b \underbrace{\Rightarrow}_{\text{Theorem from Chapter 3}} a \leq L = \lim(f(x_n)) \leq b
+      \\
+      \Rightarrow a \leq \lim_{x \to x_0} f(x) \leq b
+    \end{gather*}
+  \end{proof} 
+\end{theorem} 
+
+\begin{theorem}[Squeeze Theorem for Functions]
+  Let $f, g, h: A \to \RR$, and let $x_0$ be a cluster point of $A$. Assume that 
+  \begin{gather*}
+    g(x) \leq f(x) \leq h(x)
+  \end{gather*} 
+  For all $x \in A \setminus \{x_0\}$.
+  \\\\
+  Furthermore, assume that
+  \begin{gather*}
+    L \coloneqq \lim_{x \to x_0} g(x) = \lim_{x \to x_0} h(x)
+  \end{gather*} 
+  Then the limit of $f(x)$ as $x \to x_0$ \ul{exists} and equals $L$.
+  \begin{proof}
+    Let $(x_n)$ be a sequence in $A \setminus \{x_0\}$ such that $\lim(x_n) = x_0$. Then $\lim(g(x_n)) = L$ and $\lim(h(x_n)) = L$.
+    \\\\
+    And since $\forall n \in \NN : x_n \in A \setminus \{x_0\}$, we know that
+    \begin{gather*}
+      g(x_n) \leq f(x_n) \leq h(x_n)
+    \end{gather*} 
+    By the squeeze theorem for sequences it now follows that $(f(x_n)$ converges to $L$. Since this holds for \ul{any} $(x_n)$ in $A \setminus \{x_0\}$ with $\lim(x_n) = x_0$, it follows from sequence criterion that
+    \begin{gather*}
+      \lim_{x \to x_0} f(x) = L
+    \end{gather*} 
+  \end{proof} 
+\end{theorem} 
+
+\begin{example}
+  Consider the following function :
+  \begin{gather*}
+    f(x) : \RR \setminus \{0\} \ \text{where} \  x \to x \cdot \sin(\frac{1}{x})
+  \end{gather*} 
+  \begin{soln}
+    \begin{gather*}
+      |x \cdot \sin(\frac{1}{x})| = |x| \cdot |\sin(\frac{1}{x})| \leq |x|
+      \\
+      \Rightarrow
+      -|x| \leq x \sin(\frac{1}{x}) \leq |x|
+    \end{gather*} for all $x \in \RR \setminus \{0\}$.
+    \\\\
+    Note that
+    \begin{gather*}
+      \lim_{x \to x_0} |x| = 0 \\
+      \lim_{x \to x_0}(-|x|) = -\lim_{x \to x_0}|x| = 0
+    \end{gather*} 
+    Therefore, by squeeze theorem we have that
+    \begin{gather*}
+      -|x| \leq x \sin(\frac{1}{x}) \leq |x| \underbrace{\Rightarrow}_{\text{Squeeze Theorem}} \lim_{x \to x_0}(x \sin(\frac{1}{x})) = 0
+    \end{gather*} 
+  \end{soln} 
+\end{example} 
+\begin{example}
+  Let $f: \RR^+ \to \RR$ and $x \to x^{3 / 2}$. We want to find $\lim_{x \to 0}x^{3 / 2}$.
+  \\\\
+  Restrict $f$ to the interval $[0, 1]$. On this interval we have that
+  \begin{gather*}
+    0 \leq x \leq x^{1 / 2} \\
+    \Rightarrow 0 \leq x^{3 / 2} \leq x
+  \end{gather*} and $\lim_{x \to 0} x = 0$.
+  \\\\
+  Therefore, by squeeze theorem,
+  \begin{gather*}
+    \underbrace{0}_{=0} \leq x^{3 / 2} \leq \underbrace{x}_{=0} \Rightarrow \lim_{x \to 0}x^{3 / 2} = 0
+  \end{gather*} 
+\end{example} 
+
+\subsection{Criteria for non-existence of limits of functions}
+
+\begin{theorem}[Non-existence criteria where $(f(x_n))$ diverges.]
+  Let $f: A \to \RR$ and $x_0$ be a cluster point of $A$. If $\exists (x_n)$ in $A \setminus \{0\}$ such that $\lim(x_n) = x_0$ but such that $\lim(f(x_n))$ diverges, then $\lim_{x \to x_0}f(x)$ DNE.
+  \begin{proof}
+    If $\lim_{x \to x_0}f(x)$ would exist, then $\lim(f(x_n) = \lim_{x \to x_0}f(x)$ but $f(x_n))$ diverges $\Rightarrow \lim_{x \to x_0} f(x)$ DNE.
+  \end{proof} 
+\end{theorem} 
+
+\begin{theorem}[Non-existence criteria where $(f(x_n))$ and $(f(t_n))$ converge to different limits]
+  Let $f: A \to \RR$ and $x_0$ be a cluster point of $A$. Assume that $\exists (x_n), (t_n)$ in $A \setminus \{x_n\}$ such that $\lim(x_n) = x_0 = \lim(t_n)$ and such that both $(f(x_n))$ and $(f(t_n))$ converge but to \ul{different} limits. Then $\lim_{x \to x_0} f(x)$ does not exist.
+  \begin{proof}
+    Assume that $\lim_{x \to x_0}f(x) = L$. Then $\lim(f(x_n)) = L = \lim(f(t_n))$. Contradiction because $\lim(f(x_n)) \neq \lim(f(t_n))$. Thus $\lim_{x \to x_0}f(x)$ diverges.
+  \end{proof} 
+\end{theorem} 
+
+\begin{example}
+  Let $f: \RR \setminus \{0\} \to \RR$ and $x \to \sin(1 / x)$. Show that $\lim_{x \to 0} f(x)$ DNE.
+  \begin{enumerate}
+    \ii Solution using the 2-sequence criterion.
+    \\\\
+    Choose  $(x_n)$ where $x_n \coloneqq \frac{1}{\pi n}$ for all $n \in \NN$. Then $f(x_n) = \sin(\pi n) = 0$ for all $n \in \NN$. i.e. $\lim(f(x_n)) = 0$.
+    \\\\
+    Now choose $(t_n)$ where $t_n \coloneqq \frac{1}{\pi / 2 + 2\pi n}$. Then $f(t_n) = \sin(\pi / 2 + 2 \pi n) = \sin(\pi / 2) = 1$ for all $n \in \NN$.
+    \begin{gather*}
+      \Rightarrow \lim(f(t_n)) = 1 \neq 0 = \lim(f(x_n)) \\
+      \Rightarrow \lim_{x \to 0} f(x) \ \text{DNE} \ 
+    \end{gather*} 
+    \ii Solution using the 1-sequence criterion.
+    \\\\
+    Let $x_n \coloneqq \frac{1}{(2n - 1) \pi / 2}$. Then $\lim(x_n) = 0$ and $f(x_n) = \sin((2n - 1) \pi / 2) = (-1)^n$ for all $n \in \NN$. i.e. $(f(x_n)) = ((-1)^n)$ which diverges!
+    \begin{gather*}
+      \Rightarrow \lim_{x \to 0} f(x) \ \text{DNE} \ 
+    \end{gather*} 
+  \end{enumerate} 
+\end{example} 
+
+\subsection{One-sided limits (Brief)}
+
+In calculus you've seen 
+\begin{gather*}
+  \lim_{x \to x_0+}f(x) \ \text{and} \  \lim_{x \to x_0^-}f(x)
+\end{gather*} How do we define these properly? 
+
+\begin{definition}[Definition of limit from left and right]
+  Let $f: A \to \RR$ and $x_0 \in \RR$.
+  \begin{gather*}
+    \lim_{x \to x_0^+}f(x) \coloneqq f_{\big|A \cap ]x_0, \infty[ }(x) \\
+    \lim_{x \to x_0^-}f(x) \coloneqq f_{\big|A \cap ]-\infty, x_0[ }(x) \\
+  \end{gather*} 
+\end{definition} 
+
+\begin{example}
+  $f: \RR \to \RR$ where $x \to |x|$. Determine $\lim_{x \to 0^+} f(x)$ and $\lim_{x \to 0^-}f(x)$.
+  \begin{gather*}
+    \lim_{x \to 0}x = 0 \Rightarrow \lim_{x \to x^+}|x| = 0 \\
+    \lim_{x \to 0}x = 0 \Rightarrow \lim_{x \to x^-}|x| = 0
+  \end{gather*} 
+\end{example} 
+
+\begin{theorem}[Limit of function exists iff limits from left and right exists and are equal]
+  Let $f: A \to \RR$ and $x_0$ be a cluster point of $A$. Then $\lim_{x \to x_0}f(x)$ exists if and only if $\lim_{x \to x_0^+} f(x)$ and $\lim_{x \to x_0^-}f(x)$ \ul{exist} and are \ul{equal}.
+  \begin{proof}
+    Assignment 11.
+  \end{proof} 
+\end{theorem} 
+
+\subsection{Chapter 5: Continuity}
+
+\begin{definition}[Defining a continuous function]
+  Let $f: A \to \RR$ and $x_0 \in A$. We say that $f$ is \ul{continuous} at $x_0$ if 
+  \begin{gather*}
+    \lim{x \to x_0} f(x)
+  \end{gather*} 
+  exists and is equal to $f(x_0)$. i.e $\lim_{x \to x_0} f(x) = f(x_0)$.
+  \begin{remark}
+    In the case that $x_0$ is an isolated point, this definition should be read as follows: $f$ is continuous at $x_0$ if it has a limit at $x_0$ which equals $f(x_0)$. In other words, all functions are continuous at all isolated points. Continuous is thus only interesting at cluster points.
+  \end{remark} 
+\end{definition} 
+
+
+\end{document}

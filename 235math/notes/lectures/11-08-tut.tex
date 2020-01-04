@@ -1,0 +1,186 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-08}
+
+
+\begin{document}
+
+\section{Tutorial 11-08}
+
+\subsection{Homomorphisms}
+
+$\varphi:G\to H$. Then $\varphi(xy) = \varphi(x)\cdot\varphi(y)$. Intuitively thing of a homomorphism as recovering some of the structure of one group in another group.
+
+\begin{theorem}[1st Isomorphism Theorem]
+  Let $\varphi: G \to H$ be a homomorphism. Then 
+  \[
+    N = \ker(\varphi) = \{x \in G | \varphi(x) = e_H\}
+  \]
+  Note that $N$ is normal in $G$, that $\varphi(G)$ is a subgroup of $H$ and that $G / N \cong \varphi(G)$.
+\end{theorem} 
+\begin{example}
+  \[
+    \varphi:\ZZ \to \ZZ \times \ZZ
+  \]
+  where $\varphi(a) = (a, 0)$. Therefore $\ker(\varphi) = \{0\}$, the trivial subgroup.
+\end{example} 
+\begin{example}
+  \[
+    \varphi:\ZZ \times \ZZ \to \ZZ
+  \]
+  where $\varphi(a, b) = a$. $\ker(\varphi) = \{(0, b) : b \in \ZZ\}$. This is a non trivial kernel.
+  \\\\
+  Thus $\ZZ \cong \ZZ^2 / \ker(\varphi)$ by the 1st Isomorphism Theorem.
+\end{example} 
+\begin{exercise}
+  Let $A$ be an $n \times m$ matrix. Then the map $\varphi(x) = Ax$ defines a homomorphism from $\RR^n \to \RR^m$.
+  \\\\
+  Let $x, y \in \RR^n$. Then $\varphi(x + y) = A(x + y) = Ax + Ay = \varphi(x) + \varphi(y)$ 
+  \\\\
+  \ul{Intution}: Multiplying by a matrix corresponds to applying a linear map (we could be scaling, rotating, projecting, etc).
+\end{exercise} 
+\begin{example}
+  \[
+    A = 
+    \begin{pmatrix}
+      4 / 5 & 2 / 5 \\
+      2 / 5 & 1 / 5
+    \end{pmatrix} 
+  \]
+\end{example} 
+\begin{exercise}
+  \[\epsilon:S_n \to \{\pm 1\} \]
+  \[
+    \epsilon(\sigma) = 
+    \begin{cases}
+      1, \quad & \sigma \ \text{composed of an even number of transpositions} \\
+      -1, \quad & \sigma \ \text{composed of an even number of transpositions}
+    \end{cases} 
+  \]
+  \ul{Homomorphism}: $\sigma, \tau \in S_n$,  
+  \[
+    \epsilon(\sigma\tau) =
+    \begin{cases}
+      1, \quad & \sigma\tau \ \text{composed of an even number of transpositions} \\
+      -1, \quad & \sigma\tau \ \text{composed of an even number of transpositions}
+    \end{cases} 
+  \]
+  \[
+    \epsilon(\sigma\tau) =
+    \begin{cases}
+      1, \quad & \sigma \ \& \ \tau \ \text{both even or odd} \\
+      -1, \quad & \text{Either $\sigma$ even and $\tau$ odd or $\sigma$ odd and $\tau$ even}
+    \end{cases} 
+  \]
+  Therefore it works out that $\epsilon(\sigma\tau) = \epsilon(\sigma)\epsilon(\tau)$. 
+  \\\\
+  Example computation:
+  \begin{gather*}
+    \sigma = \cycle{1, 2} \\
+    \tau = \cycle{1, 4}\cycle{3, 5}\cycle{1, 6} \\
+    \sigma\tau = \cycle{1, 2}\cycle{1, 4}\cycle{3, 5}\cycle{1, 6} \\
+    \epsilon(\sigma) \cdot \epsilon(\tau) = -1 \cdot -1 = 1 = \epsilon(\sigma\tau)
+  \end{gather*} 
+  What is the kernel of $\epsilon$? $\ker(\epsilon) = A_n$ (all the even permutations)
+  \\\\
+  Therefore, by the 1st Isomorphism Theorem, $S_n / A_n \cong \{\pm 1\}$.
+\end{exercise} 
+\begin{exercise}
+  Let $\varphi:G \to H$.  Prove that $\varphi$ is injective if and only if $\ker(\varphi) = \{e\}$.
+  \begin{proof}
+    \begin{itemize}
+      \ii[]
+      \ii[$(\Rightarrow)$]
+      Let $g \in \ker(\varphi)$.
+      \[
+        \varphi(g) = e = \varphi(e)
+      \]
+      So therefore $g = e$ because $\varphi$ is injective. Therefore the only element that maps to $\{e\}$ is $e$ itself.
+      \ii[$(\Leftarrow)$]
+      Assume that $\ker(\varphi) = \{e\}$ and let $g_1, g_2 \in G$ such that $\varphi(g_1) = \varphi(g_2)$. We want to show that $g_1 = g_2$.
+      \begin{gather*}
+        \varphi(g_1) = \varphi(g_2) \Rightarrow \varphi(g_1)(\varphi(g_2))^{-1} = e_H \\
+        \Rightarrow \varphi(g_1)\varphi(g_2^{-1}) = e_H \\
+        \Rightarrow \varphi(g_1g_2^{-1}) = e_H \\
+        \Rightarrow g_1g_2^{-1} = e_G \\
+        \Rightarrow g_1 = g_2
+      \end{gather*} 
+      % \[
+      %   \begin{pmatrix}[name=A]
+      %     1 \\ 
+      %     2 \\
+      %     3 
+      %   \end{pmatrix}
+      %   \ \ \ 
+      %   \begin{pmatrix}[name=B]
+      %   w \\
+      %   x \\
+      %   y \\
+      %   z
+      %   \end{pmatrix}
+      %   \ \ \ 
+      %   \begin{pmatrix}[name=C]
+      %     p \\
+      %     q \\
+      %     r
+      %   \end{pmatrix}
+      % \]
+      % \tikz [remember picture, overlay] \draw 
+      % [red,->] (A-1-1) to (B-3-1) 
+      % [red,->] (A-2-1) to (B-3-1)
+      % [red,->] (A-3-1) to (B-4-1)
+      % [red,->] (B-1-1) to (C-2-1) 
+      % [red,->] (B-2-1) to (C-1-1)
+      % [red,->] (B-3-1) to (C-3-1)
+      % [red,->] (B-4-1) to (C-3-1); 
+
+    \end{itemize} 
+  \end{proof} \noindent
+  Intuitively this makes sense. If and only if $\varphi$ is injective than we can recover everything from $G$. If and only if $\ker(\varphi) = \{e\}$ then we can recover everything from $G$. Therefore $\varphi$ is injective if and only if $\ker(\varphi) = \{e\}$.
+\end{exercise} 
+\begin{exercise}
+  Let $\phi: G \to H$, $N = \ker(\phi)$, $K \subseteq G$ is a subgroup. Show that $\phi^{-1}(\phi(K)) = KN$ where $KN = \{kn : k \in K, n \in N\}$.
+  \begin{proof}
+    \begin{gather*}
+      \text{Let } g \in \phi^{-1}(\phi(K)) \\
+      \Leftrightarrow \phi(g) = \phi(k) \ \text{for some} \ k \in K \\
+      \Leftrightarrow \phi(g) \cdot \phi(k)^{-1} = \phi(gk^{-1}) = e \\
+      \Leftrightarrow gk^{-1} \in N \Rightarrow g \in kN \\
+      \Leftrightarrow g \in KN
+    \end{gather*} 
+  \end{proof} 
+\end{exercise} 
+
+\begin{exercise}
+  Let $\varphi: G \to H$ where $G = \langle g \rangle $ i.e. $G$ is cyclic. Show that $\varphi$ is determined by $\varphi(g)$.
+  \begin{proof}
+    Let $g' \in G$. Then $g' = g^k$ for some $k$ (we know this because of the properties of a generator).
+    \begin{gather*}
+      \text{Fix } \varphi(g) = h. \ \text{Then} \ \\
+      \varphi(g') = \varphi(g^k) = \varphi(g)^k = h^k.
+    \end{gather*} 
+  \end{proof} 
+\end{exercise} 
+\begin{remark}
+  We can generalize this statement to groups that have finitely many generators.
+\end{remark} 
+
+\begin{example}
+  Try to find an Isomorphism between $U(20)$ and $U(16)$.
+  \begin{gather*}
+    U(20) = \{1, 3, 7, 9, 11, 13, 17, 19\} \\
+    \langle 3 \rangle = \{3, 9, 7, 1\} \\
+    \langle 19 \rangle = \{19, 1\} \\
+    \langle 3 \rangle \times \langle 19 \rangle = U(20) \\\\
+    U(16) = \{1, 3, 5, 7, 9, 11, 13, 15\} \\
+    \langle 3 \rangle = \{3, 9, 11, 1\} \\
+    \langle 15 \rangle = \{15, 1\} \\
+    \langle 3 \rangle \times \langle 15 \rangle = U(16) 
+  \end{gather*} 
+  So fixing $\varphi(3) = 3, \varphi(19) = 15$ is a valid isomorphism.
+  
+\end{example} 
+\end{document}

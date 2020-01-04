@@ -1,0 +1,192 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-06}
+
+
+\begin{document}
+
+\section{11-06}
+
+\subsection{Divergence to infinity}
+
+\begin{definition}
+  Let $(x_n)$ be a sequence. We say that $(x_n)$ diverges to $+ \infty$ if 
+  \[\forall M > 0, \ \exists N \in \NN, \ \forall n \geq N : x_n > M\]
+  In symbols:
+  \[\lim(x_n) = +\infty\]
+  \\\\
+  $(x_n)$ diverges to $- \infty$ if 
+  \[\forall M > 0 (\exists N \in \NN)(\forall \geq N):x_n < -M\]
+  In symbols: 
+  \[\lim(x_n) = -\infty\]
+\end{definition} 
+\begin{remark}
+  If $\lim(x_n) = + \infty$ or $\lim(x_n) = -\infty$, then the sequence \ul{diverges}. The limit laws thus do \ul{NOT} apply.
+\end{remark} 
+\begin{example}
+  $\lim(n^2) = + \infty$. Let $M > 0$. Then $n^2 > M \Leftrightarrow n > \sqrt{M}$.
+  \\\\
+  Let $N > \sqrt{M}$. Then $\forall n \geq N: n^2 \geq N^2 > M \Rightarrow n^2 > M$ for all $n \geq M \Rightarrow (n^2)$ diverges to $+\infty$.
+\end{example} 
+\begin{example}
+  Let  $a > 1$. Show that $\lim(a^n) = + \infty$.
+  \\\\
+  Since $a > 1$, $b \coloneqq a - 1 > 0$. Then $a = 1 + b$ and $a^n = (1 + b)^n$. Applying bernoulli's:
+  \[
+    (1 + b)^n \geq 1 + nb > nb > M \Leftrightarrow n > \frac{M}{b}
+  \]
+  Let $N > \frac{M}{b}$. Then $\forall n \geq N$, we know that $a^n > nb \geq Nb > M$. Thus $a^n$ diverges to $+\infty$.
+\end{example} 
+
+\subsection{Chapter 4: Limits of functions}
+
+Preparatory definition:
+\begin{definition}[In $A$]
+  Let $A \subseteq \RR$. A sequence $(x_n)$ is said to be \ul{in A} if $\forall n \in \NN : x_n \in A$.
+\end{definition} 
+
+\begin{definition}[Cluster point]
+  Let $A \subseteq \RR$. A point $x \in \RR$ is called a \ul{cluster point} of $A$ if:
+  \[
+    \forall \epsilon > 0 : \underbrace{V_\epsilon(x) \setminus \{x\}}_{\text{Punctured neighborhood}} \cap A \neq \varnothing
+  \]
+\end{definition} 
+
+\begin{note}
+  Notation for punctered neighborhoods:
+  \[
+    V_\epsilon^*(x) \coloneqq V_\epsilon(x) \setminus \{x\}
+  \]
+  i.e. $x$ is a cluster point of A if $\forall \epsilon > 0 : V_\epsilon^*(x) \cap A \neq \varnothing$.
+  \begin{remark}
+    Cluster points of $A$ are \ul{not} necessarily elements of $A$.
+  \end{remark} 
+\end{note} 
+
+\begin{definition}[Isolated Point]
+  Let $A \subseteq \RR$. $x \in A$ is called an \ul{isolated point} of $A$ if $\exists \epsilon > 0 : V_\epsilon^*(x) \cap A = \varnothing$.
+  \\\\
+  i.e. $x$ is the \ul{only} element of $A$ that is in  $V_\epsilon(x)$.
+\end{definition} 
+
+\begin{example}
+  $S \coloneqq \{0\} \cup \{ \frac{1}{n} : n \in \NN\}$.
+  \\\\
+  Claim: 0 is the only cluster point of $S$. All points $\frac{1}{n}: n \in \NN$ are isolated points of $S$.
+  \begin{proof}[0 \ul{is} a cluster point.]
+    Let $\epsilon > 0$. Then $V_\epsilon(0)$ contains infinitely many numbers of the form $\frac{1}{n}$ because $\lim(\frac{1}{n}) = 0$. Thus $0$ is a cluster point of $S$.
+    \\\\
+    Let $x \neq 0$. Then $\exists \epsilon > 0 : V_\epsilon^*(x) \cap S = \varnothing$ (left as exercise). Especially, such $\epsilon > 0$ exists for all $x = \frac{1}{n}$. Thus every $\frac{1}{n}$ is an isolated point of $S$.
+  \end{proof} 
+\end{example} 
+\begin{example}
+  Let $A \coloneqq \QQ$. Then \ul{every} real number is a cluster point of $A$.
+  \begin{proof}
+    Let $x \in \RR$ be arbitrary and let $\epsilon > 0$. Since $\QQ$ is dense in $\RR$, $V_\epsilon(x)$ contains infinitely many rational numbers. Thus $V_\epsilon^*(x)$ contains at least one (in fact infinitely many) rational numbers. i.e.
+    \[
+      V_\epsilon^*(x) \cap A \neq \varnothing \Rightarrow x \ \text{is a cluster point of} \ A
+    \]
+  \end{proof} 
+\end{example} 
+\begin{exercise}
+  Let $I$ be an interval. Then the set of all cluster points of I is $\overline{I}$
+\end{exercise} 
+\begin{theorem}
+  Let $A \subseteq \RR$. Then $x \in \RR$ is a cluster point of $A$ if and only if there exists  a sequence $(x_n)$ in $A \setminus \{x\}$ with $\lim(x_n) = x$.
+  \begin{proof}
+    \begin{itemize}
+      \ii[]
+      \ii[$(\Rightarrow)$ ]
+      Let $x$ be a cluster point of $A$.
+      \\\\
+      Let $\epsilon \coloneqq 1$. Then $V_\epsilon^*(x) \cap A \neq \varnothing$. Let $x_1 \in V_1^*(x) \cap A$.
+      \\\\
+      Let $\epsilon \coloneqq \frac{1}{2}$. Then $V_\epsilon^*(x) \cap A \neq \varnothing$. Let $x_2 \in V_{\frac{1}{2}}^*(x) \cap A$.
+      \\\\
+      We obtain a sequence $(x_n)$ in $A \setminus \{x\}$ with $\forall n\in \NN : x_n \in V_{\frac{1}{n}}^*(x) \cap A$.
+      \\\\
+      Let $\epsilon > 0$. Let $N > \frac{1}{\epsilon} \Leftrightarrow \frac{1}{N} < \epsilon$. Then
+      \[
+        \forall n \geq N : x_n \in V_{\frac{1}{n}}^*(x) \cap A \subseteq V_{\frac{1}{n}}^*(x) \subseteq V_{\frac{1}{n}}(x) \subseteq V_{\frac{1}{N}}(x) \subseteq V_\epsilon(x).
+      \]
+      i.e. $\forall n \geq N : x_n \in V_\epsilon(x) \Rightarrow (x_n)$ converges to $x$.
+      \ii[$(\Leftarrow)$ ]
+      Let $(x_n)$ be a sequence in $A \setminus \{x\}$ such that $\lim(x_n) = x$. Let $\epsilon > 0$. Then $\exists N \in \NN,\ \forall n \geq N : x_n \in V_\epsilon(x)$. But since $x_n \in A \setminus \{x\}$, $x_n \neq x$. This means that $x_n \in V_\epsilon^*(x)$ and $x_n \in A$. Thus $\forall n \geq N : x_n \in V_\epsilon^*(x) \cap A$. Thus $v_\epsilon^*(x) \cap A \neq \varnothing \Rightarrow x$ is a cluster point.
+    \end{itemize} 
+  \end{proof} 
+\end{theorem} 
+\begin{theorem}
+  Let $A \subseteq \RR$. Let $x$ be a cluster point of $A$. Then $x \in \overline{A}$.
+  \begin{proof}
+    Let $x$ be a cluster point of $A$. By previous theorem, $\exists (x_n)$ is $A \setminus \{x\}$ such that $\lim(x_n) = 0$.
+    \\\\
+    Since $\forall n \in \NN : x_n \in A \setminus \{x\}$. We have that $\forall n \in \NN : x_n \in \overline{A} \supseteq A \setminus \{x\}$.
+    \\\\
+    Since $\overline{A}$ is closed, $\lim(x_n) \in \overline{A}$ (see assignment 6).
+  \end{proof} 
+\end{theorem} 
+
+\begin{definition}[The limit of a function: \ul{Sequential Definition}] \leavevmode \\
+  Let $f: A \subseteq \RR \to \RR$. Let $x_0 \in \RR$, we say that \ul{$L$ is a limit of $f$ as $x \to x_0$ }. In symbols:
+  \[
+    L = \lim_{x \to x_0}f(x)
+  \]
+  if for \ul{all} sequences $(x_n)$ in $A \setminus \{x_0\}$ with $\lim(x_n) = x_0$, we have that $\lim(f(x_n)) = L$.
+\end{definition} 
+
+\begin{example}
+  Let \[f: \RR \setminus \{0\} \to \RR, x \to \frac{x^2}{|x|}\]
+  \\\\
+  Note that for $x \neq 0$ we have that 
+  \[
+    \frac{x ^2}{|x|} = |x|
+  \]
+  Claim: $\lim_{x \to 0}f(x) = 0$.
+  \\\\
+  Let $(x_n)$ be a sequence such that $x_n \neq 0$ for all $n \in \NN$ and such that $\lim(x_n) = 0$. We need to show that $(f(x_n))$ converges to $0$. Note that $f(x_n) = |x_n|$.
+  \\\\
+  Let $\epsilon > 0$. Since $\lim(x_n) = 0$, there exists $(N \in \NN)(\forall n \geq N):|x_n - 0| = |x_n| < \epsilon$.
+  \\\\
+  Thus $\forall n \geq N : ||x_n| - 0| = ||x_n|| = |x_n| < \epsilon \Rightarrow \lim(f(x_n)) = 0$. Thus:
+  \[
+    \lim_{x \to x_0}f(x) = 0
+  \]
+\end{example} 
+
+\begin{example}
+  Let $f: \RR \setminus \{0\} \to \RR$ where $x \to \frac{1}{x}$. Let $x_0 \neq 0$. Show that
+  \[
+    \lim_{x \to x_0}f(x) = \frac{1}{x_0}
+  \]
+  \begin{proof}
+    Let $(x_n)$ be a sequence in $\RR \setminus \{0, x_0\}$ with $\lim(x_n) = x_0$. Then $\lim(f(x_n)) = \lim(\frac{1}{x_n}) = \frac{1}{\lim(x_n)} = \frac{1}{x_0}$.
+  \end{proof} 
+\end{example} 
+\begin{example}
+  Let $f: \ZZ \to \RR$ where $x \to 0$. Let $L \in \RR$ be \ul{arbitrary}. Then
+  \[
+    \lim_{x \to 0}f(x) = L
+  \]
+  Since $0$ is an \ul{isolated} point in $\ZZ$, there doesn't exist \ul{any} sequence in $\ZZ \setminus \{0\}$ that converges to 0. Thus $\ul{all}$ sequences $(x_n)$ in $\ZZ \setminus \{0\}$ that converge to $0$ hvae that property that
+  \[
+    \lim_{x \to 0}f(x_0) = L
+  \]
+  Thus $\lim_{x \to 0} f(x) = L$ for \ul{any} $L \in \RR$.
+  \begin{remark}
+    This example shows that we should avoid isolated points when considering limits.
+  \end{remark} 
+\end{example} 
+
+\begin{theorem}
+  Let $f: A \to \RR$ where $x_0$ is a \ul{cluster point} of $A$.
+  \\\\
+  Then: if $f$ has a limit as $x$ approaches $x_0$, then this limit is uniquely determined.
+  \begin{proof}
+    Let $L_1, L_2$ be limits of $f$ as $x$ approaches $x_0$. Then $\exists (x_n)$ is $A \setminus \{x_0\}$ with $\lim(x_n) = x_0$. Because $f$ has a limit at $x_0$, $\lim(f(x_n))$ exists and $L_1 = \lim(f(x_n)) = L_2$.
+  \end{proof} 
+\end{theorem} 
+
+\end{document}

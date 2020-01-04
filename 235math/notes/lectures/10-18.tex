@@ -1,0 +1,127 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+
+\begin{document}
+
+\section{Isomorphisms Continued}
+
+\begin{theorem}
+  If $G$ is cyclic and $|G| = n$, then $G \equiv \ZZ_n$.
+  \begin{proof}
+    Consider $\phi:\ZZ_n \to G$ given by $\phi(i) = g^i$, then $\phi$ is a bijection.
+
+    Injective:
+    $\phi(i) = \phi(j) \Rightarrow g^i = g^j \Rightarrow g^{i - j} = g^0 \Rightarrow i - j \equiv_n = 0 \Rightarrow i = j$
+
+    Surjective: 
+    Let $G = \langle g \rangle.$
+
+    $\{g^0, g^1, \dots, g^{n - 1}\} = G$
+
+    $\{0, 1, \dots, n - 1\} = \ZZ_n$
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Cor 9.9.
+
+  If $|G| = p$ and $p$ is prime, then $G \equiv\sim \ZZ_p$
+
+   \begin{proof}
+     We showed that $G = \langle g \rangle $ for any $g \neq e$.
+
+     My understanding: if prime order, it must be cyclic.
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Isomorphism is an equivalence relation on a set of groups.
+
+  Reflexive: $G \equiv\sim G$ because $1_G:G \to G$ is isomorphism. 
+  \[1_G(ab) = ab = 1_G(a) \cdot 1_G(b)\]
+
+  Symmetrical: $G \equiv\sim K \Rightarrow K \equiv\sim G$ because $\phi:G \to K$ isomorphism then $\phi^{-1}:K \to G$ is isomorphism.
+
+  Transitive: $f: G \to K$ and $h:K \to J$ are isomorphisms then $h \circ f: G \to J$ is ismorphism.
+\end{theorem}
+
+\begin{theorem}[Cayley's Theorem]
+  Every group is isomorphic to a permutation group.
+  \begin{recall}
+    A permutation group is a subgroup of $S_n$
+  \end{recall}
+  \begin{proof}
+    G is isomorphic to a subgroup of the group of bijections of the set G. You could think of this as $S_G$.
+
+    For  $g \in G$, let $\lambda_g:G \to G$ be permutation "left multiply by g" 
+    i.e. $\lambda_g(x) = gx$ for all $x \in G$.
+
+    Let $\overline{G} = \{\lambda_g:g \in G\}$
+
+    Claim:  $G \cong \overline{G}$ with $\phi(g) = \lambda_g$
+
+    Injectivity: if $\phi(x) = \phi(y)$ then $\lambda_x$ and $\lambda_y$ are some bijection of $ G$.
+    \[x = xe = \lambda_x(e) = \lambda_y(e) = ye = y\]
+
+    Surjectivity (immediate). $\overline{G} = \{\lambda_g:g \in G\} = \{\phi(g):g \in G\} = \phi(G)$
+
+    Homomorphism: 
+    \begin{gather*}
+      \phi(xy) = \lambda_{xy} \\
+      \phi(x)\phi(y) = \lambda_x \lambda_y \\
+      \lambda_{xy}(z) = (xy)z \ \text{for all} \ z \in G \\
+      \lambda_x(\lambda_y(z)) = \lambda_x(yz) = x(yz) \\
+      (xy)z = x(yz) \ \checkmark
+    \end{gather*}
+  \end{proof}
+\end{theorem}
+
+\begin{example}
+  \begin{gather*}
+    G = \{\pm 1, \pm i\} \\
+    G \cong \overline{G} \subset S_G \cong S_4 \\
+    1 \to \lambda_1 = 
+    \begin{bmatrix}
+      1 & -1 & i & -i \\
+      1 & -1 & i & -i
+    \end{bmatrix}  = () 
+    \\
+    -1 \to \lambda_{-1} = 
+        \begin{bmatrix}
+      1 & -1 & i & -i \\
+      -1 &  1 & -i &  i
+    \end{bmatrix} = (1 \ -1) (i \ -i)
+    \\
+    i \to \lambda_{i}
+        \begin{bmatrix}
+      1 & -1 & i & -i \\
+      i &  -i & -1 &  1
+    \end{bmatrix}  = (1 \ i \ -1 \ -i)
+    \\
+    -i \to \lambda_{-i} = 
+        \begin{bmatrix}
+      1 & -1 & i & -i \\
+      -i &   i &  1 &  -1
+    \end{bmatrix}  = (1 \ -i \ -1 \ i)
+  \end{gather*}
+\end{example}
+
+\begin{example}
+  \[Q_8 \cong \overline{Q_8} \subset S_8\]
+\end{example}
+
+\begin{example}
+  \begin{gather*}
+    \ZZ_6 \subset \to  S_{\ZZ_6} = S_{\{0, 1, 2, 3, 4, 5\}} \\
+    2 \to_{\phi} \lambda_2 \qquad \lambda_2: \ZZ_6 \to\ZZ_6 \qquad\lambda_2(x) = 2 + x \\
+    \lambda_2 = (0 \ 2 \ 4)(1 \ 3 \ 5) \\
+    \lambda_3 = (0 \ 3)(1 \ 4)(2 \ 5) \\
+    \lambda_5 = (0 \ 5 \ 4 \ 3 \ 2 \ 1)
+  \end{gather*}
+\end{example}
+
+\end{document}

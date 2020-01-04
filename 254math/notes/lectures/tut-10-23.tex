@@ -1,0 +1,143 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+
+\date{10-23}
+
+\begin{document}
+
+\section{Sequences}
+
+\begin{definition}
+  Limit. $x_n \to x$ if $\forall \epsilon > 0,\ \exists k \in \NN$ such that $|x_n - x| < \epsilon$. $\forall n \geq K$.
+\end{definition}
+
+\begin{example}
+  \begin{gather*}
+    \lim(\frac{2n}{n + 1}) = 2 \\
+  \end{gather*}
+  Let $\epsilon > 0$. Compute (for any $n \in \NN$ )
+  \[
+    |\frac{2n}{n + 1} - 2| = |\frac{2n - 2n - 2}{n + 1}| = \frac{2}{n + 1} < \frac{2}{n}
+  \]
+  By A.P, $\exists k \in \NN$ such that $K > \frac{2}{\epsilon}$. Then $\forall n \geq K$:
+  \[
+    |\frac{2n}{n + 1} - 2| < \frac{2}{n} \leq \frac{2}{k} < \epsilon
+  \]
+\end{example}
+\begin{example}
+  \[
+    \lim\frac{3n + 1}{2n + 5} = \frac{3}{2}
+  \]
+  First, for any $n \in \NN$, we have that 
+  \[
+    |\frac{3n + 1}{2n + 5} - \frac{3}{2}| = |\frac{6n + 2 - 6N - 15}{2(2n + 5)}| = \frac{13}{4n + 10} \leq \frac{10^6}{n}
+  \]
+  Note: If unsure, use number much bigger i.e. $10^6 > 13$. 
+  \\\\
+  Now, for any $\epsilon > 0$, by A.P, $\exists k \in \NN$ such that $k > \frac{10^6}{\epsilon}$. Then, $\forall n \geq K$:
+  \[
+    |\frac{3n + 1}{2n + 5} - \frac{3}{2|} \leq \frac{10^6}{n} \leq \frac{10^6}{k} < \epsilon
+  \]
+\end{example}
+\begin{example}
+  \[
+    \lim\frac{n^2 - 1}{2n^2 + 3} = \frac{1}{2}
+  \]
+  First, $\forall n \in \NN$,
+  \[
+    |\frac{n^2 - 1}{2n^2 + 3} - \frac{1}{2}| = |\frac{2n^2 - 2 - 2n^2 - 3}{2(2n^2 + 3)}| = \frac{5}{4n^2 + 6} \leq \frac{5}{n^2}
+  \]
+  $\forall \epsilon > 0$, $\exists k \in \NN$ such that $k > \sqrt{\frac{5}{\epsilon}}$
+  \\\\
+  Then, for any $n \geq k$ 
+  \[
+    |\frac{n^2 - 1}{2n^2 + 3} - \frac{1}{2}| \leq \frac{5}{n^2} \leq \frac{5}{k^2} < \epsilon
+  \]
+\end{example}
+\begin{example}
+  \[
+    \lim\frac{\sqrt{n}}{n + 1} = 0
+  \]
+  For any $n \in \NN$ :
+  \[
+    |\frac{\sqrt{n}}{n + 1} - 0| = \frac{\sqrt{n}}{n + 1} \leq \frac{\sqrt{n}}{n} = \frac{1}{\sqrt{n}}
+  \]
+  So, $\forall \epsilon > 0$, let $k \in \NN$ be such that $k > \frac{1}{\epsilon^2} \Rightarrow \epsilon^2 > \frac{1}{k} \Rightarrow \epsilon > \frac{1}{\sqrt{k}}$
+  Then for any $n \geq k$,
+  \[
+    |\frac{\sqrt{n}}{n + 1} - 0| \leq \frac{1}{\sqrt{n}}\leq \frac{1}{\sqrt{k}} < \epsilon
+  \]
+  Note: $\epsilon > \frac{1}{\sqrt{k}}\Leftrightarrow \epsilon^2 > \frac{1}{k} \Leftrightarrow k > \frac{1}{\epsilon^2}$
+\end{example}
+\begin{proposition}
+  If $x_n \to x$, then $|x_n| \to |x|$.
+  \begin{proof}
+    Let $\epsilon > 0$ be arbitrary. We know that $\exists k \in \NN$ such that $|x_n - x| < \epsilon \quad \forall n \geq K$.
+    \\\\
+    \[
+      \left||x_n| - |x|\right| \leq |x_n - x| < \epsilon \quad \forall n \geq k
+    \]
+  \end{proof} \leavevmode
+  \\\\
+  Side proof
+  \begin{proof}
+    \begin{gather*}
+      |x_n| = |x_n - x + x| \leq |x_n - x| + |x| \\
+      \Rightarrow |x_n| - |x| \leq |x_n - x| \\
+      ...
+    \end{gather*}
+  \end{proof}
+\end{proposition}
+\begin{proposition}
+  If $|x_n| \to 0$, then $x_n \to 0$.
+  \begin{proof}
+    Let $\epsilon > 0$. Then $\exists k \in \NN$ such that 
+    \[
+      |x_n - 0| = |x_n| = ||x_n| - 0| < \epsilon \quad \forall n \geq k
+    \]
+  \end{proof}
+\end{proposition}
+\begin{exercise}
+  Show that if $a > 1$, then $\frac{1}{a^n} \to 0$.
+  \begin{proof}
+    If $a > 1$, then $a = 1 + r$ where $r > 0$.
+    \begin{gather*}
+      a^n = (1 + r)^n \geq 1 + rn \ \text{Bernoulli} \\
+      \Rightarrow |\frac{1}{a^n} - 0| = \frac{1}{a^n} \leq \frac{1}{1 + rn} \leq \frac{1}{rn}
+    \end{gather*}
+    For any $\epsilon > 0$, we can pick $K \in \NN$ such that $K > \frac{1}{r\epsilon}$. Then $\forall n \geq k$ 
+    \[
+      |\frac{1}{a^n} - 0| \leq \frac{1}{rn} \leq \frac{1}{rK} < \epsilon
+    \]
+  \end{proof}
+\end{exercise}
+\begin{exercise}
+  Show that if $a \in (-1, 1)$, then $a^n \to 0$.
+  \begin{proof}
+    First, if $a = 0$, we are done.
+    \\\\
+    If $a > 0$, pick $b = \frac{1}{a}$. $a^n = \frac{1}{b^n} \to 0$.
+    \\\\
+    If $a < 0$, then $0 < |a| < 1 \Rightarrow |a|^n \to 0 \Rightarrow |a^n| \to 0 \Rightarrow a^n \to 0$
+  \end{proof}
+\end{exercise}
+\begin{note}
+  \[
+    \lim_{m \to \infty} \lim_{n \to \infty} a_{n,m} \neq \lim_{n \to \infty} \lim_{m \to \infty} a_{n,m}
+  \]
+\end{note}
+\begin{definition}
+  Another definition of limit: We have $x_n \to x$ if and only if for any open set $x \in U$, $\forall \epsilon > 0$, $\exists K \in \NN$ such that  $x_n \in U$ for all $n \geq K$.
+  \\\\
+  $(\Rightarrow)$ First, suppose $x_n \to x$. Let $U \ni x$ where $U$ is open. We know that $\exists \epsilon > 0$ such that $V_\epsilon(x) \subseteq U$. This means that $y \in \RR$ such that $|x - y| < \epsilon \Rightarrow y \in U$.
+  \\\\
+  $\exists K \in \NN$ such that  $|x_n - x| < \epsilon \quad \forall n \geq K$. So, if $n \geq K$, then $|x_n - x| < \epsilon \Rightarrow x_n \in V_\epsilon(x) \subseteq U$
+  \\\\
+  $(\Leftarrow)$ Fix $\epsilon > 0$. We know that $V_\epsilon(x)$ is open. So, $\exists K \in \NN$ such that $x_n \in V_\epsilon(x) \forall n \geq K \Rightarrow |x_n - x| < \epsilon \quad \forall n \geq K$
+\end{definition}
+\begin{proposition}
+  Let $x_n$ be a positive sequence. If $\lim$...
+\end{proposition}
+
+\end{document}

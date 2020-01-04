@@ -1,0 +1,170 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+
+\begin{document}
+
+\title{Notes 2019-09-09}
+
+\section{Lecture 2019-09-09}
+
+\begin{theorem}
+  
+
+Suppose $f: A \to B \ \text{and} \  g: B \to C$ are surjective then  $g \circ f : A \to C$ is surjective
+
+Proof:
+$c \in C $
+
+since $g: B \to C$ there exists $b \in B $ s.t. $g(b) = c$ 
+since $f:A \to B $ is surjective, exists $a \in A$ s.t. $f(a) = b$ 
+
+thus $(g\circ f) (a) = g(f(a)) = g(b) = c$
+
+\end{theorem}
+
+\begin{definition}
+  
+A function $g:b \to A$ is inverse to function $f: A \to B$ if:
+\begin{align*}
+f \circ g = 1_B \\
+g \circ f = 1_A
+\end{align*} 
+\begin{center}
+  
+\begin{gather*}
+A \to^f B \to^g C\\
+A \to^f B \to^g A\\
+g \circ f = 1_A\\
+\\
+B \to^g A \to^f B\\
+f \circ g = 1_B\\
+\end{gather*}
+\end{center}
+
+\end{definition}
+
+\begin{note}
+  
+They say f and g are inverible, use notation $f^-1$ for inverse of f
+
+\end{note}
+
+\begin{theorem}
+Let $f: A \to B $ be a map:
+f is invertible if and only if f is a bijection
+\end{theorem}
+
+\begin{align*}
+P\Leftrightarrow Q \\
+P \Leftarrow Q \\
+P \Rightarrow Q \\
+\end{align*} 
+
+Proof that f is invertible means f is a bijection: 
+\begin{align*}
+  \ \text{let} \ g = f^{-1}
+  \ \text{f is surjective since for all} \ b \in B \\
+  \ \text{we have } \ f(g(b)) = f\circ g (b) = 1_B(b) = b \\\\
+  \ \text{f is injective since if} \ f(a_1) = f(a_2) \Rightarrow g(f(a_1)) = g(f(a_2))
+\end{align*} 
+
+injective: if $f(a_1) = f(a_2)$, then $a_1 = a_2$
+
+Proof that f is a bijection means f is invertible
+define $f^{-1}: B \to A$ thus:
+
+
+for each $b \in B$, there exists $a \in A \ \text{s.t.} \ f(a) = b$ and $a$ is unique with this property (by injectivity)
+
+define $f^{-1}(b) = a$ then $f\circ f^{-1} (b) = f(f^{-1}(b)) = f(a) = b$ 
+$f^{-1}\circ f(a) = f^{-1}(f(a)) = f^{-1}(b)$
+
+so $f\circ f^{-1} = 1_B$
+
+
+\begin{definition}[Equivalence Relation]
+ Equivalence Relation on a set $X$ is a relation $R \subset X \times X$
+\begin{align*}
+  R \ \text{is reflexive} \ (x, x) \in R \ \text{for all} \ x \in X \\
+  \ \text{is symmetric} \ (x, y) \in R \to (y, x) \in R \\
+  \ \text{is transitive} \ (x, y) \in R \ \text{and} \ (y, z) \in R \to (x, z) \in R
+\end{align*} 
+ 
+\end{definition}
+
+\begin{note}
+Usually denote equiv relations by $x \sim y$ instead of $(x, y) \in R$ 
+\begin{align*}
+\ \text{or} \ x = y \\
+x \equiv y \\
+\end{align*} 
+ 
+\end{note}
+
+\begin{definition}
+  
+A partition of $X$ is a collection of disjoint nonempty subsets of $X$ whose union is $X$
+\end{definition}
+
+\begin{example}
+ $\{X_k: k \in K \}$
+ $x_i \cap x_j = \varnothing \ \text{for} \ i \neq j$
+
+$\{1, 2, 3, 4, 5, 6, 7, 8, 9, 0 \} = \{1, 4, 5\} \cup \{6\} \cup \{9\} \cap \{2, 3, 7, 9, 0 \}$
+
+$X = X_1 \cup X_2 \cup X_3 \cup X_4 $
+
+\end{example}
+
+\subsection{Creating a partition}
+
+let $x$ be a set with equivalence relation $\sim$ 
+for $y \in X$, let $[y] = \{x \in X : x \sim y \}$
+
+$[y]$ is the equivalence class represented by y
+
+\begin{theorem}
+    Theorem 1.25: The equivalence classes of an equivalence relation ($\sim$ ) form a partition of X.
+\end{theorem}
+
+Proof:
+\begin{gather*}
+1. \ \text{each equiv class is nonempty since } \ y \in [y] \\
+2. \ \text{equiv classes are either disjoint or equal since if } \ y \in [a] \ \text{and} \ y \in [b] \ \\
+\text{then } \ [a] \subset [b] \ \text{since } \ c \in [a] \Rightarrow c \sim a \Rightarrow^{transitivity} c \sim y \Rightarrow^{transitivity} c \sim b \Rightarrow c \in [b] \\
+  \ \text{similarly} \ [b] \subset [a] \\
+3. X = \cup_{x \in X} [x]
+\end{gather*} 
+Conversely, given a partition of $X$ you can define an equivalence relation by declaring $x \sim y \Rightarrow x, y $ lie in the same part of the partition
+
+\begin{note}
+An equivalence relation is a disguised version of a partition
+\end{note}
+
+\begin{definition}
+Definition: congruence modulo n equivalence relation on $Z$ 
+\end{definition}
+
+$a \equiv_n b$ if  $n$ divides $(b - a)$ 
+i.e. $b - a =  mn$ for some $m \in Z$ 
+do NOT use $(a \equiv b(mod n)$ 
+
+EX.  $\equiv_2$ partition 
+\begin{align*}
+  \{, -4, -2, 0, 2, \cdot \} \\
+  \{, -3, -1, 1, 3, \cdot \}
+\end{align*} 
+
+Proof: $\equiv_n $ is equiv relation
+\begin{align*}
+  1. a \equiv_n a \ \text{since} \  n|(a - a)  \\
+2. (a \equiv_n b) \Rightarrow (b \equiv_n a) \ \text{since} \ n | (b - a) \ \text{then} \ n|(a - b) \\
+3. a \equiv_n b \ \text{and} \ b \equiv_n c \ \text{then} \ a \equiv_n c
+\end{align*} 
+$n | (b - a) \ \text{and} \ n | (c - b) \ \text{so} \ n | (b - a) + (c - b)$
+
+
+\end{document}

@@ -1,0 +1,144 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+
+\date{10-23}
+
+\begin{document}
+
+\section{Monotone Sequences} 
+\begin{recall}
+  Monotone means increasing or decreasing in the non strict sense.
+\end{recall}
+\begin{theorem}
+  Let $(x_n)$ be a monotone sequence. Then $(x_n)$ is convergent if and only if it is bounded. This is useful because it is easier to check whether or not a sequence is bounded than to check whether or not it is convergent.
+  \begin{proof}
+    Assume that $(x_n)$ is increasing. We will show that $(x_n)$ converges ot the supremum.
+    \\\\
+    What is the supremeum of a sequence. We take all the numbers and consider it a set in $\RR$ and then find the supremeum. $x \coloneqq \sup \underbrace{\{x_1, x_2, x_3, \dots\}}_{\coloneqq S}$.
+    \\\\
+    Let $\epsilon > 0$, then $x - \epsilon$ is not an upper bound of S. Thus $\exists N \in \NN$ such that $x - \epsilon < x_N \leq X$ but $(x_n)$ is increasing. We also have $x - \epsilon < x_N \leq x_{N + 1} \leq x_{N + 2} \leq \dots \leq x$. i.e. $\forall n \geq N : x - \epsilon < x_n \leq x$ 
+    \\\\
+    $\Rightarrow x_n \in ]x - \epsilon, x]$ for all $n \geq N \quad \subseteq ]x - \epsilon, x + \epsilon[ = V_\epsilon(x)$. i.e. $\forall n \geq N : x_n \in V_\epsilon(x)$. Thus $(x_n)$ converges to $x \coloneqq \sup \{x_1, x_2, \dots\}$. The case that $(x_n)$ is decreasing is left as an exercise.
+  \end{proof}
+\end{theorem}
+
+\begin{example}
+  $x_1 = 1, x_{n + 1} = \frac{1}{2}x_n + 2$ 
+  \\\\
+  Show that $x_n$ convreges and determine its limit. We will show that $(x_n)$ is increasing and bounded; by monotone convergence theorem, $(x_n)$ converges. Lastly, we will show that $\lim(x_n) = 4$.
+  \begin{proof}
+    $(x_n)$ is bounded from above by 4. We'll show this using induction.
+    \\\\
+    \ul{$n = 1$}: $\quad 1 \leq 4 \ \checkmark$ 
+    \\\\
+    \ul{$n \to n + 1$}: Assume that $x_n \leq 4$. Then $x_{n + 1} = \frac{1}{2}x_n + 2 \leq \frac{1}{2}\cdot 4 + 2 = 4 \ \checkmark$ 
+    \\\\
+    Therefore $(x_n)$ is bounded from above by 4.
+  \end{proof}
+  \begin{proof}
+    Proving that $(x_n)$ is increasing. Consider $x_{n + 1} - x_n = \frac{1}{2} x_n + 2 - x_n = 2 - \frac{1}{2}x_n \geq 0$.
+    \begin{gather*}
+      \Rightarrow \forall n \in \NN \quad x_{n + 1} - x_n \geq 0 \\
+      \Rightarrow \forall n \in \NN \quad x_{n + 1} \geq x_n \\
+    \end{gather*}
+    i.e. $(x_n)$ is increasing.
+  \end{proof}  \noindent
+  By showing that $(x_n)$ is bounded from above and increasing, we know that $(x_n)$ is convregent by the monotone convergence theorem. Now to find where it converges.
+  \\\\
+  Let $x \coloneqq \lim(x_n)$.
+  \begin{gather*}
+    \forall n \in \NN \quad x_{n + 1} = \frac{1}{2}x_n + 2 \\
+    \Rightarrow \lim(x_{n + 1}) = \lim(\frac{1}{2}x_n + 2) = \frac{1}{2} \lim(x_n) + 2 = \frac{1}{2} x + 2 \\
+    \Rightarrow x = \frac{1}{2}x + 2 \\
+    \Rightarrow \frac{1}{2}x = 2 \Rightarrow
+    x = 4
+  \end{gather*}
+  \begin{note}
+    It is essential for this argument that we knew in advance that $(x_n)$ is convergent.
+  \end{note} \noindent
+  We've now shown that $\lim(x_n) = 4$.
+\end{example}
+\begin{example}
+  Exercise for the reader: $x_1 = 1$. $x_{n + 1} = \sqrt{2 + x_n}$.
+  \\\\
+  Prove that $(x_n)$ converges to 2.
+\end{example}
+\subsection{Euler's constant}
+Consider the squence $x_n = (1 + \frac{1}{n})^n$ and $y_n = (1 + \frac{1}{n})^{n + 1}$.
+\\\\
+We will show that $(x_n)$ increases and that $(y_n)$ decreases.
+\begin{proof}
+  $(x_n)$ is increasing. We have to show that $\forall n \in \NN: x_n \leq x_{n + 1}$. i.e. that 
+  \begin{gather*}
+    (1 + \frac{1}{n})^n \leq (1 + \frac{1}{n + 1})^n + 1 \\
+    \Leftrightarrow (1 + \frac{1}{n + 1})^{n + 1} \geq (1 + \frac{1}{n})^n \\
+    \Leftrightarrow 1 + \frac{1}{n + 1} \geq \sqrt[n + 1]{(1 + \frac{1}{n})^n} \\
+  \end{gather*}
+  Recall the inequality of the algebraic and geometric mean. If $ a_1, a_2, \dots, a_n \geq 0$
+, then 
+\[
+  \frac{a_1 + \cdots + a_n}{n} \geq \sqrt[n]{a_1 \times \cdots \times a_n}
+\]
+Let $a_1 = \dots  = a_n = 1 + \frac{1}{n}$ and $a_{n + 1} = 1$. Then 
+\begin{gather*}
+  \sqrt[n + 1]{a_1\times\cdots\times a_n \times a_{n + 1}} = \sqrt[n + 1]{(1 + \frac{1}{n})^n}\\
+    \text{and}\quad \frac{a_1 + \cdots + a_n + a_{n + 1}}{n + 1} = \frac{n(1 + \frac{1}{n}) + 1}{n + 1} = \frac{n + 1 + 1}{n + 1} = \frac{n + 2}{n + 1} = 1 + \frac{1}{n + 1}
+\end{gather*}
+Thus, by AGM-inequality, $1 + \frac{1}{n + 1} \geq \sqrt[n + 1]{(1 + \frac{1}{n})^n}$.
+\end{proof} \noindent
+\begin{proof}
+  Now to show that $y_n$ is decreasing. Similar strategy, but take inverse to reverse inequality.
+\end{proof} \noindent
+It follows from the above proofs that, Claim:
+\[\forall n,k \in \NN: x_n < y_n\]
+
+\begin{definition}
+  \[e \coloneqq \lim\left((1 + \frac{1}{n})^n\right) = \lim\left((1 + \frac{1}{n})^{n + 1}\right)\]
+\end{definition} \noindent
+In analysis 2, you'll see that
+\[
+  e = \sum_{n = 0}^{\infty} \frac{1}{n!}
+\]
+From which it can be shown that $e$ is irrational.
+\\\\
+Estimates for $e$. Since $(x_n)$ is increasing and $(y_n)$ is decreasing, we have that $\forall n \in \NN: x_n \leq e \leq y_n$.
+\begin{gather*}
+  \frac{5}{2} < e < 3 \Leftarrow
+  \begin{cases}
+    x_6 \geq \frac{5}{2} = 2.5 \\
+    y_5 < 3
+  \end{cases}
+\end{gather*}
+
+\subsection{Subsequences}
+
+\begin{definition}
+  Let $n_1 < n_2 < n_3 < \dots$ be natural numbers and let $(x_n) = (x_1, x_2, x_3, \dots)$ be a sequence. Then $(x_{n_k}) = (x_{n_1}, x_{n_2}, x_{n_3},\dots)$ is called a \ul{subsequence} of $(x_n)$.
+\end{definition}
+\begin{example}
+  Let $(x_1, x_2, x_3, \dots)$ be a sequence. Then $(x_1, x_3, x_5, x_7, \dots)$ is called the subsequence of odd indices; here $n_k = 2k - 1$.
+  \\\\
+  Likewise, $(x_2, x_4, x_6, x_8, \dots)$ is called the subsequence of even indices; here $n_k = 2k$.
+\end{example}
+
+\begin{theorem}
+  Let $(x_n)$ be convergent. Then every subsequence $(x_{n_k})$ of $(x_n)$ also converges to the same limit.
+  \begin{proof}
+    Next class.
+  \end{proof}
+  \begin{example}
+    Let $0 < a < 1$ ; consider $(a^n)$. We will show that $\lim(a^n) = 0$. Note that $(a^n)$ is decreasing and is bounded from below. By monotone convergence theorem, $(a^n)$ converges.
+    \\\\
+    Let $x \coloneqq \lim(a^n)$. Now consider the subsequence of even terms $(a^{2n})$. By the theorem above, this subsequence converges and has the same limit. i.e. $\lim(a^{2n}) = x$.
+    \\\\
+    On the other hand, we can rewrite this as 
+    \begin{gather*}\lim((a^n)^2) = [\lim(a^n)]^2 = x^2 = x \\
+      \Rightarrow x^2 - x = 0 \\
+      \Rightarrow x(x - 1) = 0
+    \end{gather*}
+    This means that either $x = 0$ or $x = 1$. But $a^3 < a^2 < a^1 = a < 1 \Rightarrow x < 1 \Rightarrow x = 0$.
+  \end{example}
+\end{theorem}
+
+\end{document}

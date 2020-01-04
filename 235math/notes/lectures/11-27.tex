@@ -1,0 +1,84 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-27}
+
+
+\begin{document}
+
+\section{Lecture 11-27}
+
+\begin{example}
+  \begin{gather*}
+    \ZZ_3[x] / \langle x^3 + 2x + 1 \rangle 
+  \end{gather*} 
+  $x^3 + 2x + 1$ is irreducible because $\deg \leq 3$ and no zeros. Hence we obtain a field.
+  \\\\
+  Elements s: $\{ax^2 + bx + c + I : a, b, c \in \ZZ_3 \}$ where $I = \langle x^3 + 2x + 1 \rangle $. There are $3^3$ elements because $\ZZ_3$ has 3 elements and there are three coefficients in each polynomial.
+  \\\\
+  Then:
+  \begin{gather*}
+    0 + I = (x^3 + 2x + 1 + I) = (x^3 + I) + (2x + 1 + I)
+  \end{gather*} 
+  So $x^3 + I = (x + 2 + I)$.
+
+\end{example} 
+
+\begin{example}
+  Example of addition
+  \begin{gather*}
+    (x^2 + 2x + I) + (2x + 1 + I) \\
+    = x^2 + 4x + 1 + I \\
+    = x^2 + x + 1 + I
+  \end{gather*} 
+\end{example} 
+\begin{example}
+  Example of multiplication
+  \begin{gather*}
+    (2x + 1 + I)(x^2 + 2x + I) \\
+    = 2x^3 + x^2 + x^2 + 2x + I \\
+    = 2x^3 + 2x^2 + 2x + I \\
+    = 2(x + 2) + 2x^2 + 2x + I \\
+    = 2x^2 + x + 1
+  \end{gather*} 
+\end{example} 
+
+\begin{fact}
+  The group of units of a finite field is cyclic!
+\end{fact} 
+
+\begin{exercise}
+  Find the inverse of $(x^2 + 1 + I)$.
+  \\\\
+  It's inverse is $(x^2 + 1 + I)^25$.
+  \\\\
+  Another way to do it would be to take $(ax^2 + bx + c + I)(x^2 + 1 + I) = 1 + I$ and solve the system of linear equations over $\ZZ_3$ just like you would in linear algebra.
+\end{exercise} 
+
+\subsection{Classification of symmetries over $E^2$ plane}
+
+\begin{enumerate}
+  \ii
+  e \ul{identity}
+  \ii
+  $\theta_p$ \ul{$\theta$ notation}. Counterclockwise rotation about point $p \in E^2$.
+  \ii
+  \ul{translation} $\vec{u} \to \vec{u} + \vec{v}$
+  \ii
+  \ul{reflection} over some line $l$
+  \ii
+  \ul{glide reflection} a reflection and translation over the same line
+\end{enumerate} 
+
+\begin{definition}
+  A \ul{Freeze Group} $G$ is an infinite subgroup $G$ of isometries($E^2$ ) that is \ul{actually a subgroup of Isom(Strip)} which is \ul{discrete} in the sense that finitely many elements $g \in G$ have distance $(p, g(p)) < 1$.
+  \\\\
+  Classification: 7 types of freeze groups.
+
+
+\end{definition} 
+
+
+\end{document}

@@ -1,0 +1,224 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+\usepackage{ wasysym }
+
+\date{2019-11-27}
+
+
+\begin{document}
+
+\section{Lecture 11-27}
+
+\subsection{Application of Heine-Borel}
+
+\begin{theorem}
+  Let $A_1 \supseteq A_2 \supseteq A_3 \supseteq \cdots$ be a nested sequence of compact sets. Then 
+  \begin{gather*}
+    \bigcap_{n \in \NN} A_n \neq \varnothing
+  \end{gather*} 
+  (This is by the nested interval property, but we are going to prove it using heine-borel)
+  \begin{proof}
+    $\forall n \in \NN$, let $U_n \coloneqq \RR \setminus A_n \Rightarrow \forall n \in \NN U_n$ is open and $U_1 \subseteq U_2 \subseteq U_3 \subseteq \cdots$ 
+    \\\\
+
+    By de morgans law, we have that
+    \begin{gather*}
+      \bigcup_{n \in \NN}U_n 
+      = \bigcup_{n \in \NN}\RR \setminus A_n 
+      \underbrace{=}_{\text{De morgans}} \RR \setminus \bigcap_{n \in \NN}A_n
+    \end{gather*} 
+    Now assume that $\cap_{n \in \NN}A_n = \varnothing$. Then $\cup_{n \in \NN}U_n = \RR \setminus \varnothing = \RR$.
+    \\\\
+    i.e. The $U_n$ cover all of $\RR$ and thus especially $A_1$. By heine-borel, this open cover has a finite subcover.
+    \begin{gather*}
+      \{U_{n_1}, \dots, U_{n_k}\}, n_1 < \dots < n_k \\
+      \Rightarrow
+      A_1 \subseteq \bigcup_{i = 1}^{k}U_{n_i} = U_{n_1}\cup\cdots\cup U_{n_k} = U_{n_k}
+      \\
+      \Rightarrow A_1 \subseteq U_{n_k} \\
+      \Rightarrow A_{n_k} \subseteq A_1 \subseteq U_{n_k} = \RR \setminus A_{n_k} \\
+      \Rightarrow A_{n_k} \subseteq \RR \setminus A_{n_k} \quad \text{\lightning}
+      \\
+      \Rightarrow \bigcap_{n \in \NN}A_n \neq \varnothing
+    \end{gather*} 
+  \end{proof} 
+\end{theorem} 
+
+\begin{definition}[Uniform Continuity]
+  Let's recall the definition of continuity of $f: A \to \RR$:
+  \begin{gather*}
+    (\forall x_0 \in A) (\forall \epsilon > 0)(\exists \delta = \delta(\epsilon, x_0)) : (\forall x \in A) (|x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon)
+  \end{gather*} 
+  \begin{note}
+    In general, $\delta$ will depend on both $\epsilon$ (unavoidable) and $x_0$.
+  \end{note} 
+  It would be useful in many branches of analysis (e.g. Riemann integration) if $\delta$ would only depend on $\epsilon$ and \ul{not} $x_0$.
+  \\\\
+  i.e. we'd like to have this:
+  \begin{gather*}
+    (\forall x_0 \in A)(\forall \epsilon > 0)(\exists \delta = \delta (\epsilon)) (\forall x \in A) : (|x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon)
+    \\
+    \equiv
+    \\
+    (\forall \epsilon > 0)(\exists \epsilon > 0)(\forall x_1, x_0 \in A) : (|x - x_0| < \delta \Rightarrow |f(x) - f(x_0)| < \epsilon)
+  \end{gather*} 
+  Since $x_0$ is actually a variable, we'll use $\mu$ instead and obtain:
+  \\\\
+  $f : A \subseteq \RR \to \RR$ is called \ul{uniformly continuous} on A if 
+  \begin{gather*}
+    (\forall \epsilon > 0)(\exists \delta > 0) (\forall x, \mu \in A) : (|x - \mu| < \delta \Rightarrow |f(x) - f(\mu)| < \epsilon)
+  \end{gather*} 
+\end{definition} 
+
+\begin{example}
+  $f : \RR \to \RR$, $x \to x$. Claim: $f$ is uniformaly continuous.
+  \begin{proof}
+    Let $\epsilon > 0$ and let $\delta \coloneqq \epsilon$. Then $\forall x, \mu \in \RR$, $|x - \mu| < \delta = \epsilon \Rightarrow |f(x) - f(\mu)| = |x - u| < \epsilon$
+  \end{proof} 
+\end{example} 
+
+
+\begin{lemma}
+  $\forall x, \mu > 0$ where $x \geq \mu$, we have that $\sqrt{x} - \sqrt{\mu} \leq \sqrt{x - \mu}$.
+  \begin{proof}
+    \begin{gather*}
+      \sqrt{x} - \sqrt{\mu} \leq \sqrt{x - \mu} \\
+      \Leftrightarrow (\sqrt{x} - \sqrt{\mu})^2 \leq (\sqrt{x - \mu})^2 = x - \mu \\
+      \Leftrightarrow x - 2 \sqrt{x}\sqrt{\mu} + \mu \leq x - \mu \\
+      \Leftrightarrow 2\mu - 2\sqrt{x}\sqrt{\mu} \leq 0 \\
+      \Leftrightarrow \underbrace{2\sqrt{\mu}}_{\geq 0}\underbrace{(\sqrt{\mu} - \sqrt{x})}_{\leq 0} \leq 0 \ \checkmark
+    \end{gather*} 
+    Because we only used equivalence statements, this final true statement proves that 
+    \begin{gather*}
+      \sqrt{x} - \sqrt{\mu} \leq \sqrt{x - \mu}
+    \end{gather*}
+  \end{proof} 
+\end{lemma} 
+
+\begin{example}
+  $f : \RR_0^+ = [0, \infty[ \to \RR$, $x \to \sqrt{x}$. Claim: $f$ is uniformally continuous.
+  \begin{remark}
+    We did prove in chapter 4 that $\sqrt{x}$ is continuous on $[0, \infty[$. Back then, the $\delta$ value we obtained \ul{did} depend on both $\epsilon$ and $x$ !
+    \\\\
+    However, this does \ul{not} necessarily mean that $\sqrt{}$ is not uniformally continuous! It might just mean that we need better estimates!
+  \end{remark}
+  \begin{proof}
+    Let $\epsilon > 0$, let $\delta > 0$ be arbitrary for now. Let $x, \mu \in [0, \infty[$. We may assume without loss of generality that $x \geq \mu$. Let $|x - \mu| = x - \mu < \delta$. Then:
+    \begin{gather*}
+      |f(x) - f(\mu)| = |\sqrt{x} - \sqrt{\mu}| = \sqrt{x} - \sqrt{\mu} \leq \sqrt{x - \mu} < \sqrt{\delta} < \epsilon \\
+      \Leftrightarrow \delta < \epsilon^2
+    \end{gather*} 
+    Note that $\delta$ is independent of $x$ and $\mu$ !
+    \\\\
+    With this \ul{uniform} $\delta$, we have
+    \begin{gather*}
+      |x - \mu| < \delta \Rightarrow|f(x) - f(\mu)| < \epsilon \Rightarrow \sqrt{x}
+    \end{gather*} is uniform continuous on $[0, \infty[$.
+  \end{proof} 
+\end{example} 
+
+How can we see whether a funciton is \ul{not} uniformally continuous?
+\\\\
+$f: A \to \RR$ \ul{not} continuous:
+\begin{gather*}
+  \neg (\forall \epsilon > 0)(\exists \delta > 0) (\forall x, \mu \in A) : (|x - \mu| < \delta \Rightarrow |f(x) - f(\mu)| < \epsilon)
+  \\
+  \equiv \neg(\forall \epsilon > 0)(\exists \delta > 0)(\forall x, \mu \in A) : (|x - \mu| \geq \delta \vee |f(x) - f(\mu)| < \epsilon)
+  \\
+  \equiv
+  (\exists \epsilon > 0)(\forall \delta > 0) (\exists x, \mu \in A) : (|x - \mu| < \delta \wedge |f(x) - f(\mu)| \geq \epsilon)
+\end{gather*} 
+\begin{recall}
+  $P \Rightarrow Q \equiv \neg P \vee Q$
+\end{recall} 
+
+\begin{theorem}[2 sequence criterion for non-uniform continuity]
+  Let $f : A \to \RR$. Let $\epsilon_0 > 0$ and let $(x_n), (\mu_n)$ be sequences in $A$ such that $\lim(x_n - \mu_n) = 0$ and $|f(x_n) - f(\mu_n)| \geq \epsilon_0$ for all $n \in \NN$. Then $f$ is not uniformally continuous on $A$.
+  \begin{proof}
+    Assume that $f$ is uniform continuous. Then $\exists \delta > 0$ such that $\forall x, \mu \in A : |x - \mu| < \delta \Rightarrow |f(x) - f(\mu)| < \epsilon_0$. $(*)$
+    \\\\
+    Now $\lim(x_n - \mu_n) = 0$. Then $(\exists N \in \NN) (\forall n \geq N): |x_n - \mu_n| < \delta$. Especially, $|x_n - \mu_n| < \delta$.
+    \\\\
+    In $(*) : \Rightarrow|f(x_N) - f(\mu_N)| < \epsilon_0$ \lightning
+    \\\\
+  Thus $f$ is \ul{not} uniformally continuous on $A$.
+  \end{proof} 
+\end{theorem} 
+
+\begin{example}
+  $f : \RR \to \RR$, $x \to x^2$.
+  \\\\
+  Let $x_n \coloneqq n$, $u_n \coloneqq n + 1 / n$ 
+  \\\\
+  Then $|x_n - \mu_n| = 1 / n \Rightarrow \lim(x_n - \mu_n) = 0$
+  \\\\
+  But $|f(x_n) - f(\mu_n)| = |n^2 - (n + 1 / n)^2| = |n^2 - n^2 - 2 - 1 / n^2| = 2 + 1 / n^2 > 2$.
+  \\\\
+  Let $\epsilon_0 \coloneqq 2$. Then $\lim(x_n - \mu_n) = 0$, but $\forall n \in \NN : |f(x_n) - f(\mu_n)| \geq \epsilon_0$.
+  \\\\
+  $\Rightarrow x^2$ is \ul{not} uniformally continuous on $\RR$.
+\end{example} 
+
+\begin{example}
+  $f: ]0, \infty[ \to \RR$, $x \to 1 / x$ 
+  \\\\
+  Let $x_n \coloneqq 1 / n$, $\mu_n \coloneqq 1 / (n + 1)$.
+  \\\\
+  Then, $|x_n - \mu_n| = |1 / n - 1 / (n + 1)| = |(x + 1 - x) / (n(n + 1)) | = 1 / (n(n + 1))  \leq 1 / n^2 \to 0$.
+  \\\\
+  By convergence criterion, $\lim(x_n - \mu_n) = 0$.
+  \\\\
+  But, $|f(x_n) - f(\mu_n)| = |n - (n + 1)| = 1$. Let $\epsilon_0 \coloneqq 1$.
+  \\\\
+  Then $\lim(x_n - \mu_n) = 0$. But $|f(x_n) - f(\mu_n)| \geq \epsilon_0$.
+  \\\\
+  Therefore $1 / x$ is \ul{not} uniformally continuous on $]0, \infty[$.
+\end{example} 
+
+\begin{theorem}
+  Every continuous function on a \ul{compact} domain is uniformally continuous.
+  \begin{proof}
+    Let $f : A \to \RR$, $A$ be compact, and $f$ continuous on $A$.
+    \\\\
+    Let $\epsilon > 0$, then $(\forall x \in A) (\exists \delta_x > 0) : (|x - \mu| < \delta_x \Rightarrow |(f(x) - f(\mu)| < \epsilon / 2)$
+    \\\\
+    Now consider the neighborhoods  $V_{(1 / 2) \delta_x} (x)$ for all $x \in A$.
+    \\\\
+    Then $\varphi \coloneqq \{V_{(1 / 2)\delta_x}(x) : x \in A\}$ is an open cover of $A$. (Even just the centres of these neighborhoods already cover $A$)
+    \\\\
+    By Heine-Borel, $\varphi$ has a finite subcover $\{V_{(1 / 2)\delta_{x_1}}, \dots, V_{(1 / 2)\delta_{x_n}}\}$ where $x_1, \dots, x_n \in A$.
+    \\\\
+    Let $\delta \coloneqq \min\{\frac{1}{2} \delta_{x_1}, \dots, \frac{1}{2} \delta_{x_n}\} > 0$.
+    \\\\
+    We'll prove that with this $\delta$, we have that $|x - \mu| < \delta \Rightarrow |f(x) - f(\mu)| < \epsilon$.
+    \\\\
+    Let $x, \mu \in A$ such that $|x - \mu| < \delta$. Since $x \in A$, $\exists 1 \leq k \leq n$ such that $x \in V_{(1 / 2)\delta_{x_k}}(x_k)$
+    \\\\
+    $\Rightarrow |x - x_k| < \frac{1}{2} \delta_{x_k} < \delta_{x_k}$ 
+    \\\\
+    and
+    \begin{gather*}
+      |\mu - x_k| = |(\mu - x) + (x - x_k)| \leq |x - \mu| + |x - x_k| < \delta + \frac{1}{2}\delta_{x_k} = \delta_{x_k} \\
+      \Rightarrow x, \mu \in V_{\delta_{x_k}}(x_k) \\
+      \Rightarrow
+      |f(x) - f(\mu)| = |(f(x) - f(x_k)) + f(x_k) - f(\mu))|
+      \\ \leq
+      \underbrace{|f(x) - f(x_k)|}_{\leq \epsilon / 2} + \underbrace{|f(\mu) - f(x_k)|}_{\leq \epsilon / 2} < \epsilon
+    \end{gather*} 
+    Because $|x - x_k| < \delta_{x_k}$ and $|\mu - x_k| < \delta_{x_k}$.
+    \\\\
+    i.e. if $|x - \mu| < \delta \Rightarrow |f(x) - f(\mu)| < \epsilon \Rightarrow f$ is uniform continuous on $A$
+  \end{proof} 
+\end{theorem} 
+
+\begin{example}
+  $x^2$ is uniform continuous on \ul{all} intervals $[-a, a]$ where $a > 0$.
+\end{example} 
+\begin{example}
+  $1 / x$ is uniform continuous on \ul{all} intervals $[a, 1]$ where $0 < a < 1$.
+\end{example} 
+
+
+\end{document}

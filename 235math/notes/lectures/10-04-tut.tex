@@ -1,0 +1,204 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+% \usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage[sexy]{/home/gautierk/.config/mod-evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+\usepackage{forest}
+
+\title{Math 235 Tutorial Notes 10-04}
+
+\begin{document}
+
+\section{Tutorial 5: Cyclic Groups - 10-04}
+
+\begin{theorem}
+  Every cyclic group is abelian.
+\end{theorem}
+\begin{theorem}
+  Every subgroup of a cyclic group is cyclic.
+\end{theorem}
+Let $G$ be a cyclic group and let $a \in G$ be of order n.
+\begin{theorem}
+  $a^m = e \Leftrightarrow n | m$
+\end{theorem}
+\begin{theorem}
+  $b = a^k \in G$, then $|b| = \frac{n}{\gcd(n, k)}$ \newline
+  \textbf{Corollary: In additive notation}
+
+  \begin{itemize}
+    \item
+      $\ZZ_n = \langle 1 \rangle$ with $|1| = n$.
+
+    \item
+      $k = k \cdot 1$, then $|k| = \frac{n}{\gcd(n, k)}$
+
+    \item
+      Generators of $\ZZ_n$ are the integers $k$ such that $1 \leq k < n$ and $\gcd(k, n) = 1$.
+
+  \end{itemize}
+ \end{theorem}
+\begin{example}
+  Subgroups of $(\ZZ_8, +)$. Observe that $1, 2, 4, 8$ divide 8. We have to find $k \in \ZZ_8$ such that:
+  \begin{itemize}
+    \item
+      $\gcd(8, k) = 1$ 
+
+      $\{1, 3, 5, 7\}$. These generate subgroups of order $\frac{8}{\gcd} = 8$. There is only one such subgroup of $\ZZ_8$ so they must all be the same.
+    \item
+      $\gcd(8, k) = 2$ 
+
+      $\{2, 6\}$. These generate subgroups of order 4: $\{0, 2, 4, 6\}$ 
+
+      A question arises: Do 2 and 6 generate the same subgroup? $\langle 2 \rangle = \{0, 2, 4, 6\}$.  $6 \in \langle 2 \rangle$ so $\langle 2 \rangle = \langle 6 \rangle$.
+    \item
+      $\gcd(8, k) = 4$ 
+
+      $\{4\}$. Generates a group of order 2: $\{0, 4\}$
+    \item
+      $\gcd(8, k) = 8$ 
+
+      $\{0\}$. Generates a sugroup of order 1: $\{0\}$
+  \end{itemize}
+  \begin{center}
+  \begin{forest}
+    [$\ZZ_8 {=} \langle 1 \rangle {=} \langle 3 \rangle {=} \langle 5 \rangle {=} \langle 7 \rangle$
+      [$\langle 4 \rangle$
+        [\{0\}
+        ]
+      ]
+      [$\langle 2 \rangle {=} \langle 6 \rangle$
+        [\{0\}
+        ]
+      ]
+    ]
+  \end{forest}
+  \end{center}
+
+\end{example}
+
+\begin{example}
+  List all the subgroups of $\ZZ_{10}$. Observe that 1, 2, 5, and 10 divide 10. Find $k \in \ZZ_{10}$ such that:
+  \begin{itemize}
+    \item
+      $\gcd(k, 10) = 1$. 
+
+      $k = 1, 3, 7, 9$. $\ZZ_{10} = \langle 1 \rangle= \langle 3 \rangle= \langle 7 \rangle= \langle 9 \rangle$
+    \item
+      $\gcd(k, 10) = 2$. 
+
+      $k = 2, 4, 6, 8$. These generate subgroups of order 5.
+
+      $\langle 2 \rangle= \langle 4 \rangle= \langle 6 \rangle= \langle 8 \rangle = \{0, 2, 4, 6, 8\}$
+    \item
+      $\gcd(k, 10) = 5$. 
+
+      $k = 5$. $\langle 5 \rangle = \{0, 5\}$.
+    \item
+      $\gcd(k, 10) = 10$. 
+
+      $k = 0$.  $\langle 0 \rangle = \{0\}$
+  \end{itemize}
+  \begin{center}
+  \begin{forest}
+    [$\ZZ_{10} {=} \langle 1 \rangle {=} \langle 3 \rangle {=} \langle 7 \rangle {=} \langle 9 \rangle$
+      [$\langle 5 \rangle$
+        [\{0\}
+        ]
+      ]
+      [$\langle 2 \rangle {=} \langle 4 \rangle {=} \langle 6 \rangle {=} \langle 8 \rangle$
+        [\{0\}
+        ]
+      ]
+    ]
+  \end{forest}
+  \end{center}
+\end{example}
+
+\begin{example}
+  Let G be a group. Assume $a \in G$ such that $a^{24} = e$. What are the possible orders of $a$?
+
+  Recall that when $a^n = e$, the possible orders of a are those which divide n. Possible orders are therefore 1, 2, 3, 4, 6, 8, 12, 24.
+
+  $|a| = n \Rightarrow a^n = e$. NOT  $\Leftarrow$
+\end{example}
+
+\begin{example}
+  Let $a, b \in G$. Prove the following statements:
+  \begin{enumerate}[label=(\alph*)]
+    \ii
+    $|a| = |a^{-1}|$ 
+    \begin{proof}
+      $|a| = n$. $|a^{-1}| = m$
+      \begin{gather*}
+        a^n = e \\
+        \Rightarrow (a^n)^{-1} \cdot a^n = (a^n)^{-1} \cdot e \\
+        \Rightarrow e = (a^n)^{-1} \\
+        \Rightarrow e = (a^{-1})^n
+        \Rightarrow m | n
+      \end{gather*}
+      You can show similarly that $n | m$. By proving that $m | n$ and that $n | m$, we have proven that $n = m$.
+    \end{proof}
+    \ii
+    $\forall g \in G, |a| = |g^{-1}ag|$ 
+    \begin{proof}
+      Let $g \in G$, $|a| = n$, $|g^{-1}ag| = m$. Observe that:
+      \begin{gather*}
+        (g^{-1}ag)^m = e \\
+        \Rightarrow (g^{-1}ag)(g^{-1}ag)\dots(g^{-1}ag) = e \\
+        \Rightarrow g^{-1}a^mg = e \\
+        \Rightarrow g \cdot g^{-1} a^m g \cdot g^{-1} = g \cdot e \cdot g^{-1} \\
+        \Rightarrow a^m = e
+      \end{gather*}
+      Therefore $n | m$ because $|a| = n$. Similarly $m | n$. Therefore $m = n$.
+    \end{proof}
+    \ii
+    $|ab| = |ba|$ 
+    \begin{proof}
+      By (b), $|ab| = |a^{-1}(ab)a| = |a^{-1}aba| = |ba|$
+    \end{proof}
+  \end{enumerate}
+\end{example}
+
+\begin{exercise}
+  Show that if $G$ has no proper non-trivial subgroups, then G is a cyclic group of prime orders.
+  \begin{proof}
+    \begin{enumerate}[label=(\alph*)]
+      \ii[]
+      \ii
+      Showing that G is cyclic. Let $g \in G: g \neq e$. $\langle g \rangle$ is a non-trivial subgroup of G because $g \in \langle g \rangle$ and $g \neq e$. By assumption that G has no proper non-trivial subgroups, $\langle g \rangle = G$.
+
+      \ii
+      Showing that G must be of prime order.
+      \begin{enumerate}
+        \ii
+        Case where $|G| = \infty$. Let G
+
+        Observe that $\langle g^2 \rangle$ is a non-trivial subgroup of G.
+        Observe that $\langle g^2 \rangle \neq G$ because $g \notin \langle g^2 \rangle$.
+        "If the order of a group is infinity, we will always be able to generate non-trivial proper subgroups."
+        \ii
+        Case where $|G| = n < \infty$
+
+        Assume that $n = d \cdot m$ for some $d, m$. Since $d | n$, then G must have a subgroup H of order d. This would mean that H is non-trivial and $H \neq G$. This is a contradiction $\Rightarrow |G| = p$ for some prime number.
+      \end{enumerate}
+  
+    \end{enumerate}
+  \end{proof}
+\end{exercise}
+
+\begin{exercise}
+  An infinite cyclic group G has exactly 2 generators.
+
+  $G = \langle a \rangle = \langle b \rangle$. This would mean that $a = b^k$ for some $k$, and that $b = a^l$ for some $l$.
+
+   \begin{gather*}
+     a = b^k = (a^l)^k = a^{lk} \\
+     \Rightarrow a^{-1} \cdot a = a^{-1} a^{lk} \\
+     \Rightarrow e = a^{lk - 1}
+  \end{gather*}
+  We know that $|a| = \infty$, therefore $lk - 1 = 0 \Rightarrow lk = 1$. This gives two possible cases: $l = k = 1$ or $l = k = -1$ because $l$ and $k$ must be integers. Therefore either $b = a$ or $b = a^{-1}$. This means that the only generators of G are $a$ and $a^{-1}$.
+\end{exercise}
+
+
+\end{document}

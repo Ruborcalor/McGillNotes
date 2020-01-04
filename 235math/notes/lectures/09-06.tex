@@ -1,0 +1,116 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+
+\begin{document}
+
+\section{Proof of  $(A \cup B)' = A' \cap B'$}
+
+In order to prove $A=B$, prove that $A\subset B$ and $A\supset B$
+
+\subsection{Proof of $(A \cup B)' \subset A' \cap B'$ } 
+
+\begin{align*}
+\text{Proving that} \ \text{let } x \in (A \cup B)' \\
+& \rightarrow x \notin A \cup B \\
+& \rightarrow x \notin A \ \text{and} \ \notin B \\
+& \rightarrow x \in A' \ \text{and} \ x \in B' \\
+& \rightarrow x \in A' \cap B'
+\end{align*} 
+
+
+\subsection{Proof of $(A \cup B)' \supset A' \cap B'$ } 
+\begin{align*}
+\ \text{let} \ x \in A' \cap B' \\
+\rightarrow x \in A \ \text{and} \ x \in B' \\
+\rightarrow x \notin A \ \text{and} \ x \notin B \\
+\rightarrow x \notin A \cup B \\
+\rightarrow x \in (A \cup B)'
+\end{align*} 
+
+\section{Product of Sets}
+
+\begin{align*}
+  A \times B = \{(a,b): a \in A \ \text{and} \ b \in B\} \\
+  \ \text{i.e.} \ A^n = A \times A \times A \ldots \\
+  \mathbb{R} = R \times R
+\end{align*} 
+
+\section{Relations and Functions}
+A relation from A to B is a subset of $A \times B$
+
+A map or funciton from A to B is a relation where $f \subset A \times B$ such that for each $a \in A$ there exists a unique  $(a,b) \in f$
+ 
+Notation: $f: A \to B$
+
+Think of it as  $f(a) = b$ instead of $(a, b) \in f$ 
+
+A is domain of f, B is codomain or target of f
+
+image of f is $f(A) = \{f(a): a \in A\}$
+
+Example:
+$f(A) = \{(1, y), (2, y), (3, y)\}$
+
+image = $f(A) = \{y, z\}$ 
+
+Definition: $f: A \to B$ is subjective if $f(A) = B$ 
+
+Definition: $f:A \to B$ is injective or one-to-one or "into" if there does not exist $a \in A $ and $b \in A $ such that $f(a) = f(b)$
+
+\section{Composite Functions}
+
+$f:A \to B$ 
+
+$g: B \to C$ 
+
+Composition $g \circ f$ is a function. $g \circ f: A \to C$
+
+$(g \circ f)(a) = g(f(a))$
+
+
+\[
+\begin{pmatrix}[name=A]
+  1 \\ 
+  2 \\
+  3 
+\end{pmatrix}
+\ \ \ 
+\begin{pmatrix}[name=B]
+w \\
+x \\
+y \\
+z
+\end{pmatrix}
+\ \ \ 
+\begin{pmatrix}[name=C]
+  p \\
+  q \\
+  r
+\end{pmatrix}
+\]
+\tikz [remember picture, overlay] \draw 
+[red,->] (A-1-1) to (B-3-1) 
+[red,->] (A-2-1) to (B-3-1)
+[red,->] (A-3-1) to (B-4-1)
+[red,->] (B-1-1) to (C-2-1) 
+[red,->] (B-2-1) to (C-1-1)
+[red,->] (B-3-1) to (C-3-1)
+[red,->] (B-4-1) to (C-3-1); 
+
+\begin{align*}
+  g\circ f(1) = g(f(1)) = g(y) = r \\
+  g\circ f(2) = g(f(2)) = g(y) = r \\
+  g\circ f(3) = g(f(3)) = g(z) = r \\
+\end{align*} 
+
+\fbox{\begin{minipage}{\linewidth}
+        Theorem 1.1.8: The quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog. the quick brown fox jumps right over the lazy dog.
+    \end{minipage}}
+
+
+  
+\end{document}

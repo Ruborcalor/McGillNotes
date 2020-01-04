@@ -1,0 +1,150 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+
+
+\begin{document}
+
+\section{Normal Subgroups and Factor Groups}
+
+\begin{definition}
+  A subgroup $H \subset G$ is \ul{normal} if $gH = Hg$ for all $g \in G$.
+  \begin{example}
+    \begin{enumerate}
+      \ii
+      Every subgroup of H is normal if $G$ is abelian.
+      \ii
+      If $[G:H] = 2$, then $H$ is normal. This is because $gH \cup H = G = H \cup Hg$.
+      \ii
+      Let $H \subset D_h$ be a subgroup of rotations. Then $H$ is normal (because $[D_h:H] = 2 $). However, let $R = \langle r \rangle $ where $r$ is reflection, then $R$ is not normal in $D_n$.
+      \ii
+      $\{e\} \subset G$ and $G \subset G$ are normal.
+    \end{enumerate}
+  \end{example}
+\end{definition}
+\begin{theorem}
+  Let $N \subset G$ be a subgroup. TFAE
+  \begin{enumerate}
+    \ii 
+    $N$ is normal in $G$.
+    \ii
+    $gNg^{-1} \subset N$ for all $g \in G$.
+    \ii
+    $gNg^{-1} = N$ for all $g \in G$.
+  \end{enumerate}
+  \begin{note}
+    For $S \subset G$ and $x,y \in G$, $xSy = \{xsy: s \in S\}$
+  \end{note}
+  \begin{proof}
+    \begin{enumerate}
+      \ii[]
+      \ii[] $(1 \Rightarrow 2)$
+      We must show that $gng^{-1} \in N$ for all $n \in N$.
+      \begin{gather*}
+        gN = Ng \Rightarrow \exists n' \in N \ \text{such that} \ gn = n'g \\
+        \text{Hence: } \quad (gn)g^{-1} = (n'g)g^{-1} = n' \in N
+      \end{gather*}
+      \ii[] $(2 \Rightarrow 3)$
+      Suffices to show that $N \subset gNg^{-1}$.
+      \begin{gather*}
+        g^{-1}ng \in g^{-1}N(g^{-1})^{-1} \subset N \Rightarrow g^{-1}ng = n' \ \text{for some} \ n' \in N \\
+        \ \text{So} \ n = gn'g^{-1}
+      \end{gather*}
+      \ii[] $(3 \Rightarrow 1)$ 
+      Right multiply by $g$. $gNg^{-1} = N$ gives $gN = Ng$.
+    \end{enumerate}
+  \end{proof}
+\end{theorem}
+
+\subsection{Factor Group or Quotient Group}
+\begin{definition}
+  Let $N \subset G$ be a normal subgroup of $G$. The left cosets of $N$ in $G$ form a group whose operation is $(aN)(bN) = (abN)$. 
+  This is the \ul{quotient group} of $G$ and $N$, denoted by $G / N$.
+\end{definition}
+\begin{theorem}
+  $G / N$ is really a group!
+  \begin{proof}
+    \begin{enumerate}
+      
+      \ii[]
+      \ii
+    To show: Operation is well defined. If $aN = a'N$ and $bN = b'N$, then $abN$ = $a'b'N$.
+    \\\\
+    We know that $a' = an_1$ and $b' = bn_2$ where $n_1,n_2 \in N$. Hence $a'b' = (an_1)(bn_2)$. Because $Nb = bN$, we hvae that $n_1b = bn_3$ for some $n_3 \in N$. Therefore $a'b' = a(n_1b)n_2 = a(bn_3)n_2 = abn_3n_2$.
+    \\\\
+    Thus $a'b'N = abN$ since $(ab)^{-1}(a'b') = b^{-1}a^{-1}abn_3n_2 = n_3n_2 \in N$.
+    \ii
+    To show: Associativity.
+    \begin{gather*}
+      aN(bNcN) = aN(bcN) = a(bc)N = abcN \\
+      (aNbN)cN = (abN)cN = (ab)cN = abcN
+    \end{gather*}
+    \end{enumerate}
+    \ii
+    To show: Identity. $eNxN = exN = xN = xeN = xNeN$
+    \ii
+    To show: Inverses. $(xN)(x^{-1}N)$ = $xx^{-1}N = eN = x^{-1}xN = x^{-1}NxN$
+  \end{proof}
+\end{theorem}
+\begin{recall}
+  If $G$ is finite, $|G / N| = [G:N] = |G| / |N|$
+\end{recall}
+\begin{example}
+  $\ZZ_n$ is just notation for $\frac{\ZZ}{n\ZZ}$
+   \[
+     \text{Quotient Group} \ \ZZ / 4\ZZ: \quad
+       \setlength{\extrarowheight}{3pt}% local setting
+       \begin{array}{l|*{5}{l}}
+       \circ      & 0 + 4\ZZ & 1 + 4\ZZ & 2 + 4\ZZ & 3 + 4\ZZ \\
+       \hline
+       0 + 4\ZZ           & 0 + 4\ZZ & 1 + 4\ZZ & 2 + 4\ZZ & 3 + 4\ZZ \\
+       1 + 4\ZZ           & 1 + 4\ZZ & 2 + 4\ZZ & 3 + 4\ZZ & 4 + 4\ZZ \\
+       2 + 4\ZZ           & 2 + 4\ZZ & 3 + 4\ZZ & 4 + 4\ZZ & 5 + 4\ZZ \\
+       3 + 4\ZZ           & 3 + 4\ZZ & 4 + 4\ZZ & 5 + 4\ZZ & 6 + 4\ZZ \\
+       \end{array}
+   \]
+\end{example}
+\begin{example}
+  $H \subset D_n$ be subgroup of rotations. $D_n / H \cong \ZZ_2$ since $[D_n:H] = 2$.
+\end{example}
+\begin{example}
+  $S_n / A_n \cong \ZZ_2$
+\end{example}
+\begin{example}
+  $N = \{\pm 1\}$ is normal in $Q$. It's cosets are:
+  \begin{gather*}
+    1N = \{\pm 1\} = N 1 \\
+    j N = \{\pm j\} = N j \\
+    k N = \{\pm k\} = N k \\
+    i N = \{\pm i\} = N i \\
+  \end{gather*}
+  What is $Q / N$? Note: $|Q / N| = [Q:N] = 4$.
+  \[
+      Q / N: \quad
+      \setlength{\extrarowheight}{3pt}% local setting
+      \begin{array}{l|*{5}{l}}
+      \circ      & 1N & iN & jN & kN \\
+      \hline
+      1N           & 1N & iN & jN & kN \\
+      iN           & iN & 1N & kN & jN \\
+      jN           & jN & kN & 1N & iN \\
+      kN           & kN & jN & iN & 1N \\
+      \end{array}
+  \]
+\end{example}
+\begin{example}
+  \[
+      (\ZZ_4, +): \quad
+      \setlength{\extrarowheight}{3pt}% local setting
+      \begin{array}{l|*{5}{l}}
+        \circ      & (0,0) & (1,0) & (0,1) & (1,1) \\
+      \hline
+        (0,0)           & (0,0) & (1,0) & (0,1) & (1,1) \\
+        (1,0)           & (1,0) & (0,0) & (1,1) & (0,1) \\
+        (0,1)           & (0,1) & (1,1) & (0,0) & (1,0) \\
+        (1,1)           & (1,1) & (0,1) & (1,0) & (0,0) \\
+      \end{array}
+  \]
+    
+\end{example}
+\end{document}

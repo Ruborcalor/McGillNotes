@@ -1,0 +1,47 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{parskip}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+\begin{document}
+
+\title{Notes 2019-09-11}
+\author{Cole Killian}
+
+
+\section{Mathematical Induction}
+
+Suppose have sequence of statements: $S_1, S_2, \dots \{S_n: n \in \mathbb{N}\}$
+
+Principle of mathematical induction:
+
+Suppose  $S_1$ is true (base case)
+
+Suppose $S_n \Rightarrow S_{n+1}$ for each n (the induction)
+
+Then $S_n$ is true for each $n \in \mathbb{N}$ 
+
+ex. $\int_n = 1 + 2 + 3 + \dots + n = \frac{n(n+1)}{2}$
+
+(base case) $S_1:  1 = \frac{1(1 + 1)}{2}$
+
+(induction) $S_n \Rightarrow S_{n+1}$
+
+$S_n: 1 + 2 + \dots + n = \frac{n(n+1)}{2}$
+
+$\ \ \ \ \ +n + 1$
+
+$S_n: 1 + 2 + \dots + n + (n + 1) = \frac{n(n+1)}{2} + (n + 1)$
+
+\end{document}

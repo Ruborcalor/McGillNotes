@@ -1,0 +1,52 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+\begin{document}
+
+\title{Notes 2019-09-25}
+\author{Cole Killian}
+
+\begin{theorem}
+Every subgroup of a cyclic group G is cyclic
+\end{theorem}
+
+\subsection{Proof}
+Let $G = \langle x\rangle.$ Let $H \subset G$ be a subgroup.
+
+Show that $H = \langle y\rangle$ for some y.
+
+If $H = \{e\}$ then $H = \langle e\rangle \ \checkmark$.
+
+Wha t is H contains an element $g \neq e$
+
+Let $S = \{n > 0: x^n \in H\}$ 
+
+$S \neq \varnothing$ because it at least must include (review this proof that $S \neq \varnothing$.
+
+Next step:
+
+By W.O.P, let $m$ be the least element of S.
+
+Claim: $H = \langle y\rangle$ where $y = x^m$ 
+
+Proof of claim: Let $h \in H$ Show that $h \in \langle y\rangle$ which means $h = y^q$ for some q.
+
+Since $h \in G = \langle x\rangle$, $h = x^a$ for some $a \in \mathbb{Z}$
+
+By the division algorithm: $a = mq + r$ where $0 \leq r < m$
+
+If  $r = 0$ then $h = x^a = x^{mq} = x^{m^q} = y^q \ \checkmark$
+
+If $r > 0$ the $hy^{-q} = x^{mq + r}x^{m^{-q}} = x^{mq + r}x^{-mq} = x^r$, but this would contradict that m is least element of S because... i'm not sure why review this
+
+Cor 4.11. Subgroups of $\mathbb{Z}$ are $\langle n\rangle = n\mathbb{Z}$ (notation)
+
+Prop 4.12. Let G by cyclic of order n $\Rightarrow x^n = e$. Suppose $G = \langle x\rangle$. This means that $(x^k = e) \Leftrightarrow n | k$.
+
+Proof "$\Leftarrow$" If  $k = n * l$, then $x^k$
+
+
+\end{document}

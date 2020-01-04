@@ -1,0 +1,109 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+\begin{document}
+
+\title{Notes 2019-09-20}
+\author{Cole Killian}
+
+
+\subsection{Proposition 3.21}
+
+Proposition 3.21: Let G be a group, let $a, b \in G$.
+
+Then the equations $ax = b$ and $xa = b$ have unique solutions.
+
+\subsubsection{Proof of existence:} Let $x = a^{-1}b$. This is a solution for the first equation. $a * a^{-1}b = b = b \ \checkmark$ 
+
+Let $x = ba^{-1}$. This is a solution for the second equation.
+
+\subsubsection{Proof of uniqueness:} To do this we will show that two solutions are always the same. Suppose c and d are solutions to $ax = b$. Therefore $a * c = b \ \text{and} \ a * d = b$.
+
+Therefore $a * c = a * d \Rightarrow a^{-1} * a * c = a^{-1} * a * d \Rightarrow c = d \ \checkmark$. This is the proof for the first equation; the same steps can be used for the second equation.
+
+\subsection{Proposition 3.22}
+
+Let G be a group. $(ba = ca) \Rightarrow (b = c)$.  $(ab = ac) \Rightarrow b = c$. The idea behind this is \underline{left right} cancellation.
+
+$ba = ca \Rightarrow baa^{-1} = caa^{-1} \Rightarrow b = c$
+
+\subsection{Notation}
+
+$g^n = g \circ g \circ g \circ \dots \circ g$ where the number of g equals n - 1
+
+$g^0 = e$
+
+$g^{-1} = g^{-1} \circ g^{-1} \circ \dots \circ g^{-1}$ where the number of g equals n - 1
+
+From this: $g^m \circ g^n = g^{m + n}$ and  $(g^m)^n = g^{m * n}$
+
+Careful:  $(ab)^m \neq a^m b^n$. Not necessarily commutative so you can't pass them through one another. Review a conceptually understanding of this.
+
+For commutative  $(G, +)$
+
+ $-g$ is notation for inverse of g.
+
+\subsection{3.3 a \underline{subgroup} H of group G is a subset of G}
+
+st $(H, \circ)$ is itself a group.
+
+\subsubsection{ex. of the above.}
+
+$_3\mathbb{Z} = \{\dots, -9, -6, -3, 0, 3, 6, \dots\}$
+
+Perform checks. every element has an inverse. Review the group requirements. Every element has inverse. There is a unique identity element. Associative. 
+
+
+ex. The trivial subgroup  $\{e\} \subset G$
+
+
+ex.  $(\mathbb{C}^*, \circ)$. Let  $H = \{1, -1, i, -i\}$
+
+ex.  $SL_2(R) \subset GL_2(R)$.
+
+Subgroup of $2\times 2$ real invertible matricies but this time determ inent must equal 1.  This works because determ inent of inverse of matrix is multiplicative inverse of determ inent; which in this case is also 1.
+
+
+ex.  $SL_2(Z) \subset SL_2(R) \subset GL_2(R)$.
+
+\subsection{Proposition 3.30: Criterian for subgroup}
+
+A subset $H \subset G$ of a group $(G, \circ)$ is a subgroup iff: 
+
+(1) $e \in H$ 
+
+(2) $h_1, h_2 \in H \Rightarrow h_1h_2, \in H$
+
+3)  $h \in H \Rightarrow h^{-1} \in H$ 
+
+\subsubsection{Proof that being a group gives these requirements}
+
+(1) Let $e'$ be identity element of H. Then $e' = e'e = ee' =  e \Rightarrow e = e'$
+
+(2) Holds because H is a group. We like to say: H is "closed under multiplication".
+
+(3) Since H is a  group, h must have an inverse.
+
+\subsubsection{Proof that these requirements means it must be a subgroup}
+
+Conditions (1), (2), (3), and associativity $\Rightarrow$ H is a group using operation of G. Must be associative because G is associative so any subset of G is also associative. 
+
+\subsection{Proposition 3.31}
+
+H is a subgroup $\Leftrightarrow$ $H \neq \varnothing$
+
+Easy to understand that  $g, h \in H \Rightarrow gh^{-1} \in H$
+
+A little harder to see that $gh^{-1} \in H $
+
+$H \neq \varnothing \Rightarrow \exists x \in H $
+
+
+
+
+
+
+\end{document}

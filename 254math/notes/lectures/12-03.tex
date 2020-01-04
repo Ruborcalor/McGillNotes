@@ -1,0 +1,239 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-12-03}
+
+
+\begin{document}
+
+\section{Lecture 12-03}
+
+Lipschitz Continuous.
+\\\\
+\begin{example}
+  Last class: $\sqrt{x}$ is \ul{not} lipschitz on $[0, \infty[$, however $\sqrt{x}$ \ul{is} lipschitz on $[a, \infty[$ for any $a > 0$.
+  \begin{proof}
+    Let $x, \mu \in [a, \infty[$. Then 
+    \begin{gather*}
+      |\sqrt{x} - \sqrt{\mu}| = |\frac{(\sqrt{x} - \sqrt{\mu})(\sqrt{x} + \sqrt{\mu})}{\sqrt{x} + \sqrt{u}}|
+      \\
+      \leq 
+      \frac{1}{2\sqrt{a}}|x - \mu|
+    \end{gather*} 
+    i.e. $\sqrt{x}$ is lipschitz continuous on $[a, \infty[$ with lipschitz constant $k = \frac{1}{2\sqrt{a}}$
+  \end{proof} 
+\end{example} 
+
+\begin{example}
+  Last class: $x^2$ \ul{is} lipschitz on $]-a, a[, \ a > 0$.
+  \\\\However, $x^2$ is \ul{not} lipschitz on $\RR$.
+  \begin{proof}
+    $x^2$ isn't even uniformly continuous on $\RR$ and thus cannot be lipschitz.
+  \end{proof} 
+\end{example} 
+
+\begin{definition}[Geometric interpretation of lipschitz continuous]
+  Geometric interpretation of lipschitz continuous:
+  \\\\
+  $f: A \to \RR$ is lipschitz if  
+  \begin{gather*}
+    \exists k > 0 \ : \ \forall x, \mu \in A \ : \ |f(x) - f(\mu)| \leq k \cdot |x - \mu|
+    \\
+    \ \text{if} \ x \neq \mu \Leftrightarrow \underbrace{|\frac{f(x) - f(\mu)}{x - \mu}|}_{\text{Difference Quotient}} \leq k
+  \end{gather*} 
+  i.e. $f$ is lipschitz if and only if the average slope of $f$ is bounded on $A$.
+\end{definition} 
+
+\subsection{Another method for proving that $\sqrt{x}$ is uniformly continuous on $[0, \infty[$.} \leavevmode
+\\\\
+\ul{Idea}: If $x \geq 1$, $\sqrt{x}$ is lipschitz on $[1, \infty[$ and thus uniformly continuous. And: if $0 \leq x \leq 1$ : $\sqrt{x}$ is uniformly continuous since it is continuous and $[0, 1]$ is compact.
+
+Q: $if \sqrt{x}$ is uniformly continuous on $[0, 1]$ and $[1, \infty[$, does it follow that $f$ is uniformly continuous on $[0, \infty[$.
+\\\\
+A: \ul{Yes}; this requries proof!
+
+\begin{theorem}
+  Let $f$ be uniformly continuous on intervals $I_1, I_2$ where $I_1$ is closed on the right with $\sup I_1 = \max I_1 = b$. And $I_2$ is closed on the left with $\inf I_2 = \min I_2 = b$, then $f$ is uniformly continuous on $I = I_1 \cup I_2$.
+  \begin{proof}
+    Let $\epsilon > 0$, $f$ uniformly continuous on $I_1$, thus $\exists \delta_1 > 0$ such that $|x - \mu| < \delta_1 \Rightarrow |f(x) - f(\mu)| < \epsilon / 2$.
+    \\\\
+    $f$ is uniformly continuous on $I_2$. Thus $\exists \delta_2 > 0$ such that $|x - \mu| < \delta_2 \Rightarrow |f(x) - f(\mu)| < \epsilon / 2$.
+    \\\\
+    Let $\delta \coloneqq \min\{\delta_1, \delta_2\}$.
+    \begin{enumerate}
+      \ii Case $x, \mu \in I_1$ 
+      \begin{gather*}
+        |x - \mu| < \delta \leq \delta_1 \Rightarrow |f(x) - f(\mu)| < \epsilon / 2 < \epsilon
+      \end{gather*} 
+      \ii Case $x, \mu \in I_2$ 
+      \begin{gather*}
+        |x - \mu| < \delta \leq \delta_2 \Rightarrow |f(x) - f(\mu)| < \epsilon / 2 < \epsilon 
+      \end{gather*} 
+      \ii Case $x \in I_1, \mu \in I_2$
+      \begin{gather*}
+        |x - \mu| < \delta \Rightarrow |x - b| \delta \wedge |u - b| < \delta
+        \\
+        \ \text{Thus} \ |f(x) - f(b)| < \frac{\epsilon}{2} \ \text{and} \ |f(\mu) - f(b)| < \frac{\epsilon}{2}
+        \\
+        \ \text{Now:} \ |f(x) - f(\mu)| = |[f(x) - f(b)] - [f(\mu) - f(b)]|
+        \\
+        \leq |f(x) - f(b)| + f(\mu) - f(b)| < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+        \\
+        \ \text{i.e.} \ |x - \mu| < \delta \Rightarrow |f(x) - f(\mu)| < \epsilon
+        \\
+        \Rightarrow f \ \text{is uniformly continous on} \ I = I_1 \cup I_2
+      \end{gather*} 
+    \end{enumerate} 
+  \end{proof} 
+  \ul{Application:} $\sqrt{x}$ is uniformly continuous on $[0, 1]$ and $[1, \infty[ \Rightarrow \sqrt{x}$ is uniformly continuous on $[0, \infty[$.
+\end{theorem} 
+
+\subsection{Differentiation}
+
+\begin{definition}[Differentiable Definition]
+  Let $f: I \to \RR$, $I$ be an interval, $x_0 \in I$.
+  \\\\
+  We say that $f$ is \ul{differentiable} at $x_0$, if  
+  \begin{gather*}
+    \lim_{x \to x_0} \underbrace{\frac{f(x) - f(x_0)}{x - x_0}}_{\text{Difference Quotient}} \ \text{exists.} \ 
+  \end{gather*} 
+  If the limit exists, we call its value the \ul{derivative} of $f$ at $x_0$, denoted by 
+  \begin{gather*}
+    f'(x_0) = \frac{df}{dx}(x_0)
+  \end{gather*}
+  If $f$ is differentiable at all $x_0 \in I$, we say that $f$ is differentiable on $I$.
+\end{definition} 
+
+\begin{theorem}[Caratheodory Alternative Description of Differentiability]
+  Let $f: I \to \RR$, $x_0 \in I$, then $f$ is differentiable at $x_0$ if and only if there exists a function $\phi: I \to \RR$ \ul{continuous at $x_0$} such that 
+  \begin{gather*}
+    \forall x \in I \quad f(x) = f(x_0) + \phi(x)(x - x_0)
+  \end{gather*} 
+  If $\phi$ exists, it holds that $\phi(x_0) = f'(x_0)$.
+  \begin{proof}
+    \begin{itemize}
+      \ii["$\Rightarrow$"]
+      Let $f$ be differentiable at $x_0$. Let  
+      \begin{gather*}
+        \phi(x) \coloneqq
+        \begin{cases}
+          \frac{f(x) - f(x_0)}{x - x_0}, \quad &x \neq x_0 \\
+          f'(x_0), \quad &x = x_0
+        \end{cases} 
+      \end{gather*} 
+      Then 
+      \begin{gather*}
+        \lim_{x \to x_0}\phi(x) = \lim_{x \to x_0}\frac{f(x) - f(x_0)}{x - x_0} = f'(x_0) = \phi(x_0)
+        \\
+        \Rightarrow \phi \ \text{is continuous at } \ x_0
+      \end{gather*}
+      \ii["$\Leftarrow$"]
+      Let $\phi: I \to \RR$, continuous at $x_0$ such that 
+      \begin{gather*}
+        f(x) = f(x_0) + \phi(x)(x - x_0)
+      \end{gather*} 
+      Let $x \neq x_0$. $\Rightarrow \phi(x) = \frac{f(x) - f(x_0)}{x - x_0}$
+      \\\\
+      $\phi$ continuous at $x_0 \Rightarrow \lim_{x \to x_0} \frac{f(x) - f(x_0)}{x - x_0}$ exists and equals $\phi(x_0) \Rightarrow f$ is differentiable at $x_0$ and $f'(x_0) = \phi(x_0)$
+    \end{itemize} 
+  \end{proof}  \noindent
+  \ul{Applications}:
+  Differentiable implies continuous. i.e. if $f: I \to \RR$ is differentiable at $x_0 \in I$, then $f$ is continuous at $x_0$.
+  \begin{proof}
+    $f$ differentiable at $x_0 \Rightarrow \exists \phi: I \to \RR$, continuous at $x_0$ such that $\forall x \in I$, $f(x) = \underbrace{f(x_0) + \phi(x) \cdot (x - x_0)}_{\text{continuous at } x_0}$
+  \end{proof} 
+\end{theorem} 
+
+\begin{theorem}[Product Rule]
+  Let $f, g: I \to \RR$ be differentiable at $x_0$. Then $f \cdot g$ is differentiable at $x_0$ and $(f\cdot g)'(x_0) = f'(x_0)g(x_0) - f(x_0) \cdot g'(x_0)$.
+
+  \begin{proof}
+    $f, g$ differentiable at $x_0 \Rightarrow \exists \phi, \psi : I \to \RR$ continuous at $x_0$ such that 
+    \begin{gather*}
+      f(x) = f(x_0) + \phi(x) (x - x_0) \\
+      g(x) = g(x_0) + \psi(x)(x - x_0) \\
+      \Rightarrow (f \cdot g)(x) = f(x) \cdot g(x) 
+      \\
+      = f(x_0)g(x_0) + f(x_0)\psi(x)(x - x_0) + g(x_0)\psi(x)(x - x_0) + \phi(x)\psi(x)(x - x_0)^2
+      \\
+      \Rightarrow
+      (f \cdot g)(x) = f(x_0)g(x_0) + [f(x)g(x_0) + f(x_0) \psi (x) + \phi(x)\psi(x)(x - x_0)] \cdot (x - x_0)
+    \end{gather*} 
+  \end{proof} 
+\end{theorem} 
+
+\begin{theorem}[Chain Rule]
+  Let $f: I \to \RR$, $f: J \to \RR$, $f(I) \subseteq J$, $x_0 \in I$, $f$ differentiable at $x_0$, $g$ differentiable at $y_0 \coloneqq f(x_0)$, then $g\circ f$ is differentiable at $x_0$, and $(g \circ f)'(x_0) = g'(f(x_0)) \cdot f'(x)$ 
+  \\
+  $f$ differentiable at $x_0 \Rightarrow \exists \phi: I \to \RR$, continuous at $x_0$ such that $f(x) = f(x_0) + \phi(x)(x - x_0)$.
+  \\\\
+  $g$ differentiable at $y_0 \Rightarrow \exists \psi : J \to \RR$ continuous at $y_0$ such that $g(y) = g(y_0) + \psi(y) \cdot (y - y_0)$.
+  Therefore
+  \begin{gather*}
+    g(f(x)) = g(f(x_0)) + \psi(f(x_0) + \phi(x)(x - x_0)) \cdot [f(x_0) + \phi(x)(x - x_0) - f(x_0)]
+    \\
+    = g(f(x_0)) + \psi(f(x_0) + \phi(x)(x - x_0)) \cdot \phi(x) \cdot (x - x_0) \coloneqq \Theta(x)
+  \end{gather*} 
+  \\\\
+  Then $\Theta$ is continuous at $x_0$ as a composition of 2 continuous functions.
+  \\
+  $\Rightarrow g \circ f$ is differentiable at $x_0$
+  \begin{gather*}
+    (g \circ f)'(x_0) = \Theta (x_0) \\
+    = \psi(f(x_0) + \phi(x_0) \cdot 0) \cdot \phi(x_0) \\
+    = \psi(f(x_0)) \cdot \phi(x_0) \\
+    = \psi(y_0) \cdot \phi(x_0) \\
+    = g'(y_0) \cdot f'(x_0) \\
+    = g'(f(x_0)) \cdot f'(x_0)
+  \end{gather*} 
+\end{theorem} 
+
+\subsection{Relationship Between Lipschitz Continuity and Differentiability}
+
+\begin{recall}[Mean Value Theorem]
+  The mean value theorem. Let $I = [a, b]$, $f: I \to \RR$ differentiable on $]a, b[$ and continuous on the entire interval. Then there exists $c \in ]a, b[$ such that
+  \begin{gather*}
+    f'(c) = \frac{f(b) - f(a)}{b - a}
+  \end{gather*} 
+\end{recall} 
+
+\begin{theorem}
+  Let $f: I \to \RR$ be differentiable. Then $f$ is lipschitz on $I$ if and only if $f'$ is bounded on $I$.
+  \begin{proof}
+    \begin{itemize}
+      \ii["$\Rightarrow$"]
+      Let $f$ be lipschitz with lipchitz constant $k$. 
+      \begin{gather*}
+        % x, \mu \in I_\mu \ (x \neq \mu) \ \ \text{then} \ |f(x) - f(\mu)| \leq k|x - \mu| \\
+        % \Rightarrow
+        % \left|\frac{f(x) - f(\mu)}{x - \mu}\right| \leq k \\
+        % \Rightarrow
+        -k \leq \frac{f(x) - f(\mu)}{x - \mu} \leq k \\
+        \\
+        \Rightarrow
+        -k \leq \lim_{x \to \mu}\frac{f(x) - f(\mu)}{x - \mu} \leq k \\
+        \Rightarrow
+        -k \leq f'(\mu) \leq k \\
+        \Rightarrow |f'(\mu)| \leq k \ \forall \ \mu \in I \\
+        \Rightarrow f' \ \text{is bounded on} \ I
+      \end{gather*} 
+      \ii["$\Leftarrow$"]
+      Assume that $f'$ is bounded on $I$.
+      \\\\
+      Let $k > 0$ such that $|f'(x)| \leq k$ for all $x \in I$.
+      \\\\
+      Let $x < \mu$, $x, \mu \in I$. Apply mean value theorem to $f$ on $[x, \mu]$ then $\exists c \in ]x, \mu[$ such that 
+      \begin{gather*}
+        \frac{f(x) - f(\mu)}{x - \mu} = f'(c) \Rightarrow \frac{|f(x) - f(\mu)|}{|x - \mu|} = |f'(c)| \leq k
+        \\
+        \Rightarrow |f(x) - f(\mu)| \leq k|x - \mu| \\
+        \Rightarrow f \ \text{is lipschitz on} \ I
+      \end{gather*} 
+    \end{itemize} 
+  \end{proof} 
+\end{theorem} 
+
+
+\end{document}

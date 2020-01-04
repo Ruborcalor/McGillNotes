@@ -1,0 +1,178 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+
+
+\begin{document}
+
+\section{10-30}
+
+\begin{theorem}
+  A bounded sequence converges if and only if it has \ul{exactly one} accumulation point.
+  \begin{proof}
+    \begin{itemize}
+      \ii[]
+      \ii[$(\Rightarrow)$ ]
+      Let $(x_n)$ be convergent. $x \coloneqq \lim(x_n)$. Then every subsequence $(x_{n_k})$ of $(x_n)$ converges to $x$. Thus $x$ is the only accumulation point of $(x_n)$.
+      \ii[$(\Leftarrow)$ ]
+      Let $(x_n)$ be a bounded sequence which has only one accumulation point $x$. We will show that $(x_n)$ converges to $x$. Assume that this is \ul{not} the case.
+      \\\\
+      Convergence: $\forall \epsilon > 0, \ \exists N \in \NN: \forall n \geq N, \ |x_n - x| < \epsilon$
+      \\
+      Negation: $\exists \epsilon > 0 : \forall N \in \NN, \ \exists n \geq N: |x_n - x| \geq \epsilon$
+      \\\\
+      Thus $\exists$ infinitely many $n \in \NN$ such that $|x_n - x| \geq \epsilon_0$.
+      \\
+      Let $n_1 < n_2 < n_3 < \dots$ such that $\forall k \in \NN : |x_{n_k} - x| \geq \epsilon_0$.
+      \\\\
+      Consider the subsequence $(x_{n_k})$ of $(x_n) \Rightarrow (x_{n_k})$ is bounded because $(x_n)$ is bounded. 
+      \\\\
+      By Bolzano-weierstrass, $(x_{n_k})$ has a convergent subsequence $(x_{n_{k_j}})$. Let $\sim{x} \coloneqq \lim(x_{n_{k_j}})$. Since $it$ is a subsequence of $(x_n)$ which has only one accumulation point. It follows that $\sim{x} = x$.
+      \\\\
+      Thus $\lim(it) = x$ and $\forall j \in \NN, |it - x| \geq \epsilon_0 CONTRADICTION$
+      \\
+      Thus our assumption was wrong which proves that $(x_n)$ converges to x.
+    \end{itemize}
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Let $(x_n)$ be a bounded sequence and let $A$ be the set of all accumulation points of $(x_n)$. Then $A \neq \varnothing$ and $A$ is compact (i.e. $A$ is closed and bounded).
+  \begin{proof}
+    By BOLZANO-WEIERSTRASS, $(x_n)$ has at least one convergent subsequence. Its limit is an accumulation point of $(x_n) \Rightarrow A \neq \varnothing$.
+    \\\\
+    \ul{A is bounded}:  $(x_n)$ is bounded i.e. $\exists M > 0$ such that $\forall n \in \NN, \ -M \leq x_n \leq M$.
+    \\\\
+    Let $x \in A$ be arbitrary. Then $\exists$ subsequence $(x_{n_k})$ of $(x_n)$ with $x = \lim(x_{n_k})$.
+    \\
+    We have that $\forall k \in \NN : -M \leq x_{n_k} \leq M \Rightarrow -M \leq x \leq M$.
+    \\
+    $\Rightarrow x \in [-M, M]$ for all accumulation points $x$ of $(x_n)$.
+    \\
+    $\Rightarrow A \subseteq [-M, M] \Rightarrow A$ is bounded.
+    \\\\
+    \ul{A is closed:} Let $x \in \RR \setminus A$ i.e. $x$ is \ul{not} an accumulation point. Thus $\exists \epsilon > 0 : V_\epsilon(x)$  contains at most \ul{finitely many} terms of $(x_n)$.
+    \\
+    Let $t \in V_\epsilon(x)$. $V_\epsilon(x)$ is open. Thus $\exists \tilde{\epsilon} > 0: V_{\tilde{\epsilon}(t)} \subseteq V_\epsilon(x)$.
+    \\
+    Thus $V_{\tilde{\epsilon}(t)}$ contains at most finitely many terms of $(x_n)$. Thus $t$ is \ul{not} an accumulation point $\Rightarrow$ no point in $V_\epsilon(x)$ is an accumulation point of $(x_n) \ \Rightarrow V_\epsilon(x) \subseteq \RR \setminus A$. Thus $\RR \setminus A$ is open $\Rightarrow A$ is closed.
+
+  \end{proof}
+\end{theorem}
+We've just seen that the set of all accumulation points of a bounded sequence $(x_n)$ is $\neq 0$, closed, and bounded. 
+\\
+\\
+Since $A$ is bounded, it has a supremum and an infimum. Both $\sup$ and $\inf$ are boundary points. $A$ is closed so it contains $\sup$ and $\inf$. Therefore $\sup(A)$ is the  \ul{Maximum} of A and $\inf(A)$ is the \ul{minimum} of A. i.e. $\sup(A)$ is an accumulation point of $(x_n)$, the greatest accumulation point of $(x_n)$. Similarly $\inf(A)$ is the least accumulation point of $(x_n)$.
+
+\begin{definition}
+  \begin{enumerate}
+    \ii[]
+    \ii
+    Let $(x_n)$ be a bounded sequence. Then the greatest accumulation point of $(x_n)$ is called the \ul{LIMES SUPERIOR} of $(x_n)$. In symbols: $\limsup(x_n)$.
+    \ii
+    The \ul{least} accumulation point of $(x_n)$ is called the \ul{LIMES INFERIOR} of $(x_n)$. In symbols: $\liminf(x_n)$.
+  \end{enumerate}
+\end{definition}
+
+\begin{theorem}
+  Let $(x_n)$ be a bounded sequence. Then $(x_n)$ is convergent if and only if 
+  \[
+    \liminf(x_n) = \limsup(x_n)
+  \]
+  \begin{proof}
+    \begin{itemize}
+      \ii[]
+      \ii[$(\Rightarrow)$ ]
+      Let $x \coloneqq \lim(x_n)$. Then every subsequence $(x_{n_k})$ of $(x_n)$ converges to $x$. 
+      \[
+        \Rightarrow A = \{x\} \Rightarrow \liminf(A) = x = \limsup(A)
+      \]
+      \ii[$(\Leftarrow)$ ]
+      Assume that $\liminf(x_n) = \limsup(x_n) \coloneqq x$. 
+      \[
+        A = \{x\}
+      \]
+      i.e. $(x_n)$ has only one accumulation point. By previous theorem, $(x_n)$ converges.
+    \end{itemize}
+  \end{proof}
+\end{theorem}
+
+\begin{example}
+  \begin{enumerate}
+    \ii[]
+    \ii
+    \[
+      x_n = (-1)^n
+    \]
+    Accumulation points are $-1$ and $1 \Rightarrow \liminf(x_n) = -1$ and $\limsup = 1$. Especially, $(-1)^n$ diverges because $\liminf \neq \limsup$.
+    \ii
+    Let $(x_n)$ be an enumeration of $\QQ \, \cap \, [a, b]$ where $a < b$. We'll show that $\liminf = a$ and that $\limsup = b$.
+    \begin{proof}
+      Let $x > b$. Let $\epsilon \coloneqq b - x > 0$. Then $\forall n \in \NN$, $x_n \notin V_\epsilon(x) \Rightarrow$ x is \ul{not} an accumulation point of $(x_n)$.
+      \\\\
+      Let $x \in [a, b]$ and let $\epsilon > 0$; consider $V_\epsilon(x) = ]x - \epsilon, x + \epsilon[$. By the density of $\QQ$ in $\RR$, $V_\epsilon(x)$ contains infinitely many rational numbers, especially, $V_\epsilon(x_n)$ contains infinitely many terms of $(x_n) \Rightarrow x$ is an accumulation point of $(x_n)$.
+      \\\\
+      \ul{x = a}: By density of $\QQ$ in $\RR$, $]a, a + \epsilon[$ contains infinitely many terms of $(x_n) \Rightarrow a$ is an accumulation point of $(x_n)$.
+      Similarly for $x = b$.
+      \\\\
+      Therefore $A \coloneqq [a, b] \Rightarrow \liminf(x_n) = a \ \text{and} \ \limsup(x_n) = b$.
+    \end{proof}
+    \ii
+    Find all accumulation points of the following sequence.
+    \[
+      x_n : 1, 1,  \frac{1}{2}, 1, \frac{1}{2}, \frac{1}{3}, 1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots
+    \]
+    Claim: $A = \{0\} \cup \{1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots\}$
+    \begin{proof}
+      For every $k \in \NN$, the constant sequence $\frac{1}{n}, \frac{1}{n}, \frac{1}{n}$ is a subsequence of $(x_n)$. Thus 
+      \[
+        \frac{1}{n} = \lim(\frac{1}{n}, \frac{1}{n}, \frac{1}{n}, \dots) \in A
+      \]
+      and $1, \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \dots$ is a subsequence of $(x_n)$. Thus
+      \[
+        0 = \lim(1, \frac{1}{2}, \frac{1}{3}, \dots) \in A
+      \]
+      Now let $x > 1, \ \epsilon \coloneqq x - 1 > 0$. Then $\forall n \in \NN : x_n \notin V_\epsilon(x) \Rightarrow x \notin A$.
+      \\\\
+      Similarly, $x \notin A$ for all $x < 0$. Let $0 < x < 1; \ x \notin A$. Then $\exists n \in \NN : \frac{1}{n + 1} < x < \frac{1}{n}$.
+      \\\\
+      Let $\epsilon \coloneqq \min\{x - \frac{1}{n + 1}, \frac{1}{n} - x\} > 0$. Then $\frac{1}{n + 1} \notin V_\epsilon(x) \vee \frac{1}{n} \notin V_\epsilon(x)$ 
+      \begin{gather*}
+        \Rightarrow x_n \notin V_\epsilon(x) \ \forall n \in \NN \\
+        x \ \text{ is \ul{not} an accumulation point of} \ (x_n) \\
+      \end{gather*}
+      Thus $A = \{0\} \cup \{\frac{1}{n}: n \in \NN\}$
+    \end{proof}
+  \end{enumerate}
+\end{example}
+
+\subsection{Properties of $\limsup, \liminf$}
+\begin{theorem}
+  Let $(x_n)$ be a bounded sequence and let $\epsilon > 0$. Then $\exists N \in \NN \ \forall n \geq N : x_n \in ]\liminf(x_n), \limsup(x_n) + \epsilon[$. i.e. at most finitely many terms of $(x_n)$ have the property that $x_n > \limsup(x_n) + \epsilon \ \text{or} \ x_n < \liminf(x_n) - \epsilon$
+  \begin{proof}
+    assignment 8
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Let $(x_n)$ be a bounded sequence. Then $\limsup(x_n) = \lim(\sup\{x_k : k \geq n \})$ and $\liminf(x_n) = \lim(\inf\{x_k: k \geq n\})$.
+  \begin{remark}
+    It is not clear initially whether this is well defined. We'll prove this.
+  \end{remark} \noindent
+  Let $y_n \coloneqq \sup\{x_k: k \geq n\}$. Then $(y_n)$ is bounded because $(x_n)$ is bounded.
+  \\\\
+  Let $A, B$ be bounded with $A \subseteq B$. Then $\sup(A) \leq \sup(B)$.
+   \begin{note}
+     $\{x_k: k \geq n + 1 \} \subseteq \{x_k : k \geq n\}$.
+  \end{note} \noindent
+  Therefore $\sup\{x_k: k \geq n + 1\} \leq \sup\{x_k: k \geq n\}$.
+  \\\\
+  Therefore $(y_n)$ is bounded and decreasing and therefore converges. 
+  \\\\
+  Thus $\lim(\sup\{x_k : x \geq n\})$ exists. A similar argument applies to $\lim(\inf\{x_k: k \geq n\})$.
+  \begin{proof}
+    Examination material. This is the cutoff for the midterm exam. Next week coshy sequences. 3.4 in the textbook. Important: This doesn't mean that you don't have to remember the stuff from before. If you don't know stuff from before you will be closed. I used open and closed todayand left it to you to know what open and closed means. It did not contain interior and closure so that is midterm 2 material. And you need to know what boundary sets are in order to make sense of these things but I won't ask a separate question on these things.
+  \end{proof}
+\end{theorem}
+
+\end{document}

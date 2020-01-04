@@ -1,0 +1,97 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-15}
+
+
+\begin{document}
+
+\section{Lecture 11-15}
+
+\begin{example}
+  \begin{gather*}
+    \ZZ_3[x] / I \ \text{where} \ I = \langle x^2 + 2 \rangle \\
+    (x^2 + I) + (2 + I) = (x^2 + 2 + I) = (0 + I) \\
+    (2 + I) + (1 + I) = (0 + I) \\
+    \ \text{so} \ (x^2 + I) = -(2 + I) = (1 + I) \\
+    \underbrace{((2x + 1) + I)}_{\text{Non zero}}\underbrace{((x + 1) + I)}_{\text{Non zero}} = (2x^2 + 2x + x + 1 + I) = (2x^2 + 1 + I) \\
+    = (x^2 + I) + (x^2 + I) + (1 + I) = (1 + I) + (1 + I) + (1 + I) = (0 + I)
+  \end{gather*} 
+  Hence $\ZZ_3[x] / I$ is not an integral domain.
+\end{example} 
+
+\begin{theorem}[The Chinese Remainder Theorem]
+  Let $n_1, n_2, n_3, \dots, n_k$ be positive integers with $\gcd(n_i, n_j) = 1$ for $i \neq j$.
+  \\\\
+  Then for any $a_1, a_2, a_3, \dots, a_k$, the following has a solution:
+  \begin{gather*}
+    x \equiv_{n_1} a_1 \\
+    x \equiv_{n_2} a_2 \\
+    \vdots \\
+    x \equiv_{n_k} a_k \\
+  \end{gather*} 
+  Moreover, for any two solutions $x$ and $x'$, $x \equiv x' \mod(n_1 n_2 \cdots n_k)$.
+  \begin{example}
+    Generally, $\ZZ_p \times \ZZ_q \cong \ZZ_{pq}$ if $\gcd(p, q) = 1$. \\\\
+    For example, $\ZZ_7 \times \ZZ_8 \cong \ZZ_{56}$.
+  \end{example} 
+  \begin{proof}
+    Consider the homomorphism $\varphi: \ZZ \to \ZZ_7 \times \ZZ_8$ defined by
+    \begin{gather*}
+      \varphi(a) = \left([a]_7, [a]_8\right)
+      \\\\
+      \varphi(a + b) = ([a + b]_7, [a + b]_8) = ([a]_7 + [b]_7, [a]_8 + [b]_8) \\
+      = ([a]_7, [a]_8) + ([b]_7, [b]_8) = \varphi(a) + \varphi(b)
+      \\\\
+      \varphi: \ZZ \to G \qquad \varphi(n) = g^n \ \text{where} \ g = (1, 1)
+    \end{gather*} 
+    $\varphi$ is surjective by the chinese remainder theorem. Indeed fo any $a_1, a_2$, there exists $x$ such that $x \equiv_7 a_1$ and $x \equiv_8 a_2$ so $\varphi(x) = (a_1, a_2)$.
+    \begin{note}
+      $[a]_7$ means $a \mod(7)$.
+    \end{note} \noindent
+    \\
+    What is $\ker(\varphi)$?
+    \\\\
+    $\ker(\varphi) = 7\ZZ \cap 8\ZZ = 56 \ZZ$ by the first isomorphism theorem. 
+    Because we know that $\varphi(\ZZ) = \ZZ_7 \times \ZZ_8$, and that by the first isomorphism theorem, $\varphi(\ZZ) \cong \ZZ / \ker(\varphi)$. And $\varphi(\ZZ) = \ZZ_7 \times \ZZ_8 \cong \ZZ_{56} = \ZZ / \ZZ_{56}$.
+  \end{proof} 
+\end{theorem} 
+
+\begin{lemma}[16.41]
+  Let $m$ and $n$ be positive integers with $\gcd(m, n) = 1$. Then for all $a, b \in \ZZ$,
+  \begin{gather*}
+    x \equiv_m a \\
+    x \equiv_n b
+  \end{gather*} has a solution.
+  \\\\
+  Moreover, the solution is unique $\mod (mn)$. i.e. if $x_1$ and $x_2$ are solutions, then $x_{1} \equiv_{mn} x_2$.
+  \begin{example}
+    \begin{gather*}
+      x \equiv_7 6 \\
+      x \equiv_8 4
+    \end{gather*} has solution 20. The full set of solutions is $20 + 56 \ZZ$.
+  \end{example} 
+  \begin{proof}
+    We know that $x \equiv_m a$ has solutions of the form $\{a + mp: p \in \ZZ\}$. We must find solutions such that 
+    \begin{gather*}
+      a + mp \equiv_n b \Rightarrow mp \equiv_n b - a
+    \end{gather*} 
+    But $\gcd(m, n) = 1$ implies that there exists $s, t$ such that $1 = sm + tn$. i.e. $s$ is the multiplicative inverse of $m$ in $\ZZ_n$. Hence 
+    \begin{gather*}
+      smp \equiv_n s(b - a) \\
+      \Rightarrow p \equiv_n s(b - a)
+    \end{gather*} 
+    Therefore we have found $x$ which satisfies $x \equiv_m a$ and $x \equiv_n b$.
+  \end{proof} \leavevmode \\\\
+  Suppose $x_1$ and $x_2$ are both solutions. Then: 
+  \begin{gather*}
+    x_1 - x_2 \equiv_m 0 \\
+    x_1 - x_2 \equiv_n 0
+  \end{gather*} 
+  Hence $m \, | \, (x_1 - x_2)$ and $n \, | \, (x_1 - x_2)$ so $mn \, | \, (x_1 - x_2)$.
+\end{lemma} 
+
+
+\end{document}

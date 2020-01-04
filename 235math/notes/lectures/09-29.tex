@@ -1,0 +1,182 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+\title{Math 235 Tutorial --- 09-27}
+
+\begin{document}
+
+
+\section{Math 235 Tutorial --- 09-27}
+
+\subsection{Groups \& Subgroups}
+
+\begin{definition}
+  A group $(G, \circ)$ is a set $G$ together with an operation $\circ$ such that:
+  \begin{enumerate}
+    \ii The elements are associative:
+    $(a \circ b) \circ c = a \circ (b \circ c)$
+    \ii There exists an identity element:
+    $\exists e \in G$ such that $\forall g \in G$, $ge = eg = g$.
+    \ii All elements contain an inverse within the group.
+    $\forall g \in G \ \ \exists g^{-1}$ such that $g \circ g^{-1} = g^{-1} g = e$
+  \end{enumerate}
+\end{definition}
+
+\begin{example}
+  \begin{enumerate}
+    \ii[]
+    \ii
+    $(\ZZ, +)$. It is associative. Identity element is 0. $a^{-1} = -a$.
+    \ii
+    $(\RR \setminus \{0\}, *)$. Is is associatve. Identity element is 1. All elements have an inverse (we removed 0 because 0 doesn't have an inverse).
+    \ii
+    $(\ZZ_n, +)$. It is associative. Identity element is 0. $a^{-1} = -a = n - a$.
+    \ii
+    $(\ZZ, *)$ is \ul{NOT} a group because many integers do not have inverses that belong to the integers. $5^{-1} = \frac{1}{5} \notin \ZZ$
+    \ii
+    $(\RR, *)$ is \ul{NOT} a group because 0 does not have an inverse.
+  \end{enumerate}
+\end{example}
+
+\begin{note}
+  \begin{enumerate}
+    \ii[]
+    \ii Multiplicative Notation: $g^n$ means use the operation $n$ times. $(G, \cdot)$ 
+    \ii
+    Additive Notation: $ng$ means use the operation $n$ times. $(G, +)$
+  \end{enumerate}
+\end{note}
+
+\begin{example}
+  \begin{align*}
+    11x + 2 & \equiv 16 \quad \text{(mod 26)} \\
+    11x & \equiv 14 \quad \text{(mod 26)} \\
+    11^{-1}11x & \equiv 11^{-1}14 \quad \text{(mod 26)} \\
+    x & \equiv 11^{-1}14 \quad \text{(mod 26)} \\
+  \end{align*}
+  If we were in $\RR$, $(11)^{-1} = \frac{1}{11}, \ \text{but} \ \frac{1}{11} \notin \ZZ_{26}$ 
+  We need to find $(11)^{-1} \in \ZZ_{26}$. We know it exists because  gcd $(11, 26)$ = 1
+
+  Euclidean Algorithm
+  \begin{align*}
+    26 & = 2 * 11 + 4 \\
+    11 & = 2 * 4 + 3 \\
+    4 & = 1 * 3 + 1 \\
+    3 & = 3 * 1 + 0 \\
+  \end{align*}
+  \begin{align*}
+    1 & = 4 - 3 \\
+      & = 4 - (11 - 24) \\
+      & = 3 * 4 - 11 \\
+      & = 3 (26 - 2 * 11) - 11 \\
+      & = 3 * 26 - 7 * 11 
+  \end{align*}
+  gcd $(11, 26) = 1$  means there is a linear combination of 11 and 26 that equals 1. Taking the mod of both sides, mod of 26 is 0 and mod of 1 is 1 so it means that there is a multiple of 11 equal to $1$ in mod 26. This means that it has an inverse. It's inverse is $-7 = 26 - 7 = 19$.
+
+  Back to equation:
+  \begin{align*}
+    11x & = 14 \\
+    19 \cdot 11x & = 19 \cdot 14 \\
+    x & = 266 \\
+    x & = 6
+  \end{align*}
+
+  Solution:
+  $\{x \in \ZZ: 26 \cdot n + 6 \quad n \in \ZZ\}$
+
+\end{example}
+
+
+\begin{example}
+  When presented with a Cayley table, how can we tell whether or not we are looking at a group.
+  \[
+    \begin{bmatrix}
+      a & b & c & d \\
+      b & b & c & d \\
+      c & d & a & b \\
+      d & a & b & c
+    \end{bmatrix}
+  \]
+  We must check identity element, inverses, and associativity,.
+
+  \begin{enumerate}
+    \ii Identity element is $a$. $\checkmark$
+    \ii b doesn't have an inverse so this is not a group.
+    \ii Whether or not associativity fails, this is not a group. In order to see associativity in a cayley table, it must by symmetric along the line $y = -x$.
+  \end{enumerate}
+
+  % \[
+  %   \setlength{\extrarowheight}{3pt}% local setting
+  %   \begin{array}{l|*{5}{l}}
+  %       & 1   & a   & a^2 & a^3  & a^4 \\
+  %   \hline
+  %   1   & 1   & a   & a^2 & a^3  & a^4 \\
+  %   a   & a   & a^2 & a^3 & a^4  & a^5 \\
+  %   a^2 & a^2 & a^3 & a^4 & a^5  & a^6 \\
+  %   a^3 & a^3 & a^4 & a^5 & a^6  & a^7 \\
+  %   a^4 & a^4 & a^5 & a^6 & a^7  & a^8 \\
+  %   \end{array} 
+  % \]
+  Advice: When checking if two groups are the same with cayley tables, look at the inverses and see if they match perfectly.
+\end{example}
+
+\begin{exercise}
+  Let $G$ be a group such that $g^2 = e \quad \forall g \in G$. Show that $G$ is \ul{abelian}. In other words, $\forall a, b \in G \quad ab = ba$.
+
+  \begin{soln}
+    Let $a, b\in G$. We want to show that $ab = ba$. Note: $e = a^2 = b^2 = (ab)^2 = (ba)^2$
+    \begin{align*}
+      ab = a \cdot e \cdot b \\
+      ab = a \cdot (ab)(ab) \cdot b \\
+      ab = (aa)(ba)(bb) \\
+      ab = e \cdot ba \cdot e \\
+      ab = ba
+    \end{align*}
+  \end{soln}
+  Advice: when proving that a group is abelian, play around with the identity matrix.
+\end{exercise}
+
+\begin{definition}
+  H is a subgroup of G if $H \subset G$ and H is a group with the inherited operation from G.
+\end{definition}
+
+\begin{example}
+  $(\ZZ, +)$. Even integers are a subgroup of $\ZZ$ with the + operation. \\
+  $(\ZZ, +)$. Odd integers are \ul{NOT} a subgroup of $\ZZ$ with the + operation because they don't have closure. $1 + 3 = 4$ and $4$ is not an element of the odd integers.
+\end{example}
+
+\begin{exercise}
+  $H_1$ and $H_2$ are subgroups of G. Prove or disprove the following:
+  \begin{enumerate}
+    \ii $H_1 \cap H_2$ is a subgroup of G.
+
+    This is \ul{TRUE} because it has the identity element, it has the inverses, and there is closure. There is no need to prove associativity because it is inherited from the binary operation.
+    \begin{enumerate}
+      \ii (Identity)
+      $e \in H_1 \ \text{and} \ e \in H_2$ because $H_1 \ \text{and} \ H_2$ are subgroups.
+      \ii (Inverses)
+      $a \in H_1 \cap H_2$. In particular, $a \in H_1 \Rightarrow a^{-1} \in H_1 \ \text{and} \ a \in H_2 \Rightarrow a^{-1} \in H_2$. So $a^{-1} \in H_1 \cap H_2$. Note: This works because inverses are unique.
+      \ii (Closure)
+      $a, b \in H_1 \cap H_2$. $a, b \in H_1 \Rightarrow ab \in H_1$. Same for $H_2$. Therefore $ab \in H_1 \cap H_2$.
+    \end{enumerate}
+    \ii $H_1 \cup H_2$ is a subgroup of G? 
+
+    This is \ul{FALSE}. Counter example: Let $A = \{n \in \ZZ: \text{n is a multiple of 2}\}$. Let $B = \{n \in \ZZ: \text{n is a multiple of 5}\}$. 
+    \begin{enumerate}
+      \ii
+      Identity \cmark
+      \ii
+      Inverses \cmark
+      \ii
+      Closure \xmark
+    \end{enumerate}
+
+  \end{enumerate}
+\end{exercise}
+
+
+\end{document}

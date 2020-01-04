@@ -1,0 +1,81 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+
+
+\begin{document}
+
+\section{Kernal}
+
+\begin{definition}
+  The \ul{kernel} of the homomorphism $\phi:G \to K$ is the pre image of the identity element. i.e. $\phi^{-1}(\{e\})$.
+\end{definition}
+
+\begin{theorem}
+  The kernel of $\phi:G \to H$ is a normal subgroup of $G$.
+  \begin{proof}
+    Special case of Thm 11.4
+  \end{proof}
+\end{theorem}
+
+\begin{example}
+  $\ker(\det:\GL_n(\RR) \to \RR^*) = \SL_n(\RR)$
+\end{example}
+\begin{example}
+  Let $g \in G$ be an element of order n. Let $\phi:\ZZ \to G$ be $\phi(p) = g^p$.
+  \\\\
+  Which integers are going to map to the identity? Any integers that are multiplies of $n$. So $\ker(\phi) = n\ZZ$.
+\end{example}
+\begin{example}
+  Let $N$ be a normal subgroup of $G$. The map $\phi: G \to G / N$ given by $\phi(g) = gN$ is a homomorphism. Indeed, $\phi(ab) = (ab)N = aNbN = \phi(a)\phi(b)$.
+  \begin{note}
+    This is the \ul{natural} or \ul{canonial} homomorphism.
+  \end{note}
+\end{example}
+
+\begin{theorem}[First isomorphism theorem.]
+  Let $\psi G \to H$ be a homomorphism. Let $N$ be the kernel of $\phi$. Let $\phi:G \to G / N$ be canonical homomorphism. Then there exists an isomorphism $f:G / N \to \psi(G)$ such hat $\psi = f \circ \phi$.
+  \\\\
+  $f(xN) = \psi(x)$. ($f$ is well defined).
+  \begin{example}
+    Let $g \in G$, and $\psi(p) = g^p$. We know that if $|g| = n$, then $\ker(\psi) = n\ZZ$.
+    \\\\
+    $\langle g \rangle = \psi(\ZZ) \subset G$.
+    \\\\
+    $Z / n\ZZ$ is a cyclic group of order $n$ and is therefore isomorphic to $\langle g \rangle = \psi(\ZZ)$ which is also a cyclic group of order $n$.
+  \end{example}
+\end{theorem}
+\begin{lemma}
+  If $f:A \to B$ and $g:B \to C$ are homomorphisms, then $g\circ f:A \to C$ is a homomorphism.
+  \begin{proof}
+    \[
+      g \circ f (a_1 a_2) = g(f(a_1 a_2)) = g(f(a_1)f(a_2)) = g(f(a_1))g(f(a_2))
+    \]
+  \end{proof}
+\end{lemma}
+
+\begin{example}
+  $\phi:A \times B \to A$. $\phi((a, b)) = a$ is a homomorphism.
+  \\\\
+  Check: $\phi((a_1,b_1)(a_2,b_2)) = \phi((a_1a_2,b_1b_2)) = a_1a_2 = \phi(a_1,b_1)\phi(a_2,b_2)$
+  \\\\
+  $\ker(\phi) = \{(e, b): b \in B\} = \{e\}\times B \subset A \times B$.
+\end{example}
+\begin{example}
+  \[
+    \ZZ_2 \times \ZZ_2 \times \ZZ_2 \to \ZZ_2
+  \]
+  $\phi(a,b,c) = (a + b + c)_{\mod 2}$. Kernel of $\phi$ is $\{(0, 0, 0), (1, 0, 1), (0, 1, 1), (1, 1, 0)\} = N$.
+  \\\\
+  \[\ZZ_2 \times \ZZ_2 \times \ZZ_2 / N \cong \ZZ_2\]
+\end{example}
+
+\begin{example}
+  $\phi:$Isometries of a cube$\to S_3 = $ permutations $(x, y, z)$
+  \\\\
+  $\phi(g) = $ permutations of axes determined by $\phi$.
+  \\\\
+  Kernel of $\phi \cong \ZZ_2 \times \ZZ_2 \times \ZZ_2$.
+\end{example}
+
+\end{document}

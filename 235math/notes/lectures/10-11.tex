@@ -1,0 +1,88 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+
+\begin{document}
+
+\section{10-11}
+
+\begin{lemma}
+  Conjugacy is an equivalence relation.
+
+  $x \sim y$ if $x = gyg^{-1}$ for some $g \in G$
+\end{lemma}
+
+\begin{theorem}
+  Any two k-cycles in $S_n$ are conugate. Moreover, any conjugate of a k-cycle is a k-cycle.
+
+  \begin{proof}
+    $\alpha = (a_1 a_2 \dots a_k) \quad \beta = (b_1 b_2 \dots b_k)$
+
+    Let $\sigma$ be a bijection with $\sigma(b_i) = a_i$ for $1 \leq i \leq k$ 
+
+    Then $\sigma \beta \sigma^{-1} = \alpha$. Claiming that $\beta$ and $\alpha$ are conjugate to one another.
+
+    If $x \notin \{a_1 \ \dots \ a_k\}$, then $\sigma \alpha \sigma^{-1}(x) = x$
+
+    \begin{example}
+      $\sigma \beta \sigma^{-1} (a_i) = \sigma \beta b_i = \sigma b_{i + 1} = a_{i + 1} = \alpha (a)$
+    \end{example}
+  \end{proof}
+\end{theorem}
+
+\subsection{$A_4$ is the group of rigid motions of a tetrahedron}
+
+\begin{note}
+  $A_4$ is the subgroup of even elements in $S_4$.
+\end{note}
+
+\begin{gather*}
+  \text{identity: } [e] = \{()\} \\
+  [(12)(34)] = \{(12)(34), (13)(24), (14)(23)\} \\
+  \text{Clockwise rotations about a face: } [(123)] = \{(123), (134), (142), (243)\} \\
+  \text{Counter clockwise rotations about a face: } [(132)] = \{(132), (143), (124), (234)\}
+\end{gather*}
+
+\begin{note}
+  $A_4$ has no 6 element subgroup even though 6 divides $|A_4|$
+\end{note}
+
+\section{Isomorphisms}
+
+\begin{definition}
+  $(G, \cdot) \ \text{and} \ (H, \circ)$ are isomorphic if there exists a bijection $\phi:G \to H$ such that $\phi(a \cdot b) = \phi(a) \circ \phi(b)$ for all $a, b \in G$.
+
+  This would make $\phi$ an isomorphism.
+
+  $G "equal sign with sim on top" H$
+\end{definition}
+
+\begin{note}
+  Let $H \subset G$ be a subgroup. It is possible for $x \not\sim y$ in H while $x \sim y$ in G. This is a distinguishing between $\sim_H$ and $\sim_G$.
+
+
+  \begin{example}
+    $H \subset S_{17}$
+
+    $H = \langle (1 \ 2 \dots 17) \rangle $
+
+    H is cyclic and abelian.
+
+    It has 17 conjugacy classes.
+
+    All nontrivial elements of H are conjugate in $S_{17}$.
+  \end{example}
+\end{note}
+
+\begin{note}
+  In an abelian group, two elements are conjugate iff they are equal.
+
+  If $H$ is abelian, then $(x \sim y) \Leftrightarrow x = aya^{-1} = y$
+\end{note}
+  
+
+
+\end{document}

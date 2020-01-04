@@ -1,0 +1,132 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-25}
+
+
+\begin{document}
+
+\section{Lecture 11-25}
+
+\begin{definition}
+  Let $A \subseteq \RR$ and let $c \coloneqq \{U_i : i \in I\}$, where $I$ is an index set, $U_i$ is open for all $i \in I$.
+  \\\\
+  Then $c$ i scalled an \ul{open cover} of $A$ if $A \subseteq U_{i \in I}U_i$. i.e. every $x \in A$ is contained.
+\end{definition} 
+
+If $y \subseteq I$ such that $\{U_j : j \in J\} coloneqq \varphi$  is still a cover of $A$, we say that $\varphi'$ is a \ul{finite subcover} of $\varphi$.
+\begin{example}
+  Let $A = [0, 1]$ and let $\varphi \coloneqq \{V_{1 / 2}(x) : x \in [0, 1]\}$.
+  \\\\
+  Then $\varphi$ is an open cover of $[0, 1]$ because 
+  \[
+    [0, 1] \subseteq \cup_{x \in [0, 1]}V_{1 / 2}(x) : x \in [0, 1] \subseteq \left]-1 / 2, 3 / 2\right[
+  \]
+\end{example} 
+
+\begin{theorem}[Heine-Borel]
+  $A \subseteq \RR$ is compact (closed and bounded) if and only if \ul{every} open cover of $A$ has a finite subcover.
+  \begin{proof}
+    \begin{itemize}
+      \ii[]
+      \ii[$\Rightarrow$]
+      Special Case: $A$ is a closed and bounded interval $[a, b] \coloneqq I_0$. Assume that $c$ is an open cover of $I_0$ that doesn't have a finite subcover. Divide $I_0$ into two closed subintervals of equal width $[a, c]$ and $[c, b]$ where $c = \frac{a + b}{2}$.
+      \\\\
+      For at least one of these subintervals, $\varphi$ does not have a finite subcover. Otherwise, $\varphi$ would have a finite subcover $\varphi'$ of $[a, \varphi]$ and $\varphi''$ of $[\varphi, b]$. Then $\varphi' \cup \varphi''$ would be a finite open cover of $I_0$, which doesn't exist.
+      \\\\
+      Let $I_1$ be (one of) the subinterval(s) without finite subcover. Divide $I_1$ into 2 closed subintervals of equal width. At least one of them doesn't have $A$.
+      \\\\
+      We obtain a nested sequence $I_0 \supseteq I_1 \supseteq I_2 \supseteq \cdots$ of closed and bounded intervals. Then  
+      \[
+        \cap_{n \in \NN_0}I_n \neq \varnothing
+      \] by the nested interval property.
+      \\\\
+      Let $x_0 \in \cap_{n \in \NN_0}I_n$. Then $x_0 \in I_0$, thus $\exists i \in I$ such that $x_0 \in U_i$ which is open. Thus, $\exists \epsilon > 0 : V_\epsilon(x_0) \subseteq U_i$.
+      \\\\
+      Claim: $\exists n \in \NN_0 : I_n \subseteq V_\epsilon(x_0)$.
+      \begin{proof}
+        $|I_n| = 1 / 2^n |I_0|$. Let $n \in \NN_0$ such that $1 / 2^n |I_0| < \epsilon$.
+        \\\\
+        Let $x \in I_n$ be arbitrary. Then $|\underbrace{x}_{\in I_n} - \underbrace{x_0}_{\in I_n} | \leq 1 / 2^n |I_0| < \epsilon \Rightarrow x \in V_\epsilon(x_0)$.
+        \\\\
+        $\Rightarrow I_n \subseteq V_\epsilon(x_0)$. Now we have:
+        \begin{gather*}
+          I_n \subseteq V_\epsilon(x_0) \subseteq U_i
+        \end{gather*}
+        i.e. $\{U_i\}$ covers $I_n$
+        \\\\
+        $\varphi$ has a finite (of length 1) subcover for $I_n$. CONTRADICTION.
+        \\\\
+        $\Rightarrow \varphi$ does have a finite subcover.
+      \end{proof} 
+      \ul{General Case}; $A \subseteq \RR$ compact. $\varphi$ open cover. Since $A$ is bounded, $\exists M > 0$ such that $A \subseteq [-M, M]$. Let $U \coloneqq \RR / A$ which is open.
+      \\
+      Consider $\varphi' \coloneqq \varphi \cap \{U\}$. Then $\varphi'$ covers $\RR$. Thus $\varphi '$ covers $[-M, M]$ which is closed and bounded interval by special case.
+      \\
+      By special case, $\varphi '$ has a finite subcover $\varphi''$. $\varphi''$ may not be a subcover of $\varphi$ because $\varphi''$ may contain $U$. However, if $\varphi''$ should contain $U$, we can simply remove it.
+      \\
+      i.e. if $U \in \varphi''$, let $\varphi''' = \varphi'' / \{U\}$. If $U \notin \varphi''$, let $\varphi''' \coloneqq \varphi''$.
+      \\
+      Since $U = \RR / A$, $\varphi'''$ will still cover $A$. Thus we've obtained a finite subcover of $A$.
+    \end{itemize} 
+    \end{proof} 
+\end{theorem} 
+
+\begin{theorem}
+   $A \subseteq \RR$ is compact (closed and bounded) if and only if \ul{every} open cover of $A$ has a finite subcover.
+  \begin{proof}
+    \begin{itemize}
+      \ii[]
+      \ii[$\Leftarrow$] 
+      Let $A$ not be compact. We need to find an open cover of $A$ without a finite subcover. $A$ not closed: assignment 12.
+      \\\\
+      \textbf{$A$ unbounded}
+      \\
+      Let $\varphi \coloneqq \{U_n : n \in \NN\}$ where $U_n \coloneqq ]-n, n[$. Then $\varphi$ covers $\RR$ and thus $A$. Consider any finite subset ${m\{U_{n_1}}, \cdots, U_{n_k}$. 
+    \end{itemize} 
+  \end{proof}
+ 
+\end{theorem} 
+
+\begin{remark}
+  THe "classical" definition of compacness is closed and bounded, however this definition doesn't generalize will beyond $\RR^n$ since there isn't even a notion of boundedness on general "topological spaces" However, open covers still make perfect sense on topological spaces. Thus, the \ul{def} of compactness was revised to
+  \\\\
+  \begin{definition}[Modern definition of compactness]
+    $A$ is called compact if every open cover of $A$ has a finite subcover.
+  \end{definition} 
+  "Modern" heine borel becomes:
+  \begin{definition}
+    $A \subseteq \RR$ is compact if and only if $A$ is closed and bounded.
+  \end{definition} 
+  Applications of heine borel: It can often be useful to generalize "local" properties of functions to "global" properties if the domain is compact.
+  \begin{definition}
+    $f : A \to \RR$ is called \ul{locally bounded} if $\forall x_0 \in A$, $\exists \epsilon > 0 : f$ is bounded on the domain $V_\epsilon(x_0)$.
+  \end{definition} 
+\end{remark} 
+
+\begin{example}
+  $f: \left]0, \infty\right[ \to \RR$, $x \to 1 / x$.
+  \\\\
+  $f$ is bounded on any neighborhood about $x_0$ that does not contain $0$ is in its boundary. Thus $f$ is locally bounded, but \ul{not} (globally) bounded!
+  \\\\
+  However, this can't happen if the domain is compact
+\end{example} 
+
+\begin{theorem}
+  Let $A \subseteq \RR$ be compact. $f: A \to \RR$ be locall bounded. Then $f$ is bounded (on $A$).
+  \begin{proof}
+    Let $x \in A$ be arbitrary. $f$ locally bounded $\Rightarrow \exists \epsilon_x > 0$ such that $f$ is bounded on interval $V_{\epsilon_x}(x)$.
+    \\\\
+    Then $\varphi \coloneqq \{V_{\epsilon_x} : x \in A$ is an open cover of $A$. Since $A$ is compact, $\varphi$ has a finite subcover $\{V_{\epsilon_{x_1}}, \cdots, V_{\epsilon_{x_n}}(x_n)\}$.
+      \\\\
+      On each of these $n$ neighborhoods, $f$ is bounded.
+      \begin{gather*}
+        \Rightarrow \exists M_1, \cdots, M_n \geq 0
+      \end{gather*}  such that $|f|(x) \leq M_1, \cdots, |f|(x) \leq M_n$ bounded on $V_{\epsilon_n}(x_n)$.
+      \\\\
+      Let $M \coloneqq \max\{M_1, \cdots, M_n\}$. Then $|f|(x) \leq M, \cdots, |f| \leq M$.
+  \end{proof} 
+\end{theorem} 
+\end{document}

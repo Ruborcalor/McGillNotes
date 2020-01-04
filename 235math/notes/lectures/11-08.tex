@@ -1,0 +1,140 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-08}
+
+
+\begin{document}
+
+\section{11-08}
+
+\begin{proposition}[16.15]
+  For commutative ring with unity:
+  \\\\
+  $D$ is an integral domain $\Leftrightarrow$ for all nonzero $a \in D$, $ab = ac \Leftrightarrow b = c$
+\end{proposition} 
+
+\begin{theorem}[16.16]
+  Finite integral domain $\Rightarrow$ field.
+  \\\\
+  Let $a \in D^* = D \setminus \{0\}$
+  \\\\
+  Then $\varphi:D^* \to D^*$ where  $\varphi(x) = ax$ for all $x \in D^*$.
+  \\\\
+  $\varphi$ is injective because $\varphi(x_1) = \varphi(x_2) \Rightarrow ax_1 = ax_2 \Rightarrow x_1 = x_2$ 
+  \\\\
+  $\varphi$ is surjective because $|D^*| < \infty$ 
+  \\\\
+  Thus, $1 = \varphi(x)$ for some $x \in D^*$. Hence $ax = 1$ for some $x$, so $a^{-1}$ exists.
+\end{theorem} 
+
+\begin{definition}
+  The \ul[Characteristic] of $R$ is the smallest  $n$ such that $nr = 0$ for all $r \in R$. If there isn't such a smalest $n$, we say that $R$ has \ul{characteristic 0}.
+\end{definition} 
+
+\begin{example}
+  $\ZZ_n$ has characteristic $n$.
+  \\\\
+  $\ZZ, \QQ, \RR, \CC$ all have characteristic 0.
+  \\\\
+  $\mathbb{F}_4$ has characteristic 2.
+  \begin{gather*}
+    \mathbb{F}_4 = 
+    \left\{
+      \begin{pmatrix}
+        1 & 0 \\
+        0 & 1
+      \end{pmatrix} ,
+      \begin{pmatrix}
+        1 & 1 \\
+        0 & 1
+      \end{pmatrix} ,
+      \begin{pmatrix}
+        0 & 1 \\
+        1 & 1
+      \end{pmatrix} ,
+      \begin{pmatrix}
+        0 & 0 \\
+        0 & 0
+      \end{pmatrix} 
+    \right\}
+  \end{gather*} 
+\end{example} 
+
+\begin{lemma}
+  If $R$ is a ring with unity, then char($R$) equals the smallest  $n$ such that $n_1 = 0$. i.e. the order of $1$ is $(R, +)$.
+  \\\\
+  "It is enough to find the additive order of the multiplicative identity element".
+  \begin{proof}
+    \[nr = \underbrace{r + r + \cdots + r}_{n}\]
+    Let $n$ denote $n_1$ for a ring with unity.
+    \[
+      nr = (n 1)r = 0r = 0
+    \] holds for all $r$! $n$ is minimal with this property because $n = |1|$ in $(\RR, +)$.
+  \end{proof} 
+\end{lemma} 
+
+\begin{theorem}
+  The characteristic of an integral domain is either $0$ or $p$ prime.
+  \begin{proof}
+    Suppose char$(R)$ is $m = ab$ with $1 < a, b < m$.
+    \\\\
+    Then $a 1, b 1 \neq 0$. But $(a 1)(b 1) = ab 1 = m 1 = 0$. Contradiction because this contradicts integral domain.
+    \begin{gather*}
+      (n_1r_1)(n_2r_2) = n_1n_2(r_1r_2)
+    \end{gather*} 
+  \end{proof} 
+\end{theorem} 
+
+\subsection{Ring Homomorphisms \& Ideals}
+
+A ring homomorphism $\varphi: R \to S$ satisfies:
+\begin{gather*}
+  \varphi(a + b) = \varphi(a) + \varphi(b) \\
+  \varphi(ab) = \varphi(a)\varphi(b)
+\end{gather*} 
+A bijective ring homomorphism is an \ul{isomorphism}.
+\begin{example}
+  $\varphi:\ZZ \to \ZZ_n$.  $\varphi(a) = a \mod(n)$ is a homomorphism.
+\end{example} 
+
+\begin{proposition}
+  Let $\varphi: R \to S$ be a homomorphism.
+  \begin{enumerate}
+    \ii
+    $\varphi(R)$ is a subring of $S$.
+    \ii
+    If $R$ is commutative, then $\varphi(R)$ is commutative. 
+    \ii
+    $\varphi(0) = 0$ 
+    \ii
+    If $R$ and $S$ are rings with unity $1_R$ and $1_S$ and $\varphi$ is surjective, then $\phi(1_R) = 1_S$ 
+    \ii
+    If $R$ is a field, then either $\varphi(R) = 0$ or $\varphi(R)$ is a field.
+    \begin{proof}
+      \begin{itemize}
+        \ii[]
+        \ii[3.]
+        $\varphi(0_R) = \varphi(0_R + 0_R) = \varphi(0_R) + \varphi(0_R)$ so $\varphi(0_R) = 0_S$ 
+        \ii[1.]
+        $0_S \in \varphi(R)$.
+        \\\\
+        $a, b \in \varphi(R) \Rightarrow a - b \in \varphi(R)$ because $a = \varphi(a')$ and $b = \varphi(b')$ for some $a', b' \in R$ so $a - b = \varphi(a') - \varphi(b') = \varphi(a' - b') \in \varphi(R)$
+        \\\\
+        Likewise,  $ab = \varphi(a')\varphi(b') = \varphi(a'b') \in \varphi(R)$.
+        \ii[2.]
+        If $a'b' = b'a'$, then:
+        \[
+          ab = \varphi(a')\varphi(b') = \varphi(a'b') = \varphi(b'a') = \varphi(b')\varphi(a') = ba
+        \]
+        \ii[4.]
+        Let $x \in R$ such that $\varphi(x) = 1_S$. Then $1_S = \varphi(x) = \varphi(1_R x) = \varphi(1_R)\varphi(x) = \varphi(1_R)(1_S) = \varphi(1_R)$ 
+      \end{itemize} 
+      
+    \end{proof} 
+  \end{enumerate} 
+\end{proposition} 
+
+\end{document}

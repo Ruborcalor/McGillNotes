@@ -1,0 +1,154 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{parskip}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+\begin{document}
+
+\title{Notes 2019-09-23}
+\author{Cole Killian}
+
+\maketitle
+
+\subsection{Homework: Read 2.1 on your own}
+
+\section{Absolute Values}
+
+Definition: Let $x \in \mathbb{R}$, then
+\[|x| = 
+  \begin{cases}
+    x, & x \geq 0 \\
+    -x, & x \leq 0 \\
+  \end{cases}
+\]
+
+Note that $|x| = \sqrt{x^2}$
+
+\subsection{Discussing properties of absolute value}
+
+\fbox{\begin{minipage}{\linewidth}
+Theorem 
+
+(a) $\forall x, y \in \mathbb{R}: |x * y| = |x| * |y|$
+
+(b) Let  $a > 0$. Then $|x| \leq a \Leftrightarrow -a \leq x \leq a$
+
+(c)  $\forall x \in \mathbb{R}: -|x| \leq x \leq |x|$
+
+Review: Math notation so that I can confidently write it myself instead of copying from the board. This will propably improve my retention.
+\end{minipage}}
+
+\subsection{Proof}
+
+(a) $|xy| = \sqrt{(xy)^2} = \sqrt{x^2y^2} = \sqrt{x^2}\sqrt{y^2} = |x||y| \ \checkmark$
+
+(b) "$\Rightarrow$ " Let $|x| \leq a$. First case: $x \geq 0$. If this is true, then if follows that $x = |x| \leq a \Rightarrow x \leq a \ \ \text{and} \ -a \leq 0 \leq x \Rightarrow -a \leq x \leq a \checkmark$. Second case: $x < 0$. If this is true then $-x = |x| \leq a \Rightarrow x \geq -a \Rightarrow -a \leq x \ \text{and} \ x \leq 0 \leq a \Rightarrow x \leq a \Rightarrow -a \leq x \leq a$. Combining these cases gives that $-a \leq x \leq a$ in all cases.
+
+(b) "$\Leftarrow$ ". Let $-a \leq x \leq a \Rightarrow a \geq -x \geq -a \Rightarrow -a \leq -x \leq a$. Because  $|x| = x \ \text{or} \ |x| = -x$, it follows that $-a \leq |x| \leq a \Rightarrow |x| \leq a$ 
+
+(c) Let $a \equiv |x| \geq 0$, then $|x| \leq a = |x|$. Also, it follows from (b) that $-a \leq x \leq a \ \text{which can also be seen as} \ -|x| \leq x \leq |x|$.
+
+\subsection{The triangle inequality}
+
+About estimating absolute values of sums. Very important to analysis. Possibly most important in all of mathematics.
+
+$\forall x, y \in \mathbb{R}: |x + y| \leq |x| + |y|$ 
+
+\subsection{Proof}
+
+By Previous theorem part c we have $-|x| \leq x \leq |x| \ \text{and} \ -|y| \leq y \leq |y|$. The trick to the proof involves adding these inequalities together.
+
+This gives $-(|x| + |y|)_{\text{Let this be "-a"}} \leq x + y \leq (|x| + |y|)_{\text{Let this be "a"}}$. It follows from previous theorem part b that  $|x + y| \leq a = |x| + |y| \Rightarrow |x + y| \leq |x| + |y|$. This theorem (the triangle inequality) is used to find the upper bounds of sums.
+
+Next theorem helps with lower bounds:
+
+\fbox{\begin{minipage}{\linewidth}
+    Theorem - $\forall x, y \in \mathbb{R}: |x - y| \geq |x| - |y| \ \text{and} \ |x - y| \geq |y| - |x|$. This one is called the triangle inequality for sums.
+\end{minipage}}
+
+\subsection{Proof}
+
+$|x| = |x - y + y| \leq |x - y| + |y| \Rightarrow |x| - |y| \leq |x - y| \Rightarrow |x - y| \geq |x| - |y|$ .
+
+Interchange x and y (to avoid redoing the proof):
+$|y - x| = |x - y| \geq |y| - |x| \Rightarrow |x - y| \geq |y| - |x|$
+
+Remark:
+$|x - y| \geq |x| - |y| \ \text{and} \ |x - y| \geq |y| - |x|$ can be combined to $\Rightarrow |x - y| \geq ||x| - |y||$. This final equation looks nice but can be hard to but into practice. It is normally easier to pick the correct of the other two equations.
+
+ \fbox{\begin{minipage}{\linewidth}
+Theorem - Generalized Triangle Inequality.
+Let $x_1, \dots, x_n \in \mathbb{R}$, then $|x_1 + \dots + x_n| \leq |x_1| + \dots + |x_n|$
+\end{minipage}}
+Proof of this is on assignment 3.
+
+\subsection{Moving on. Absolute values are needed in the following definition:}
+
+Definition: $\epsilon$ neighborhood
+
+Let $\epsilon > 0$ and let $a \in \mathbb{R}$, the $\epsilon$ neighborhood of a is defined as $V_\epsilon (a) \equiv \{x \in \mathbb{R}: |x - a| \le \epsilon\}$
+
+$|x - a| < \epsilon \Leftrightarrow -\epsilon < x - a < \epsilon \Leftrightarrow a - \epsilon < x < a + \epsilon.$. This leads to $V_\epsilon (a) = ]a - \epsilon, a + \epsilon[$
+
+ \fbox{\begin{minipage}{\linewidth}
+     Theorem - if $x \in V_\epsilon (a)$ for all  $\epsilon > 0$, then $x = a$
+\end{minipage}}
+
+\subsection{Proof}
+
+Assume that $x \neq a$ and find a contradiction.
+
+First case: $x > a$. Let $\epsilon = x - a > 0$, then $a + \epsilon = x \Rightarrow x \ni ]a - \epsilon, a + \epsilon[ = V_\epsilon(a)$
+
+Second case:  $x < a$. Let $\epsilon = a - x$. Prove the rest yourself.
+
+This theorem implies the following. 
+
+$$ \bigcap_{\epsilon > 0} V_\epsilon (a) = \{a\} $$
+
+\section{Supremum and Infimum}
+
+Def: Let $s \subset \mathbb{R}, s \neq \varnothing$. We say that:
+
+S is bounded from above if $\exists u \in \mathbb{R}$ such that $\forall s \in S: s \leq u$. Upper bound follows same idea.
+
+\subsection{Examples}
+
+(1) $S = [0, 1[$.
+
+Then 1, 2, $\pi$, 1.5 are all upper bounds for S, and 0, -1, $\dots$ are lower bounds for S.( This answers my question about whether or not an upper or lower bound has to be right at the bound. )
+
+(2) $A = [1, \infty[$ is not bounded from above. 
+
+Definition: Let $S \subset \mathbb{R}, S \neq \varnothing,$ S is bounded from above. $s \in \mathbb{R}$ is called the \underline{SUPREMUM} or \underline{Least upper bound} of S. Symbolically: $s = \text{supr}S$ if:
+
+(1) $s$ is an upper bound for S.
+(2) $\forall t$ upper bounds of S, $s \leq t$.
+
+Similary for Infimum. Definition: Let $S \subset \mathbb{R}, S$ is bounded from below. A number $u \in \mathbb{R}$ is called the infimum of S if $u$ is a lower bound of S and $\forall t$ lower bounds of S, $u \geq t$
+
+\subsection{Examples}
+
+$S = [0, 1[$. Claim that $\text{inf}S = 0$. Proof: 0 is indeed lower bound of S $\checkmark$. Let v be any lower bound for S. This lower bound cannot be positive because if it was $0 < v$ and so it wouldn't be  a lower bound. $\Rightarrow v \leq 0 \Rightarrow$ 0 is the infimum of S.
+
+No supremum in this case (THIS IS WHAT I THOUGHT INITIALLY BUT I WAS WRONG). Claim: supr$S = 1$. Proof: 1 is an upperbound of S  $\checkmark$. Let $v$ be any upper bound of S. If we assume that $v$ is less than 1, we get contradiction that $v$ is not an upper bound of S. Therefore $v \geq 1$. Therefore $1 = \text{supr}(S)$.
+
+Questions: Given any non empty set $S \subset \mathbb{R}$ bounded from above, must there be a supremum? Same idea of question for bounded below infimum. Complicated answers to these questions. Postpone this to next class.
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,91 @@
+\contentsline {section}{\numberline {1}Proof of $(A \cup B)' = A' \cap B'$}{4}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Proof of $(A \cup B)' \subset A' \cap B'$}{4}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Proof of $(A \cup B)' \supset A' \cap B'$}{5}{subsection.1.2}% 
+\contentsline {section}{\numberline {2}Product of Sets}{5}{section.2}% 
+\contentsline {section}{\numberline {3}Relations and Functions}{5}{section.3}% 
+\contentsline {section}{\numberline {4}Composite Functions}{5}{section.4}% 
+\contentsline {section}{\numberline {5}Lecture 2019-09-09}{6}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Creating a partition}{7}{subsection.5.1}% 
+\contentsline {section}{\numberline {6}Mathematical Induction}{8}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Review proof of uniqueness}{10}{subsection.6.1}% 
+\contentsline {subsection}{\numberline {6.2}Definition and example of Groups}{10}{subsection.6.2}% 
+\contentsline {subsection}{\numberline {6.3}Proposition 3.21}{11}{subsection.6.3}% 
+\contentsline {subsubsection}{\numberline {6.3.1}Proof of existence:}{11}{subsubsection.6.3.1}% 
+\contentsline {subsubsection}{\numberline {6.3.2}Proof of uniqueness:}{11}{subsubsection.6.3.2}% 
+\contentsline {subsection}{\numberline {6.4}Proposition 3.22}{11}{subsection.6.4}% 
+\contentsline {subsection}{\numberline {6.5}Notation}{12}{subsection.6.5}% 
+\contentsline {subsection}{\numberline {6.6}3.3 a \underline {subgroup} H of group G is a subset of G}{12}{subsection.6.6}% 
+\contentsline {subsubsection}{\numberline {6.6.1}ex. of the above.}{12}{subsubsection.6.6.1}% 
+\contentsline {subsection}{\numberline {6.7}Proposition 3.30: Criterian for subgroup}{12}{subsection.6.7}% 
+\contentsline {subsubsection}{\numberline {6.7.1}Proof that being a group gives these requirements}{12}{subsubsection.6.7.1}% 
+\contentsline {subsubsection}{\numberline {6.7.2}Proof that these requirements means it must be a subgroup}{12}{subsubsection.6.7.2}% 
+\contentsline {subsection}{\numberline {6.8}Proposition 3.31}{12}{subsection.6.8}% 
+\contentsline {section}{\numberline {7}Cyclic Groups}{13}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Cyclic Subgroup}{13}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}Examples}{13}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Proof}{13}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.4}Examples}{13}{subsection.7.4}% 
+\contentsline {subsection}{\numberline {7.5}Proof}{13}{subsection.7.5}% 
+\contentsline {subsection}{\numberline {7.6}Practice}{14}{subsection.7.6}% 
+\contentsline {subsection}{\numberline {7.7}The \underline {group of units modulo n}}{14}{subsection.7.7}% 
+\contentsline {subsection}{\numberline {7.8}Examples}{14}{subsection.7.8}% 
+\contentsline {subsection}{\numberline {7.9}Proof}{14}{subsection.7.9}% 
+\contentsline {section}{\numberline {8}Cyclic Subgroups}{15}{section.8}% 
+\contentsline {section}{\numberline {9}Chapter 5 09-27}{15}{section.9}% 
+\contentsline {section}{\numberline {10}Lecture 09-30}{18}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}Review Complex Numbers}{18}{subsection.10.1}% 
+\contentsline {section}{\numberline {11}Math 235 Tutorial --- 09-27}{19}{section.11}% 
+\contentsline {subsection}{\numberline {11.1}Groups \& Subgroups}{19}{subsection.11.1}% 
+\contentsline {section}{\numberline {12}10-02}{23}{section.12}% 
+\contentsline {subsection}{\numberline {12.1}Cosets and Lagrange's Theorem}{24}{subsection.12.1}% 
+\contentsline {section}{\numberline {13}Tutorial 5: Cyclic Groups - 10-04}{28}{section.13}% 
+\contentsline {section}{\numberline {14}Lecture 10-07}{32}{section.14}% 
+\contentsline {section}{\numberline {15}Case Study: The Cube}{34}{section.15}% 
+\contentsline {section}{\numberline {16}Tutorial 6: Permutation Groups}{34}{section.16}% 
+\contentsline {section}{\numberline {17}10-11}{36}{section.17}% 
+\contentsline {subsection}{\numberline {17.1}$A_4$ is the group of rigid motions of a tetrahedron}{36}{subsection.17.1}% 
+\contentsline {section}{\numberline {18}Isomorphisms}{37}{section.18}% 
+\contentsline {section}{\numberline {19}Isomorphisms}{37}{section.19}% 
+\contentsline {section}{\numberline {20}Cosets}{41}{section.20}% 
+\contentsline {section}{\numberline {21}Isomorphisms Continued}{44}{section.21}% 
+\contentsline {section}{\numberline {22}Direct Products}{46}{section.22}% 
+\contentsline {section}{\numberline {23}Normal Subgroups and Factor Groups}{47}{section.23}% 
+\contentsline {subsection}{\numberline {23.1}Factor Group or Quotient Group}{47}{subsection.23.1}% 
+\contentsline {section}{\numberline {24}Isomorphisms}{49}{section.24}% 
+\contentsline {section}{\numberline {25}Simple Groups}{52}{section.25}% 
+\contentsline {section}{\numberline {26}Homomorphisms}{52}{section.26}% 
+\contentsline {section}{\numberline {27}Kernal}{54}{section.27}% 
+\contentsline {section}{\numberline {28}10-30}{56}{section.28}% 
+\contentsline {subsection}{\numberline {28.1}Classification of finitely generated abelian groups}{56}{subsection.28.1}% 
+\contentsline {section}{\numberline {29}Tutorial 2019-11-01. Normal Subgroups and Quotient Groups}{58}{section.29}% 
+\contentsline {subsection}{\numberline {29.1}Normal Subgroups}{58}{subsection.29.1}% 
+\contentsline {subsection}{\numberline {29.2}Quotient Groups}{58}{subsection.29.2}% 
+\contentsline {section}{\numberline {30}2019-11-01 Rings}{60}{section.30}% 
+\contentsline {section}{\numberline {31}11-04}{61}{section.31}% 
+\contentsline {section}{\numberline {32}11-06}{63}{section.32}% 
+\contentsline {subsection}{\numberline {32.1}Integral domains and fields}{64}{subsection.32.1}% 
+\contentsline {section}{\numberline {33}Tutorial 11-08}{65}{section.33}% 
+\contentsline {subsection}{\numberline {33.1}Homomorphisms}{65}{subsection.33.1}% 
+\contentsline {section}{\numberline {34}11-08}{68}{section.34}% 
+\contentsline {subsection}{\numberline {34.1}Ring Homomorphisms \& Ideals}{69}{subsection.34.1}% 
+\contentsline {section}{\numberline {35}11-11}{70}{section.35}% 
+\contentsline {subsection}{\numberline {35.1}Ideals}{71}{subsection.35.1}% 
+\contentsline {section}{\numberline {36}Lecture 11-13}{73}{section.36}% 
+\contentsline {subsection}{\numberline {36.1}Maximal and Prime Ideals}{73}{subsection.36.1}% 
+\contentsline {section}{\numberline {37}Tutorial 11-15}{76}{section.37}% 
+\contentsline {section}{\numberline {38}Lecture 11-15}{81}{section.38}% 
+\contentsline {section}{\numberline {39}Lecture 11-18}{83}{section.39}% 
+\contentsline {subsection}{\numberline {39.1}Polynomial Rings}{83}{subsection.39.1}% 
+\contentsline {section}{\numberline {40}Lecture 11-20}{86}{section.40}% 
+\contentsline {subsection}{\numberline {40.1}Irreducible Polynomials}{87}{subsection.40.1}% 
+\contentsline {section}{\numberline {41}Lecture 11-22}{88}{section.41}% 
+\contentsline {subsection}{\numberline {41.1}Eisention's Criterion}{89}{subsection.41.1}% 
+\contentsline {section}{\numberline {42}Lecture 11-25}{90}{section.42}% 
+\contentsline {subsection}{\numberline {42.1}Eisenstein's Criterion}{90}{subsection.42.1}% 
+\contentsline {section}{\numberline {43}Lecture 11-27}{91}{section.43}% 
+\contentsline {subsection}{\numberline {43.1}Classification of symmetries over $E^2$ plane}{92}{subsection.43.1}% 
+\contentsline {section}{\numberline {44}Tutorial 12-02}{93}{section.44}% 
+\contentsline {section}{\numberline {45}Lecture 12-02}{93}{section.45}% 
+\contentsline {subsection}{\numberline {45.1}Construction of $\mathbb F_D$}{93}{subsection.45.1}% 
+\contentsline {subsection}{\numberline {45.2}Factorization}{95}{subsection.45.2}% 
+\contentsline {subsection}{\numberline {45.3}Summary}{95}{subsection.45.3}% 

@@ -1,0 +1,107 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+
+\begin{document}
+
+\section{Simple Groups}
+
+\begin{definition}
+  A group $G$ with no normal subgroups except $G$ and $\{1_G\} = \{e\}$ is called \ul{simple}.
+\end{definition}
+
+\begin{example}
+  \begin{enumerate}
+    \ii[]
+    \ii
+    $\ZZ_p$ with $p$ prime. The only subgroups are $G$ and $\{1_G\}$.
+    \ii
+    $A_n \quad \forall n \geq 5$.
+  \end{enumerate}
+\end{example}
+
+In some sense, simple groups are like the primes. Every group can be built from simple groups.
+
+\section{Homomorphisms}
+
+\begin{definition}
+  A \ul{homomorphism} from group $(G, \cdot)$ to $(H, \circ)$ is a map $\phi:G \to H$ such that is preserves multiplication. i.e. $\phi(g_1 \cdot g_2) = \phi(g_1)\circ\phi(g_2)$ for all $g_1, g_2 \in G$.
+  \\\\
+  The range $\phi(G) \subset H$ is called the \ul{homomorphic image} of $G$.
+  \begin{remark}
+    $\phi(G)$ is a subgroup of $H$.
+  \end{remark}
+  \begin{note}
+    All isomorphisms are homomorphisms with the additional property that $\phi$ is a bijection.
+  \end{note}
+\end{definition}
+
+\begin{example}
+  Let $g \in G$. There is a homomorphism $\phi:\ZZ \to G$ defined by $\phi(n) = g^n$.
+  \\\\
+  Check: (review how binary operations apply below)
+  \begin{gather*}
+    \phi(a + b) = g^{a + b} = g^ag^b = \phi(a)\phi(b) \\
+    \phi(\ZZ) = \langle g \rangle \subset G
+  \end{gather*}
+\end{example}
+\begin{example}
+  \begin{gather*}
+    \det: \GL_n(\RR) \to \RR^* \\
+    \det(AB) = \det(A) \cdot \det(B)
+  \end{gather*}
+\end{example}
+\begin{example}
+  Let $G = $ the isometries of a tetrahedron.
+  \\\\
+  $\phi:G \to \{\pm 1\}$. $\phi(g) = \pm 1$ if $g$ preserves orientation. $\phi(g) = -1$ if $g$ reverses orientation.
+\end{example}
+\begin{theorem}
+  Let $\phi:G_1 \to G_2$ be a homomorphism.
+  \begin{enumerate}
+    \ii
+    If $e_1$ is the identity element of $G_1$, the $\phi(e_1)$ is the identity element of $G_2$.
+    \ii
+    $\phi(g^{-1}) = [\phi(g)]^{-1}$ 
+    \ii
+    $H_1 \subset G_1$ is a subgroup $\Rightarrow \phi(H_1) \subset G_2$ is a subgroup
+    \ii
+    $H_2 \subset G_2$ is a subgroup $\Rightarrow \phi^{-1}(H_2)\subset G_1$ is a subgroup
+    \ii
+    $H_2 \subset G_2$ is a normal subgroup $\Rightarrow \phi^{-1}(H_2)\subset G_1$ is a normal subgroup
+  \end{enumerate}
+  \begin{note}
+    Normal groups can be used to build factor and quotient groups.
+  \end{note}
+  \begin{proof}
+    Of the above statements.
+    \begin{enumerate}
+      \ii
+      $\phi(e_1) = \phi(e_1e_1) = \phi(e_1)\phi(e_1)$. Therefore $e_2 = \phi(e_1)$.
+      \ii
+      $e_2 = \phi(e_1) = \phi(g\cdot g^{-1}) = \phi(g) \cdot \phi(g^{-1})$. Therefore $\phi(g)$ and $\phi(g^{-1})$ are inverse to one another.
+      \ii
+      Identity: $e_1 \in H_1 \Rightarrow e_2 = \phi(e_1) \in \phi(H_1)$, so image of $\phi$ contains identity element.
+      \\\\
+      Inverses: $g_2 \in \phi(H_1) \Rightarrow g_2 = \phi(g_1)$ for some $g_1 \in H_1 \Rightarrow g_1^{-1} \in H_1 \Rightarrow \phi(g^{-1}) = [\phi(g_1)]^{-1} = g_2^{-1} \in \phi(H_1)$. Therefore  image contains inverses.
+      \\\\
+      Closure: Let $g_2, g_2' \in \phi(H_1)$. Therefore $\exists g_1, g_1' \in H_1$ such that $g_2 = \phi(g_1)$ and $g_2' = \phi(g_1')$. Therefore:
+      \[
+        g_1g_1' \in H_1 \Rightarrow \phi(g_1g_1') \in \phi(H_1) \Rightarrow g_2g_2'=\phi(g_1)\phi(g_1') \in \phi(H_1)
+      \]
+      \ii
+      Identity: $e_1 \in \phi^{-1}(H_2)$ because $\phi(e_1) = e_2 \in H_2$.
+      \\\\
+      Inverses: $g_1 \in \phi^{-1}(H_2) \Rightarrow g_1^{-1} \in \phi^{-1}(H_2)$ because $\phi(g_1^{-1}) = [\phi(g_1)]^{-1} \in H_2$.
+      \\\\
+      Closure: $g_1,g_1' \in \phi^{-1}(H_2) \Rightarrow g_1g_1^{-1} \in \phi^{-1}(H_2)$ because $\phi(g_1g_1') = \phi(g_1)\phi(g_1') \in H_2$
+      \ii
+      Show that for all $g_1 \in G_1$, $g_1\phi^{-1}(H_2)g_1^{-1} \subset \phi^{-1}(H_2)$ 
+      \\\\
+      Let $k \in \phi^{-1}(H_2)$. Then $\phi(g_1kg_1^{-1}) = \phi(g_1)\phi(k)\phi(g_1^{-1}) = \phi(g_1)\phi(k)[\phi(g_1)]^{-1} \in H_2$. Since we construct with $H_2 \subset G_2$ is normal. Remember that $\phi(k) \in H_2$.
+    \end{enumerate}
+  \end{proof}
+\end{theorem}
+\end{document}

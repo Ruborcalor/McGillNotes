@@ -1,0 +1,165 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+\usetikzlibrary{calc}
+\usepackage{listofitems}
+\newcommand\cycle[2][\,]{%
+  \readlist\thecycle{#2}%
+  (\foreachitem\i\in\thecycle{\ifnum\icnt=1\else#1\fi\i})%
+}
+
+
+
+\begin{document}
+
+\section{Cosets}
+
+\begin{definition}
+  Let $G$ be a group. Let $H$ be a subgroup of $G$.  $g \in G$ 
+
+  $gH = \{gh: h \in H\}$ (left coset)
+
+  $Hg = \{hg: h \in H\}$ (right coset)
+\end{definition}
+
+\begin{theorem}
+  Left (or right) cosets of $H$ in $G$ \ul{partition} $G$.
+\end{theorem}
+
+\begin{theorem}[Lagrange-theorem]
+  Let $G$ be a finite group. Let $H$ be a subgroup of $G$.
+  \[
+    [G:H] = \frac{|G|}{|H|}
+  \]
+  \begin{note}
+    $[G:H]$ is the number of cosets of $H$ in $G$.
+  \end{note}
+\end{theorem}
+
+\begin{remark}
+  Right and left cosets are not necessarily equal.
+  \begin{example}
+    Let $H = \{id, (1 \ 2)\}$ be a subgroup of $S_3$.
+    \begin{gather*}
+      (1 \ 2 \ 3)H = \{(1 \ 2 \ 3), (1 \ 2 \ 3)(1 \ 2)\} = \{(1 \ 2 \ 3), (1 \ 3)\} \\
+      H(1 \ 2 \ 3) = \{(1 \ 2 \ 3), (1 \ 2)(1 \ 2 \ 3)\} = \{(1 \ 2 \ 3), (2 \ 3)\}
+    \end{gather*}
+  \end{example}
+\end{remark}
+
+\begin{exercise}
+  \begin{enumerate}[label=(\alph*)]
+    \ii[]
+    \ii
+    What is the index of $\langle 6 \rangle $ in $\ZZ_{24}$.
+
+    By lagrange:
+    \begin{gather*}
+      [\ZZ_{24}, \langle 6 \rangle ] = \frac{|\ZZ_{24}|}{|\langle 6 \rangle |} = \frac{24}{4} = 6 \\
+      \langle 6 \rangle = \{0, 6, 12, 18\} \qquad |\langle 6 \rangle | = 4
+    \end{gather*}
+    \ii
+    Let $\sigma = \cycle{1, 2, 5, 4}\cycle{2, 3}$ in $S_5$. What is the index of $\langle \sigma \rangle $ in $S_5$?
+    \begin{gather*}
+      \sigma = \cycle{1, 2, 5, 4}\cycle{2, 3} = \cycle{2, 3, 5, 4, 1} \ \text{because sigma is not disjoint} \ \\
+      |\sigma| = 5 \qquad |\langle \sigma \rangle | = 5 \\
+      [S_5:\langle \sigma \rangle ] = \frac{5!}{5} = 4! = 24
+    \end{gather*}
+  \end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+  Find the left cosets of $H = \{id, \mu\}$ in $D_4$. ($D_4$ is the symmetries of a square.)
+  \begin{recall}
+    $\mu = \cycle{1, 2}\cycle{3, 4}$
+  \end{recall}
+  $D_4 = \{id, \cycle{1, 2, 3, 4}, \cycle{1, 3}\cycle{2,4}, \cycle{1,2}\cycle{3,4}, \cycle{1,4,3,2}, \cycle{1,4}\cycle{2,3}, \cycle{1,3},\cycle{2,4}\}$
+
+  By lagrange: $[D_4,H] = \frac{|D_4|}{|H|} = \frac{8}{2} = 4$
+\end{exercise}
+
+\begin{example}
+  Let $H = \{id, \cycle{1,2}\cycle{3,4}\}$
+  \begin{gather*}
+    \cycle{1,3}H = \{\cycle{1,3},\cycle{1,3}\cycle{1,2}\cycle{3,4}\} = \{\cycle{1,3},\cycle{1,2,3,4}\} \\
+    \cycle{2,4}H = \{\cycle{2,2},\cycle{2,4}\cycle{1,2}\cycle{3,4}\} = \{\cycle{2,4},\cycle{1,4,3,2}\} \\
+    \cycle{1,3}\cycle{2,4}H = \{\cycle{1,3}\cycle{2,4},\cycle{1,3}\cycle{2,4}\cycle{1,2}\cycle{3,4}\} = \{\cycle{1,3}\cycle{2,4},\cycle{1,4}\cycle{2,3}\} \\
+  \end{gather*}
+  Conceptually it makes sense that the size of a subgroup must divide the size of the group so that the cosets of the subgroup can partition the group into subgroups of equal sizes.
+\end{example}
+
+\begin{recall}
+  $S_n$ represents all possible bijections between $\NN_n$ and $\NN_n$
+\end{recall}
+
+\begin{exercise}
+  Let $G$ be a group and $H$ a subgroup of $G$ such that $[G:H] = 2$ and $a,b \in G \setminus H$. Show that $ab \in H$.
+
+  We know that $a^{-1} \notin H$. Therefore $a^{-1}H \neq H$.
+
+  \begin{recall}
+    $g_1H = g_2H \Leftrightarrow g_1 \in g_2H$. This implies that $g_1 \notin g_2H \Leftrightarrow g_1H \neq g_2H$.
+  \end{recall}
+
+  Similarly $b \notin H$ implies that $bH \neq H$.
+
+  There are only two cosets, so $a^{-1}H = bH$. Therefore 
+  \[
+    a^{-1}h = bh'
+  \]
+  for some $h, h' \in H$. Reordering we get that $ab = h(h')^{-1} \in H$
+\end{exercise}
+
+\begin{exercise}
+  Is it possible to have a group $G$ of order 6 such that all of its elements have order 1 or 2? NO
+
+  Proof by contradiction.
+  $G = \{e, g_1, g_2, g_3, g_4, g_5\}$ such that $|g_i| = 2$ for all $i \in \{1, 2, 3, 4, 5\}$ 
+
+  Claim: With this construction, $G$ must be abelian.
+  \begin{gather*}
+    a,b \in G \\
+    ab = id \cdot ab = (ba)^2ab \ \text{because} \ ba \in G \Rightarrow (ba)^2 = e \\
+    \text{Expanding: } ab = babaab = bab^2 = ba
+  \end{gather*}
+
+  Consider the subgroup $H = \{1, g_1, g_2, g_1g_2\}$. This is a subgroup because G is abelian and all its elements have order 2.
+
+  By lagrange: $[G:H] = \frac{|G|}{4}$. This is a contradiction because $|G| = 6$ and 4 does not divide 6.
+
+  Basically, with the assumption that G is of order 6 with all elements being of order 1 or 2, we can build a subgroup of order 4 which doesn't make sense because 4 doesn't divide 6.
+\end{exercise}
+
+\begin{exercise}
+  Let $H,K$ be subgroups of $G$. Show that for $x,y \in G$, either $xH \cap yK = \varnothing$, or $xH \cap yK$ is a coset of $H \cap K$. (Recall that $H \cap K$ is a subgroup).
+
+  Pick $x, y \in G$. If $xH \cap yK = \varnothing$, we are done with this case.
+
+  Assume that $xH \cap yK \neq \varnothing$. Pick $g \in xH \cap yK$. Then $g \in xH \Rightarrow xH = gH$ and $g \in yK \Rightarrow yK = gK$.
+
+  Therefore $xH \cap yK = gH \cap gK$.
+
+  Claim:  $gH \cap hK = g(H \cap K)$
+   \begin{proof}
+     ($\subseteq$ ). Pick $z \in gH \cap gK$.
+     \begin{gather*}
+       \Rightarrow z = gh = gk \ \text{for some } \ h\in H, k \in K \\
+       \Rightarrow h = k \ \text{so} \ h \in H\cap K \\
+       \text{So } z = gh \quad h \in H \cap K \\
+       \text{Then } z \in g(H \cap K) \\\\
+       (\supseteq)
+       \text{Let } z \in g(H \cap K) \\
+       \Rightarrow z = gl \ \text{for some} \ l \in H \cap K \\
+       l \in H \Rightarrow z \in gH \\
+       l \in K \Rightarrow z \in gK \\
+       z \in gH \cap gK
+     \end{gather*}
+     Therefore $gH \cap hK = g(H \cap K)$
+  \end{proof}
+\end{exercise}
+
+
+\end{document}

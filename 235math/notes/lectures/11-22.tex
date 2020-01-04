@@ -1,0 +1,103 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-22}
+
+
+\begin{document}
+
+\section{Lecture 11-22}
+
+Non constant $f \in \FF[x]$ is \ul{irreducible over $F$ } if $f$ cannot be expressed as $f = gh$ where $\deg(g), deg(h) \geq 1$
+
+\begin{theorem}[Fundamental Theorem of Algebra]
+  Every $f \in \CC[x]$ can be expressed as $f = l(x - r_1)(x - r_2)(\cdots)(x - r_n)$ where $l$ is the leading coefficient of $f$ and $n$ is the degree of $f$.
+  \begin{corollary}
+    Only degree 1 polynomials can be irreducible in $\CC$.
+  \end{corollary} 
+\end{theorem} 
+
+\begin{example}
+  Let $f \in \RR[x]$ with $\deg(f)$ is odd and $\deg(f) > 1$.
+\end{example} 
+
+\begin{theorem}
+  An ideal $\langle p \rangle \subset \FF[x]$ is maximal $\Leftrightarrow p$  is irreducible over $\FF$.
+  \begin{recall}
+    Ideal $p = gh$. $\langle p \rangle \subsetneq \langle g \rangle \subseteq \FF[x]$
+  \end{recall} 
+\end{theorem} 
+
+\begin{theorem}
+  $\FF[x] / \langle p \rangle $ is a field $\Leftrightarrow \langle p \rangle $ is a maximal ideal $\Leftrightarrow p$ is irreducible.
+  \\\\
+  So $\FF[x] / \langle p \rangle $ is a field $\Leftrightarrow p$ is irreducible.
+\end{theorem} 
+
+\begin{example}
+  $\CC \cong \RR[x] / \langle x^2 + 1 \rangle $ motivating amazing case.
+\end{example} 
+
+\begin{lemma}
+  A degree 2 or 3 polynomial $p \in \FF[x]$ is irreducible $\Leftrightarrow$ $p$ has no zero.
+  \begin{proof}
+    If $p = gh$ with $\deg(g), \deg(h) \geq 1$, then one of these, say $g$, has $\deg(g) = 1$. Therefore $p = (x - r)g$ for $r \in \FF \Leftrightarrow p(r) = 0$.
+  \end{proof} 
+\end{lemma} 
+
+\begin{example}
+  $x^3 + x + 1$ is irreducible in $\ZZ_2[x]$ because it has no roots. $p(0) = 1$ and $p(1) = 1$.
+  \\\\
+  $x^3 + x + 1$ is reducible in $\ZZ_3[x]$ because it has a root. $p(0) = 1$. $p(1) = 0$. $p(2) = 2$ 
+  \\\\
+  $x^3 + x + 1$ is irreducible in  $\ZZ_5[x]$ has no roots.
+  \\\\
+  Therefore
+  \begin{gather*}
+    \ZZ_2[x] / \langle x^3 + x + 1 \rangle \ \text{is a field} \  \\
+    \ZZ_5[x] / \langle x^3 + x + 1 \rangle \ \text{is a field} \ \\
+    \ZZ_3[x] / \langle x^3 + x + 1 \rangle \ \text{is not a field} \ \\
+    (x + 2 + \langle x^3 + x + 1 \rangle )((x^2 + ax + b) + \langle x^3 + x + 1 \rangle ) = 0 + \langle x^3 + x + 1 \rangle 
+  \end{gather*} 
+\end{example} 
+
+\begin{lemma}
+  Each element of $\ZZ_n[x] / \langle p \rangle $ (where $n$ is prime) is of the form $a_{d - 1}x^{d - 1} + a_{d - 2}x^{d - 2} + \cdots + a_0 + \langle p \rangle $. Assume $p$ is monic and that $p$ is irreducible of degree $d$.
+  \\\\
+  Note that each element can be written in the form  $f = \langle p \rangle $ to hvae $\deg(f) < d = \deg(p)$.
+  \\\\
+  Idea:
+  \begin{gather*}
+    p = x^d + q \\
+    (x^d + \langle p \rangle ) + (q + \langle p \rangle ) = (x^d + q + \langle p \rangle ) = 0 + \langle p \rangle .
+  \end{gather*} 
+  So we can replace any occurence of $x^d$ by $-q$ and have the same element.
+\end{lemma} 
+
+\subsection{Eisention's Criterion}
+
+Let $p$ be prime. 
+\\\\
+Let $f = a_n x^n + \cdots + a_0 \in \ZZ[x]$
+\\\\
+Suppose 
+\begin{enumerate}
+  \ii
+  $p$ divides each $a_i$ except $a_n$ 
+  \ii
+  $p^2$ does not divide $a_0$
+\end{enumerate} 
+
+Then $f$ is irreducible over $\QQ$. 
+\begin{example}
+  $2x^3 + 25x + 5$ is irreducible use $p = 5$.
+  \\\\
+  $2x^5 + 6x^4 + 5x^3 + 9x^2 + 0x^1 + 30$
+\end{example} 
+
+
+
+
+\end{document}

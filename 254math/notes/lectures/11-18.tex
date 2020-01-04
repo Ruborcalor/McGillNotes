@@ -1,0 +1,254 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\DeclareMathOperator{\sgn}{sgn}
+
+\date{2019-11-18}
+
+
+\begin{document}
+
+\section{Lecture 11-18}
+
+Definition of continuity: $\forall \epsilon > 0 \ ,\ \exists \delta > 0 : f(V_\delta(x_0)\cap A) \subseteq V_\epsilon(f(x_0))$
+
+\begin{remark}
+  Let $x_0$ be an isolated point of $A$. Then \ul{any} function $f: A \to \RR$ is continuous at $x_0$.
+  \begin{proof}
+    Let $f: A \to \RR$ and let $\epsilon > 0$. Since $x_0$ is an isolated point of $A$, $\exists \delta : V_\delta(x_0) \cap A = \{x_0\}$.
+    \\\\
+    Then, $f(V_\delta(x_0) \cap A) = f(\{x_0\}) = \{f(x_0)\}$. Thus $f$ is continuous at $x_0$.
+  \end{proof} 
+\end{remark} 
+
+\begin{theorem}[Algebraic Rules for Continuity]
+  Let $f, g: A \to \RR$ and let $x_0 \in A$ be a cluster point of $A$. $f, g$ is continuous at $x_0$, then:
+  \begin{enumerate}[label=(\alph*)]
+    \ii
+    $f + g$ is continuous at $x_0$.
+    \ii
+    $f \cdot g$ is continuous at $x_0$.
+    \ii
+    $f - g$ is continuous at $x_0$.
+    \ii
+    $f / g$ is continuous at $x_0$ if $\forall x \in A$, $g(x) \neq 0$.
+  \end{enumerate} 
+  \begin{proof}
+    \begin{enumerate}[label=(\alph*)]
+      \ii[]
+      \ii
+      Let $(x_n)$ be a sequence in $A$ with $\lim(x_n) = x_0$.
+      \\\\
+      Since $f$ and $g$ are continuous at $x_0$, we have that $\lim(f(x_n)) = f(x_0)$ and $\lim(g(x_n)) = g(x_0)$.
+      \\\\
+      Thus,
+      \begin{gather*}
+        \lim((f + g)(x_0)) = \lim(f(x_0) + g(x_0)) \\
+        = \lim(f(x_n)) + \lim(g(x_n)) = f(x_0) + g(x_0) = (f + g)(x_0) \\
+        \Rightarrow f + g \ \text{is continuous at} \ x_0
+      \end{gather*} 
+      Alternatively, we can use the limits of functions. $f, g$ are continuous at $x_0$ so
+      \begin{gather*}
+        \lim_{x \to x_0}f(x) = f(x_0) \\
+        \lim_{x \to x_0}g(x) = g(x_0)
+      \end{gather*} 
+      Thus
+      \begin{gather*}
+        \lim_{x \to x_0}[(f + g)(x)] = \lim_{x \to x_0}[f(x) + g(x)] \\
+        = \lim_{x \to x_0}f_(x) + \lim_{x \to x_0}g(x) = f(x_0) + g(x_0) = (f + g)(x_0) \\
+        \Rightarrow f + g \ \text{is continous at} \ x_0
+      \end{gather*} 
+      \ii
+      Left as an exercise
+      \ii
+      Left as an exercise
+      \ii
+      Left as an exercise
+    \end{enumerate} 
+  \end{proof} 
+\end{theorem} 
+
+\begin{theorem}[Compositions of continuous functions]
+  Let $f: A \to B$, and $g: B \to \RR$ where $f(A) \subseteq B$. Let $x_0 \in A$, and let  $f$ be continuous at $x_0$, and $g$ is continuous at $f(x_0)$, then $g \circ f$ is continuous at $x_0$.
+  \begin{proof}
+    \begin{enumerate}
+      \ii[]
+      \ii
+      Proof with $\epsilon-\delta$ 
+      \\\\
+      Let $\epsilon > 0$. Because $g$ is continuous at $f(x_0)$, we get that 
+      \begin{gather}
+        \exists \nu > 0 \ \text{such that} \  g(V_\nu(f(x_0)) \cap B) \subseteq V_\epsilon(g(f(x_0))).
+      \end{gather} 
+      And since $f$ is continuous at $x_0$, we get that 
+      \begin{gather}
+        \exists \delta > 0 \ \text{such that} \ f(V_\delta(x_0) \cap A) \subseteq V_\nu(f(x_0))
+      \end{gather} 
+      Combining (1) and (2) we get that 
+      \begin{gather*}
+        (g \circ f)(V_\delta(x_0) \cap A) = g(f(V_\delta(x_0) \cap A) \subseteq g(V_\nu(f(x_0)\cap B) \subseteq V_\epsilon(g(f(x_0))) \\\\
+        \Rightarrow (g \circ f)(V_\delta (x_0) \cap A) \subseteq V_\epsilon((g \circ f)(x_0))
+        \\\\
+        \Rightarrow g \circ f \ \text{is continuous at} \ x_0
+      \end{gather*} 
+      \ii
+      Proof with sequential method
+      \\\\
+      Let $(x_n)$ be a sequence with $\lim(x_n) = x_0$. Since $f$ is continuous at $x_0$, we have that $\lim(f(x_n)) = f(x_0)$.
+      \\\\
+      Because $g$ is continuous at $f(x_0)$, we have that 
+      \begin{gather*}
+        \lim(g(f(x_n))) = g(f(x_0)) \\\\
+        \Rightarrow \lim((g \circ f)(x_n)) = (g \circ f)(x_0) \\\\
+        \Rightarrow g \circ f \ \text{is continuous at} \ x_0
+      \end{gather*} 
+    \end{enumerate} 
+  \end{proof} 
+\end{theorem} 
+
+\pagebreak
+\begin{definition}
+  A function $f: A \to \RR$ is called \ul{continuous} (on $A$ ) if $f$ is continuous at all $x_0 \in A$.
+  \begin{example}
+    \begin{enumerate}
+      \ii[]
+      \ii
+      $x$ is continuous on $\RR$.
+      \ii
+      Because products of continuous functions are continuous, $x^n$ is continuous on $\RR$ for all $n \in \NN$.
+      \\\\
+      Note also that if $c_n \in \RR$, $c_n x^n$ is continuous on $\RR$.
+      \ii
+      Since sums of continuous functions are continuous, every polynomial $p(x) \coloneqq a_0 + a_1x + \cdots + a_nx^n$ is continuous on $\RR$.
+      \ii
+      Since quotients of continuous functions are continuous, wherever the denominator is non-zero, we have that all rational functions $\displaystyle R(x) \coloneqq \frac{P(x)}{Q(x)}$, $P, Q$ polynomials are continuous on $\RR / N$ where $N \coloneqq \{x \in \RR: Q(x) = 0\}$.
+      \ii
+      We've seen that $\displaystyle \lim_{x \to x_0}\sqrt{x} = \sqrt{x_0}$ for all $x_0 \in \RR_0^+$. Thus $\sqrt{}$ is continuous on $\RR_0^+$.
+      \ii
+      $\sin$ and $\cos$ are continuous on $\RR$. See assignment 11.
+    \end{enumerate} 
+  \end{example} 
+\end{definition} 
+
+\begin{example}[Examples of discontinuous functions. sgn, Dirichlet, Thomae]
+  \begin{enumerate}
+    \ii[]
+    \ii
+    \begin{gather*}
+      \sgn(x) \coloneqq
+      \begin{cases}
+        1, &x > 0 \\
+        0, &x = 0 \\
+        -1, &x < 0
+      \end{cases} 
+    \end{gather*} 
+  
+    \begin{center}
+    \begin{tikzpicture}
+      \begin{axis}[
+        axis lines=middle,
+        xlabel=$x$,
+        ylabel={$\sgn(x)$},
+        xmin=-3, xmax=3,
+        ymin=-1.5, ymax=1.5,
+        xtick=\empty,
+        ytick={0, 1},
+        extra y ticks={-1},
+        extra y tick style={
+          tick label style={anchor=west, xshift=3pt},
+        },
+        function line/.style={
+          red,
+          thick,
+          samples=2,
+        },
+        single dot/.style={
+          red,
+          mark=*,
+        },
+        empty point/.style={
+          only marks,
+          mark=*,
+          mark options={fill=white, draw=black},
+        },
+      ]
+        \addplot[function line, domain=\pgfkeysvalueof{/pgfplots/xmin}:0] {-1};
+        \addplot[function line, domain=0:\pgfkeysvalueof{/pgfplots/xmax}] {1};
+        \addplot[single dot] coordinates {(0, 0)};
+        \addplot[empty point] coordinates {(0, -1) (0, 1)};
+      \end{axis}
+    \end{tikzpicture}
+    \end{center}
+    Let $(x_n)$ be a sequence with $x_n > 0$ for all $n \in \NN$ and $\lim(x_n) = 0$ (e.g. $x_n = 1 / n$. Then $\sgn(x_n) = 1$ for all $n \in \NN$. Thus $(\sgn(x_n))$ converges to 1.
+    \\\\
+    But! $\sgn(0) = 0 \neq 1 = \lim(\sgn(x_n))$. Thus $\sgn$ is discontinuous at 0.
+    \ii
+    Dirichlet's Function. $f: [0, 1] \to \RR$ where $f$ is defined as follows:
+    \begin{gather*}
+      f(x) = 
+      \begin{cases}
+        1, &x \in \QQ \\
+        0, &x \in \RR \setminus \QQ
+      \end{cases} 
+    \end{gather*} 
+    Claim: $f$ is discontinuous at all $x_0 \in [0, 1]$.
+    \begin{proof}
+      Proof by cases where $x_0 \in \QQ$ and $x_0 \in \RR \setminus \QQ$ :
+      \begin{enumerate}
+        \ii
+         Let $x_0$ be rational. Because $\RR \setminus \QQ$ is dense in $\RR$, we know that $\exists (x_n) \in [0, 1] \ \text{such that} \ \lim(x_n) = x_0$ and that $\forall n \in \NN : x_n \in \RR \setminus \QQ$.
+        \\\\
+        Then $\forall n \in \NN$ we have that $f(x_n) = 0 \Rightarrow \lim(f(x_n)) = 0 \neq 1 = f(x_0)$.
+        \ii
+        Let $x_0 \in \RR \setminus \QQ$. Because $\QQ$ is dense in $\RR$, we know that $\exists(x_n) \in [0, 1]$ with $\lim(x_n) = x_0$ and $\forall n \in \NN : x_n \in \QQ$. \\\\
+        Then $\forall n \in \NN : f(x_n) = 1 \Rightarrow \lim(f(x_n)) = 1 \neq 0 = f(x_0)$.
+      \end{enumerate} 
+    \end{proof} 
+    \ii
+    Thomae's Function Consider $f: [0, 1] \to \RR$ such that
+    \begin{gather*}
+      f(x) = 
+      \begin{cases}
+        1 / q, & x = n / q, \ \gcd(n, q) = 1 \\
+        0 & x \in \RR \setminus \QQ
+      \end{cases} 
+    \end{gather*} 
+    Claim: $f$ is \ul{continuous} at all irrational numbers, but \ul{discontinuous} at all rational numbers.
+  \end{enumerate} 
+\end{example} 
+
+\subsection{Topological consequences of continuity}
+
+\begin{exercise*}
+  \begin{enumerate}
+     \ii[]
+     \ii
+    Let $I \subseteq \RR$ be an interval and let $f: I \to \RR$ be continuous. Is $f(I)$ an interval? (Yes, we will see later)
+    \ii
+    If $U \subseteq \RR$ is open and $f: U \to \RR$ is continuous, is $f(U)$ open? (No. Find a counterexample).
+    \ii
+    If $V \subseteq \RR$ is closed, is $f(V)$ closed? (No)
+    \ii
+    If $S \subseteq \RR$ is bounded, is $f(S)$ bounded (No)
+    \ii
+    If $C \subseteq \RR$ is compact (recall that this means closed and bounded), is $f(C)$ compact?
+  \end{enumerate} 
+\end{exercise*} 
+
+\begin{soln}
+  \begin{enumerate}
+    \ii[]
+    \ii We will see later.
+    \ii
+    Let $f: ]-1, 1[ \to \RR$ where $x \to x^2$. Then $]-1, 1[$ is open, but $f(]-1, 1[) = [0, 1[$ which is \ul{not} open.
+    \ii
+    $f: [1, \infty[ \to \RR$ where $x \to 1 / x$. Then $f([1, \infty[) = ]0, 1]$ which is \ul{not} closed.
+    \ii $f: ]0, 1] \to \RR$ where $x \to 1 / x$. The domain of $f$ is bounded. But $(]0, 1]) = [1, \infty[$ is unbounded.
+    \ii
+  \end{enumerate} 
+\end{soln} 
+
+\end{document}

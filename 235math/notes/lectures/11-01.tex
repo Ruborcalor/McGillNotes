@@ -1,0 +1,66 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+
+
+\begin{document}
+
+\section{2019-11-01 Rings}
+
+\begin{definition}
+  A \ul{ring} is a set $R$ with two binary operations.
+  \begin{enumerate}
+    \ii
+    (+ is associative): $(a + b) + c = a + (b + c)$ 
+    \ii
+    There is an \ul{additive identity element} $0 \in R$ such that $a + 0 = a = 0 + a$ for all $a \in R$.
+    \ii
+    Each $a \in R$ has an \ul{additive inverse} $-a$ such that $a + -a = 0 = -a + a$ 
+    \ii
+    + is \ul{commutative}: $a + b = b + a$ for all $a, b \in R$.
+    \ii
+    Multiplication is associative: $a \cdot (bc) = (ab) \cdot c$ 
+    \ii
+    Left / right distributive: $a \cdot (b + c) = a\cdot b + a \cdot c$ and $(a + b) \cdot c = a \cdot c + b \cdot c$
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}
+  If $R$ has a multiplicative identity element $1 \neq 0$ such that $1a = a = a1 \ \forall a$ then $R$ is a \ul{ring with unity / identity}
+  \\\\
+  If multiplication is commutative, $R$ is a \ul{commutative ring}.
+  \\\\
+  If $R$ is commutative with $1$ and $(ab = 0) \Rightarrow (a = 0$ or $b = 0)$, then $R$ is an \ul{integral domain}
+  \\\\
+  If $R$ has the identity element and every $x \neq 0$ has a multiplicative inverse in $R$ then $R$ is a \ul{division ring}. i.e. $(R - \{0\}, \cdot) = (\RR^*, \cdot)$ is a group.
+  \\\\
+  If $(R^*, \cdot)$ is a commutative group then $R$ is a field.
+\end{definition}
+
+\begin{example}
+  \begin{gather*}
+    \text{Integral domain: } (\ZZ, +, \cdot) \\
+    \text{Fields: }(\RR, +, \cdot), 
+    (\QQ, +, \cdot), 
+    (\CC, +, \cdot) \\
+    \text{Commutative Ring: } (\ZZ_n, +, \cdot) \\
+    (\ZZ_p, +, \cdot) \ \text{is a field because } a^{p - 1} \equiv_p 1 \ \text{for} \ a \neq 0 \ \text{so} \ (a)(a^{p - 2}) \ \text{are inverses.} \\
+  \end{gather*}
+  $\ZZ_n$ is not a field when $n > 1$ is not prime. One example is $3 \in \ZZ_6$ which doesn't have a multiplicative inverse. $\ZZ_n$ is also not an integral domain when $n$ is not prime. e.g. $3 \cdot 2 \equiv_6 = 0$ even though neither $3$ nor $2$ are equal to 0.
+  \\\\
+  $\ZZ_1$ is commutative and $ab = 0 \Rightarrow a = 0$ or $b = 0$ but not a ring with unity because unity must be satisfied by an element other than the additive identity element. There is only one element so this is not possible. 
+\end{example}
+
+\begin{definition}
+  A non zero element $a \in R$ such that $ab = 0$ but $b \neq 0$ is a \ul{zero divisor}. A \ul{unit} $u \in R$ is an element with a multiplicative inverse.
+\end{definition}
+
+\begin{definition}
+  $\ZZ[x]$ is a ring of all polynomials with integer coefficients.
+  \\
+  A \ul{polynomial} $a_nx^n + a_{n - 1}^{n - 1} + \cdots = a_1x^1 + a_0$ has degree $n$ if $a_n \neq 0$ has degree $n$ if  $a_n \neq 0$. Add polynomials by corresponding coefficients. Multiply by multiplying and then combining like terms.
+  \\\\
+  $\ZZ[x]$ is an integral domain! It's commutative, it has unity, and there is no way to multiply two non zero polynomials and get 0.
+\end{definition}
+
+\end{document}

@@ -1,0 +1,92 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-13}
+
+
+\begin{document}
+
+\section{Lecture 11-13}
+
+\begin{definition}
+  Let $I$ be an ideal of $R$. Then $\phi: R \to R / I$ is a \ul{canonical homomorphism} associated to $I$.
+  \begin{gather*}
+    \phi(r) = r + I \\
+    \phi(xy) = xh + I \\
+    \phi(x) \phi(y) = (x + I)(y + I)
+  \end{gather*} 
+\end{definition} 
+
+\subsection{Maximal and Prime Ideals}
+
+\begin{definition}
+  
+An ideal $M \subseteq R$ is \ul{maximal} if the only ideal larger than $M$ is $R$ itself.
+\\\\
+i.e. There does not exist ideal $I$ with $M \subsetneq I \subsetneq R$.
+\end{definition} 
+
+\begin{definition}
+  An ideal $P \subsetneq R$ where $R$ is commutative is \ul{prime} if for all $a, b \in R$, $ab \in P \Rightarrow [a \in P \ \text{or} \ b \in P]$. 
+\end{definition} 
+\begin{example}
+  A proper ideal $n\ZZ \subset \ZZ$ is maximal $\Leftrightarrow$ $n\ZZ \subset \ZZ$ is prime $\Leftrightarrow$ $n$ is a prime number. Reasoning:
+  \\\\
+  $n\ZZ \subsetneq m\ZZ \subsetneq \ZZ$ if and only if $m | n$ but $m \neq 1$ and $m \neq n$ i.e. $ n$ is not prime.
+  \\\\
+  $(ab \in n\ZZ) \Leftrightarrow n | (ab)$ but if $n$ is prime then $n | (ab) \Leftrightarrow n | a$ or $n | b$. Hence $a \in n\ZZ$ or $b \in n\ZZ$.
+  \\\\
+  If $n$ is not prime, then $n = xy$ where $1 < x, y < n$ and $xy \in n\ZZ$ but $x \notin n \ZZ$ and $y \notin n\NN$. This would mean that $n\ZZ$ is not prime.
+\end{example} 
+
+\begin{example}
+  In $\ZZ[x]$, the ideal $\langle x \rangle $ is prime but not maximal.
+  \\\\
+  \textbf{Maximal Proof}:
+  \\\\
+  $\langle x \rangle $ is not maximal because $\langle x \rangle \subsetneq \langle x, 2 \rangle \subsetneq \ZZ[x]$
+  \\\\
+  $\langle x, 2 \rangle $ consists of all polynomials of the form $f \cdot x + g \cdot 2$ (where $f, g \in \ZZ[x]$ ).  i.e. all polynomials whose consant term is even.
+  \\\\
+  $\langle x \rangle $ consists of all polynomials of the form $f \cdot x$. i.e. all polynomials whose constant term is zero.
+  \\\\
+  \textbf{Prime Proof}:
+  \\\\
+  $\langle x \rangle $ is prime because $f \cdot g \in \langle x \rangle \Rightarrow (f \in \langle x \rangle \ \text{or} \ g \in \langle x \rangle $ because if both $f$ and $g$ have non zero constant term than $f \cdot g$ has a non zero constant term.
+\end{example} 
+
+\begin{theorem}
+  Let $R$ be a commutative ring with $1$. Let $I \subsetneq R$ be a proper ideal. Then:
+  \\\\
+  $I$ is maximal $\Leftrightarrow$ $R / I$ is a field.
+  \\\\
+  $I$ is prime $\Leftrightarrow$ $R / I$ is an integral domain.
+\end{theorem} 
+
+\begin{example}
+  Let $R = \RR[x]$, and $I = \langle x^2 + 1 \rangle $. Then $R / I \cong \CC$. Note the following for gaining an intuition:
+  \\\\
+  \begin{gather*}
+    (x + I)(x + I) = (x^2 + I) \\
+    (x^2 + I) + (1 + I) = (x^2 + 1 + I) = 0 + I \Rightarrow (x^2 + I) = (-1 + I)
+    \\\\
+    i \leftrightarrow x + I \\
+    1 \leftrightarrow 1 + I
+  \end{gather*} 
+
+  Going through an a demonstration:
+
+  \begin{gather*}
+    7x^3 - 3x^2 + x + 9 + I \leftrightarrow ? \in \CC \\
+    (7x^3 + I) + (-3x^2 + I) + (x + I) + (9 + I) \\
+    (7x + I)(x^2 + I) + (-3 + I)(x^2 + I) + (x + I) + (9 + I) \\
+    (7x + I)(-1 + I) + (-3 + I)(-1 + I) + (x + I) + (9 + I) \\
+    (-7x + I) + (3 + I) + (x + I) + (9 + I) \\
+    (-6x + I) + (12 + I) 
+  \end{gather*} 
+
+\end{example} 
+
+\end{document}

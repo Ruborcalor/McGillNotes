@@ -1,0 +1,138 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+\usepackage{polynom}
+% \input longdiv.tex
+
+\date{2019-11-18}
+
+
+\begin{document}
+
+\section{Lecture 11-18}
+
+\subsection{Polynomial Rings}
+
+\begin{definition}
+  Let $R$ be a commutative ring with 1. 
+  \\\\
+  \ul{Polyomial} over $R$ with \ul{indeterminate} x.
+
+  \begin{gather*}
+    f(x) = \sum_{i = 0}^{n}a_i x^i = a_0 + a_1 x^1 + \cdots + a_nx^n
+  \end{gather*} 
+  Usually assume that $a_n \neq 0$ so that $a_n$ is a \ul{leading coefficient}.
+  \\\\
+  $f$ is \ul{monic} if $a_n = 1$. $a_0, \cdots, a_n$ are \ul{coefficients} of $f$.
+  \\\\
+  $n$ is the \ul{degree} of $f$. The degree of $0$ polynomial is $-\infty$.
+\end{definition} \noindent
+
+$R[x]$ is the set of all polynomials over $R$. It is a \ul{ring}. Add component wise and multiply by combining like terms.
+\begin{gather*}
+  \sum_{i = 0}a_ix^i + \sum_{i = 0}b_ix^i = \sum(a_i + b_i)x_i 
+  \\\\
+  (\sum a_ix^i)(\sum b_j x^j) = \sum c_k x^k \qquad \ \text{where} \ c_k = \sum_{i + j = k}a_ib_j
+\end{gather*} 
+Multiplication and addition are associative, distributive, etc.
+
+\begin{example}
+  $\ZZ_2[x]:$
+  \begin{gather*}
+    \\
+    (1 + x^2 + x^4)(1 + x^2 + x^4) = 1 + x^4 + x^8
+    \\
+    (1 + x + x^2 + x^3)(1 + x + x^2 + x^3) = (1 + x^2 + x^4 + x^6)
+  \end{gather*}
+  $\ZZ_4[x]:$
+  \begin{gather*}
+    (1 + x + x^2 + x^3)(1 + x + x^2 + x^3) = (1 + 2x + 3x^2 + 3x^4 + 2x^5 + x^8)
+  \end{gather*} 
+  $\ZZ_6[x]$:
+  \begin{gather*}
+    (2x^2 + 4 + 2)(3x^2 + 3x) = 0
+  \end{gather*} 
+\end{example} 
+
+\begin{proposition}
+  If $R$ is an integral domain, then $R[x]$ is an integral domain.
+  \\\\
+  Moreover, degree($p \cdot q$) = degree($p$) + degree($q$) for $p, q \in R[x]$.
+  \begin{gather*}
+    \underbrace{(a_nx^n + \cdots + a_0)}_{p}\underbrace{(b_mx^m + \cdots + b_0)}_{q} = (a_nb_mx^{n + m} + \cdots + a_0b_0)
+  \end{gather*} 
+\end{proposition} 
+
+\begin{definition}[The evaluation homomorphism]
+  Let $F$ be the set of functions $\{f: \RR \to \RR\}$. Define the following:
+  \begin{gather*}
+    (f + g)(x) = f(x) + g(x) \\
+    (f \cdot g)(x) = f(x) \cdot g(x)
+  \end{gather*} 
+  Associative, distributive, etc. $F$ is a commutative ring with unity.
+  \\\\
+  The \ul{evaluation homomorphism} is defined as follows:
+  \begin{gather*}
+    \varphi_{a}: F \to \RR
+  \end{gather*} 
+  Let $a \in \RR$. Define $\varphi_{a}(f) = f(a)$. This is a homomorphism because:
+  \begin{gather*}
+    \varphi_a(fg) = \varphi_a(f)\varphi_a(g) \\
+    \varphi_a(f + g) = \varphi_a(f) + \varphi_a(g)
+  \end{gather*} 
+  Likewise: $\varphi_a:R[x] \to R$ defined by $\varphi_a(f) = f(a)$ is homomorphic (where $a \in R)$. Let 
+  \begin{gather*}
+    f = b_n x^n + b_{n- 1}x^{n - 1} + \cdots + b_1x^1 + b_0
+  \end{gather*} 
+  Then 
+  \begin{gather*}
+    f(a) = b_n a^n + b_{n- 1}a^{n - 1} + \cdots + b_1a^1 + b_0
+  \end{gather*} 
+  You can check that $\varphi_a$ is a homomorphism for each $a \in R$.
+  \begin{example}
+    \begin{enumerate}
+      \ii[]
+      \ii
+      $\varphi_0: R[x] \to R$
+      \begin{gather*}
+        \varphi_0(f) = \ \text{the constant term of} \ f
+      \end{gather*} 
+      \ii
+      $\varphi_1:R[x] \to R$
+      \begin{gather*}
+        \varphi_1(f) = \sum ( \ \text{coefficients of} \ f)
+      \end{gather*} 
+      \ii
+      $\varphi_1: \ZZ_2[x] \to \ZZ_2$ 
+      \\\\
+      The kernel of $\varphi_1$ is ideal of all polynomials with an even number of terms.
+    \end{enumerate} 
+  \end{example} 
+
+\end{definition} 
+
+\begin{theorem}[Division Algorithm]
+  Let $f, g \in \FF[x]$ where $\FF$ is a field. Suppose $g \neq 0$. Then there exists unique $q, r \in \FF[x]$ such that $f = g q + r$ where $r = 0$ or $\deg(r) < \deg(g)$.
+
+  \begin{proof}[Proof by induction on $\deg(f) - \deg(g)$] \leavevmode \\\\
+     If $\deg(f) < \deg(g)$ we stop $f = g \cdot 0 + f$. Otherwise, let $f = a_nx^n + \cdots$ and let $g = b_m x^m + \cdots$ where $m < n$.
+    \\\\
+    Now let $f' = f - \frac{a_n}{b_m}x^{n - m}g$. Then $\deg(f') < \deg(f)$.
+    \\\\
+    So by induction, $f' = gq' + r$ where $\deg(r) < \deg(g)$. So
+    \begin{gather*}
+      f = f' + \frac{a_n}{b_m}x^{n - m}g = g(\frac{a_n}{b_m}x^{n - m} + q') + r
+    \end{gather*} 
+  \end{proof} 
+\end{theorem} 
+
+\begin{example}
+  Apply the division algorithm to $x^2 + 0x + 1$ in $\ZZ_3[x]$. Let $f = 2x^5 + x^4 + 1$ and $g = x^2 + 1$.
+  %%\longdiv{}
+  \polylongdiv{2x^5 + x^4 + 0x^3 + 0x^2 + 1}{x^2 + 0x + 1}
+  % \polylongdiv[style=C,vars=z]{z^4-8z^3+39z^2-122z+170}{z^2+8}
+\end{example} 
+
+
+\end{document}

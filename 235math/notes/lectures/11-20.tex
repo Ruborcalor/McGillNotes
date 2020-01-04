@@ -1,0 +1,100 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-20}
+
+
+\begin{document}
+
+\section{Lecture 11-20}
+
+\begin{corollary}[If $\alpha$ is a zero of a polynomial, then $(x - \alpha)$ is a factor]
+  $\alpha \in \FF$ is a zero of $p(x) \in \FF[x] \Leftrightarrow (x - \alpha)$ is a factor of $p(x)$.
+  \begin{proof}
+    Apply division algorithm. \\\\
+    $p(x) = (x - \alpha)q(g) + r(x)$ where  $\deg(r) < \deg(x - \alpha) = 1$
+    \\\\
+    Hence,  $p(\alpha) = 0 \Leftrightarrow r = 0 \Leftrightarrow (x - \alpha) \ | \ p(x)$
+  \end{proof} 
+\end{corollary} 
+
+\begin{theorem}[An $n$ degree polynomial has at most $n$ distinct zeros]
+  Let $p(x) \in \FF[x]$ be a nonzero degree $n$ polynomial.
+  \\\\
+  Then $p(x)$ has at most $n$ distinct zeros (roots).
+  \begin{proof}
+    By induction on $\deg(p)$.
+    \\\\
+    Base case: has $\deg(p) = 0$ so $p(x) = c \neq 0$.  (Not equal to 0 because then the degree would be minus infinity)
+    \\\\
+    Hence $p(a) \neq 0$ for all $a \in \FF$. Hence at most $\deg(p)$ roots in this case.
+    \\\\
+    Suppose that the statement holds for $n = k$. Now we prove it for $n = k + 1$.
+    \\\\
+    Suppose $p(x)$ ha sa root $r$, so $p(r) = 0$.
+    \\\\
+    So $p(x) = (x - r)q(x)$ for some $q \in \FF[x]$ with $\deg(q) = \deg(p) - 1 = k$
+    \\\\
+    Any root $r'$ is either $r$ or is a root of $q(x)$ because $0 = p(r') = (r' - r)q(r')$.
+    \\\\
+    By induction, $q(x)$ has at most $k$ distinct roots. Thus $p(x)$ has at most $k + 1$ distinct roots. i.e. the roots of $q$ and $r$.
+  \end{proof} 
+\end{theorem} 
+
+\begin{definition}[Greatest Common Divisor Definition]
+  Let $p, q \in \FF[x]$ where $\FF$ is a field. A \ul{monic polynomial} $d \in \FF[x]$ is a $\gcd$ of $p, q$ if $d | p$ and $d | q$ and $d' | d$ wherever $d' | p$ and $d' | q$.
+  \\\\
+  Notation: $d = \gcd(p, q)$. $p, q$ are relatively prime if $1 = \gcd(p, q)$.
+\end{definition} 
+
+\begin{example}
+  If $\ZZ_5[x]$, consider how $(x + 1) = \gcd(x^2 + 4, x^3 + 4x^2 + 2)$.
+\end{example} 
+
+\begin{proposition}
+  Let $\FF$ be a field and $p, q \in \FF[x]$. Also let $d = \gcd(p, q)$.
+  \\\\
+  Then there exists $r, s \in \FF[x]$ such that $d = rp + sq$.
+  \begin{proof}
+    Let $d$ be the smallest degree monic polynomial in the ideal 
+    \[J = \{fp + gq : f, g \in \FF[x]\}\]
+    Then $J$ contains non zero polynomial because $p = 1 p + 0q \in J$.
+    \\\\
+    Claim: $d \ | \ s$ for each $s \in J$ because otherwise  $s = hd + r$ with $\deg(r) < \deg(d)$ and $r \neq 0$.
+    \[
+      r = s - hd = fp + gq - h(f'p + g'q) \in J
+    \]
+    hence  $d \ | \ p$ and $d \ | \ q$ so $J = \langle d \rangle $.
+    \\\\
+    Finally, if $d' \ | \ p$ and $d' \ | \ q$ then $d' \ | \ d$ because $p = p'd'$ and $q = q'd'$ so $d = r(p'd') + s(q'd') = d = (rp' + sq')d'$ 
+  \end{proof} 
+\end{proposition} 
+
+\begin{theorem}
+  $\FF[x]$ is a P.I.D. (principle ideal domain) i.e. every ideal in $\FF[x]$ is principal i.e. is $\langle d \rangle $.
+\end{theorem} 
+\begin{example}
+  $\ZZ[x]$ is not a principle ideal domain because $\langle x, y \rangle $ is not principal.
+  \\\\
+  $\FF[x, y]$ is not a principle ideal domain because $\langle x, y \rangle $ is not principal.
+\end{example} 
+
+\subsection{Irreducible Polynomials}
+
+\begin{definition}
+  A monic polynomial $f \in \FF[x]$ is \ul{irreducible} over $\FF$ if $f \neq gh$ with $\deg(g) \geq 1$ and $\deg(h) \geq 1$.
+\end{definition} 
+
+\begin{example}
+  $x^2 - 3$ is irreducible over $\QQ$ but not over $\RR$.
+  \\\\
+  $x^2 + 1$ is irreducible over $\RR$, but it is not over $\CC$.
+  \\\\
+  $x^2 + 2$ is not irreducible over $\ZZ_3$. $(x^2 + 2) = (x - 1)(x - 2)$.
+  \\\\
+  $x^2 + 2$ is irreducible over $\ZZ_5$ because it has no roots. Hence no degree factors.
+\end{example} 
+\end{document}
+

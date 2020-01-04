@@ -1,0 +1,136 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-11-06}
+
+
+\begin{document}
+
+\section{11-06}
+
+\begin{definition}
+  A \ul{subring} of a ring is a subset $S \subseteq R$ such that $(S, + , \cdot)$ is itself a ring (some operations are restricted).
+  \begin{example}
+    $5\ZZ \subseteq \ZZ \subseteq \QQ \subseteq \RR \subseteq \CC$
+  \end{example} 
+\end{definition} 
+\begin{proposition}
+  A subset $S \subseteq R$ is a ring if and only if:
+  \begin{enumerate}
+    \ii
+    $S \neq \varnothing$ 
+    \ii
+    Let $x, y \in S$, then $x - y \in S$. (If this is true, then the set contains the identity element, whenever an element is inside its inverse is inside, whenever two elements are in $S$ its product is in $S$. This is just a faster way of showing these).
+    \ii
+    Let $x, y \in S$, then $x \cdot y \in S$.
+  \end{enumerate} 
+  What about associativity and distributive, etc? Those properties are inherited from the ring.
+\end{proposition} 
+\begin{example}
+  \[2\ZZ_{10} \subseteq \ZZ_{10}\]
+  \[
+    \{0, 2, 4, 6, 8\} \subset \{0, 1, 2, 3, 4, 5, 6, 7, 8, 9\}
+  \]
+  Yes, this is a subring but it does not have unity because it does not include "$1$".
+  \[S \neq \varnothing, \qquad x - y \in S, \qquad x \cdot y \in S\]
+\end{example} 
+\begin{example}
+  \[\ZZ[x^2] \subseteq \ZZ[x]\]
+  \[
+    \ZZ[x^2] = \{a_{2n}x^{2n} + a_{2(n - 1)}x^{2(n - 1)} + \cdots + a_0x^0\}
+  \]
+  i.e. $\ZZ[x^2]$ represents polynomials where the odd polynomial coefficients are 0.
+  \\\\
+  Yes, this is a subring and it has unity because it contains $"1"$, the identity element.
+  \[S \neq \varnothing, \qquad x - y \in S, \qquad x \cdot y \in S\]
+\end{example} 
+\begin{example}
+  \[
+    T_{n \times n}(\RR) \subset M_{n \times n}(\RR)
+  \]
+  $T_{n \times n}(\RR)$ which represents upper triangular matrices. i.e. zeros bellow diagonal.
+  \[
+    \begin{bmatrix}
+      * & * & * & * \\
+      0 & * & * & * \\
+      0 & 0 & * & * \\
+      0 & 0 & 0 & * \\
+    \end{bmatrix} 
+  \]
+  Yes a subring.
+\end{example} 
+
+\subsection{Integral domains and fields}
+
+\begin{definition}
+  The subring $\ZZ[i] \subset \CC$ consisting of $\{m + ni: m, n \in \ZZ\}$ is the \ul{Gaussian Integers}.
+  \begin{remark}
+    Not every Gaussian Integer is a unit in the Gaussian Integers. Indeed, $\pm 1$ and $\pm i$ are the only units. Proof:
+    \\\\
+    Suppose $\alpha, \beta \in \ZZ[i]$, and $\alpha\beta = 1$ where $\alpha = a_1 + a_2i$ and $\beta = b_1 + b_2i$. Remember that for $z_1 = a_1 + b_1i$ and $z_2 = a_2 + b_2i$ :
+    \[
+      \overline{z_1z_2} = \overline{z_1}\cdot\overline{z_2}
+    \]
+    Then if follows that
+    \[
+      1 = 1 \cdot 1 = (\alpha\beta)(\overline{\alpha\beta}) = (\alpha\beta)(\overline{\alpha}\overline{\beta}) = (\alpha\overline{\alpha})(\beta\overline{\beta}) = (a_1^2 + a_2^2)(b_1^2 + b_2^2)
+    \]
+    Hence $(a_1^2 + a_2^2) = \pm 1$ and $(b_1^2 + b_2^2) = \pm 1$. 
+  \end{remark} \noindent
+  $\ZZ[i]$ is an integral domain since it is the \ul{subring of a field with unity} which implies that the subring is an \ul{integral domain}.
+  \[
+    xy = 0 \Rightarrow x = 0 \vee y = 0
+  \]
+  because $x^{-1}xy = x^{-1} 0 \Rightarrow y = 0$.
+\end{definition} 
+\begin{example}
+  $\ZZ_p$ is a field with $p$ elements.
+\end{example} 
+\begin{theorem}
+  There exista a field with $p^n$ elements for each $n \geq 1$ when $p$ is prime.
+\end{theorem} 
+\begin{example}
+  \[
+    M_{2 \times 2}(\ZZ_2) \supset \mathbb{F}_4 =
+    \{
+      \begin{pmatrix}
+        1 & 0 \\
+        0 & 1
+      \end{pmatrix} ,
+      \begin{pmatrix}
+        1 & 1 \\
+        1 & 0
+      \end{pmatrix} ,
+      \begin{pmatrix}
+        0 & 1 \\
+        1 & 1
+      \end{pmatrix} ,
+      \begin{pmatrix}
+        0 & 0 \\
+        0 & 0
+      \end{pmatrix} 
+    \}
+  \]
+  is a field with $2^2$ elements. 
+\end{example} 
+
+\begin{proposition}
+  Let $D$ be a commutative ring with $"1"$ i.e. unity.
+  \\\\
+  Then $D$ is an integral domain if and only if for all non zero  $a \in D$, $(ab = ac) \Rightarrow (b = c)$
+  \begin{proof}
+    \begin{itemize}
+      \ii[]
+      \ii[$(\Rightarrow)$ ]
+      \[
+        ab = ac \Rightarrow a(b - c) = 0 \Rightarrow b - c = 0 \Rightarrow b = c
+      \]
+      \ii[$(\Leftarrow)$ ]
+      \[ab = 0 \Rightarrow ab = a 0 \Rightarrow b = 0 \ \text{because} \ a \neq 0\]
+    \end{itemize} 
+  \end{proof} 
+\end{proposition} 
+
+\end{document}

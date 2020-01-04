@@ -1,0 +1,76 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-12-02}
+
+
+\begin{document}
+
+\section{Lecture 12-02}
+
+\begin{theorem}
+  Let $f: A \to \RR$ be uniformly continuous on $A$.
+  \\\\
+  Let $(x_n)$ be a cauchy sequence in $A$. Then $(f(x_n))$ is also a cauchy sequence.
+   \begin{proof}
+     Let $\epsilon > 0$. Then $\exists \delta > 0$ such that $|x - \mu| < \delta \Rightarrow |f(x) - f(\mu)| < \epsilon$
+     \\\\
+     $(x_n)$ cauchy then $\exists N \in \NN$ such that $\forall n, m \geq N : |x_n - x_m| < \delta \Rightarrow |f(x_n) - f(x_m)| < \epsilon$.
+     \\\\
+     i.e. $(\exists N \in \NN)(\forall n, m \geq N : |f(x_n) - f(x_m)| < \epsilon \Rightarrow (f(x_n)$ is a cauchy sequence.
+  \end{proof}  
+\end{theorem} 
+
+\begin{remark}
+  This result is, in general, false, if $f$ is just continuous on $A$.
+\end{remark} 
+
+\begin{example}
+  $f: \left]0, \infty\right[ \to \RR, x \to 1 / x$.
+  \\\\
+  $f$ is continuous but \ul{not} uniformally continuous on $]0, \infty[$.
+  \\\\
+  Consider $x_n \coloneqq 1 / n$. Then $(x_n)$ is a cauchy sequence but $(f(x_n)) = (n)$ which diverges.
+  \begin{gather*}
+    \Rightarrow (f(x_n)) \ \text{is \ul{not} a cauchy sequence} \ 
+  \end{gather*} 
+\end{example} \noindent
+However: if $f: A \to \RR$ is continuous, $(x_n)$ is a convergent sequence in $A$ such that $\lim(x_n) \in A$. Then:
+\\\\
+$\lim(x_n) \coloneqq x \in A$. Then $f$ is continuous at $x$. Thus let $\lim(f(x_n)) = f(x)$ be the sequence of continuity. Especially, $(f(x_n))$ is cauchy sequence in this case.
+\\\\
+This can be turned into another criterion for non-uniform continuous functions.
+\begin{theorem}[One sequence criterion for a non-uniform continuous function]
+  Let $f: A \to \RR$. If $(x_n)$ is cauchy sequence in $A$ such that $(f(x_n))$ is not cauchy, then $f$ is not uniformally continuous on $A$.
+\end{theorem} 
+
+\begin{example}
+  $f: \left]0, \infty\right[ \to \RR, x \to 1 / x$.
+  \begin{gather*}
+    x_n \coloneqq \frac{1}{n}
+  \end{gather*} cauchy but $(f(x_n)) = (n)$ is not cauchy.
+  \begin{gather*}
+    \Rightarrow f \ \text{is not uniformly continuous on} \ \left]0, \infty\right[
+  \end{gather*} 
+\end{example} 
+
+\begin{theorem}
+  Let $f: A \to \RR$, $A$ bounded, $f$ a uniformly continuous on $A$, then $f$ is bounded (i.e. $f(A)$ is bounded.
+  \begin{proof}
+    Assume that $f$ is unbounded. Then $\forall n \in \NN$, $\exists x_n \in A : |f(x_n)| \geq n$.
+    \\\\
+    Consider $(x_n)$. Since $A$ is bounded, $(x_n)$ is bounded and thus has a convergent subsequence $(x_{n_k})$. Thus $(x_{n_k})$ is cauchy $\Rightarrow$ $(f(x_{n_k}))$ is cauchy and thus especially bounded. But  $|f(x_{n_k})| \geq n_k \geq k$ for all $k \in \NN$.
+    \\\\
+    This implies that $f(x_{n_k})$ is unbounded. Contradiction!
+    \\\\
+    Thus $f$ is bounded.
+  \end{proof} 
+\end{theorem} 
+
+\begin{example}
+  $f : \left]0, 1\right[ \to \RR, x \to 1 / x$. Then $f$ is unbounded on the bounded domain $\left]0, 1\right[ \Rightarrow f$ is \ul{not} continuous on $\left]0, 1\right[$.
+\end{example} 
+
+\end{document}

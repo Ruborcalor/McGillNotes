@@ -1,0 +1,36 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+
+
+\begin{document}
+
+\section{Tutorial 10-30}
+
+
+\subsection{e}
+
+\begin{example}
+  
+  \begin{enumerate}
+    \ii[]
+    \ii
+    \begin{gather*}
+      \lim(1 - \frac{1}{n})^{-n} = e
+    \end{gather*}
+    \ii
+    \begin{gather*}
+      (1 + \frac{1}{2n})^n = ((1 + \frac{1}{2n})^{2n})^\frac{1}{2} = (e)^\frac{1}{2}
+    \end{gather*}
+    Because $(1 + \frac{1}{2n})$ is a subsequence of $(1 + \frac{1}{n})$ which converges to e.
+    \ii
+    $(1 + \frac{n}{2})^{\frac{n}{2}}$ is \ul{not} a subsequence of $(1 + \frac{1}{n})^n$. It's the other way around.
+
+  \end{enumerate}
+\end{example}
+
+Let $a > 0$. Pick $x_1 > 0$. Let $x_{n + 1} = \frac{1}{2}(x_n + \frac{a}{x_n}) > 0$ 
+\\\\
+Prove that $x_n \to \sqrt{a}$.
+
+\end{document}

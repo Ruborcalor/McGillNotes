@@ -1,0 +1,91 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+\usepackage{polynom}
+\input longdiv.tex
+
+
+\date{2019-11-25}
+
+
+\begin{document}
+
+\section{Lecture 11-25}
+
+\begin{lemma}[Gauss's Lemma]
+  Let $p \in \ZZ[x]$ be monic. Suppose $p$ is reducible over $\QQ$. So $p = \alpha \beta$ where $\alpha, \beta \in \QQ[x]$ and $\deg(\beta), \deg(\alpha) \geq 1$.
+  \\\\
+  Then $p = a \cdot b$ where $a, b \in \ZZ[x]$ and $\deg(a) = \deg(\alpha)$, $\deg(b) = \deg(\beta)$.
+\end{lemma} 
+
+\begin{corollary}
+  Let $p \in \ZZ[x]$ where $p = x^n + a_{n - 1}x^{n - 1} + \cdots + a_0$. Suppose $p$ has a zero in $\QQ$. Then $p$ has a zero $z \in \ZZ$. Moreover $z \, | \, a_0$.
+\end{corollary} 
+
+\begin{proof}
+  If $p(z) = 0$, then $p(x) = q(x)(x - z)$. Hence $p(x) = a(x) \cdot b(x)$ where $\deg(b) = 1$ and $b \in \ZZ[[x]$. Hence $b = (x - z)$ for some $z \in \ZZ$ and $p(z) = q(z)b(z) = 0$.
+\end{proof}  \noindent
+Often recognize irreducible deg 3 polynomials in $\QQ[x]$. $x^2 + x + 1$ must be irreducible in $\QQ[x]$. Since it has no $\QQ$ zero, since no $\ZZ$ zero.
+
+\subsection{Eisenstein's Criterion}
+
+Let $p$ be prime. Let $f = a_nx^n + \cdots + a_0 \in \ZZ[x]$.
+\\\\
+Suppose $p$ divides each $a_i$ for $i < n$, $p$ does not divide $a_n$, and $p^2$ does not divide $a_0$.
+
+\begin{example}
+  \begin{gather*}
+    7x^4 + 5x^3 + 10x^2 + 25x^1 + 5x^0
+  \end{gather*}  Show it is irreducible over $\QQ$.
+  \\\\
+  \begin{proof}
+    Under assumption $f$ monic by Gauss's Lemma, it suffices to show that $f$ is irreducible over $\ZZ$.
+    \\\\
+    Suppose $f = (b_rx^r + \cdots + b_0)(c_sx^s + \cdots + c_0)$. Note either $p \nmid b_0$ or $p \nmid c_0$ because $p^2 \nmid a_0 = b_0c_0$.
+    \\\\
+    Suppose $p \nmid b_0$, hence $p \, | \, c_0$.
+    \\\\
+    Let $m$ be the smallest such that $p \nmid c_m$.
+    \\\\
+    Note $p \nmid c_s$ because $p \nmid a_n = b_rc_s$ so $m < s$.
+    \\\\
+    Then $a_m = b_1c_{m - 1} + \cdots + b_mc_0$.
+    \\\\
+    $p \, | \, a_m$ by hypothesis. $p \nmid b_0$, $b \nmid c_m$ and $p | c_{m - 1} \cdots c_0$. So $P | \text{left}$ but $p \nmid \text{right}$. Contradiction!
+  \end{proof} 
+\end{example} 
+
+For each $n \geq 1$, there is a homomorphism $\phi_n: \ZZ[x] \to \ZZ_n[x]$ induced by $\ZZ \to \ZZ / n\ZZ = \ZZ_n$.
+\begin{gather*}
+  \phi_n(f) = f \quad \text{with coefficients mod $n$ }
+\end{gather*} 
+
+\begin{example}
+  \begin{gather*}
+    \underbrace{\phi_3(5x^3 + 4x + 7)}_{\in \ZZ[x]} = \underbrace{2x^3 + x + 1}_{\in \ZZ_3[x]}
+  \end{gather*} 
+\end{example} 
+
+\begin{lemma}
+  If $\phi_n(f)$ is irreducible in $\ZZ_n[x]$ (and $f \neq mf'$ for some $m \in \ZZ$ ), then $f$ is irreducible in $\ZZ[x]$. 
+  \begin{proof}
+    Indeed, if $f = g \cdot h$ in $\ZZ[x]$, then $\phi_n(f) = \phi_n(gh) = \phi_n(g) \phi_n(h)$.
+  \end{proof} 
+\end{lemma} 
+
+\begin{example}
+  $\QQ[x] / \langle 5x^3 + 4x + 7 \rangle $ is a field.
+
+  To compute $\gcd(f, g)$, $f, g \in \FF[x]$, just apply Euclid's algorithm.
+
+  \begin{example}
+    $\gcd(x^3 + x + 1, x^2 + 2)$ in $\ZZ_3[x]$.
+    \polylongdiv{x^3 + 0x^2 + x + 1}{x^2 + 0x + 2}
+    \\\\
+    $\gcd(x^2 + 2, 2x + 1) = 2x + 1$
+    \polylongdiv{x^2 + 0x + 2}{2x + 1}
+  \end{example} 
+\end{example} 
+
+\end{document}

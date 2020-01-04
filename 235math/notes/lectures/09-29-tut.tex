@@ -1,0 +1,112 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+\title{Math 235 Tutorial --- 09-30}
+
+\begin{document}
+
+\section{Lecture 09-30}
+
+\subsection{Review Complex Numbers}
+
+Recall $\CC = \{a + bi: a, b \in \RR\}$
+
+Come equipped with:
+\begin{enumerate}
+  \ii
+  Addition: $(a_1 + b_1i) + (a_2 + b_2i) = (a_1 + a_2) + (b_1 + b_2)i$
+  \ii
+  Multiplication:
+\end{enumerate}
+
+Complex numbers are associative and commutative under these operations.
+
+There exists a complex conjugate.
+\begin{example}
+  Complex conjugate of $(a + bi) = (a - bi)$
+\end{example}
+\begin{note}
+  $(a + bi)(a - bi) = a^2 + b^2$
+\end{note}
+
+$\CC^*$ is a multiplicative group of complex numbers. All imaginary numbers have an inverse.
+
+Rectangular and Polar coordinates.
+
+Rectangular: x axis is real component, y axis is imaginary component.
+
+Polar: radius is $\sqrt{a^2 + b^2}$
+
+$\sqrt{a^2 + b^2}\cos{\theta} + \sqrt{a^2 + b^2}\sin{\theta}i = \sqrt{a^2 + b^2}cis\theta = re^{i\theta}$
+
+We have that $(r_1cis\theta_1)(r_2cis\theta_2) = r_1r_2cis(\theta_1 + \theta_2)$.
+
+r is the "scale factor"
+
+$cis\theta$ is the "rotation"
+
+When $r = 1$, we get the subgroup of unit length com plex numbers.
+
+$cis\theta = 1 =$ identity.
+$(cis\theta)^{-1} = cis(\theta)$
+$cis\theta_1(cis\theta_2) = cis(\theta_1 + \theta_2)$
+
+The nth roots of unity are the solutions to $x^n = 1$ in $\CC^*$.
+
+They form a cyclic subgroup of order n.
+Form verticies of a polygon with n verticies.
+
+Recall. Given a geometric object X, its group of isometries or symmetries Isom$(X)$ is a group with multiplication as composition of functions.
+
+Recall. An isometry $f: X \to X$ is a distance preserving function.
+
+dist $(p, q)$ = dist $(f(p), f(q) \forall p, q \in X$.
+
+\begin{definition}
+  Dinedral group - $D_n$ is the group of isometries of regular n-gon.
+  \begin{example}
+    $|D_n| = 2n$. It has n reflections and n rotations (counting the identity).
+
+    Consider $n = 3$. This gives a regular triangle. There are three reflections and three rotations. In this example, reflections fix 1 vertex and midpoing of opposite edge. Rotations fix the center. Group of isometries is not abelian because if you do the same thing in different orders you get different results.
+  \end{example}
+\end{definition}
+
+\ul{Lemma}. The set of rotations forms a subgroup.
+
+\ul{Remark}. Each reflection is its own inverse.
+\ul{Remark}. Product of two reflections is a rotation.Generally it is by twice the angle between the axes of reflection.
+
+When n is even, reflections occur in two ways.
+\begin{enumerate}
+  \ii
+  Fix two vertices
+  \ii
+  Fix two midpopints of opposite edges.
+\end{enumerate}
+
+Interpretation for $n = 1$ and $n = 2$.
+\begin{enumerate}
+  \ii
+  $n = 2$ represented by isometry of "bigon" (looks like a lemon). 
+  \ii
+  $n = 1$ represented by isometry of a water droplet. $reflection, identity$.
+\end{enumerate}
+These two groups are the only abelian dinedral groups.
+
+Let X be a rigid object. Its group of rigit motions consists of isometries that can be "physically realised". They are all rotations.
+
+\begin{example}
+  Let X be a "brick". Dimensions: $2 \times 3 \times 5$
+  \begin{enumerate}
+    \ii
+    Isom X consists of 16 elements. We have 3 $\pi$ rotations, the identity, and reflections.
+    \ii
+    Rigid motions of X consists of 8 elements.
+  \end{enumerate}
+\end{example}
+
+
+\end{document}

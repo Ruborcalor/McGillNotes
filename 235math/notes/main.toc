@@ -1,0 +1,56 @@
+\contentsline {section}{\numberline {1}Proof of $(A \cup B)' = A' \cap B'$}{2}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}Proof of $(A \cup B)' \subset A' \cap B'$}{2}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.2}Proof of $(A \cup B)' \supset A' \cap B'$}{2}{subsection.1.2}% 
+\contentsline {section}{\numberline {2}Product of Sets}{2}{section.2}% 
+\contentsline {section}{\numberline {3}Relations and Functions}{2}{section.3}% 
+\contentsline {section}{\numberline {4}Composite Functions}{3}{section.4}% 
+\contentsline {section}{\numberline {5}Lecture 2019-09-09}{3}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Creating a partition}{5}{subsection.5.1}% 
+\contentsline {section}{\numberline {6}Mathematical Induction}{6}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Review proof of uniqueness}{7}{subsection.6.1}% 
+\contentsline {subsection}{\numberline {6.2}Definition and example of Groups}{8}{subsection.6.2}% 
+\contentsline {subsection}{\numberline {6.3}Proposition 3.21}{9}{subsection.6.3}% 
+\contentsline {subsubsection}{\numberline {6.3.1}Proof of existence:}{9}{subsubsection.6.3.1}% 
+\contentsline {subsubsection}{\numberline {6.3.2}Proof of uniqueness:}{9}{subsubsection.6.3.2}% 
+\contentsline {subsection}{\numberline {6.4}Proposition 3.22}{9}{subsection.6.4}% 
+\contentsline {subsection}{\numberline {6.5}Notation}{9}{subsection.6.5}% 
+\contentsline {subsection}{\numberline {6.6}3.3 a \underline {subgroup} H of group G is a subset of G}{9}{subsection.6.6}% 
+\contentsline {subsubsection}{\numberline {6.6.1}ex. of the above.}{10}{subsubsection.6.6.1}% 
+\contentsline {subsection}{\numberline {6.7}Proposition 3.30: Criterian for subgroup}{10}{subsection.6.7}% 
+\contentsline {subsubsection}{\numberline {6.7.1}Proof that being a group gives these requirements}{10}{subsubsection.6.7.1}% 
+\contentsline {subsubsection}{\numberline {6.7.2}Proof that these requirements means it must be a subgroup}{10}{subsubsection.6.7.2}% 
+\contentsline {subsection}{\numberline {6.8}Proposition 3.31}{10}{subsection.6.8}% 
+\contentsline {section}{\numberline {7}Cyclic Groups}{10}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Cyclic Subgroup}{10}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}Examples}{10}{subsection.7.2}% 
+\contentsline {subsection}{\numberline {7.3}Proof}{11}{subsection.7.3}% 
+\contentsline {subsection}{\numberline {7.4}Examples}{11}{subsection.7.4}% 
+\contentsline {subsection}{\numberline {7.5}Proof}{11}{subsection.7.5}% 
+\contentsline {subsection}{\numberline {7.6}Practice}{11}{subsection.7.6}% 
+\contentsline {subsection}{\numberline {7.7}The \underline {group of units modulo n}}{11}{subsection.7.7}% 
+\contentsline {subsection}{\numberline {7.8}Examples}{12}{subsection.7.8}% 
+\contentsline {subsection}{\numberline {7.9}Proof}{12}{subsection.7.9}% 
+\contentsline {section}{\numberline {8}Cyclic Subgroups}{12}{section.8}% 
+\contentsline {section}{\numberline {9}Chapter 5 09-27}{13}{section.9}% 
+\contentsline {section}{\numberline {10}Math 235 Tutorial --- 09-27}{15}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}Groups \& Subgroups}{15}{subsection.10.1}% 
+\contentsline {section}{\numberline {11}Lecture 09-30}{19}{section.11}% 
+\contentsline {subsection}{\numberline {11.1}Review Complex Numbers}{19}{subsection.11.1}% 
+\contentsline {section}{\numberline {12}10-02}{20}{section.12}% 
+\contentsline {subsection}{\numberline {12.1}Cosets and Lagrange's Theorem}{22}{subsection.12.1}% 
+\contentsline {section}{\numberline {13}Tutorial 5: Cyclic Groups - 10-04}{25}{section.13}% 
+\contentsline {section}{\numberline {14}Lecture 10-07}{29}{section.14}% 
+\contentsline {section}{\numberline {15}Case Study: The Cube}{31}{section.15}% 
+\contentsline {section}{\numberline {16}10-11}{31}{section.16}% 
+\contentsline {subsection}{\numberline {16.1}$A_4$ is the group of rigid motions of a tetrahedron}{31}{subsection.16.1}% 
+\contentsline {section}{\numberline {17}Isomorphisms}{32}{section.17}% 
+\contentsline {section}{\numberline {18}Tutorial 6: Permutation Groups}{32}{section.18}% 
+\contentsline {section}{\numberline {19}Isomorphisms}{35}{section.19}% 
+\contentsline {section}{\numberline {20}Isomorphisms Continued}{38}{section.20}% 
+\contentsline {section}{\numberline {21}Cosets}{40}{section.21}% 
+\contentsline {section}{\numberline {22}Direct Products}{43}{section.22}% 
+\contentsline {section}{\numberline {23}Normal Subgroups and Factor Groups}{44}{section.23}% 
+\contentsline {subsection}{\numberline {23.1}Factor Group or Quotient Group}{45}{subsection.23.1}% 
+\contentsline {section}{\numberline {24}Simple Groups}{47}{section.24}% 
+\contentsline {section}{\numberline {25}Homomorphisms}{47}{section.25}% 
+\contentsline {section}{\numberline {26}Isomorphisms}{49}{section.26}% 

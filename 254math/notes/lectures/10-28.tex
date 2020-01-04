@@ -1,0 +1,155 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+
+
+\begin{document}
+
+\section{10-28}
+
+\begin{theorem}
+  Let $(x_n)$ be a convergent sequence, then every subsequence of $(x_n)$ also converges to the same limit. i.e. $\lim(x_{n_k}) = \lim(x_n)$. 
+  \begin{lemma}
+    If $n_1 < n_2 < n_3 < \dots$ where $n_k \in \NN$ for all $k$, then $n_k \geq k$ for all $k \in \NN$.
+    \begin{proof}
+      By induction. 
+      \\\\
+      $k = 1:$ Base case where $n_k \geq k$.
+      \\\\
+      $k \to k + 1$ : Assume that $n_k \geq k$. Then  
+      \[
+        n_{k + 1} > n_k \geq k \Rightarrow n_{k + 1} > k \Rightarrow n_{k + 1} \geq k + 1
+      \]
+      Thus $n_k \geq k$ for all $k \in \NN$.
+    \end{proof}
+  \end{lemma}
+  \begin{proof}
+    Let $x \coloneqq \lim(x_n)$. Let $\epsilon > 0$, then $\exists N \in \NN \quad \forall n \geq N: |x_n - x| < \epsilon$.
+    \\\\
+    Since $n_k \geq k$, by the lemma, we also have that $|x_{n_k} - x| < \epsilon$ for all $k \geq N$, since $n_k \geq k \geq N$.
+    \\\\
+    Thus $(x_{n_k})$ converges to $x$.
+  \end{proof}
+\end{theorem}
+
+\subsection{Criterion for the divergence of sequences}
+
+\begin{theorem}[1]
+  Let $(x_n)$ be a sequence such that $(x_n)$ has a subsequence $(x_{n_k})$ that diverges.
+  \begin{proof}
+    If $(x_n)$ were convergent, $(x_{n_k})$ would converge, but it doesn't. Thus $(x_n)$ diverges.
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Let $(x_n)$ be a sequence such that there exists two subsequences $(x_{n_k})$ and $(x_{n_j})$ that converge to different limits, then $(x_n)$ diverges.
+  \begin{proof}
+    If $(x_n)$ was convergent to $x_1$, then $(x_{n_k})$ and $(x_{n_j})$ would converge to $x_1$; but they don't. Thus $(x_n)$ diverges.
+  \end{proof}
+\end{theorem}
+
+\begin{example}
+  $x_n = (-1)^n$. Consider the subsequences of the even and odd terms $(x_{2n})$ and $(x_{2n - 1})$.
+  \\\\
+  $x_{2n} = (-1)^{2n} = 1^{2n} = 1$. i.e. $(x_{2n})$ is a constant sequence and $\lim(x_{2n}) = 1$.
+  \\\\
+  Similarly, $x_{2n - 1} = (-1)(-1)^{2n} = -1$. i.e. $(x_{2n - 1})$ is a constant sequence and $\lim(x_{2n - 1}) = -1$.
+  \\\\
+  According to one of the criterion for the divergence of sequences theorems, $(x_n)$ diverges. 
+\end{example}
+
+\begin{example}
+  $x_n: 1, 1, 2, \frac{1}{2}, 3, \frac{1}{3}, 4, \frac{1}{4}$.
+  Then $x_{2n - 1}: 1, 2, 3, 4, \dots$. Which diverges, thus $(x_n)$ diverges.
+\end{example}
+
+\begin{example}
+  $x_n = \sqrt[n]{n}$ ; Prove that $(x_n)$ converges to 1.
+  \\\\
+  1st step: $(x_n)$ is eventually decreasing.
+  \begin{gather*}
+    \frac{x_{n + 1}}{x_n} = \frac{(n + 1)^{\frac{1}{n + 1}}}{n^{\frac{1}{n}}} \\
+    \Rightarrow (\frac{x_{n + 1}}{x_n})^{n(n + 1)} = \frac{1}{n} \cdot \frac{n + 1}{n}^n 
+    = \frac{1}{n} \cdot (1 + \frac{1}{n})^n \leq \frac{1}{n} \cdot e < \frac{3}{n} \leq 1
+  \end{gather*}
+  As long as $n \geq 3$. Thus $(x_n)$ is decreasing for all $n \geq 3$. 
+  \\\\
+  Furthermore, $(x_n)$ is bounded from below by 1. Thus $(x_n)$ is bounded and eventually decreasing $\Rightarrow$ $(x_n$ converges by monotone convergence theorem. Let $x \coloneqq \lim(x_n)$. 
+  \\\\
+  Second step: Show that $x = 1$.
+  \\
+  Consider the subsequence $(x_{2n})$ of even terms. 
+  \[
+    x_{2n} = \sqrt[2n]{2n} \Rightarrow x_{2n}^2 = \sqrt[n]{2n} = \sqrt[n]{2} \cdot \sqrt[n]{n} = \sqrt[n]{2} \cdot x_n
+  \]
+  Thus 
+  \begin{gather*}
+    \lim(x_{2n}^2) = \lim(\sqrt[n]{2} \cdot x_n) = \underbrace{\lim(\sqrt[n]{2})}_{=1} \cdot \lim(x_n) \\
+    \lim(x_{2n}^2) = (\lim(x_{2n}))^2 \\
+    \Rightarrow x^2 = x \Rightarrow x^2 - x = 0 \Rightarrow x(x - 1) = 0 \\
+    \Rightarrow x = 0 \vee x = 1. \ \text{but} \ x_n \geq 1 \quad \forall n \in \NN \\
+    \Rightarrow x = 1
+  \end{gather*}
+\end{example}
+\begin{theorem}[Bolzano - Weirstrass]
+  Let $(x_n)$ be a \ul{bounded} sequence. Then $(x_n)$ has a convergent subsequence. 
+  \begin{proof}
+    Since $(x_n)$ is bounded, $\exists \mu > 0$ such that $x_n \in \underbrace{[-M, M]}_{= I_1}$ for all $n \in \NN$.
+    \\\\
+    Divide $I_1$ into two subintervals of equal width. At least one of these subintervals contains infinitely many terms of $(x_n)$. Choose this one of these intervals and call it $I_2$.
+    \\\\
+    Divide $I_2$ into 2 subintervals of equal width. At least one of them, called $I_3$ contains infinitely many terms of $(x_n)$. Etc...
+    \\\\
+    We obtain an infinite sequence $I_1 \supseteq I_2 \supseteq I_3 \supseteq \cdots$ of closed and bounded intervals. By the nested interval property of $\RR$ we know that the intersection over all of these intervals is not empty. i.e. $\cap_{n \in \NN} I_n \neq \varnothing$.
+    \\\\
+    Let $x \in \cap_{n \in \NN} I_n$. We will now show that there exists a subsequence $(x_{n_k})$ of $(x_n)$ with $\lim(x_{n_k}) = x$.
+    \\\\
+    Let $n_1 \in \NN$ be arbitrary. We know that $x_{n_1} \in I_1$ because all elements are in $I_1$. $I_2$ contains infinitely many terms of $(x_n)$. Thus there exists $n_2 > n_1$ such that $x_{n_2} \in I_2$. The same goes for $I_3$ ; etc...
+    \\\\
+    We obtain $n_1 < n_2 < n_3 < \dots$ such that $x_{n_k} \in I_k$ for all $k \in\NN$.
+    \\\\
+    We also have that $x \in I_k$ for all $k \in \NN$. This gives that $|x_{n_k} - x| \leq |I_k|$ where $|I_1| = 2M, \quad |I_2| = M, \quad |I_3| = \frac{M}{2}, \quad\dots$.
+    \[
+      \Rightarrow |I_k| = \frac{2M}{2^{k - 1}} = \frac{4M}{2^k} \Rightarrow |x_{n_k} - x| \leq 4M \cdot (\frac{1}{2})^k
+    \]
+    for all $k \in \NN$. By convergence criterion, $\lim(x_{n_k}) = x$ ; especially, $(x_{n_k})$ converges.
+    Corner stone of the proof is the nested interval property of $\RR$.
+  \end{proof}
+\end{theorem}
+
+\begin{definition}
+  Let $(x_n)$ be a sequence and let $(x_{n_k})$ be a convergent subsequence. Let $x \coloneqq \lim(x_{n_k})$. Then $x$ is called an \ul{accumulation point} or a \ul{subsequential limit} (point) of $(x_n)$.
+\end{definition}
+
+\begin{example}
+  $x_n = (-1)^n$. The accumulation points of $(x_n)$ are $+1$ and $-1$.
+\end{example}
+\begin{example}
+  Let $x_n$ be an enumeration of $Q$. Every real number is an accumulation point because $Q$ is dense in $\RR$.
+\end{example}
+
+\begin{theorem}
+  Let $(x_n)$ be a sequence. $x \in \RR$ is an accumulation point of $(x_n)$ iff $\forall \epsilon > 0: V_\epsilon(x)$ contains infinitely many terms of $(x_n)$.
+  \begin{proof}
+    \begin{itemize}
+      \ii[]
+      \ii[$(\Rightarrow)$ ]
+      Let $x$ be an accumulation point of $(x_n)$. Thus there exists a subsequence $(x_{n_k})$ of $(x_n)$ with $\lim(x_{n_k}) = x$. Then $\exists k \in \NN: \forall k \geq N x_{n_k} \in V_\epsilon(x)$. Thus $V_\epsilon(x)$ contains infinitely many terms of $(x_n)$. 
+      \ii[$(\Leftarrow)$ ]
+      Let $x \in \RR$ be such that $\forall \epsilon > 0:V_\epsilon(x)$ contains infinitely many terms of $(x_n)$. Let $\epsilon \coloneqq 1$. Then $V_1(x)$ contains infinitely many terms of $(x_n)$ .Let $n_1 \in \NN$ such that $x_{n_1} \in V_1(x)$.
+      \\\\
+      Let $\epsilon \coloneqq \frac{1}{2}$. Then $V_{\frac{1}{2}}(x)$ contains infinitely many terms of $(x_n)$. Thus $\exists n_l > n_1$ such that $x_{n_2} \in V_{\frac{1}{2}}(x)$.
+      \\
+      $\vdots$
+      \\
+      $\epsilon = \frac{1}{k}$. Then $V_{\frac{1}{k}}(x)$ contains infinitely many terms of $(x_n)$ thus $\exists n_k > n_{k - 1}$ such that $x_{n_k} \in V_{\frac{1}{k}}(x)$ 
+      \\\\
+      Since $n_1 < n_2 < n_3 < \dots$, we obtain a subsequence $(x_{n_k})$ of $(x_n)$ with $x_{n_k} \in V_{\frac{1}{k}}(x)$. Now let $\epsilon > 0$ and let $k > \frac{1}{\epsilon} \Leftrightarrow \frac{1}{k} < \epsilon \Rightarrow x_{n_k}, x_{n_{k + 1}}, x_{n_{k + 2}}, \dots \in V_{\frac{1}{k}}(x) \subseteq V_\epsilon(x)$.
+      \[
+        x_{n_k} \in V_\epsilon(x) \quad \forall k \geq K \Rightarrow x_{n_k} \ \text{ converges to } \ x
+      \]
+    \end{itemize}
+  \end{proof}
+\end{theorem}
+
+\end{document}

@@ -1,0 +1,142 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{/home/gautierk/.config/evan}
+\usepackage{/home/gautierk/.config/Latex/cole}
+
+\date{2019-12-02}
+
+
+\begin{document}
+
+\section{Lecture 12-02}
+
+\begin{theorem}[Finding a field from an integral domain]
+  Let $D$ be an integral domain. $\exists$ a field $\FF_D$ and an injective homomorphism $\phi: D \to \FF_D$ such that every $f \in F_D$ is equal to $\phi(d_1) \cdot \phi(d_2)^{-1}$ for some $d_1, d_2 \in D$.
+  \\\\
+  $\FF_D$ is called the \ul{field of fractions} equal associated to $D$.
+\end{theorem} 
+
+\begin{example}
+  $\QQ[x]$ is not a field, but $\QQ(x) = \{p / q : p, q \in \QQ[x], \ q \neq 0 \}$ is a field.
+\end{example} 
+\begin{example}
+  If $D$ is a field, then $D = \FF_D$.
+\end{example} 
+
+\subsection{Construction of $\FF_D$ }
+
+We represent $a / b$ as $(a, b)$.
+\begin{gather*}
+  S = \{(a, b) \in D : b \neq 0\}
+\end{gather*} 
+
+Define $\sim $ on $S$ such that $(a_1, b_1) \sim (a_2, b_2)$ if and only if $a_1b_2 = a_2b_1$. i.e. 
+\begin{gather*}
+  \frac{a_1}{b_1} = \frac{a_2}{b_2} \quad \ \text{if and only if} \ \quad a_1b_2 = a_2b_1
+\end{gather*} 
+
+\begin{proof}[Proof that $\sim$ is an equiv relation]
+  \begin{enumerate}
+    \ii[]
+    \ii
+    Reflexive
+    \\\\
+    $a_1b_1 = a_1b_1$
+    \\\\
+    $(a_1, b_1) \sim (a_1, b_1)$ 
+    \ii
+    Symmetric
+    \\\\
+    If $(a_1, b_1) \sim (a_2, b_2)$, then $(a_2, b_2) \sim (a_1, b_1)$ 
+    \ii
+    Transitive
+    \\\\
+    If $(a_1, b_1) \sim (a_2, b_2)$ and $(a_2, b_2) \sim (a_3, b_3)$, then $(a_1, b_1) \sim (a_3, b_3)$.
+  \end{enumerate} 
+\end{proof} 
+
+Claim: $+, \cdot$ are well-defined on $S / \sim$. Proof as an exercise.
+\\\\
+Notation:
+\begin{gather*}
+  (a_1, b_1) \cdot (a_2, b_2) = (a_1a_2, b_1b_2) \\
+  \frac{a_1}{b_1} \cdot \frac{a_2}{b_2} = \frac{a_1b_2}{a_2b_2}
+  \\\\
+  (a_1, b_1) + (a_2, b_2) = (a_1b_2 + a_2b_1, b_1b_2) \\
+  \frac{a_1}{b_1} + \frac{a_2}{b_2} = \frac{a_1b_2 + a_2b_1}{b_1b_2}
+\end{gather*} 
+
+Claim: $(S / \sim, \cdot, + , 0 / 1, 1 / 1) \equiv \FF_D$ is a field.
+\\\\
+with inverses
+\begin{gather*}
+  (\frac{a}{b})^{-1} = \frac{b}{a} \quad \ \text{if} \ \quad a \neq 0
+  \\
+  -(\frac{a}{b}) = (-\frac{a}{b})
+\end{gather*} 
+
+\begin{proof}
+  Check associativity, distributivity, commutativity. (Exercise)
+  \begin{gather*}
+    \frac{0}{1} + \frac{a}{b} = \frac{0b + a 1}{b 1} = \frac{a}{b} \ \checkmark
+    \\\\
+    \frac{1}{1} \cdot \frac{a}{b} = \frac{1a}{1b} = \frac{a}{b} \ \checkmark
+    \\\\
+    \frac{a}{b} \neq 0 \quad (a \neq 0) \\
+    \frac{a}{b} \cdot \frac{b}{a} = \frac{ab}{ab} \sim \frac{1}{1} \\
+    \Rightarrow \frac{b}{a} = (\frac{a}{b})^{-1}
+    \\\\
+    \frac{a}{b} + \frac{-a}{b} = \frac{ab + (-a)b}{b^2} = \frac{0}{b^2} \sim \frac{0}{1} \\
+    \Rightarrow -(\frac{a}{b}) = \frac{-a}{b}
+  \end{gather*} 
+\end{proof} 
+
+
+\subsection{Factorization}
+
+Let $R$ be a commutative ring with unity.
+
+\begin{definition}[Definition of divides, unit, and associate]
+  $a$ \ul{divides} $b$ if $\exists c \in R$ such that $a \cdot c = b$.
+  \\\\
+  A \ul{unit} $u$ is an element with an inverse.
+  \\\\
+  $a$ and $b$ are \ul{associates} if $a = b \cdot u$ for a unit $u$.
+\end{definition} 
+
+\begin{example}
+  \begin{gather*}
+    4 = 2 \cdot 2 = (-2) \cdot (-2) \\
+    2 = \underbrace{(-1)}_{\text{unit}} \cdot (-2)
+  \end{gather*} 
+\end{example} 
+
+\begin{note}
+  Being associates is an equivalence relation.
+  \begin{gather*}
+    a = b \cdot u \\
+    \Rightarrow b = a \cdot u^{-1}
+  \end{gather*} 
+\end{note} 
+
+\begin{example}
+  In $\ZZ$, associates are $\pm n$
+\end{example} 
+
+\begin{definition}[Irreducible. Prime] \leavevmode \\\\
+  Suppose $D$ is an integral domain.
+  \\\\
+  $p \in D$ non-zero, non-unit is \ul{irreducible} if $p = ab \Rightarrow a$ is a unit \ul{or} $b$ is a unit.
+  \\\\
+  $p$ is \ul{prime} if $p \ | \ a \cdot b \Rightarrow p \ | \ a$  \ul{or} $p \ | \ b$.
+  
+\end{definition} 
+
+
+\subsection{Summary}
+Key take away: Really just trying to do what the rationals did to the integers, but to a general integral domain. This is useful because fields are very easy to work with, while integral domains are not very easy to work with.
+
+What's special about the prime numbers? You can uniquely factor everything into a product of prime numbers. Everything you do with $\ZZ$ crucially lies on this fact. The question is whether or not you could do this with all general rings. The answer is not always, but many times you can.
+
+
+\end{document}
