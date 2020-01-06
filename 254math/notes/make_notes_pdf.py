@@ -37,7 +37,7 @@ for line in contents:
         new_file.append("% Imports End %\n")
         #print("% Imports End %")
 
-f = open("new_main.tex", "w")
+f = open("main.tex", "w")
 #print(new_file)
 new_file = "".join(new_file)
 f.write(new_file)
