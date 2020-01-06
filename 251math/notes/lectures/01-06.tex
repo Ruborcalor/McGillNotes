@@ -1,0 +1,186 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+\date{2020-01-06}
+
+
+\begin{document}
+
+\section{01-06}
+
+http://www.math.mcgill.ca/ daimon /courses /algebra /algebra.html
+
+Assignments: due on wednesday at burnside floor 10. Handed back on Monday
+
+office hourse mw 10:35 - 11:45
+
+Midterm feb 19
+
+Friday: no lecture this week
+
+Textbook: "Linear algebra and geometry" Kostakin & makte
+
+\begin{definition}[Linear Algebra]
+  The study of vector spaces over a field and of the maps between them.
+
+  Homomorphism aka linear transformation. Studying linear transformations between vector spaces.
+\end{definition} 
+
+Groups are an abstraction of the notion of symmetry.
+
+Rings are an abstraction of the notion of numbers.
+
+Vector spaces arose as a model of physical space.
+
+\begin{example}
+  Prototypical
+  \begin{enumerate}
+    \ii
+    $\RR$
+    \ii
+    $\RR^2$ 
+    \ii
+    $\RR^3$
+  \end{enumerate} 
+\end{example} 
+
+\subsection{Abstractions}
+
+\begin{enumerate}
+  \ii
+  $\RR^n$. n-dimensional euclideon space
+  \ii
+  Replace $\RR$ by a general field $F \to F^n$ 
+  \\
+  Allow you to study some interesting and practical ideas.
+\end{enumerate} 
+
+\begin{definition}
+  Fix a field $F$ (e.g. $\RR, \CC, \QQ, \FF_p = \ZZ / p \ZZ, \FF_{p^n} = \FF_p[x] / (q(x)) \deg(q) = n, q \text{ irreducible}$ 
+
+  A vector space over $\FF$ is a set $V$ equipped with the following structures:
+  \begin{enumerate}
+    \ii
+    A binary operation.
+    \begin{gather*}
+      +: V \times V \to V \\
+      (v_1, v_2) \to v_1 + v_2
+    \end{gather*} 
+    \ii
+    A scalar multiplication
+    \begin{gather*}
+      \cdot: F \times V \to V \\
+      (\lambda, v) \to \lambda \cdot v
+    \end{gather*} 
+  \end{enumerate} 
+  Subject to the following axioms.
+  \begin{enumerate}
+    \ii
+    $(V, +)$ is an abelian group, i.e. $\exists$ a mutual (identity) element for +.
+    \begin{enumerate}
+      \ii Identity:
+      \begin{gather*}
+        0_V \ \text{such that} \ 0_V + w = w + 0_V = w \forall w \in V
+      \end{gather*} 
+      \ii Commutative:
+      \begin{gather*}
+        v_1 + v_2 = v_2 + v_1 \forall v_1, v_2 \in V
+      \end{gather*} 
+      \ii Inverses:
+      \begin{gather*}
+        \forall v \in V, \exists v' \ \text{such that} \ v + v' = v' + v = 0_V
+      \end{gather*} 
+      \begin{note}
+        $v' = -v$
+      \end{note} 
+      \ii Associativity
+      \begin{gather*}
+        (v_1 + v_2) + v_3 = v_1 + (v_2 + v_3)
+      \end{gather*} 
+    \end{enumerate} 
+    \ii
+    Multiplication rules
+    \begin{enumerate}
+      Identity
+      \begin{gather*}
+        1 \cdot v = v
+      \end{gather*} 
+      \ii
+      Associativity
+      \begin{gather*}
+        \lambda_1, \lambda_2 \in F, v \in V \\
+        \lambda_1(\lambda_2 v) = (\lambda_1\lambda_2)v
+      \end{gather*} 
+    \end{enumerate} 
+    \ii
+    Distributive Laws
+    \begin{enumerate}
+      \ii
+      \begin{gather*}
+        \lambda(v_1 + v_2) = \lambda v_1 + \lambda v_2
+      \end{gather*} 
+      \ii
+      \begin{gather*}
+        (\lambda_1 + \lambda_2)v = \lambda_1 v + \lambda_2 v
+      \end{gather*} 
+    \end{enumerate} 
+  \end{enumerate} 
+\end{definition} 
+
+\subsection{Consequences of these axioms}
+
+\begin{enumerate}
+  \ii
+  \begin{gather*}
+    0 \cdot w = 0_V \\
+    (0 + 0) \cdot w = 0 \cdot w + 0 \cdot w = 0 \cdot w \Rightarrow 0_V = 0 \cdot w
+  \end{gather*} 
+  \ii
+  \begin{gather*}
+    (-1) \cdot w = -w \\
+    (1 + (-1) \cdot w = 1 \cdot w + (-1) \cdot w \\
+    \Rightarrow 0_V = 0 \cdot w = w + (-1)w
+  \end{gather*} 
+\end{enumerate} 
+
+\begin{example}
+  \begin{enumerate}
+    \ii
+    Euclidean space $\RR^n$ is a vector space over $\RR$.
+    \ii
+    Solutions of linear equations
+    \\
+    Let $x_1, \dots, x_n, a_1, dots, a_n \in F$
+    \\
+    \begin{gather*}
+      a_1x_1 + \cdots + a_nx_n = 0
+    \end{gather*} 
+    If $(x_1, \dots x_n)$ and $(x_1', \dots, x_n')$ are solutions to $(*)$, then so is $\lambda(x_1, \dots, x_n)$ and $(x_1, \dots, x_n) + (x_1' + \dots, x'_n)$
+    \\
+    More generally you can set up a series of these equations. Let $S$ be the set of solutions of this set of equations. It is a vector subspace of  $F^n$. Homogeneous vs non homogeneous
+    \\
+    Let $\sim{S}$ be solutions to (**) where replace 0 with constants.
+    \\
+    $\sim{S}$ is either empty, or it is a coset for $S$ in $F^n$. If $x_1^0, \dots, x_n^0) \in \sim{S}$, then $\sim{S} = (x_1^0, \dots, x_n^0) + S$
+  \end{enumerate} 
+\end{example} 
+
+\subsection{Linear Differential Equations}
+
+$a_0(x), a_1(x), \dots, a_n(x)$ functions from $\RR \to \RR$ 
+
+\begin{gather*}
+  f: \RR \to \RR \ \text{such that} \ 
+  \\
+  a_0(x)f(x) + a_1(x)f'(x) + \dots + a_n(x)f^{(n)}(x) = 0
+  \\
+  \frac{d}{dx}(f(x) + g(x)) = \frac{d}{dx}f + \frac{d}{dx}g
+\end{gather*}
+
+Note that this equation would not hold true when replacing addition with multiplication. Think of the product rule.
+
+
+
+\end{document}
