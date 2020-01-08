@@ -1,4 +1,4 @@
 \contentsline {section}{\numberline {1}01-06}{2}{section.1}% 
 \contentsline {subsection}{\numberline {1.1}Abstractions}{2}{subsection.1.1}% 
-\contentsline {subsection}{\numberline {1.2}Consequences of these axioms}{3}{subsection.1.2}% 
+\contentsline {subsection}{\numberline {1.2}Consequences of these axioms}{4}{subsection.1.2}% 
 \contentsline {subsection}{\numberline {1.3}Linear Differential Equations}{4}{subsection.1.3}% 
