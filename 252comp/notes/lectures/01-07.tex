@@ -1,0 +1,163 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+\date{2020-01-07}
+
+
+\begin{document}
+
+\section{Lecture 01-07}
+\subsection{Website}
+http://luc.devroye.org/251.html
+
+\subsection{Textbook}
+Cormen, Leisarson, Rivest, Steing, Intro to algorithms, 3rd edition.
+
+
+\begin{definition}
+  Precise set of instructions acting on a finite input acting on a \ul{finite input} and halting in \ul{finite time} and using a \ul{finite} amount of resources. 
+  \\
+  i.e. there is no algorithm for calculating all the digits of pi. It would be wrong to say that "my algorithm" has an infinite loop because then it would not halt in finite time.
+  \\
+  Algorithms for everything. Need it to create a good spageti bolognese.
+  \\
+  (world wars are usually very good for advancing technology (although we don't need another one))
+\end{definition} 
+
+\subsection{Timeline}
+
+1940: Turing and his Tape
+
+1950: IBM Ram Model (Random access memory)
+
+CPU constant time access very questionable
+
+1970: Pointer based machines come into fashion
+
+Difference: Unlimited cells. Address calcluations are not permitted / done. IBM you can go to the "next" address, but you cannot do that with the pointer based machine.
+
+\subsection{Time / Complexity of an algorithm}
+
+\begin{note}
+  $i, j, k, l, m, n$ are reserved for small 
+  $f, g$ are for functions
+  $r, s, t$ are sort of grouped. $t$ for time
+  $x, y, z$ 
+  $o$ can be confused with 0
+  $e$ do not use this
+  $d$ used for dimension
+\end{note} 
+
+If algorithm takes finite time and finite resources, the ouput must also be finite.
+
+\begin{gather*}
+  \underbrace{x_1, \dots, x_n}_{\text{Input}} \Rightarrow \text{Algorithm} \Rightarrow \underbrace{y_1, \dots, y_m}_{\text{Output}}
+\end{gather*} 
+
+Model Dependent
+
+\subsection{Models}
+
+\begin{enumerate}
+  \ii
+  Ram Model: Every standard operationtakes 1 time unit.
+  \ii
+  Bit Model (competitor model cherished by computer theorists): Cost = 1 $\forall$ bit operations. (After class understand the cost of adding two binary numbers). Note that addition takes n time.
+  \ii
+  Oracle Model: Cost = 1 per use of the oracle.
+  \begin{example}
+    Types of oracles
+    \begin{enumerate}
+      \ii
+      Comparison based oracle. Analogy is a scale.
+      \ii
+      Function oracle: $f(x)$
+      \ii
+      Sorting Chip. 3 inputs one output with 6 possible values (better understand why there are 6 possible values, i would have though 8) 
+    \end{enumerate} 
+  \end{example} 
+  \ii
+  Cache, communication complexity. Idea: Computers are orders of magnitudes faster than communication lines. Cost is the number of bits in an exchange between two computers. Inside cost at another computer is 0
+  \ii Modern day computers. Memory interacts slowly with cache memory which interacts very quickly with the cpu. Cost of operation between memory and cache memory is 1. Cost of operation between cache memory and cpu is 0. (I think the memory could be thought as hard drive, and cache memory as ram)
+\end{enumerate} 
+
+\subsection{Time Complexity}
+
+\begin{enumerate}
+  \ii
+  Worst Case Time:
+  \begin{gather*}
+    T_n = \max Time_n(x_1, \dots, x_n)
+  \end{gather*} 
+  \ii
+  Average Case Time: 
+  \begin{gather*}
+    T_n = \frac{1}{#(x_1, \dots, x_n)}\sum_{x_1, \dots, x_n} T_n(x_1, \dots, x_n)
+  \end{gather*} 
+\end{enumerate} 
+When designing an algorithm with the user in mind the average case time is more important.
+
+\subsection{Lambda Symbols}
+
+\begin{gather*}
+  O, \Omega, \Theta, o, w, \sim
+\end{gather*} 
+
+Let $a_n, b_n$ be positive number sequences.
+
+\begin{gather*}
+  a_n = O(b_n) \ \text{if} \ \exists C, n_0 : a_n \leq C \cdot b_n : (\forall n \geq n_0)
+\end{gather*} 
+
+\begin{example}
+  If $T_n = O(n)$, then we are guaranteeing that $T_n$ has no more than linear growth.
+  \\
+  If $T_n = \Omega(2^n)$, we are guaranteeing that $T_n$ grows at least exponentially.
+  \\
+  If  $T_n = \Theta(n^2)$, we are guaranteeing that $T_n$ always grows at $n^2$. More specific information.
+  \\
+  a_n = o(b_n) when
+  \begin{gather*}
+    \lim(a_n / b_n) = 0
+  \end{gather*} 
+  \ii
+  a_n = w(b_n) when
+  \begin{gather*}
+    \lim(a_n / b_n) = \infty
+  \end{gather*} 
+  \ii
+  a_n = \sim(b_n) when
+  \begin{gather*}
+    0 < \lim(a_n / b_n) < \infty
+  \end{gather*} 
+\end{example} 
+
+\subsection{Scale}
+
+\begin{gather*}
+  \underbrace{\log(n)}_{\text{polylogorithmic} (\log(n))^\Theta(1)}, \underbrace{\sqrt{n}, n, n\log(n), n^2}_{\text{polynomial} n^{\Theta(1)}}, \underbrace{2^n, 3^n}_{\text{Exponential} (\Theta(1))^n}, n!, n^n
+\end{gather*} 
+
+\begin{example}[Computing the n-th fibonacci number]
+  \begin{gather*}
+    0, 1, 1, 2, 3, 5, 8, 13, 21, 34, \dots
+    \\
+    \text{Assume} \ x_n \approx c^n
+    \\
+    \Rightarrow c^n = c^{n - 1} + c^{n - 2} \\
+    c^2 = c + 1 \Rightarrow c = \{\frac{1 + \sqrt{5}}{2}, \frac{1 - \sqrt{5}}{2}\} \\
+  \end{gather*} 
+  Solution Number 2, recursive program
+  \\
+  Solution Number 3, dynamic programming
+  \\
+  Solution #4, linear algebra exponentiation. Take $O(\log n)$
+\end{example} 
+
+
+
+
+
+\end{document}
