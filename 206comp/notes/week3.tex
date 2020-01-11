@@ -1,0 +1,45 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{parskip}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+\begin{document}
+
+\title{Notes 2019-09-20}
+\author{Cole Killian}
+
+\maketitle
+
+Bash Review difference between [], (), [[]], (()), and all the positional arguments \$?, etc
+
+bash test command:
+
+if test EXPRESSION
+
+if [ EXPRESSION ]
+
+if ( EXPRESSION )
+
+% -r if file exists and readable, -w file exists and writable, -x file exists and executable, -f file exists and regular file, -d file exists and is directory, -h or -L true if exists & symbolic link, and many more
+
+String tests:
+%-z string: true if string length is zero, -n string true if string length is non zer, string_1 = string_2 true if strings identical. != not identical. string (without operator) true if not NULL%
+
+integer tests: -eq, -ne, -gt, -ge, -lt. -le
+
+Examples: 
+
+
+
+\end{document}

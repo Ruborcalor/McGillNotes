@@ -1,0 +1,193 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\begin{document}
+
+\title{Notes 2019-09-16}
+\author{Cole Killian}
+
+
+\section{Order Relations}
+
+Def: A Relation on a set S is a subset of $S \times S$
+
+ex. (1) Equality: S set,  $x, y \in S$. $x \sim (\text{in relation with}) y$ if $x = y$ as a subset of $S \times S$ : \{$(x, x): x \in S$ \}
+
+(2) $\leq$ on N
+
+$x \sim y$ if $x \leq y$ ; \{$(x, y): x \leq y $\}
+
+\subsection{Order Relations:}
+
+Def: Let S be a set. A relation $\sim$ on S is called an order relation if it satisfies the following:
+
+(1) $\forall x \in S: x \sim x$ REFLEXIVITY
+
+(2) $\forall x, y \in S: x \sim y \wedge y \sim x \Rightarrow x = y$ ANTI-SYMMETRY
+
+(3) $\forall x, y, z \in S: x \sim y \ \text{and} \  y \sim z \Rightarrow x \sim z$ TRANSITIVITY
+
+ex.1 "$\leq$" on N or on R
+ 
+Checking the axioms is straightforward
+
+(1) $$\forall x \in R: x \leq x$$
+(2) $$ \forall x, y \in R: x \leq y \wedge y \leq x \Rightarrow x = y $$
+(3) $$ \forall x, y, z \in R: x \leq y \wedge y \leq z \Rightarrow x \leq z $$
+
+ex.2 Let S bea family of sets. Then "$\subset$ " is an order relation on S.
+
+let $A, B, C \in S$
+
+$$A \subset A \ \checkmark \ \text{REFLEXIVITY}$$ 
+$$ A \subset B \wedge B \subset A \Rightarrow A = B \ \text{ANTI-SYMMETRY}$$ 
+$$A \subset B \wedge B \subset C \Rightarrow A \subset C \ \text{TRANSITIVITY}$$ 
+
+\section*{Cardinality of Sets}
+
+\subsection*{Finite Sets}
+
+Def: Let A be a finite set. Then $|A|$ gives the number of elements of A; this is also called the \underline{CARDINALITY} of A.
+
+Next we are going to learn to use functions to determine which of two sets is bigger.
+
+\fbox{\begin{minipage}{\linewidth}
+    Theorem: Let $A, B$ be finite and non-empty sets. Then:
+
+    (a) $|A| \leq |B|$ IFF $\exists f:A \to B$ s.t. $f$ is injective.
+
+    (b) $|A| \geq |B|$ IFF $\exists f: A \to B$ s.t. $f$ is surjective.
+
+    (c) $|A| = |B|$ IFF $\exists f: A \to B$ s.t. $f$ is bijective.
+\end{minipage}}
+
+\subsubsection{Proof:}
+
+(a) "$\Rightarrow$ " let $|A| \leq |B|.$ Let $A = \{a_1, \dots, a_n\}, B = \{b_1, \dots, b_k\}$ where $n \leq k$.
+Define $f:A \to B$.
+
+By: $f(a_i) = b_i \forall 1 \leq i \leq n$
+
+This is a proper def since  $n \leq k$. Then f is injective by construction.
+
+"$\Leftarrow$". Assume $\exists f: A \to B$ injective.
+
+Let $A = \{a_1, \dots, a_n\}.$ Then $f(a_1), \dots, f(a_n)$. These are pairwise distinct and are contained in B. Therefore B contains at least n elements. Therefore  $|A| \leq |B|$.
+
+(b) Exercise
+
+$"\Rightarrow" if |A| = |B|$, $f(a_i) = b_i \ \ \forall 1 \leq i \leq n$ is a bijection.
+
+$"\Leftarrow" \ \text{let} \ f: A \to B$ be bijective especially, $f is injective $
+
+Furthermore,  $f^{-1}: B \to A$ is bijective and thus injective $\Rightarrow^{(a)} |B| \leq |A| \Rightarrow^{\text{ANTI-SYMMETRY}} |A| = |B|$
+
+\subsection*{Generalizing for infinite sets.}
+
+def: let A, B be sets. We say that  $|A| \leq |B|$ if $\exists f:A \to B$ s.t. f is injective. (Note a bit of cheating because in this definition we do not define Cardinality). (Note just because it looks like less than or equal does not mean it shares all the properties of less than or equal.)
+
+"$\leq$ " is indeed an order relation on any fam ily of sets.
+
+$|A| \leq |A|$ because $id: A \to A$ (The identity map) is injective REFLEXIVITY
+
+let $|A| \leq |B| \wedge |B| \leq |C|$ then $\exists f:A \to B$ (injective) and $\exists g: B \to C$ (injective) then $g \circ f: A \to C$ is injective as a composition of two injective maps (see tutorials). Thus $|A| \leq |C|$ which gives us transitivity TRANSITIVITY
+
+ANTI-SYMMETRY. let $|A| \leq |B| \wedge |B| \leq |A|$. $\exists f: A \to B$ (injective) and $\exists g: B \to A$ (injective). This is the same as saying there is a surjective function from A to B. But this doesn't necesate bijectivity because they could be two different mappings. It is therefore NOT intuitive that it follows from this that $\exists h: A \to B$ bijective. This is true but NOT easy to prove.
+
+\fbox{\begin{minipage}{\linewidth}
+Theorem : Cantor, Bernstein, Schroder
+
+If $|A| \leq |B| \wedge |B| \leq |A| \Rightarrow |A| = |B|$ ANTI-SYMMETRY
+
+Look up this proof on wikipedia it is very clever.
+\end{minipage}}
+
+In other words, "$\leq$ " is an order relation on any fam ily of sets.
+
+Note: composition of injective maps is injective.
+
+ex.1 Consider $|\mathbb{N}| \ \text{and} \ |\mathbb{N}_0|$
+
+We have to find a bijective mapping $f$ from one set to the other.
+
+$\mathbb{N} = 1, 2, 3, \dots$
+
+$\mathbb{N}_0 = 0, 1, 2, 3, \dots$
+
+Then  $n \to n - 1$ is a bijective map from $\mathbb{N} \to \mathbb{N}_0 \Rightarrow |\mathbb{N}| = |\mathbb{N}_0|$. But note that $\mathbb{N}$ is not a proper subset of $\mathbb{N}_0$. This cannot happen for ANY finite sets! (having both equal cardinality and one being an improper subset of the other).
+
+ex. $|\mathbb{Z}| = |\mathbb{N}|$ "ZAHL (I don't know what this is here for)"
+
+This example is a bit harder.
+
+ $-3, -2, -1, 0, 1, 2, 3$.
+
+ $0 \to 1, 1 \to 2, -1 \to 3, 2 \to 4, -2 \to 5, \dots$
+
+ Consider  $f: \mathbb{N} \to \mathbb{Z}, $
+ \[n \to
+   \begin{cases} 
+     \frac{n}{2}, & \text{if n is even} \\
+     -\frac{n-1}{2}, & \text{if n is odd} \\
+   \end{cases}
+ \]
+
+ which is a bijection.
+
+ Review exercise: explicitely calculate $f: \mathbb{Z} \to \mathbb{N}$
+
+ Note: There are infinitely many levels of infinity.
+
+ The set of rational numbers: between any two numbers there are an infinite number of numbers between the two. But it turns out that cardinality of rational numbers is the same as natural numbers. Rational numbers are countable.
+
+ Real numbers are not countable. There is no bijection from real numbers to natural numbers. He was proved that there cannot possibly be which was very hard.
+
+ Review: power set. power set changes level of infinity
+
+
+ \subsubsection*{ Def: A set S is called countably infinite if  $|S| = |\mathbb{N}|$ }
+
+ \subsubsection*{A set S is called countable if S is either finite or countably infinite.}
+
+ \subsubsection*{ex. $\mathbb{N}, \mathbb{N}_0, \mathbb{Z}$ are all countably infinite.}
+
+ \fbox{\begin{minipage}{\linewidth}
+     Theorem: Let S be a subset of the natural numbers. Then S is countable (because natural numbers are countable). Therefore it is either finite or countably infinite.
+ \end{minipage}}
+
+ Proof: If S if finite, it is countable. Nothing more to show.
+
+ Now assume that S is countably infinite. $S \ \text{infinite} \ \Rightarrow S \neq \varnothing \Rightarrow$ S has a least element $a_1$.
+
+ $S$ minus $a_1$ is not empty. remove $a_2, a_3$.
+
+ $A = \{a_1, a_2, a_3, \dots\} \subset S$ where $a_1 < a_2$ and pairwise distinct.
+
+ $\Rightarrow A \subset S \subset \mathbb{N}$
+
+ (Actually A = S; Prove this! we don't need it for this proof)
+
+ $n \to a_n$ is a bijection from $\mathbb{N}$ to A
+
+ $\Rightarrow |A| = |\mathbb{N}|$
+
+ $$A \subset S \subset \mathbb{N} \Rightarrow |A| \leq |S| \leq |\mathbb{N}|$$
+
+ $$ \Rightarrow |A| = |S| = |\mathbb{N}| \Rightarrow $$ A is countable (actually, countably infinite.)
+
+  \fbox{\begin{minipage}{\linewidth}
+      Theorem let $f: \mathbb{N} \to S$ be surjective. Then S is countable. Proof; next class
+ \end{minipage}}
+ 
+ 
+
+
+
+
+
+
+
+\end{document}

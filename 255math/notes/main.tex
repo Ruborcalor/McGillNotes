@@ -1,0 +1,32 @@
+\documentclass{scrartcl}
+\usepackage{standalone}
+\usepackage{import}
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+\usepackage{array}
+\usepackage{pifont}
+\usepackage{forest}
+\usetikzlibrary{shapes.geometric, calc}
+\usepackage{polynom}
+
+\title{Comp \#252 Notes}
+
+\begin{document}
+
+\maketitle
+
+\clearpage
+\tableofcontents
+
+%  ls *.tex -1 | sed -e 's/\.tex$/\}/;s/^/\\import\{lectures\/\}\{/'
+
+
+% Lecture Imports %
+\import{}{lectures/01-07}
+% Imports End %
+
+
+\end{document}

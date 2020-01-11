@@ -1,0 +1,160 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+\date{2020-01-08}
+
+
+\begin{document}
+
+\section{Lecture 01-08}
+
+\begin{definition}
+  Vector space is a special kind of abelian group that can multiply by scalars.
+  For a general vector space, the scalars are members of a field F, in which case V is called a vector space over F. 
+\end{definition} 
+
+\subsection{Codes}
+
+\begin{definition}[Codes]
+  A subset of the field $\FF_2^n$ 
+  \begin{gather*}
+    \FF_2 = \ZZ / 2 \ZZ = \{0, 1\}
+  \end{gather*} 
+  There are various features you would like a good code to have.
+  \begin{enumerate}
+    \ii
+    \ul{Capacity:} Cardinality of sigma should be large relative to the cardinality of $\FF_2^n$ which is $2^n$.
+    \ii
+    \ul{Redundancy:} Often data is transmitted over noisy channels, so single bits can occasionally be corrupted. One feature you would like to have is being able to detect these corruptions. 
+    \\
+    Do this by defining \ul{Hamming distance}. Let  $v, w \in \FF_2^n$. $d(v, w) = \#$ of $j$ such that $v_j \neq w_j$.
+    \begin{gather*}
+      v = (v_1, \dots, v_n) \\
+      w = (w_1, \dots, w_n)
+    \end{gather*} 
+    One bit is flipped you may fall out of sigma which may be detected.
+    \\
+    K-bit error detection. If $v \in \Sigma$, then 
+    \begin{gather*}
+      \{w | d(v, w) \leq k\} \cap \Sigma = \{v\}
+    \end{gather*} 
+    \ii
+    \ul{Computational Efficiency:} Algorithms for converting elements of $\Sigma$ into the acutal data you are trying to communicate should be efficient.
+    \begin{definition}
+      $\Sigma$ is a \ul{linear code} if it is a vector subspace of $\FF_2^n$. (Closed under addition). All you really have to check if closure under addition.
+      \\
+      Scalar multiplication is really no requirement at all because multiplying by 0 just means $\Sigma$ must contain 0. And multiplying by 1 just gives you the element back.
+    \end{definition} 
+  \end{enumerate} 
+\end{definition} 
+
+\subsection{Function Spaces}
+
+Let $x$ be a set, and $F$ a field.
+\\
+Let $\FF(x, F)$ be the set of functions from $x$ to $F$.
+\begin{gather*}
+  f_1, f_2 \in \FF, \quad (f_1 + f_2)(x) = f_1(x) + f_2(x) \\
+  f \in \FF, \quad (\lambda f)(x) = \lambda \cdot f(x)
+\end{gather*} 
+
+\subsubsection{Linear subspaces of function spaces}
+
+\begin{enumerate}
+  \ii
+  Function with compact support
+  \\
+  $x$ is a topological space.
+  \begin{definition}[Compact Support]
+    $f: x \to $ has compact support if $\exists B \subset x$, $B$ compact, such that $(f(x) = 0) (\forall x \notin B)$ 
+    \\\\
+    If $f_1$ is supported on $B_1$ and $f_2$ on $B_2$, then $f_1 + f_2$ is supported on $B_1 \cup B_2$.
+    \\\\
+    Linearly supported is closed under addition. And scalar multiplication as well
+    \\\\
+    \ul{Special Case:} $x$ has discrete topology. Then compact sets are finite.
+    \\\\
+    $\FF_0(x, F)$ is the set of compactly supported F-valued functions on x.  $F_0(x, F) \leq F(x, F)$.
+  \end{definition} 
+\end{enumerate} 
+
+\subsection{Linear Transformations}
+
+\begin{definition}[Linear Transformation]
+  A linear transformation from $V$ to $W$ ($V, W$ vector spaces over $F$) is a function $T: V \to W$ such that $\forall v_1, v_2 \in V$ 
+    \begin{gather*}
+      T(\lambda_1v_1 + \lambda_2v_2) = \lambda_1T(v_1) + \lambda_2T(v_2)
+    \end{gather*} 
+    T is group homomorphism with additional feature that it respects scalar multiplication. $T(\lambda v) = \lambda T(v)$
+    \\\\
+    \ul{Consequences:}
+    \begin{gather*}
+      T(\lambda_1v_1 + \dots + \lambda_nv_n) = \lambda_1T(v_1) + \dots + \lambda_nT(v_n)
+    \end{gather*} 
+\end{definition} 
+
+Now we can consider the set of all these linear transformations.
+
+\begin{note}
+  \begin{enumerate}
+    \ii[]
+    \ii
+    $\hom_F(V, W)$ represents the set of all linear transformations from $V$ to $W$ ($V$ and $W$ are vector spaces). % revisit, why the sub F?
+    \ii
+    A linear transformation from $V$ to itself is called \ul{endomorphism} of $V$. 
+    \begin{gather*}
+      \End_F(V) = \hom_F(V, V)
+    \end{gather*} 
+    \ii
+    $\hom(V, W)$ is a vector space! (this makes sense because if $T_1$ and $T_2$ are linear, so is $\lambda_1T_1 + \lambda_2T_2$)
+    \ii
+    $\End(V)$ is also endowed with an internal multiplication in addition to the addition arising from the vector space. The product $T_1T_2 = T_1 \circ T_2$ or $T_1T_2(v) = T_1(T_2(v))$. On the other hand you cannot compose elements of $\hom_F(V, W)$. 
+    \\\\
+    Distributive Laws % revisit
+    \\
+    Composition of functions is always associative % revisit
+    \\
+    But not necesarily commutative.
+    \\
+    $\End(V)$ is a ring and a vector space over the field $F$!
+    \begin{definition}
+      A vector space over $F$ which is also a ring is called an $F$-algebra.
+    \end{definition} 
+  \end{enumerate} 
+\end{note} 
+
+A ring $R$ gives rise to two groups, namely 
+\begin{enumerate}
+  \ii
+  $(R, +, 0)$ is an abelian group.
+  \ii
+  $(R^{\times}, \times, 1)$ is a group.
+\end{enumerate} 
+
+\begin{gather*}
+  \End(V)^{\times} = \Aut_F(V)
+\end{gather*} 
+
+\begin{note}
+  Last value in $(R, +, 0)$ indicates the identity element.
+\end{note} 
+
+
+\begin{definition}[Automorphism]
+  An invertible linear transformation from $V$ to $V$ is called an automortphism of $V$.
+\end{definition} 
+
+
+\begin{definition}[Dual Space]
+  Linear transformation from $V$ to $F$ where $F$ is a vector space over itself.
+  \\\\
+  $\hom_F(V, F) = V^*$ is called the dual space of $V$. We will talk about it in more detail on Monday.
+\end{definition} 
+
+
+
+\end{document}
+
+

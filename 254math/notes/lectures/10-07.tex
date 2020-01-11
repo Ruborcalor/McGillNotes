@@ -1,0 +1,46 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+\date{2019-10-07}
+
+
+\begin{document}
+
+\section{Lecture 10-07}
+
+\begin{example}
+\end{example}
+
+\begin{definition}
+  Let $S \subseteq \RR$. The \ul{interior} $\mathring{S}$ "S with dot on top" or int(S) is defined as:
+  $$ \mathring{S} = \bigcup_{U \subset S, \ \ U open}U $$
+  Note that $\mathring{S}$ is open as a union of open sets.
+  It is the largest open subset of S.
+\end{definition}
+
+\begin{definition}
+  Let $S \subset \RR$. The \ul{closure} $\tilde{S}$ of S is defined as:
+  $$ \tilde{S} = \bigcap_{V \supset S, \ \ V closed} V $$
+  Note that $\tilde{S}$ is closed as an intersection of closed sets.
+\end{definition}
+
+\begin{theorem}
+  Let $S \subset \RR$. Then $\mathring{S} = S \setminus \delta S$
+  \begin{proof}
+    \begin{enumerate}
+      \ii
+      $"\subseteq"$. Let $x \in \mathring{S} \Rightarrow \exists U \ \text{open} \ , U \subset S$ with $x \in U$.
+
+      Thus $\exists \epsilon > 0 s.t. V_{\epsilon}(x) \subset U \subset S$.
+    \end{enumerate}
+  \end{proof}
+\end{theorem}
+
+\begin{theorem}
+  Let $S \subset \RR$. Then $\RR \setminus \tilde{S} = int(\RR \setminus S)$.
+\end{theorem}
+
+
+\end{document}

@@ -1,0 +1,34 @@
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{parskip}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+\begin{document}
+
+\title{Notes 2019-09-20}
+\author{Cole Killian}
+
+\maketitle
+
+\section{Day 7}
+
+\subsection{hashCode}
+
+hashCode() returns a 32 bit integer associated to an object. When invoked on the same object during execution of Java, hasCode must return the same integer consistently.
+
+o_1.equals(o_2) is true means that o_1.hashCode() == o_2.hasCode()
+
+Converse not necessarily true. Think same hash, same bucket, but not same object.
+
+\end{document}

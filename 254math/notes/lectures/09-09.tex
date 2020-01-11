@@ -1,0 +1,161 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+% \documentclass{article}
+% 
+% \usepackage{amsmath}
+% \usepackage{amssymb}
+% \usepackage{enumerate}
+% \usepackage{parskip}
+% \usepackage{siunitx}
+% \usepackage{tikz}
+% \usepackage{upgreek}
+% \usepackage[margin=0.5in]{geometry}
+% \usepackage{graphicx}
+% \usepackage{esint}
+% \usepackage{nicematrix}
+% \NiceMatrixOptions{transparent}
+
+
+\begin{document}
+
+\title{Notes 2019-09-09}
+\author{Cole Killian}
+
+
+\fbox{\begin{minipage}{\linewidth}
+    Definition - The Cartesian Product: $A \times B \ \text{of} \ A \ \text{and} \  B = \{(a, b): a \in A, b \in B \}$
+\end{minipage}}
+i.e. $R \times R = R^2$ 
+$[0, 1] \times [0, 2]$ 
+
+\fbox{\begin{minipage}{\linewidth}
+Definition - Functions in Calculus: Let D and E be sets; a function $f: D \to E$ is a rule that takes an input from D and assigns to it an output in E.
+\end{minipage}}
+
+\[
+\begin{pmatrix}[name=A]
+  1 \\
+  2 \\
+  3 
+\end{pmatrix}
+\ \ \ 
+\begin{pmatrix}[name=B]
+w \\
+x \\
+y \\
+z
+\end{pmatrix}
+\\ \\ \\ 
+\begin{pmatrix}[name=C]
+  p \\
+  q \\
+  r
+\end{pmatrix}
+\]
+\tikz [remember picture, overlay] \draw 
+[red,->] (A-1-1) to (B-3-1) 
+[red,->] (A-2-1) to (B-3-1)
+[red,->] (A-3-1) to (B-4-1)
+[red,->] (B-1-1) to (C-2-1) 
+[red,->] (B-2-1) to (C-1-1)
+[red,->] (B-3-1) to (C-3-1)
+[red,->] (B-4-1) to (C-3-1); 
+
+In modern math we define a function $f: D \to E$ as a subset $f \ \text{of} \ D \times E$ s.t. $\forall x \in D$ there exists EXACTLY ONE $y \in E$ s.t. $(x, y) \in f$.
+Functions are thus just sets, there is thus just one fundamental concept (sets) we need to consider.
+
+ex: $f: \{-1, 0, 1\} \to \{-1, 0, 1\}$ 
+
+$x$ "maps to" $x^2$ 
+
+image vs. codomain
+
+$\{(-1, 1), (0, 0), (1, 1) \} = f$
+
+\fbox{\begin{minipage}{\linewidth}
+    Definition - a function $f: D \to E$ is called injective or one-to-one if $x_1 \neq x_2 \Rightarrow f(x_1) \neq f(x_2)$
+    Everything gets mapped to its own unique point.
+    Equivalently:  $f(x_1) = f(x_2) \Rightarrow x_1 = x_2$
+\end{minipage}}
+
+\fbox{\begin{minipage}{\linewidth}
+    Definition - $f: D \to E$ is called surjective or "onto" if $\forall y \in E \ \text{"there exists"} \ x \in D : f(x) = y$
+\end{minipage}}
+
+\fbox{\begin{minipage}{\linewidth}
+Definition - $f: D \to E$ is called bijective if f is both injective and surjective
+\end{minipage}}
+
+let $f: D \to E$, $A \subset D$
+then $f(A) = \{f(x): x \in A\} \subset E$ is called the image of A under f
+
+\fbox{\begin{minipage}{\linewidth}
+     Definition - let f: $D \to E, B \subset E$, then $f^{-1}(B) = \{x \in D: f(x) \in B\} \subset D$ is called the inverse image of B under f
+\end{minipage}}
+
+CAUTION: The inverse image $f^{-1}(B)$ makes sense whether or not f is invertible!
+
+ex: $f: \{-1, 0, 1\} \to \{-1, 0, 1\}$ 
+
+$x$ "maps to" $x^2$ 
+
+image vs. codomain
+
+$\{(-1, 1), (0, 0), (1, 1) \} = f$
+
+note that f is NOT injective (because $(f(1) = f(-1)$ and is thus not invertible. none the less, inv. images make sense.
+
+$f^{1} = \{-1, 1\}$
+$f^{0} = \{0\}$
+$f^{-1} = \{\} = \varnothing$
+
+ex: let $f: D \to E$ be bijective. 
+
+then $f^{-1}(\{y_0\}) = \{x_0\}$ where $f(x_0) = y_0$
+
+inv. function: $f^{-1}(y_0) = x_0$
+
+inv. image:  $f^{-1}(\{y_0\}) = \{x_0\}$ 
+
+\fbox{\begin{minipage}{\linewidth}
+    Theorem (i): let $f: D \to E$, $A, B \subset D$ then
+(a) $f(A \cup B) = f(A) \cup f(B)$
+
+(b)  $f(A \cap B) \subset f(A) \cap f(B)$
+
+(ii)  $let f: D \to E, \ \ A, B, \subset E$ then
+(a) $f^{-1}(A \cup B) = f^{-1}(A) \cup f^{-1}(B)$
+
+(b)  $f^{-1}(A \cap B) = f^{-1}(A) \cap f^{-1}(B)$
+\end{minipage}}
+
+(ii)(a) will be shown in the tutorials
+(b) assign 1
+
+we will prove (i):
+
+(a) we have to show that the 2 sets $f(A \cup B) \ \text{and} \ f(A) \cup f(B)$ are equal
+
+Proof:
+let $y \in f(A \cup B)$ 
+$\Rightarrow \ \text{"there exists"} \ x \in A \cup B: y = f(x)$
+$\Rightarrow \ \text{"there exists"} \ x \in A: y = f(x) v \ \text{"there exists"} \ x \in B: y = f(x)$
+$\Rightarrow y \in f(A) v y \in f(B)$ 
+$\Rightarrow y \in f(A) \cup f(B) \Rightarrow f(A \cup B) \subset f(A) \cup f(B)$
+
+
+proof part 2:
+ \begin{align*}
+   \ \text{let} \ y \in f(A) \cup f(B) \\
+   & y \in f(A) v y \in f(B) \\
+   & \ \text{"there exists"} \ x \in A: y = f(x) v \ \text{"There exists"} \ x \in B: y = f(x) \\
+   & \ \text{"there exists"} \ x \in A \cup B: y = f(x) \\
+   & \Rightarrow y \in f(A \cup B) \\
+   & f(A) \cup f(B) \subset f(A \cup B) \\
+   & \Rightarrow f(A \cup B) = f(A) \cup f(B)
+\end{align*} 
+
+\end{document}

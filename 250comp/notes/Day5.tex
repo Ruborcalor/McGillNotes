@@ -1,0 +1,125 @@
+
+\documentclass{article}
+
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{parskip}
+\usepackage{siunitx}
+\usepackage{tikz}
+\usepackage{upgreek}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\usepackage{esint}
+\usepackage{nicematrix}
+\NiceMatrixOptions{transparent}
+
+
+\usepackage{listings}
+\usepackage{color}
+
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+
+\lstset{frame=tb,
+  language=Java,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+
+\begin{document}
+
+\title{Notes 2019-09-16}
+\author{Cole Killian}
+
+\maketitle
+
+define package by writting "package packageName;" at the top of the class
+
+i.e. 
+\begin{lstlisting}
+package nba.annoytingTeams;
+
+public class MiamiHead {
+
+}
+\end{lstlisting}
+
+Review: What happens if package names conflict.
+
+Two main rules: (1) name of class must match name of file (with .java added) (e.g. MiamiHead.java). (2) Folder path must match exactly package name 
+
+\subsection*{Using package in program}
+Specifying entire path
+\begin{lstlisting}
+animals.Dog myDog = new animals.Dog();
+\end{lstlisting}
+Import package member:
+\begin{lstlisting}
+import animals.Dog;
+\end{lstlisting}
+
+Java compiler automatically imports two entire packages: java.lang and the current package
+
+\subsection*{Classes}
+
+Each time we define a class we create a new object type. An object is an instance of a class.
+
+Nested class: defining a class within another class.
+
+Reasons: To group class that are used only in one place.
+When the class isn't useful in any other scenario, it makes no sense to not have it nested.
+
+Increases encapsulation. which allows for better control
+
+\subsection*{modifiers}
+
+Acccess control modifiers: public, protected, default, private.
+
+Non-access modifiers: static, final
+
+Remember as a general rule fields should be declared private.
+
+static method/field is associated with the entire class and called class variables.
+
+non static method or field belongs to instance of class and also called instance variables.
+
+Length is a non static method because its execution depends on specific string
+
+parseInt() is a static method and does not depend on specific object of type Integer
+
+final int cannot be changed after declaration. A final object cannot change its reference, but the object that it references can be modified.
+
+Final field must be initialized.
+
+\subsection*{Local variable vs. fields}
+
+local variables are declared inside a method or block.
+
+fields are declared inside class but outside a method
+
+difference: 
+
+scope: local variables only accessed within method or block
+
+class variables accessed from any method or block inclass.
+
+review: difference between fields and variables
+
+
+\end{document}
