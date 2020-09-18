@@ -1,52 +1,53 @@
-\contentsline {subsection}{\numberline {0.1}ex. $\forall x \geq y \geq 0: \sqrt {x - y} \geq \sqrt {x} - \sqrt {y}$}{4}{subsection.0.1}% 
-\contentsline {section}{\numberline {1}Order Relations}{4}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}Order Relations:}{4}{subsection.1.1}% 
-\contentsline {subsubsection}{\numberline {1.1.1}Proof:}{5}{subsubsection.1.1.1}% 
-\contentsline {subsection}{\numberline {1.2}Homework: Read 2.1 on your own}{7}{subsection.1.2}% 
-\contentsline {section}{\numberline {2}Absolute Values}{7}{section.2}% 
-\contentsline {subsection}{\numberline {2.1}Discussing properties of absolute value}{7}{subsection.2.1}% 
-\contentsline {subsection}{\numberline {2.2}Proof}{7}{subsection.2.2}% 
-\contentsline {subsection}{\numberline {2.3}The triangle inequality}{8}{subsection.2.3}% 
-\contentsline {subsection}{\numberline {2.4}Proof}{8}{subsection.2.4}% 
-\contentsline {subsection}{\numberline {2.5}Proof}{8}{subsection.2.5}% 
-\contentsline {subsection}{\numberline {2.6}Moving on. Absolute values are needed in the following definition:}{8}{subsection.2.6}% 
-\contentsline {subsection}{\numberline {2.7}Proof}{8}{subsection.2.7}% 
-\contentsline {section}{\numberline {3}Supremum and Infimum}{9}{section.3}% 
-\contentsline {subsection}{\numberline {3.1}Examples}{9}{subsection.3.1}% 
-\contentsline {subsection}{\numberline {3.2}Examples}{9}{subsection.3.2}% 
-\contentsline {section}{\numberline {4}Lecture 10-02}{9}{section.4}% 
-\contentsline {subsection}{\numberline {4.1}Open and Closed Sets}{9}{subsection.4.1}% 
-\contentsline {section}{\numberline {5}Lecture 10-07}{12}{section.5}% 
-\contentsline {section}{\numberline {6}Limit laws}{12}{section.6}% 
-\contentsline {section}{\numberline {7}Monotone Sequences}{17}{section.7}% 
-\contentsline {subsection}{\numberline {7.1}Euler's constant}{19}{subsection.7.1}% 
-\contentsline {subsection}{\numberline {7.2}Subsequences}{20}{subsection.7.2}% 
-\contentsline {section}{\numberline {8}10-28}{20}{section.8}% 
-\contentsline {subsection}{\numberline {8.1}Criterion for the divergence of sequences}{21}{subsection.8.1}% 
-\contentsline {section}{\numberline {9}Tutorial 10-30}{24}{section.9}% 
-\contentsline {subsection}{\numberline {9.1}e}{24}{subsection.9.1}% 
-\contentsline {section}{\numberline {10}10-30}{25}{section.10}% 
-\contentsline {subsection}{\numberline {10.1}Properties of $\qopname \relax m{lim\tmspace +\thinmuskip {.1667em}sup}, \qopname \relax m{lim\tmspace +\thinmuskip {.1667em}inf}$}{29}{subsection.10.1}% 
-\contentsline {section}{\numberline {11}11-06}{29}{section.11}% 
-\contentsline {subsection}{\numberline {11.1}Divergence to infinity}{29}{subsection.11.1}% 
-\contentsline {subsection}{\numberline {11.2}Chapter 4: Limits of functions}{30}{subsection.11.2}% 
-\contentsline {section}{\numberline {12}Lecture 11-11}{33}{section.12}% 
-\contentsline {subsection}{\numberline {12.1}Limit Laws}{36}{subsection.12.1}% 
-\contentsline {section}{\numberline {13}Lecture 11-13}{38}{section.13}% 
-\contentsline {subsection}{\numberline {13.1}Limits and Inequalities}{38}{subsection.13.1}% 
-\contentsline {subsection}{\numberline {13.2}Criteria for non-existence of limits of functions}{40}{subsection.13.2}% 
-\contentsline {subsection}{\numberline {13.3}One-sided limits (Brief)}{41}{subsection.13.3}% 
-\contentsline {subsection}{\numberline {13.4}Chapter 5: Continuity}{42}{subsection.13.4}% 
-\contentsline {section}{\numberline {14}Lecture 11-18}{42}{section.14}% 
-\contentsline {subsection}{\numberline {14.1}Topological consequences of continuity}{46}{subsection.14.1}% 
-\contentsline {section}{\numberline {15}Lecture 11-20}{47}{section.15}% 
-\contentsline {subsection}{\numberline {15.1}Preservation of compactness}{47}{subsection.15.1}% 
-\contentsline {section}{\numberline {16}Lecture 11-25}{47}{section.16}% 
-\contentsline {section}{\numberline {17}Lecture 11-27}{51}{section.17}% 
-\contentsline {subsection}{\numberline {17.1}Application of Heine-Borel}{51}{subsection.17.1}% 
-\contentsline {section}{\numberline {18}Lecture 12-02}{56}{section.18}% 
-\contentsline {section}{\numberline {19}Lecture 12-03}{58}{section.19}% 
-\contentsline {subsection}{\numberline {19.1}Another method for proving that $\sqrt {x}$ is uniformly continuous on $[0, \infty [$.}{59}{subsection.19.1}% 
-\contentsline {subsection}{\numberline {19.2}Differentiation}{60}{subsection.19.2}% 
-\contentsline {subsection}{\numberline {19.3}Relationship Between Lipschitz Continuity and Differentiability}{62}{subsection.19.3}% 
-\contentsline {section}{\numberline {20}Sequences}{63}{section.20}% 
+\contentsline {section}{\numberline {1}Learning to Tex}{2}{section.1}% 
+\contentsline {subsection}{\numberline {1.1}ex. $\forall x \geq y \geq 0: \sqrt {x - y} \geq \sqrt {x} - \sqrt {y}$}{4}{subsection.1.1}% 
+\contentsline {section}{\numberline {2}Order Relations}{4}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Order Relations:}{4}{subsection.2.1}% 
+\contentsline {subsubsection}{\numberline {2.1.1}Proof:}{5}{subsubsection.2.1.1}% 
+\contentsline {subsection}{\numberline {2.2}Homework: Read 2.1 on your own}{6}{subsection.2.2}% 
+\contentsline {section}{\numberline {3}Absolute Values}{6}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Discussing properties of absolute value}{6}{subsection.3.1}% 
+\contentsline {subsection}{\numberline {3.2}Proof}{7}{subsection.3.2}% 
+\contentsline {subsection}{\numberline {3.3}The triangle inequality}{7}{subsection.3.3}% 
+\contentsline {subsection}{\numberline {3.4}Proof}{7}{subsection.3.4}% 
+\contentsline {subsection}{\numberline {3.5}Proof}{7}{subsection.3.5}% 
+\contentsline {subsection}{\numberline {3.6}Moving on. Absolute values are needed in the following definition:}{7}{subsection.3.6}% 
+\contentsline {subsection}{\numberline {3.7}Proof}{7}{subsection.3.7}% 
+\contentsline {section}{\numberline {4}Supremum and Infimum}{8}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}Examples}{8}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Examples}{8}{subsection.4.2}% 
+\contentsline {section}{\numberline {5}Lecture 10-02}{8}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Open and Closed Sets}{8}{subsection.5.1}% 
+\contentsline {section}{\numberline {6}Lecture 10-07}{11}{section.6}% 
+\contentsline {section}{\numberline {7}Limit laws}{11}{section.7}% 
+\contentsline {section}{\numberline {8}Monotone Sequences}{16}{section.8}% 
+\contentsline {subsection}{\numberline {8.1}Euler's constant}{18}{subsection.8.1}% 
+\contentsline {subsection}{\numberline {8.2}Subsequences}{19}{subsection.8.2}% 
+\contentsline {section}{\numberline {9}10-28}{19}{section.9}% 
+\contentsline {subsection}{\numberline {9.1}Criterion for the divergence of sequences}{20}{subsection.9.1}% 
+\contentsline {section}{\numberline {10}Tutorial 10-30}{23}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}e}{23}{subsection.10.1}% 
+\contentsline {section}{\numberline {11}10-30}{24}{section.11}% 
+\contentsline {subsection}{\numberline {11.1}Properties of $\qopname \relax m{lim\tmspace +\thinmuskip {.1667em}sup}, \qopname \relax m{lim\tmspace +\thinmuskip {.1667em}inf}$}{27}{subsection.11.1}% 
+\contentsline {section}{\numberline {12}11-06}{28}{section.12}% 
+\contentsline {subsection}{\numberline {12.1}Divergence to infinity}{28}{subsection.12.1}% 
+\contentsline {subsection}{\numberline {12.2}Chapter 4: Limits of functions}{29}{subsection.12.2}% 
+\contentsline {section}{\numberline {13}Lecture 11-11}{32}{section.13}% 
+\contentsline {subsection}{\numberline {13.1}Limit Laws}{35}{subsection.13.1}% 
+\contentsline {section}{\numberline {14}Lecture 11-13}{37}{section.14}% 
+\contentsline {subsection}{\numberline {14.1}Limits and Inequalities}{37}{subsection.14.1}% 
+\contentsline {subsection}{\numberline {14.2}Criteria for non-existence of limits of functions}{39}{subsection.14.2}% 
+\contentsline {subsection}{\numberline {14.3}One-sided limits (Brief)}{40}{subsection.14.3}% 
+\contentsline {subsection}{\numberline {14.4}Chapter 5: Continuity}{41}{subsection.14.4}% 
+\contentsline {section}{\numberline {15}Lecture 11-18}{41}{section.15}% 
+\contentsline {subsection}{\numberline {15.1}Topological consequences of continuity}{46}{subsection.15.1}% 
+\contentsline {section}{\numberline {16}Lecture 11-20}{46}{section.16}% 
+\contentsline {subsection}{\numberline {16.1}Preservation of compactness}{46}{subsection.16.1}% 
+\contentsline {section}{\numberline {17}Lecture 11-25}{46}{section.17}% 
+\contentsline {section}{\numberline {18}Lecture 11-27}{50}{section.18}% 
+\contentsline {subsection}{\numberline {18.1}Application of Heine-Borel}{50}{subsection.18.1}% 
+\contentsline {section}{\numberline {19}Lecture 12-02}{55}{section.19}% 
+\contentsline {section}{\numberline {20}Lecture 12-03}{57}{section.20}% 
+\contentsline {subsection}{\numberline {20.1}Another method for proving that $\sqrt {x}$ is uniformly continuous on $[0, \infty [$.}{58}{subsection.20.1}% 
+\contentsline {subsection}{\numberline {20.2}Differentiation}{59}{subsection.20.2}% 
+\contentsline {subsection}{\numberline {20.3}Relationship Between Lipschitz Continuity and Differentiability}{61}{subsection.20.3}% 
+\contentsline {section}{\numberline {21}Sequences}{62}{section.21}% 

@@ -1,0 +1,133 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-17}
+
+
+\begin{document}
+
+\section{Lecture 02-17}
+
+\subsection{Dunford Decomposition}
+
+\begin{gather*}
+  T: V \to V
+\end{gather*} 
+
+If $p_T(x) = (x - \lambda_1)^{e_1}(\cdots)(x - \lambda_r)^{e_r}$, then $\exists$ $D, N$ where $D$ and  $N$ commute, $D$ is diagonalizable, $N$ is nilpotent, and $T = D + N$.
+\begin{definition}[Nilpotent]
+  \ul{Nilpotent} if $N^d = 0$ for some $d \in \NN$.
+\end{definition} 
+
+\ul{Application}. Given $g(x) \in F[x]$, evaluate $g(T)$.
+\begin{gather*}
+  g(D + N) = g(D) + g'(D)N + \frac{g''(D)}{2!}N^2 + \cdots + \frac{g^j(D)}{j!}N^j + \frac{g^{e - 1}(D)}{(e - 1)!}N^{e - 1}
+\end{gather*} 
+where $N^e = 0$.
+\\\\
+Relative to an eigenbasis, we have 
+\begin{gather*}
+  D \sim
+  \begin{pmatrix}
+    \lambda_1 & 0 \\
+    0 & \lambda_n
+  \end{pmatrix} 
+  \\
+  g(D) \sim
+  \begin{pmatrix}
+    g(\lambda_1) & 0 \\
+    0 & g(\lambda_n)
+  \end{pmatrix} 
+\end{gather*} 
+
+More generally if $g$ is defined by a convergent power series, and $\lambda_1, \dots, \lambda_n$ belong to the domain of convergence, we have
+\begin{gather*}
+  g(x) = a_0 + a_1x + a_2x^2 + \cdots + a_nx^n \\
+  g(T) = a_0I + a_1T + a_2T^2 + \cdots + a_nT^n + \cdots
+\end{gather*} 
+If $g(x)$ is $(e - 1)$ times differentiable, and $\lambda_1, \dots, \lambda_n$ belong to the domain of convergence for $g(x)$, then
+\begin{gather*}
+  g(T) = g(D + N) = \sum_{j = 0}^{e - 1}\frac{g^j(D)}{j!}N^j
+\end{gather*} 
+\begin{example}
+  \begin{gather*}
+    g(x) = e^x = 1 + x + \frac{x^2}{2} + \cdots + \frac{x^n}{n!} \\
+    e^D \sim 
+    \begin{pmatrix}
+      e^{\lambda_1} & 0 \\
+      0 & e^{\lambda_n} 
+    \end{pmatrix} 
+  \end{gather*} 
+\end{example} 
+Focusing on a single generalized eigenbasis, what is the "nicest" basis for $V_\lambda$.
+\\\\
+$T = \lambda + N$. We can choose a basis for $V$ in such a way that 
+\begin{gather*}
+  \ \text{Upper Triangular} \ M_{T, B} = 
+  \begin{pmatrix}
+    \lambda & x \\
+    0 & \lambda
+  \end{pmatrix} 
+\end{gather*} 
+A jordon subspace $W$ for $N$ is a subspace of $V$ that admins a cyclic vector. i.e. a vector $v \in W$ such that $v, Nv, \dots, N^{e - 1}v$ spans $W$.
+\\\\
+Relative ot the basis $N^{e - 1}v, N^{e - 2}v, \dots, Nv, v$, $N$ is represented by
+\begin{gather*}
+  J_{0, e} = 
+  \begin{pmatrix}
+    0 & 1 & 0 & 0 \\
+    0 & 0 & 1 & 0 \\
+    0 & 0 & 0 & 1 \\
+    0 & 0 & 0 & 0 
+  \end{pmatrix} 
+\end{gather*} 
+$T$ is represented by
+\begin{gather*}
+  J_{\lambda, e} = 
+  \begin{pmatrix}
+    \lambda & 1 & 0 & 0 \\
+    0 & \lambda & 1 & 0 \\
+    0 & 0 & \lambda & 1 \\
+    0 & 0 & 0 & \lambda
+  \end{pmatrix} 
+\end{gather*} 
+\begin{definition}[Jordan Matrix]
+  The vector $J_{\lambda, e}$ is called the Jordan matrix, or Jordan block of size $e$ and eigenvalue $\lambda$.
+\end{definition} 
+
+\begin{theorem}[Jordon Decomposition]
+  If $N: V \to V$ is a nilpotent endomorphism, then $V$ can be decomposed into a direct sum of Jordon subspaces
+  \begin{gather*}
+    V = V_1 \oplus V_2 \oplus \cdots \oplus V_j
+  \end{gather*} 
+  \begin{proof}
+    Pianful. This decomposition is not unique. 
+    \begin{remark}
+      Let $V_0 \subseteq V$. $V_0$ need not admit an $N$-stable complement.
+    \end{remark} 
+  \end{proof} 
+\end{theorem} 
+\begin{theorem}[Concrete Form]
+  If $M$ is a matrix with char polynomial $(x - \lambda_1)^{e_1}\cdots(x - \lambda_r)^{e_r}$, then $M$ is similar to a matrix of the form: Wait wait start over.
+  \\\\
+  If $p_T(x) = (x - \lambda)^e$ and $f_T(x) = (x - \lambda)^d$, $e \leq d$, then $\exists$ basis $B$ for $V$ such that 
+  \begin{gather*}
+    M_{T, B} = 
+    \begin{pmatrix}
+      J_{\lambda, e_1} & 0 & 0 \\
+      0 & J_{\lambda, e_2} & 0 \\
+      0 & 0 & J_{\lambda, e_r}
+    \end{pmatrix} 
+    \\\\
+    e_1 + e_2 + \cdots + e_r = d \\
+    \max{(e_{1}, \dots, e_r)} = e \\
+    T(J_{\lambda, e} - \lambda I)^e = 0
+  \end{gather*} 
+\end{theorem} 
+
+
+
+\end{document}

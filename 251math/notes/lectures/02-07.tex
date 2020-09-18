@@ -1,0 +1,107 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-07}
+
+
+\begin{document}
+
+\section{Lecture 02-07}
+
+$spec(T) =$ set of eigenvalues of $T = \{\lambda \in F : \exists v \neq 0 : T(v) = \lambda v\}$.
+\\\\
+\begin{gather*}
+  \oplus_{\lambda \in spec(T)}V_\lambda \subseteq V \\
+  V_\lambda = \{v | T(v) = \lambda v\} \\
+  \Rightarrow \# spec(T) \leq \dim V \\
+\end{gather*} 
+
+Two polynomials attached to $T$. 
+\begin{enumerate}
+  \ii
+  $p_T(x)$ is the minimal polynomial of $T$. $\deg p_T(x) \leq \dim(V)$
+  \ii
+  $f_T(x) =$ characteristic polynomial $= \det(xI - T)$
+\end{enumerate} 
+
+\begin{theorem}
+  If $\lambda \in F$, then 
+  \begin{gather*}
+    p_T(\lambda) = 0 \Leftrightarrow \lambda \in spec(T)
+  \end{gather*} 
+  \begin{proof}
+    \begin{itemize}
+      \ii[]
+      \ii[$(\Leftarrow)$ ]
+      $\exists v \neq 0$ such that $T(v) = \lambda v$. Then $T^2(v) = \lambda^2v$. Then $T^j(v) =\lambda^jv$.
+      \\\\
+      Let $g \in F[x]$. Then
+      \begin{gather*}
+        g(T)(v) = g(\lambda)(v) \\
+        \lambda \in spec(T) \ \Rightarrow \ g(\lambda) \in spec(g(T)) % revisit why is this important
+        \\\\
+        p_T(T)(v) = p_T(\lambda)v \\
+        0(v) = p_T(\lambda) v \\
+        0 = p_T(\lambda)v \\
+        \Rightarrow p_T(\lambda) = 0
+      \end{gather*} 
+      \ii[$(\Rightarrow)$ ]
+      \begin{gather*}
+        p_T(\lambda) = 0 \\
+        \Rightarrow p_T(x) = (x - \lambda)g(x) \\
+        \deg g(x) < \deg p_T(x) \Rightarrow g(T) \neq 0 \\
+        0 = p_T(T) = (T - \lambda I)\circ g(T) \\
+        \Rightarrow \Ima(g(T)) \subseteq \ker (T - \lambda I) = V_\lambda % revisit why is kernel equal to eigenspace?
+        \\
+        V_\lambda \neq \{0\} \Rightarrow \lambda \in spec(T)
+      \end{gather*} 
+    \end{itemize} 
+  \end{proof} 
+\end{theorem} 
+
+\begin{theorem}
+  If $\lambda \in F$, then 
+  \begin{gather*}
+    f_T(\lambda) = 0 \ \Leftrightarrow \ \lambda \in spec(T)
+  \end{gather*}
+  \begin{proof}
+    \begin{align*}
+      f_T(\lambda) = 0 \ & \Leftrightarrow \ \det(\lambda I - T) = 0 \\
+      & \Leftrightarrow T - \lambda \ \text{is non-invertible} \ \\
+      & \Leftrightarrow \ker(T - \lambda) \supsetneq \{0\} \\
+      & \Leftrightarrow V_\lambda \neq \{0\} \\
+      & \Leftrightarrow \lambda \in spec(T)
+    \end{align*}  
+  \end{proof} 
+\end{theorem} 
+
+\subsection{Voting with vectors}
+
+$A, B, C$ candidates.
+\begin{align*}
+  A > B > C \quad & (1, 1, -1) \\
+  A > C > B \quad & (1, -1, 1) \\
+  B > A > C \quad & (-1, 1, -1) \\
+  B > C > A \quad & (-1, 1, 1) \\
+  C > A > B \quad & (1, -1, 1) \\
+  C > B > A \quad & (-1, -1, 1)
+\end{align*} 
+Where the vectors encode the following: ($A > B$, $B > C$, $C > A$)
+\\\\
+If $N_1$ votes vote for $(-1, 1, 1)$, $N_2$ vote for $(1, -1, 1)$, and $N_3$ vote for $(1, 1, -1)$, then 
+\begin{gather*}
+  N_1(-1, 1, 1) + N_2(1, -1, 1) + N_3(1, 1, -1) = (X, Y, Z)
+\end{gather*} 
+where $X$ represents the margin of voters who prefer $A$ to $B$, $Y$ represents the margin of voters who prefer $B$ to $C$, and $Z$ represents the margin of voters who prefer $C$ to $A$.
+\\\\
+Consider the following scenario. The population is $3N$. $N$ people vote $(-1, 1, 1)$, $N$ people vote $(1, -1, 1)$, and $N$ people vote $(1, 1, -1)$. Then
+\begin{gather*}
+  \ \text{Vote} \ = (N, N, N)
+\end{gather*} 
+So $66\%$ prefer $A$ to $B$, $66\%$ prefer $B$ to $C$, and $66\%$ prefer $C$ to $A$. So even though everyone voted rationally, a weird scenario arose.
+
+
+\end{document}

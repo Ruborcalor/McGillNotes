@@ -94,7 +94,7 @@ Model Dependent
   \ii
   Average Case Time: 
   \begin{gather*}
-    T_n = \frac{1}{#(x_1, \dots, x_n)}\sum_{x_1, \dots, x_n} T_n(x_1, \dots, x_n)
+    T_n = \frac{1}{\#(x_1, \dots, x_n)}\sum_{x_1, \dots, x_n} T_n(x_1, \dots, x_n)
   \end{gather*} 
 \end{enumerate} 
 When designing an algorithm with the user in mind the average case time is more important.
@@ -118,17 +118,17 @@ Let $a_n, b_n$ be positive number sequences.
   \\
   If  $T_n = \Theta(n^2)$, we are guaranteeing that $T_n$ always grows at $n^2$. More specific information.
   \\
-  a_n = o(b_n) when
+  $a_n = o(b_n)$ when
   \begin{gather*}
     \lim(a_n / b_n) = 0
   \end{gather*} 
   \ii
-  a_n = w(b_n) when
+  $a_n = w(b_n)$ when
   \begin{gather*}
     \lim(a_n / b_n) = \infty
   \end{gather*} 
   \ii
-  a_n = \sim(b_n) when
+  $a_n = \sim(b_n)$ when
   \begin{gather*}
     0 < \lim(a_n / b_n) < \infty
   \end{gather*} 
@@ -153,7 +153,7 @@ Let $a_n, b_n$ be positive number sequences.
   \\
   Solution Number 3, dynamic programming
   \\
-  Solution #4, linear algebra exponentiation. Take $O(\log n)$
+  Solution \#4, linear algebra exponentiation. Take $O(\log n)$
 \end{example} 
 
 

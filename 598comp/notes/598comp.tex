@@ -1,0 +1,45 @@
+\documentclass{scrartcl}
+\usepackage{cole}
+
+\usepackage{graphicx}
+\graphicspath{ {./lectures/images/}{./images/} }
+\usepackage{subfiles}
+
+\title{Comp 598 Notes}
+\author{Cole Killian}
+\date{Summer 2020}
+
+
+\begin{document}
+
+\maketitle
+
+This is McGill’s undergraduate Math 598, ``Topics in Science 1'' instructed by
+Prakash Panangaden. This semester it is focusing on Automata and Computability.
+You can find this and other course notes here:
+\href{https://colekillian.com/course-notes}{https://colekillian.com/course-notes}
+
+\tableofcontents
+\newpage
+
+%  ls *.tex -1 | sed -e 's/\.tex$/\}/;s/^/\\import\{lectures\/\}\{/'
+
+
+% Lecture Imports %
+\subfile{lectures/05-04}
+\subfile{lectures/05-05}
+\subfile{lectures/05-06}
+\subfile{lectures/05-07}
+\subfile{lectures/05-11}
+\subfile{lectures/05-12}
+\subfile{lectures/05-13}
+\subfile{lectures/05-14}
+\subfile{lectures/05-19}
+\subfile{lectures/05-20}
+\subfile{lectures/05-21}
+\subfile{lectures/05-25}
+\subfile{lectures/05-27}
+% Imports End %
+
+
+\end{document}

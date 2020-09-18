@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.12.19)  9 JAN 2020 08:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.2.7)  25 FEB 2020 11:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**252comp.tex
+(./252comp.tex
 LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2019/10/12 v3.27 KOMA-Script document class (article)
@@ -271,7 +271,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/usr/share/texmf-dist/tex/latex/asymptote/asymptote.sty
 Package: asymptote 2016/11/26 v1.33 Asymptote style file for LaTeX
- (./main.pre)
+ (./252comp.pre)
 \ASYbox=\box34
 \ASYdimen=\dimen128
 \c@asy=\count105
@@ -288,7 +288,7 @@ Package color Info: Driver file: pdftex.def on input line 147.
 ) (/usr/share/texmf-dist/tex/generic/oberdiek/catchfile.sty
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
-\openout4 = `main.pre'.
+\openout4 = `252comp.pre'.
 
 ) (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
@@ -915,20 +915,22 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 Package thmtools Info: Key `mdframed' (with value `style=mdbluebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmbluebox' on input line 291.
+(thmtools)             that uses `style=thmbluebox' on input line 292.
 Package thmtools Info: Key `mdframed' (with value `style=mdrecbox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmrecbox' on input line 309.
+(thmtools)             that uses `style=thmrecbox' on input line 310.
 Package thmtools Info: Key `mdframed' (with value `style=mdinlinebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thminlinebox' on input line 327.
-Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 339.
+(thmtools)             that uses `style=thminlinebox' on input line 328.
+Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 340.
  (/usr/share/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
 Package: thmdef-mdframed 2019/07/31 v67
 )
 \c@theorem=\count304
+\c@hwexercise=\count305
+\c@hwproblem=\count306
  (/usr/share/texmf-dist/tex/latex/koma-script/tocstyle.sty
 Package: tocstyle 2019/10/09 v0.2j-alpha deprecated package (versatile toc styles)
 
@@ -941,7 +943,7 @@ Package tocstyle Warning: THIS IS A DEPRECATED ALPHA VERSION!
 (tocstyle)                THERE IS NO SUPPORT, IF YOU USE THIS PACKAGE!
 (tocstyle)                Maybe it would be better, not to load this package.
 
-\tocstyle@indentstyle=\count305
+\tocstyle@indentstyle=\count307
 Package tocstyle Info: no tocstyle.cfg found on input line 951.
 )
 exclude: 
@@ -958,22 +960,22 @@ exclude:
 exclude: 
 exclude: 
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count306
+\lst@mode=\count308
 \lst@gtempboxa=\box70
 \lst@token=\toks43
-\lst@length=\count307
+\lst@length=\count309
 \lst@currlwidth=\dimen271
-\lst@column=\count308
-\lst@pos=\count309
+\lst@column=\count310
+\lst@pos=\count311
 \lst@lostspace=\dimen272
 \lst@width=\dimen273
-\lst@newlines=\count310
-\lst@lineno=\count311
+\lst@newlines=\count312
+\lst@lineno=\count313
 \lst@maxwidth=\dimen274
  (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count312
-\lst@skipnumbers=\count313
+\c@lstnumber=\count314
+\lst@skipnumbers=\count315
 \lst@framebox=\box71
 ) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/09/10 1.8c listings configuration
@@ -1143,13 +1145,13 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen275
 \enit@toks=\toks44
 \enit@inbox=\box72
-\enit@count@id=\count314
-\enitdp@description=\count315
+\enit@count@id=\count316
+\enitdp@description=\count317
 )
-\c@walki=\count316
-\c@walkii=\count317
-\c@walkiii=\count318
-\enitdp@walk=\count319
+\c@walki=\count318
+\c@walkii=\count319
+\c@walkiii=\count320
+\enitdp@walk=\count321
  (/usr/share/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
 Package: todonotes 2018/11/22
@@ -1163,18 +1165,18 @@ File: tikzlibraryfadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 File: pgflibraryfadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))) (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count320
-\calc@Bcount=\count321
+\calc@Acount=\count322
+\calc@Bcount=\count323
 \calc@Adimen=\dimen276
 \calc@Bdimen=\dimen277
 \calc@Askip=\skip138
 \calc@Bskip=\skip139
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count322
+\calc@Ccount=\count324
 \calc@Cskip=\skip140
 )
-\c@@todonotes@numberoftodonotes=\count323
+\c@@todonotes@numberoftodonotes=\count325
 ) (/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2019/07/31 v1.22 mathematical typesetting tools
  (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -1184,7 +1186,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count324
+\g_MT_multlinerow_int=\count326
 \l_MT_multwidth_dim=\dimen278
 \origjot=\skip141
 \l_MT_shortvdotswithinadjustabove_dim=\dimen279
@@ -1196,11 +1198,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 ) (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2019/10/10 v2.7c Micro-typographical refinements (RS)
 \MT@toks=\toks45
-\MT@count=\count325
+\MT@count=\count327
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen285
 LaTeX Info: Redefining \textmicrotypecontext on input line 1347.
-\MT@listname@count=\count326
+\MT@listname@count=\count328
  (/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2019/10/10 v2.7c Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 914.
@@ -1246,16 +1248,7 @@ Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
 \extratabsurround=\skip148
 \backup@length=\skip149
 \ar@cellbox=\box74
-) (/usr/share/texmf-dist/tex/latex/psnfss/pifont.sty
-Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
-LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
- (/usr/share/texmf-dist/tex/latex/psnfss/upzd.fd
-File: upzd.fd 2001/06/04 font definitions for U/pzd.
-)
-LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
- (/usr/share/texmf-dist/tex/latex/psnfss/upsy.fd
-File: upsy.fd 2001/06/04 font definitions for U/psy.
-)) (/usr/share/texmf-dist/tex/latex/forest/forest.sty
+) (/usr/share/texmf-dist/tex/latex/forest/forest.sty
 Package: forest 2017/07/14 v2.1.5 Drawing (linguistic) trees
  (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
 File: tikzlibraryshapes.code.tex 2019/08/03 v3.1.4b (3.1.4b)
@@ -1304,53 +1297,53 @@ File: tikzlibraryfit.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ) (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
-\pgf@intersect@solutions=\count327
+\pgf@intersect@solutions=\count329
 ) (/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks47
 \pgfopts@list@add@b@toks=\toks48
-)
-(/usr/share/texmf-dist/tex/latex/elocalloc/elocalloc.sty
+) (/usr/share/texmf-dist/tex/latex/elocalloc/elocalloc.sty
 Package: elocalloc 2016/12/15 v0.03 local allocation for LaTeX 2015+ (DPC)
 ) (/usr/share/texmf-dist/tex/latex/environ/environ.sty
 Package: environ 2014/05/04 v0.3 A new way to define environments
  (/usr/share/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)) (/usr/share/texmf-dist/tex/latex/inlinedef/inlinedef.sty
+))
+(/usr/share/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \ID@toks=\toks49
-\ID@count=\count328
+\ID@count=\count330
 )
 \ID@usercommands=\toks50
-\safeloop@depth=\count329
-\safeRKloop@depth=\count330
+\safeloop@depth=\count331
+\safeRKloop@depth=\count332
 \forest@temp@dimen=\dimen288
-\forest@temp@count=\count331
-\forest@n=\count332
-\forest@temp@global@count=\count333
+\forest@temp@count=\count333
+\forest@n=\count334
+\forest@temp@global@count=\count335
 \forest@temp@toks=\toks51
-\forest@temparray@M=\count334
-\forest@temparray@N=\count335
-\forest@global@temparray@M=\count336
-\forest@global@temparray@N=\count337
-\forest@isnum@count=\count338
-\forest@isdim@nonintpart=\count339
+\forest@temparray@M=\count336
+\forest@temparray@N=\count337
+\forest@global@temparray@M=\count338
+\forest@global@temparray@N=\count339
+\forest@isnum@count=\count340
+\forest@isdim@nonintpart=\count341
 \forest@isdim@dimen=\dimen289
-\forest@sort@m=\count340
-\forest@sort@k=\count341
-\forest@sort@p=\count342
+\forest@sort@m=\count342
+\forest@sort@k=\count343
+\forest@sort@p=\count344
 \bracket@content=\toks52
 \bracket@afterthought=\toks53
-\forest@node@maxid=\count343
-\forest@process@left@M=\count344
-\forest@process@left@N=\count345
-\forest@process@right@M=\count346
-\forest@process@right@N=\count347
-\forest@process@saved@M=\count348
-\forest@process@saved@N=\count349
-\forest@process@result@M=\count350
-\forest@process@result@N=\count351
-\forest@process@n=\count352
+\forest@node@maxid=\count345
+\forest@process@left@M=\count346
+\forest@process@left@N=\count347
+\forest@process@right@M=\count348
+\forest@process@right@N=\count349
+\forest@process@saved@M=\count350
+\forest@process@saved@N=\count351
+\forest@process@result@M=\count352
+\forest@process@result@N=\count353
+\forest@process@n=\count354
 \forest@nodewalk@branch@toks=\toks54
 \forest@nodewalk@shortsteps@resolution=\toks55
 \forest@do@dynamics=\toks56
@@ -1365,8 +1358,8 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@PIii@toks=\toks60
 \forest@copy@in=\read3
 \forest@copy@out=\write6
-\forest@externalize@max@outer@n=\count353
-\forest@externalize@inner@n=\count354
+\forest@externalize@max@outer@n=\count355
+\forest@externalize@inner@n=\count356
 ) (/usr/share/texmf-dist/tex/latex/forest/forest-lib-linguistics.sty
 Package: forest-lib-linguistics 2017/07/14 v0.1.2
 \standardnodestrutbox=\box96
@@ -1374,17 +1367,17 @@ Package: forest-lib-linguistics 2017/07/14 v0.1.2
 Package: l3keys2e 2019-10-11 LaTeX2e option processing using LaTeX3 keys
 )
 Package: nicematrix 2019/10/29 v3.6 Several features to improve the typesetting of mathematical matrices with TikZ
-\g__nm_env_int=\count355
-\g__nm_NiceMatrixBlock_int=\count356
+\g__nm_env_int=\count357
+\g__nm_NiceMatrixBlock_int=\count358
 \l__nm_columns_width_dim=\dimen294
 \l__nm_inter_dots_dim=\dimen295
 \l__nm_radius_dim=\dimen296
-\l__nm_save_iRow_int=\count357
-\l__nm_save_jCol_int=\count358
-\l__nm_first_row_int=\count359
-\l__nm_first_col_int=\count360
-\l__nm_last_row_int=\count361
-\l__nm_last_col_int=\count362
+\l__nm_save_iRow_int=\count359
+\l__nm_save_jCol_int=\count360
+\l__nm_first_row_int=\count361
+\l__nm_first_col_int=\count362
+\l__nm_last_row_int=\count363
+\l__nm_last_col_int=\count364
 \l__nm_left_margin_dim=\dimen297
 \l__nm_right_margin_dim=\dimen298
 \g__nm_width_last_col_dim=\dimen299
@@ -1392,57 +1385,135 @@ Package: nicematrix 2019/10/29 v3.6 Several features to improve the typesetting 
 \l__nm_extra_left_margin_dim=\dimen301
 \l__nm_extra_right_margin_dim=\dimen302
 ) (/usr/share/texmf-dist/tex/generic/listofitems/listofitems.sty (/usr/share/texmf-dist/tex/generic/listofitems/listofitems.tex
-\loi_cnt_foreach_nest=\count363
-\loi_nestcnt=\count364
+\loi_cnt_foreach_nest=\count365
+\loi_nestcnt=\count366
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified sep char (CT)
+) (/usr/share/texmf-dist/tex/generic/xlop/xlop.sty
+Package: xlop 2009/12/02 package wrapper for xlop.tex
+ (/usr/share/texmf-dist/tex/generic/xlop/xlop.tex
+\op@count@z=\count367
+\op@count@i=\count368
+\op@count@ii=\count369
+\op@count@iii=\count370
+\op@count@iv=\count371
+\op@count@v=\count372
+\op@count@vi=\count373
+\op@currentstyle=\toks61
+
+`xlop' v0.26  <2017/01/07> (jcc)
+\opcolumnwidth=\dimen303
+\oplineheight=\dimen304
+\op@strutbox=\box97
+\op@decimalsepwidth=\dimen305
+\op@decimalsepoffset=\dimen306
+\op@hrulewidth=\dimen307
+\op@vrulewidth=\dimen308
+\op@parenthesis=\count374
+\op@token=\count375
+\op@stack=\count376
+\op@stackb=\count377
+)) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+ (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks62
+\t@pgfplots@tokb=\toks63
+\t@pgfplots@tokc=\toks64
+\pgfplots@tmpa=\dimen309
+\c@pgfplots@coordindex=\count378
+\c@pgfplots@scanlineindex=\count379
+ (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count380
+) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count381
+\t@pgfplotstable@a=\toks65
+) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count382
+ (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen310
+\pgfdecoratedremainingdistance=\dimen311
+\pgfdecoratedinputsegmentcompleteddistance=\dimen312
+\pgfdecoratedinputsegmentremainingdistance=\dimen313
+\pgf@decorate@distancetomove=\dimen314
+\pgf@decorate@repeatstate=\count383
+\pgfdecorationsegmentamplitude=\dimen315
+\pgfdecorationsegmentlength=\dimen316
+)
+\tikz@lib@dec@box=\box98
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count384
+\pgfplots@xmin@reg=\dimen317
+\pgfplots@xmax@reg=\dimen318
+\pgfplots@ymin@reg=\dimen319
+\pgfplots@ymax@reg=\dimen320
+\pgfplots@zmin@reg=\dimen321
+\pgfplots@zmax@reg=\dimen322
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)))) (/usr/share/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+) (/usr/share/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Trying to load font information for U+pzd on input line 63.
+ (/usr/share/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Trying to load font information for U+psy on input line 64.
+ (/usr/share/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
 )) (/usr/share/texmf-dist/tex/latex/polynom/polynom.sty
 Package: polynom 2017/07/17 0.19 (CH,HA)
-\pld@currstage=\count365
-) (./main.aux)
-\openout1 = `main.aux'.
+\pld@currstage=\count385
+) (./252comp.aux)
+\openout1 = `252comp.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 18.
  (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 17.
-Package scrbase Info: activating english \contentsname on input line 17.
-Package scrbase Info: activating english \listfigurename on input line 17.
-Package scrbase Info: activating english \listtablename on input line 17.
+LaTeX Font Info:    ... okay on input line 18.
+Package scrbase Info: activating english \contentsname on input line 18.
+Package scrbase Info: activating english \listfigurename on input line 18.
+Package scrbase Info: activating english \listtablename on input line 18.
 
 
 Package filehook Warning: Macro \InputIfFileExists got redefined after 'filehook' was loaded.
-Certain file hooks might now be dysfunctional! on input line 17.
+Certain file hooks might now be dysfunctional! on input line 18.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count366
-\scratchdimen=\dimen303
-\scratchbox=\box97
-\nofMPsegments=\count367
-\nofMParguments=\count368
-\everyMPshowfont=\toks61
-\MPscratchCnt=\count369
-\MPscratchDim=\dimen304
-\MPnumerator=\count370
-\makeMPintoPDFobject=\count371
-\everyMPtoPDFconversion=\toks62
+\scratchcounter=\count386
+\scratchdimen=\dimen323
+\scratchbox=\box99
+\nofMPsegments=\count387
+\nofMParguments=\count388
+\everyMPshowfont=\toks66
+\MPscratchCnt=\count389
+\MPscratchDim=\dimen324
+\MPnumerator=\count390
+\makeMPintoPDFobject=\count391
+\everyMPtoPDFconversion=\toks67
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -1455,21 +1526,21 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\AtBeginShipoutBox=\box98
-Package hyperref Info: Link coloring ON on input line 17.
+\AtBeginShipoutBox=\box100
+Package hyperref Info: Link coloring ON on input line 18.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count372
+\c@section@level=\count392
 )
-LaTeX Info: Redefining \ref on input line 17.
-LaTeX Info: Redefining \pageref on input line 17.
-LaTeX Info: Redefining \nameref on input line 17.
- (./main.out) (./main.out)
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
+ (./252comp.out) (./252comp.out)
 \@outlinefile=\write7
-\openout7 = `main.out'.
+\openout7 = `252comp.out'.
 
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
@@ -1478,14 +1549,14 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 17.
+(scrartcl)           before \begin{document} on input line 18.
  (/usr/share/texmf-dist/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2019/06/04 v1.27 PDF bookmarks (HO)
  (/usr/share/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
 File: bkm-pdftex.def 2019/06/04 v1.27 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input line 164.
-\BKM@id=\count373
+\BKM@id=\count393
 )) ABD: EveryShipout initializing macros
 
 Package tocstyle Warning: Usage of `tocstyle' with new `tocbasic' detected.
@@ -1498,48 +1569,51 @@ Package tocstyle Warning: Usage of `tocstyle' with new `tocbasic' detected.
 (tocstyle)                You may also get additional warnings because of
 (tocstyle)                redefined `\numberline'. Ignore them.
 
-Package tocstyle Info: prepare \l@part for redefinition on input line 17.
-Package tocstyle Info: prepare \l@section for redefinition on input line 17.
-Package tocstyle Info: prepare \l@subsection for redefinition on input line 17.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+Package tocstyle Info: prepare \l@part for redefinition on input line 18.
+Package tocstyle Info: prepare \l@section for redefinition on input line 18.
+Package tocstyle Info: prepare \l@subsection for redefinition on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 17.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18.
  (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 17.
-Package tocstyle Info: prepare \l@table for redefinition on input line 17.
-Package tocstyle Info: prepare \l@figure for redefinition on input line 17.
-\c@lstlisting=\count374
-LaTeX Info: Redefining \microtypecontext on input line 17.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 18.
+ (/usr/share/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 18.
+Package tocstyle Info: prepare \l@table for redefinition on input line 18.
+Package tocstyle Info: prepare \l@figure for redefinition on input line 18.
+\c@lstlisting=\count394
+LaTeX Info: Redefining \microtypecontext on input line 18.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 17.
+LaTeX Info: Redefining \showhyphens on input line 18.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
+
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package tocbasic Info: character protrusion at toc deactivated on input line 22.
- (./main.toc
+Package tocbasic Info: character protrusion at toc deactivated on input line 24.
+(./252comp.toc
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1549,47 +1623,142 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  12.04504pt
 text indent calculated (toc, 2): 19.46669pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 12.04504pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  12.04504pt
 text indent calculated (toc, 2): 19.46669pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 12.04504pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  12.04504pt
 text indent calculated (toc, 2): 19.46669pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 12.04504pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  12.04504pt
 text indent calculated (toc, 2): 19.46669pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 12.04504pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  12.04504pt
 text indent calculated (toc, 2): 19.46669pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 12.04504pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  12.04504pt
 text indent calculated (toc, 2): 19.46669pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 12.04504pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  12.04504pt
 text indent calculated (toc, 2): 19.46669pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 12.04504pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  12.04504pt
 text indent calculated (toc, 2): 19.46669pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 12.04504pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  12.04504pt
+text indent calculated (toc, 2): 19.46669pt
+number indent calculated (toc, 2): 12.04504pt
 )
 \tf@toc=\write8
-\openout8 = `main.toc'.
+\openout8 = `252comp.toc'.
 
- (./lectures/01-07.tex
+ (/home/gautierk/McGill/252comp/notes/lectures/01-07.tex
 LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 11.
  (/usr/share/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1598,250 +1767,247 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 20.
 Package hyperref Info: bookmark level for unknown note defaults to 0 on input line 44.
- [2
-
-]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 71.
 Package hyperref Info: bookmark level for unknown example defaults to 0 on input line 71.
-
-./lectures/01-07.tex:98: You can't use `macro parameter character #' in math mode.
-<argument> ##
-             (x_1, \dots , x_n)
-l.98   \end{gather*}
-                    
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-./lectures/01-07.tex:98: You can't use `macro parameter character #' in math mode.
-<argument> ##
-             (x_1, \dots , x_n)
-l.98   \end{gather*}
-                    
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
+ [2]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 115.
-./lectures/01-07.tex:121: Missing $ inserted.
-<inserted text> 
-                $
-l.121   a_
-          n = o(b_n) when
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-./lectures/01-07.tex:122: Package amsmath Error: \begin{gather*} allowed only in paragraph mode.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.122   \begin{gather*}
-                       
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./lectures/01-07.tex:125: LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.125   \ii
-           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./lectures/01-07.tex:126: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126   a
-         _n = w(b_n) when
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./lectures/01-07.tex:126: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.126   a
-         _n = w(b_n) when
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./lectures/01-07.tex:127: Package amsmath Error: \begin{gather*} allowed only in paragraph mode.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.127   \begin{gather*}
-                       
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./lectures/01-07.tex:130: LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.130   \ii
-           
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./lectures/01-07.tex:131: Missing $ inserted.
-<inserted text> 
-                $
-l.131   a
-         _n = \sim(b_n) when
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./lectures/01-07.tex:131: Missing } inserted.
-<inserted text> 
-                }
-l.131   a
-         _n = \sim(b_n) when
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./lectures/01-07.tex:131: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.131   a
-         _n = \sim(b_n) when
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./lectures/01-07.tex:131: Missing $ inserted.
-<inserted text> 
-                $
-l.131   a_
-          n = \sim(b_n) when
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-./lectures/01-07.tex:132: Package amsmath Error: \begin{gather*} allowed only in paragraph mode.
-
-See the amsmath package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132   \begin{gather*}
-                       
-You've lost some text.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./lectures/01-07.tex:135: LaTeX Error: Command \end{mdframed} invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.135 \end{example}
-                   
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./lectures/01-07.tex:135: Missing $ inserted.
-<inserted text> 
-                $
-l.135 \end{example}
-                   
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./lectures/01-07.tex:135: Missing } inserted.
-<inserted text> 
-                }
-l.135 \end{example}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./lectures/01-07.tex:135: Extra }, or forgotten \endgroup.
-\par ...m \@noitemerr {\@@par }\fi \else {\@@par }
-                                                  \fi 
-l.135 \end{example}
-                   
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-[3]
+ [3]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 143.
+) (/home/gautierk/McGill/252comp/notes/lectures/01-09.tex [4]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 29.
 
-./lectures/01-07.tex:156: You can't use `macro parameter character #' in horizontal mode.
-l.156   Solution #
-                  4, linear algebra exponentiation. Take $O(\log n)$
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
+Underfull \hbox (badness 10000) in paragraph at lines 30--33
 
-) [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 32.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 32.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 32.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 32.
-Package rerunfilecheck Info: File `main.out' has not changed.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--59
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--67
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--67
+
+ []
+
+[5]
+Overfull \vbox (59.13712pt too high) has occurred while \output is active []
+
+ [6]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 73.
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--80
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--80
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 102.
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--105
+
+ []
+
+(/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+Overfull \hbox (202.51784pt too wide) detected at line 112
+[]
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 121--126
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--126
+
+ []
+
+) (/home/gautierk/McGill/252comp/notes/lectures/01-14.tex
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 50.
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--72
+
+ []
+
+[8] [9]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 136.
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 136.
+
+Underfull \hbox (badness 10000) in paragraph at lines 137--140
+
+ []
+
+) (/home/gautierk/McGill/252comp/notes/lectures/01-16.tex
+Underfull \hbox (badness 10000) in paragraph at lines 16--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--28
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 52--55
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 76--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 76--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--127
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--127
+
+ []
+
+[12]) (/home/gautierk/McGill/252comp/notes/lectures/02-25.tex [13]
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
+
+ []
+
+) [14]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
+ (./252comp.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
+Package rerunfilecheck Info: File `252comp.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 52933 strings out of 492167
- 1136477 string characters out of 6131557
- 1402707 words of memory out of 5000000
- 56536 multiletter control sequences out of 15000+600000
- 542330 words of font info for 72 fonts, out of 8000000 for 9000
+ 63546 strings out of 492167
+ 1473616 string characters out of 6131559
+ 1889387 words of memory out of 5000000
+ 66877 multiletter control sequences out of 15000+600000
+ 545066 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,20n,111p,10086b,1259s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on main.pdf (4 pages, 167390 bytes).
+ 100i,21n,144p,10089b,1271s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on 252comp.pdf (14 pages, 250123 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
- 151 compressed objects within 2 object streams
- 35 named destinations out of 1000 (max. 500000)
- 15029 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 418 PDF objects out of 1000 (max. 8388607)
+ 360 compressed objects within 4 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 17741 words of extra memory for PDF output out of 20736 (max. 10000000)
 

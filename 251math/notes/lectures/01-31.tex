@@ -1,0 +1,82 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-01-31}
+
+
+\begin{document}
+
+\section{Lecture 01-31}
+
+Calculate $\Gr(k, n)$ = collection of $k$-dimensional subspaces in a vector space of dim $n$ over $F$.
+
+Strategy: First count the number of $k$-tuples $(v_1, \dots, v_k)$ of linearly independent vectors.
+\\\\
+Possibilities for $v_1 = q^n - 1$. Possibilities for $v_2 = q^n - q$. Possibilities for $v_3 = q^n - q^2$. Possibilities for $v_k = q^n - q^{k - 1}$.
+\\\\
+Let $\Sigma \coloneqq$ the set of ordered k-tuples of linearly independent vectors.
+\\\\
+$\Sigma$ injects into  $\Gr(k, n)$ with the function $(v_1, \dots, v_k) \mapsto \spn(v_1, \dots, v_k)$.
+\\\\
+Given a $W \subset V$ of dim $k$, how many $(v_1, \dots, v_k)$ span $W$. i.e. how many bases does $W$ have?
+\\\\
+Choices for $v_1 = q^k - 1$. Choises for $v_2 = q^k - q$. Choices for $v_k = q^k - q^{k - 1}$. Therefore $p^{-1}(W) = (q^k - 1)(q^k - q)\cdots(q^k - q^{k - 1})$.
+\begin{gather*}
+  \#\Gr(k, n) = \frac{(q^n - 1)(q^n - q)(\cdots)(q^n - q^{k - 1})}{(q^k - 1)(q^k - q)(\cdots)(q^k - q^{k - 1})} \\
+  = \#\Gr(k, n) = \frac{(q^n - 1)(q^{n - 1} - 1)(\cdots)(q^{n - k + 1} - 1)}{(q^k - 1)(q^{k - 1} - 1)(\cdots)(q^1)} \\
+  =
+  \begin{pmatrix}
+    n \\ k
+  \end{pmatrix}_q
+  \\
+  \begin{pmatrix}
+    n \\ k
+  \end{pmatrix} 
+  = \frac{n * (n - 1) * \cdots * (n - k + 1)}{k * (k - 1) * \cdots * 1}
+\end{gather*} 
+\begin{note}
+  \begin{gather*}
+    \frac{q^j - 1}{q - 1} = [j]_q = 1 + q + q^2 + \cdots + q^{j - 1} \\
+    [j]_q! = [1]_q[2]_q\cdots[j]_q \\
+    \begin{pmatrix}
+      n \\ k
+    \end{pmatrix}_q
+    = \frac{[n]_q!}{[k]_q![n - k]_q}
+  \end{gather*} 
+\end{note} 
+How many subsets of size $k$ are there in a set of size $n$? This question is linked to how many subspaces of dimension $k$ are there in a vector space of dimension $n$.
+\begin{gather*}
+  \begin{pmatrix}
+    n \\ k
+  \end{pmatrix} \quad
+  \begin{pmatrix}
+    n \\ k
+  \end{pmatrix}_q
+  \\
+  x \mapsto \mathcal{F}(x, F), \ \mathcal{F}_0(x, F)
+\end{gather*} 
+\begin{gather*}
+  \lim_{q \to 1}
+  \begin{pmatrix}
+    n \\ k
+  \end{pmatrix}_q
+  =
+  \begin{pmatrix}
+    n \\ k
+  \end{pmatrix} 
+  \\
+  \begin{pmatrix}
+    n \\ k
+  \end{pmatrix}_q
+  = 
+  \frac{(q^n - 1)(q^{n - 1} - 1)(\cdots)(q^{n - k + 1} - 1)}{(q^k - 1)(q^{k - 1} - 1)(\cdots)(q^1)} \\
+  \lim_{q \to 1}\frac{q^j - 1}{q - 1} = \lim_{q \to 1}jq^{j - 1} = j \\
+  \frac{q^j - 1}{q - 1} = 1 + q + \cdots + q^{j - 1} \\
+  \lim_{q \to 1}(n \\ k)_q. \quad \ \text{Divide all elements by (q - 1) on the bottom and top} \  \\
+  \lim_{q \to 1}(n \\ k)_q. = \frac{n * (n - 1) * \cdots * (n - k + 1)}{k * (k - 1) * \cdots * 1}
+\end{gather*} 
+
+\end{document}

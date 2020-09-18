@@ -1,0 +1,124 @@
+\documentclass[../598comp.tex]{subfiles}
+
+\graphicspath{ {./lectures/images/}{./images/} }
+
+\date{05-27}
+
+\begin{document}
+
+\section{05-27}
+
+\subsection{Universal Functions}
+
+\begin{definition}
+  A binary function $U: \NN^2 \to \NN$ is said to be \ul{universal} for the
+  class of \ul{computable} unary functions if
+  \begin{enumerate}
+  \item 
+    $\forall n, \ U_n: x \mapsto U(n, x)$ is computable. $U_n$ is called a
+    \ul{section} of $U$. This is called currying, when you split a function that
+    takes multiple parameters into nested unary functions.
+  \item
+    $\forall$ unary computable $f: \NN \to \NN, \ \exists n$ such that $U_n =
+    f$, i.e. $\forall x \ U_n(x) = f(x)$
+  \end{enumerate}
+  Note that in this definition $U$ doesn't have to be computable.
+\end{definition}
+
+\begin{note}
+  The list of programs is countable.
+\end{note}
+
+\begin{theorem}
+  There is a binary \ul{computable} function $U: \NN \times \NN \to N$ such that
+  $U$ is a universal function for all unary computable functions. i.e. one
+  turing machine that can simulate all the others.
+  \begin{proof}
+    Consider your favorite programming language (YFPL), and enumerate all legal
+    programs, $p_1, p_2, \dots, p_n, \dots$
+
+    $U(n, x) = p_n(x)$. So $U$ is an ``interpreter'' while $n$ is the code of
+    the algorithm.
+  \end{proof}
+  \begin{note}
+    ``Code'' comes from the days of early computability theory because every
+    program could be coded up as a number.
+  \end{note}
+\end{theorem}
+
+\subsection{Total Computable Universal Function}
+
+Does there exist a \ul{total} computable universal function for the class of
+\ul{total} computable unary functions. Total means it will be defined on all
+inputs, so everything must terminate. No!
+
+Let $U$ be any total computable function of two arguments. Define $d(n) = U(n,
+n) + 1$. $\forall n, \ d(n) \neq U_n(n)$ so $\forall d \neq U_n$. Can't
+guarantee all terminating algorithms, or must allow some options to not terminate.
+
+Think about why doesn't this argument work for partial functions? Because $U(n,
+n)$ might be undefined, in which case $U(n, n) + 1$ is still undefined.
+
+\subsection{Compositional Programming}
+
+We want to program \ul{Compositionally}. If $f, g$ rae computable functions,
+then $g \circ f$ is also computable. The map that figures out $g \circ f$ should
+be total computable.
+
+\begin{definition}
+  Let $S$ be any countable set. A map $\nu: \NN \to S$ is called a
+  \ul{numbering} of $S$ if $\nu$ is surjective.
+
+  A value of $n$ such that $\nu(n) = s$ is called a code number for $s$.
+
+  Note the indefine article. There can be multiple such $n$ for a given element.
+
+  We want to show that for the ``right kind'' of universal function $U$, there
+  is a computable function with the following properties.
+  \begin{gather*}
+    c: \NN \times \NN \to \NN \\
+    \forall p, q, x \in \NN, \ (U_p \circ U_q)(x) = U(p, U(q, x)) = U(c(p, q),
+    x) = U_{c(p, q)}(x)
+  \end{gather*}
+\end{definition}
+
+\begin{note}
+  A set $S$ is computable if there is a \ul{total} computable function $f$, such
+  that $f(n) = 1$ if $n \in S$ and $f(n) = 0$ if $n \notin S$.
+
+  Note that computable function doesn't have to be ``computable'' set. Only total
+  computable function.
+\end{note}
+
+\begin{definition}
+  Let $U$ be a universal computable function. It is called a \ul{Godel}
+  universal function if $\forall$ binary computable functions $V$, $\exists$ a
+  total computable unary function $\sigma: \NN \to \NN$ such that $\forall m, x
+  \in \NN, \ V(m, x) = U(\sigma(m), x)$ ($\sigma$ will depend on $V$).
+\end{definition}
+
+I stopped taking notes because I realized there was a handout online with
+detailed notes on today's lecture.
+
+\subsection{Primitive Recursive Functions}
+
+Godel. These roughly correspond to a programming language with \ul{bounded} search. i.e
+can't use while loops, only loops that run a set number of times.
+
+Fortran for loops for example. Provably terminating.
+
+Ackerman gave an example of a provably terminating function that was not
+primitive recursive.
+
+This makes sense based on the proof above, whereby it's impossible to produce a
+universal total computable function for the class of total computable unary functions.
+
+Kleene: PRF + unbounded search gives partial recursive functions. They include
+the power of while loops. Proved that these are equivalent to turing machines
+and lambda calculus.
+
+\subsection{Degrees of Unsolvability}
+
+Online handout.
+
+\end{document}

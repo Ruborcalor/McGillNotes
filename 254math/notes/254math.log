@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.12.19)  7 JAN 2020 20:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.2.7)  10 FEB 2020 09:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**254math.tex
+(./254math.tex
 LaTeX2e <2019-10-01> patch level 1
 (/usr/share/texmf-dist/tex/latex/koma-script/scrartcl.cls
 Document Class: scrartcl 2019/10/12 v3.27 KOMA-Script document class (article)
@@ -271,7 +271,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )) (/usr/share/texmf-dist/tex/latex/asymptote/asymptote.sty
 Package: asymptote 2016/11/26 v1.33 Asymptote style file for LaTeX
- (./main.pre)
+ (./254math.pre)
 \ASYbox=\box34
 \ASYdimen=\dimen128
 \c@asy=\count105
@@ -288,7 +288,7 @@ Package color Info: Driver file: pdftex.def on input line 147.
 ) (/usr/share/texmf-dist/tex/generic/oberdiek/catchfile.sty
 Package: catchfile 2016/05/16 v1.7 Catch the contents of a file (HO)
 )
-\openout4 = `main.pre'.
+\openout4 = `254math.pre'.
 
 ) (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2017/10/31 v2.20.4
@@ -915,20 +915,22 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 Package thmtools Info: Key `mdframed' (with value `style=mdbluebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmbluebox' on input line 291.
+(thmtools)             that uses `style=thmbluebox' on input line 292.
 Package thmtools Info: Key `mdframed' (with value `style=mdrecbox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmrecbox' on input line 309.
+(thmtools)             that uses `style=thmrecbox' on input line 310.
 Package thmtools Info: Key `mdframed' (with value `style=mdinlinebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thminlinebox' on input line 327.
-Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 339.
+(thmtools)             that uses `style=thminlinebox' on input line 328.
+Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 340.
  (/usr/share/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
 Package: thmdef-mdframed 2019/07/31 v67
 )
 \c@theorem=\count304
+\c@hwexercise=\count305
+\c@hwproblem=\count306
  (/usr/share/texmf-dist/tex/latex/koma-script/tocstyle.sty
 Package: tocstyle 2019/10/09 v0.2j-alpha deprecated package (versatile toc styles)
 
@@ -941,7 +943,7 @@ Package tocstyle Warning: THIS IS A DEPRECATED ALPHA VERSION!
 (tocstyle)                THERE IS NO SUPPORT, IF YOU USE THIS PACKAGE!
 (tocstyle)                Maybe it would be better, not to load this package.
 
-\tocstyle@indentstyle=\count305
+\tocstyle@indentstyle=\count307
 Package tocstyle Info: no tocstyle.cfg found on input line 951.
 )
 exclude: 
@@ -958,22 +960,22 @@ exclude:
 exclude: 
 exclude: 
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count306
+\lst@mode=\count308
 \lst@gtempboxa=\box70
 \lst@token=\toks43
-\lst@length=\count307
+\lst@length=\count309
 \lst@currlwidth=\dimen271
-\lst@column=\count308
-\lst@pos=\count309
+\lst@column=\count310
+\lst@pos=\count311
 \lst@lostspace=\dimen272
 \lst@width=\dimen273
-\lst@newlines=\count310
-\lst@lineno=\count311
+\lst@newlines=\count312
+\lst@lineno=\count313
 \lst@maxwidth=\dimen274
  (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count312
-\lst@skipnumbers=\count313
+\c@lstnumber=\count314
+\lst@skipnumbers=\count315
 \lst@framebox=\box71
 ) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/09/10 1.8c listings configuration
@@ -1143,13 +1145,13 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen275
 \enit@toks=\toks44
 \enit@inbox=\box72
-\enit@count@id=\count314
-\enitdp@description=\count315
+\enit@count@id=\count316
+\enitdp@description=\count317
 )
-\c@walki=\count316
-\c@walkii=\count317
-\c@walkiii=\count318
-\enitdp@walk=\count319
+\c@walki=\count318
+\c@walkii=\count319
+\c@walkiii=\count320
+\enitdp@walk=\count321
  (/usr/share/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
 Package: todonotes 2018/11/22
@@ -1163,18 +1165,18 @@ File: tikzlibraryfadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 File: pgflibraryfadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))) (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count320
-\calc@Bcount=\count321
+\calc@Acount=\count322
+\calc@Bcount=\count323
 \calc@Adimen=\dimen276
 \calc@Bdimen=\dimen277
 \calc@Askip=\skip138
 \calc@Bskip=\skip139
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count322
+\calc@Ccount=\count324
 \calc@Cskip=\skip140
 )
-\c@@todonotes@numberoftodonotes=\count323
+\c@@todonotes@numberoftodonotes=\count325
 ) (/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2019/07/31 v1.22 mathematical typesetting tools
  (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -1184,7 +1186,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count324
+\g_MT_multlinerow_int=\count326
 \l_MT_multwidth_dim=\dimen278
 \origjot=\skip141
 \l_MT_shortvdotswithinadjustabove_dim=\dimen279
@@ -1196,11 +1198,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 ) (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2019/10/10 v2.7c Micro-typographical refinements (RS)
 \MT@toks=\toks45
-\MT@count=\count325
+\MT@count=\count327
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen285
 LaTeX Info: Redefining \textmicrotypecontext on input line 1347.
-\MT@listname@count=\count326
+\MT@listname@count=\count328
  (/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2019/10/10 v2.7c Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 914.
@@ -1304,7 +1306,7 @@ File: tikzlibraryfit.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ) (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
-\pgf@intersect@solutions=\count327
+\pgf@intersect@solutions=\count329
 ) (/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks47
@@ -1319,38 +1321,38 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )) (/usr/share/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \ID@toks=\toks49
-\ID@count=\count328
+\ID@count=\count330
 )
 \ID@usercommands=\toks50
-\safeloop@depth=\count329
-\safeRKloop@depth=\count330
+\safeloop@depth=\count331
+\safeRKloop@depth=\count332
 \forest@temp@dimen=\dimen288
-\forest@temp@count=\count331
-\forest@n=\count332
-\forest@temp@global@count=\count333
+\forest@temp@count=\count333
+\forest@n=\count334
+\forest@temp@global@count=\count335
 \forest@temp@toks=\toks51
-\forest@temparray@M=\count334
-\forest@temparray@N=\count335
-\forest@global@temparray@M=\count336
-\forest@global@temparray@N=\count337
-\forest@isnum@count=\count338
-\forest@isdim@nonintpart=\count339
+\forest@temparray@M=\count336
+\forest@temparray@N=\count337
+\forest@global@temparray@M=\count338
+\forest@global@temparray@N=\count339
+\forest@isnum@count=\count340
+\forest@isdim@nonintpart=\count341
 \forest@isdim@dimen=\dimen289
-\forest@sort@m=\count340
-\forest@sort@k=\count341
-\forest@sort@p=\count342
+\forest@sort@m=\count342
+\forest@sort@k=\count343
+\forest@sort@p=\count344
 \bracket@content=\toks52
 \bracket@afterthought=\toks53
-\forest@node@maxid=\count343
-\forest@process@left@M=\count344
-\forest@process@left@N=\count345
-\forest@process@right@M=\count346
-\forest@process@right@N=\count347
-\forest@process@saved@M=\count348
-\forest@process@saved@N=\count349
-\forest@process@result@M=\count350
-\forest@process@result@N=\count351
-\forest@process@n=\count352
+\forest@node@maxid=\count345
+\forest@process@left@M=\count346
+\forest@process@left@N=\count347
+\forest@process@right@M=\count348
+\forest@process@right@N=\count349
+\forest@process@saved@M=\count350
+\forest@process@saved@N=\count351
+\forest@process@result@M=\count352
+\forest@process@result@N=\count353
+\forest@process@n=\count354
 \forest@nodewalk@branch@toks=\toks54
 \forest@nodewalk@shortsteps@resolution=\toks55
 \forest@do@dynamics=\toks56
@@ -1365,8 +1367,8 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@PIii@toks=\toks60
 \forest@copy@in=\read3
 \forest@copy@out=\write6
-\forest@externalize@max@outer@n=\count353
-\forest@externalize@inner@n=\count354
+\forest@externalize@max@outer@n=\count355
+\forest@externalize@inner@n=\count356
 ) (/usr/share/texmf-dist/tex/latex/forest/forest-lib-linguistics.sty
 Package: forest-lib-linguistics 2017/07/14 v0.1.2
 \standardnodestrutbox=\box96
@@ -1374,75 +1376,245 @@ Package: forest-lib-linguistics 2017/07/14 v0.1.2
 Package: l3keys2e 2019-10-11 LaTeX2e option processing using LaTeX3 keys
 )
 Package: nicematrix 2019/10/29 v3.6 Several features to improve the typesetting of mathematical matrices with TikZ
-\g__nm_env_int=\count355
-\g__nm_NiceMatrixBlock_int=\count356
+\g__nm_env_int=\count357
+\g__nm_NiceMatrixBlock_int=\count358
 \l__nm_columns_width_dim=\dimen294
 \l__nm_inter_dots_dim=\dimen295
 \l__nm_radius_dim=\dimen296
-\l__nm_save_iRow_int=\count357
-\l__nm_save_jCol_int=\count358
-\l__nm_first_row_int=\count359
-\l__nm_first_col_int=\count360
-\l__nm_last_row_int=\count361
-\l__nm_last_col_int=\count362
+\l__nm_save_iRow_int=\count359
+\l__nm_save_jCol_int=\count360
+\l__nm_first_row_int=\count361
+\l__nm_first_col_int=\count362
+\l__nm_last_row_int=\count363
+\l__nm_last_col_int=\count364
 \l__nm_left_margin_dim=\dimen297
 \l__nm_right_margin_dim=\dimen298
 \g__nm_width_last_col_dim=\dimen299
 \g__nm_width_first_col_dim=\dimen300
 \l__nm_extra_left_margin_dim=\dimen301
 \l__nm_extra_right_margin_dim=\dimen302
+) (/usr/share/texmf-dist/tex/latex/mnsymbol/MnSymbol.sty
+Package: MnSymbol 2007/01/21 v1.4 support for the MnSymbol font
+LaTeX Info: Redefining \dagger on input line 84.
+LaTeX Info: Redefining \ddagger on input line 84.
+LaTeX Info: Redefining \mathparagraph on input line 84.
+LaTeX Info: Redefining \mathsection on input line 84.
+LaTeX Info: Redefining \mathdollar on input line 84.
+LaTeX Info: Redefining \mathsterling on input line 84.
+LaTeX Info: Redefining \yen on input line 84.
+LaTeX Info: Redefining \circledR on input line 84.
+LaTeX Info: Redefining \circledS on input line 84.
+LaTeX Info: Redefining \Re on input line 84.
+LaTeX Info: Redefining \Im on input line 84.
+LaTeX Info: Redefining \dotplus on input line 84.
+LaTeX Info: Redefining \thicksim on input line 84.
+LaTeX Info: Redefining \thickapprox on input line 84.
+LaTeX Info: Redefining \veebar on input line 84.
+LaTeX Info: Redefining \barwedge on input line 84.
+LaTeX Info: Redefining \doublebarwedge on input line 84.
+LaTeX Info: Redefining \centerdot on input line 84.
+LaTeX Info: Redefining \divideontimes on input line 84.
+\symMnSyA=\mathgroup7
+\symMnSyB=\mathgroup8
+\symMnSyC=\mathgroup9
+\symMnSyD=\mathgroup10
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `MnSyA' in version `bold'
+(Font)                  U/MnSymbolA/m/n --> U/MnSymbolA/b/n on input line 121.
+LaTeX Font Info:    Overwriting symbol font `MnSyB' in version `bold'
+(Font)                  U/MnSymbolB/m/n --> U/MnSymbolB/b/n on input line 122.
+LaTeX Font Info:    Overwriting symbol font `MnSyC' in version `bold'
+(Font)                  U/MnSymbolC/m/n --> U/MnSymbolC/b/n on input line 123.
+LaTeX Font Info:    Overwriting symbol font `MnSyD' in version `bold'
+(Font)                  U/MnSymbolD/m/n --> U/MnSymbolD/b/n on input line 124.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/MnSymbolE/m/n --> OMX/MnSymbolE/b/n on input line 125.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  U/MnSymbolF/m/n --> U/MnSymbolF/b/n on input line 126.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 241.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
+(Font)                  OMS/MnSymbolS/m/n --> OMS/MnSymbolS/b/n on input line 241.
+LaTeX Info: Redefining \longrightarrow on input line 548.
+LaTeX Info: Redefining \longleftarrow on input line 549.
+LaTeX Info: Redefining \longleftrightarrow on input line 550.
+LaTeX Info: Redefining \Longrightarrow on input line 551.
+LaTeX Info: Redefining \Longleftarrow on input line 552.
+LaTeX Info: Redefining \Longleftrightarrow on input line 553.
+LaTeX Info: Redefining \longmapsto on input line 554.
+LaTeX Info: Redefining \vdots on input line 868.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 1660.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 1661.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 1662.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 1663.
+LaTeX Font Info:    Redeclaring math delimiter \ulcorner on input line 1664.
+LaTeX Font Info:    Redeclaring math delimiter \urcorner on input line 1665.
+LaTeX Font Info:    Redeclaring math delimiter \llcorner on input line 1666.
+LaTeX Font Info:    Redeclaring math delimiter \lrcorner on input line 1667.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 1673.
+LaTeX Font Info:    Redeclaring math delimiter \lvert on input line 1676.
+LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 1677.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 1678.
+LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 1681.
+LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 1682.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 1683.
+LaTeX Font Info:    Redeclaring math delimiter \Arrowvert on input line 1684.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 1692.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 1693.
+LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 1699.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 1704.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 1705.
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 1706.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 1707.
+LaTeX Font Info:    Redeclaring math delimiter \rmoustache on input line 1708.
+LaTeX Font Info:    Redeclaring math delimiter \lmoustache on input line 1709.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 1710.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 1721.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 1722.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 1723.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 1724.
+LaTeX Info: Redefining \downbracefill on input line 1799.
+LaTeX Info: Redefining \upbracefill on input line 1800.
+LaTeX Info: Redefining \overbrace on input line 1819.
+LaTeX Info: Redefining \underbrace on input line 1820.
+LaTeX Info: Redefining \surd on input line 1843.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 ) (/usr/share/texmf-dist/tex/generic/listofitems/listofitems.sty (/usr/share/texmf-dist/tex/generic/listofitems/listofitems.tex
-\loi_cnt_foreach_nest=\count363
-\loi_nestcnt=\count364
+\loi_cnt_foreach_nest=\count365
+\loi_nestcnt=\count366
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified sep char (CT)
-)) (/usr/share/texmf-dist/tex/latex/polynom/polynom.sty
-Package: polynom 2017/07/17 0.19 (CH,HA)
-\pld@currstage=\count365
-) (./main.aux)
-\openout1 = `main.aux'.
+) (/usr/share/texmf-dist/tex/generic/xlop/xlop.sty
+Package: xlop 2009/12/02 package wrapper for xlop.tex
+ (/usr/share/texmf-dist/tex/generic/xlop/xlop.tex
+\op@count@z=\count367
+\op@count@i=\count368
+\op@count@ii=\count369
+\op@count@iii=\count370
+\op@count@iv=\count371
+\op@count@v=\count372
+\op@count@vi=\count373
+\op@currentstyle=\toks61
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 17.
+`xlop' v0.26  <2017/01/07> (jcc)
+\opcolumnwidth=\dimen303
+\oplineheight=\dimen304
+\op@strutbox=\box97
+\op@decimalsepwidth=\dimen305
+\op@decimalsepoffset=\dimen306
+\op@hrulewidth=\dimen307
+\op@vrulewidth=\dimen308
+\op@parenthesis=\count374
+\op@token=\count375
+\op@stack=\count376
+\op@stackb=\count377
+)) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+ (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks62
+\t@pgfplots@tokb=\toks63
+\t@pgfplots@tokc=\toks64
+\pgfplots@tmpa=\dimen309
+\c@pgfplots@coordindex=\count378
+\c@pgfplots@scanlineindex=\count379
+ (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count380
+) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count381
+\t@pgfplotstable@a=\toks65
+) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count382
+ (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen310
+\pgfdecoratedremainingdistance=\dimen311
+\pgfdecoratedinputsegmentcompleteddistance=\dimen312
+\pgfdecoratedinputsegmentremainingdistance=\dimen313
+\pgf@decorate@distancetomove=\dimen314
+\pgf@decorate@repeatstate=\count383
+\pgfdecorationsegmentamplitude=\dimen315
+\pgfdecorationsegmentlength=\dimen316
+)
+\tikz@lib@dec@box=\box98
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count384
+\pgfplots@xmin@reg=\dimen317
+\pgfplots@xmax@reg=\dimen318
+\pgfplots@ymin@reg=\dimen319
+\pgfplots@ymax@reg=\dimen320
+\pgfplots@zmin@reg=\dimen321
+\pgfplots@zmax@reg=\dimen322
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)))) (/usr/share/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup11
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+LaTeX Font Info:    Redeclaring math symbol \invneg on input line 239.
+) (/usr/share/texmf-dist/tex/latex/polynom/polynom.sty
+Package: polynom 2017/07/17 0.19 (CH,HA)
+\pld@currstage=\count385
+) (./254math.aux)
+\openout1 = `254math.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 18.
  (/usr/share/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 17.
-Package scrbase Info: activating english \contentsname on input line 17.
-Package scrbase Info: activating english \listfigurename on input line 17.
-Package scrbase Info: activating english \listtablename on input line 17.
+LaTeX Font Info:    ... okay on input line 18.
+Package scrbase Info: activating english \contentsname on input line 18.
+Package scrbase Info: activating english \listfigurename on input line 18.
+Package scrbase Info: activating english \listtablename on input line 18.
 
 
 Package filehook Warning: Macro \InputIfFileExists got redefined after 'filehook' was loaded.
-Certain file hooks might now be dysfunctional! on input line 17.
+Certain file hooks might now be dysfunctional! on input line 18.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count366
-\scratchdimen=\dimen303
-\scratchbox=\box97
-\nofMPsegments=\count367
-\nofMParguments=\count368
-\everyMPshowfont=\toks61
-\MPscratchCnt=\count369
-\MPscratchDim=\dimen304
-\MPnumerator=\count370
-\makeMPintoPDFobject=\count371
-\everyMPtoPDFconversion=\toks62
+\scratchcounter=\count386
+\scratchdimen=\dimen323
+\scratchbox=\box99
+\nofMPsegments=\count387
+\nofMParguments=\count388
+\everyMPshowfont=\toks66
+\MPscratchCnt=\count389
+\MPscratchDim=\dimen324
+\MPnumerator=\count390
+\makeMPintoPDFobject=\count391
+\everyMPtoPDFconversion=\toks67
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -1455,21 +1627,21 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\AtBeginShipoutBox=\box98
-Package hyperref Info: Link coloring ON on input line 17.
+\AtBeginShipoutBox=\box100
+Package hyperref Info: Link coloring ON on input line 18.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count372
+\c@section@level=\count392
 )
-LaTeX Info: Redefining \ref on input line 17.
-LaTeX Info: Redefining \pageref on input line 17.
-LaTeX Info: Redefining \nameref on input line 17.
- (./main.out) (./main.out)
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
+ (./254math.out) (./254math.out)
 \@outlinefile=\write7
-\openout7 = `main.out'.
+\openout7 = `254math.out'.
 
 Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           Using `bookmark' together with `hyperref' is recommended,
@@ -1478,14 +1650,14 @@ Class scrartcl Info: loading recommended package `bookmark'.
 (scrartcl)           `bookmarkpackage=false' before \begin{document} and
 (scrartcl)           you can avoid this message adding:
 (scrartcl)             \usepackage{bookmark}
-(scrartcl)           before \begin{document} on input line 17.
+(scrartcl)           before \begin{document} on input line 18.
  (/usr/share/texmf-dist/tex/latex/oberdiek/bookmark.sty
 Package: bookmark 2019/06/04 v1.27 PDF bookmarks (HO)
  (/usr/share/texmf-dist/tex/latex/oberdiek/bkm-pdftex.def
 File: bkm-pdftex.def 2019/06/04 v1.27 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input line 164.
-\BKM@id=\count373
+\BKM@id=\count393
 )) ABD: EveryShipout initializing macros
 
 Package tocstyle Warning: Usage of `tocstyle' with new `tocbasic' detected.
@@ -1498,53 +1670,51 @@ Package tocstyle Warning: Usage of `tocstyle' with new `tocbasic' detected.
 (tocstyle)                You may also get additional warnings because of
 (tocstyle)                redefined `\numberline'. Ignore them.
 
-Package tocstyle Info: prepare \l@part for redefinition on input line 17.
-Package tocstyle Info: prepare \l@section for redefinition on input line 17.
-Package tocstyle Info: prepare \l@subsection for redefinition on input line 17.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+Package tocstyle Info: prepare \l@part for redefinition on input line 18.
+Package tocstyle Info: prepare \l@section for redefinition on input line 18.
+Package tocstyle Info: prepare \l@subsection for redefinition on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 17.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 18.
  (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 17.
-Package tocstyle Info: prepare \l@table for redefinition on input line 17.
-Package tocstyle Info: prepare \l@figure for redefinition on input line 17.
-\c@lstlisting=\count374
-LaTeX Info: Redefining \microtypecontext on input line 17.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 18.
+ (/usr/share/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
+Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 18.
+Package tocstyle Info: prepare \l@table for redefinition on input line 18.
+Package tocstyle Info: prepare \l@figure for redefinition on input line 18.
+\c@lstlisting=\count394
+LaTeX Info: Redefining \microtypecontext on input line 18.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 17.
+LaTeX Info: Redefining \showhyphens on input line 18.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
+
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Package tocbasic Info: character protrusion at toc deactivated on input line 22.
- (./main.toc
-number indent by \l@... (toc, 2):  16.42503pt
-text indent by \l@... (toc, 2):  25.18509pt
-number indent by parent (toc, 2):  18.06757pt
-text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+Package tocbasic Info: character protrusion at toc deactivated on input line 24.
+(./254math.toc
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1554,17 +1724,27 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 18.06757pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  18.06757pt
+text indent calculated (toc, 2): 24.9417pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 3):  41.61012pt
 text indent by \l@... (toc, 3):  35.04005pt
-number indent by parent (toc, 3):  41.36673pt
+number indent by parent (toc, 3):  43.00926pt
 text indent calculated (toc, 3): 27.98337pt
-number indent calculated (toc, 3): 41.61012pt
+number indent calculated (toc, 3): 43.00926pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1574,37 +1754,37 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1614,12 +1794,12 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1629,7 +1809,7 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1649,12 +1829,12 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1664,7 +1844,7 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1674,7 +1854,7 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1684,60 +1864,10 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
-number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  16.42503pt
-number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.06757pt
-number indent calculated (toc, 1): 0.0pt
-number indent by \l@... (toc, 2):  16.42503pt
-text indent by \l@... (toc, 2):  25.18509pt
-number indent by parent (toc, 2):  18.06757pt
-text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
-number indent by \l@... (toc, 2):  16.42503pt
-text indent by \l@... (toc, 2):  25.18509pt
-number indent by parent (toc, 2):  18.06757pt
-text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
-number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  16.42503pt
-number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.06757pt
-number indent calculated (toc, 1): 0.0pt
-number indent by \l@... (toc, 2):  16.42503pt
-text indent by \l@... (toc, 2):  25.18509pt
-number indent by parent (toc, 2):  18.06757pt
-text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
-number indent by \l@... (toc, 1):  0.0pt
-text indent by \l@... (toc, 1):  16.42503pt
-number indent by parent (toc, 1):  0.0pt
-text indent calculated (toc, 1): 18.06757pt
-number indent calculated (toc, 1): 0.0pt
-number indent by \l@... (toc, 2):  16.42503pt
-text indent by \l@... (toc, 2):  25.18509pt
-number indent by parent (toc, 2):  18.06757pt
-text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
-number indent by \l@... (toc, 2):  16.42503pt
-text indent by \l@... (toc, 2):  25.18509pt
-number indent by parent (toc, 2):  18.06757pt
-text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
-number indent by \l@... (toc, 2):  16.42503pt
-text indent by \l@... (toc, 2):  25.18509pt
-number indent by parent (toc, 2):  18.06757pt
-text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
-number indent by \l@... (toc, 2):  16.42503pt
-text indent by \l@... (toc, 2):  25.18509pt
-number indent by parent (toc, 2):  18.06757pt
-text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
-[2
+number indent calculated (toc, 2): 18.06757pt
+[1
 
-]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1747,7 +1877,12 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  18.06757pt
+text indent calculated (toc, 2): 24.9417pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1757,7 +1892,52 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 18.06757pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  18.06757pt
+text indent calculated (toc, 2): 24.9417pt
+number indent calculated (toc, 2): 18.06757pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  18.06757pt
+text indent calculated (toc, 2): 24.9417pt
+number indent calculated (toc, 2): 18.06757pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  18.06757pt
+text indent calculated (toc, 2): 24.9417pt
+number indent calculated (toc, 2): 18.06757pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  18.06757pt
+text indent calculated (toc, 2): 24.9417pt
+number indent calculated (toc, 2): 18.06757pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 18.06757pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  18.06757pt
+text indent calculated (toc, 2): 24.9417pt
+number indent calculated (toc, 2): 18.06757pt
+number indent by \l@... (toc, 1):  0.0pt
+text indent by \l@... (toc, 1):  16.42503pt
+number indent by parent (toc, 1):  0.0pt
+text indent calculated (toc, 1): 18.06757pt
+number indent calculated (toc, 1): 0.0pt
+number indent by \l@... (toc, 2):  16.42503pt
+text indent by \l@... (toc, 2):  25.18509pt
+number indent by parent (toc, 2):  18.06757pt
+text indent calculated (toc, 2): 24.9417pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1772,7 +1952,7 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1787,17 +1967,17 @@ number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 2):  16.42503pt
 text indent by \l@... (toc, 2):  25.18509pt
 number indent by parent (toc, 2):  18.06757pt
 text indent calculated (toc, 2): 24.9417pt
-number indent calculated (toc, 2): 16.42503pt
+number indent calculated (toc, 2): 18.06757pt
 number indent by \l@... (toc, 1):  0.0pt
 text indent by \l@... (toc, 1):  16.42503pt
 number indent by parent (toc, 1):  0.0pt
@@ -1805,70 +1985,10 @@ text indent calculated (toc, 1): 18.06757pt
 number indent calculated (toc, 1): 0.0pt
 )
 \tf@toc=\write8
-\openout8 = `main.toc'.
+\openout8 = `254math.toc'.
 
  (./lectures/09-09.tex
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 30--33
-[][]
- []
-
-
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 36--37
-[][] 
- []
-
-\g__nm_max_cell_width_dim=\dimen305
-\c@iRow=\count375
-\c@jCol=\count376
-\g__nm_row_total_int=\count377
-\g__nm_col_total_int=\count378
-\g__nm_last_vdotted_col_int=\count379
-\g__nm_left_delim_dim=\dimen306
-\g__nm_right_delim_dim=\dimen307
-\l__nm_the_array_box=\box99
-\g__nm_dp_row_zero_dim=\dimen308
-\g__nm_ht_row_zero_dim=\dimen309
-\g__nm_ht_row_one_dim=\dimen310
-\g__nm_dp_ante_last_row_dim=\dimen311
-\g__nm_ht_last_row_dim=\dimen312
-\g__nm_dp_last_row_dim=\dimen313
-\l__nm_ddots_int=\count380
-\l__nm_iddots_int=\count381
-\l__nm_delta_x_one_dim=\dimen314
-\l__nm_delta_y_one_dim=\dimen315
-\l__nm_delta_x_two_dim=\dimen316
-\l__nm_delta_y_two_dim=\dimen317
-\l__nm_initial_i_int=\count382
-\l__nm_initial_j_int=\count383
-\l__nm_final_i_int=\count384
-\l__nm_final_j_int=\count385
-
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 82--83
-[][] 
- []
-
-
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 86--87
-[][] 
- []
-
-
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 90--91
-[][] 
- []
-
-
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 97--98
-[][] 
- []
-
-[3]
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 133--134
-[][] 
- []
-
-) (./lectures/09-11.tex
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 29.
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 27.
  (/usr/share/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
@@ -1876,7 +1996,67 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmss' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 32--35
+[]
+ []
+
+
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 38--39
+[][] 
+ []
+
+\g__nm_max_cell_width_dim=\dimen325
+\c@iRow=\count395
+\c@jCol=\count396
+\g__nm_row_total_int=\count397
+\g__nm_col_total_int=\count398
+\g__nm_last_vdotted_col_int=\count399
+\g__nm_left_delim_dim=\dimen326
+\g__nm_right_delim_dim=\dimen327
+\l__nm_the_array_box=\box101
+\g__nm_dp_row_zero_dim=\dimen328
+\g__nm_ht_row_zero_dim=\dimen329
+\g__nm_ht_row_one_dim=\dimen330
+\g__nm_dp_ante_last_row_dim=\dimen331
+\g__nm_ht_last_row_dim=\dimen332
+\g__nm_dp_last_row_dim=\dimen333
+\l__nm_ddots_int=\count400
+\l__nm_iddots_int=\count401
+\l__nm_delta_x_one_dim=\dimen334
+\l__nm_delta_y_one_dim=\dimen335
+\l__nm_delta_x_two_dim=\dimen336
+\l__nm_delta_y_two_dim=\dimen337
+\l__nm_initial_i_int=\count402
+\l__nm_initial_j_int=\count403
+\l__nm_final_i_int=\count404
+\l__nm_final_j_int=\count405
+[2]
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 84--85
+[][] 
+ []
+
+
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 88--89
+[][] 
+ []
+
+
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 92--93
+[][] 
+ []
+
+
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 99--100
+[][] 
+ []
+
+
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 135--136
+[][] 
+ []
+
+) (./lectures/09-11.tex (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 ) (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
@@ -1917,34 +2097,34 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 29.
 
-) (./lectures/09-16.tex
+) (./lectures/09-16.tex [3]
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 17.
  (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 17.
- [4]
+
 Overfull \hbox (17.75002pt too wide) in paragraph at lines 65--66
 [][] 
  []
 
-
-Overfull \hbox (14.1586pt too wide) in paragraph at lines 86--87
-[]\OT1/cmr/m/n/10.95 (-20) Furthermore, $\OML/cmm/m/it/10.95 f[] \OT1/cmr/m/n/10.95 (-20) : \OML/cmm/m/it/10.95 B \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 A$ \OT1/cmr/m/n/10.95 (-20) is bi-jec-tive and thus in-jec-tive $\OMS/cmsy/m/n/10.95 )[] j\OML/cmm/m/it/10.95 B\OMS/cmsy/m/n/10.95 j ^^T j\OML/cmm/m/it/10.95 A\OMS/cmsy/m/n/10.95 j )[]
+[4]
+Overfull \hbox (2.73631pt too wide) in paragraph at lines 86--87
+[]\OT1/cmr/m/n/10.95 (-20) Furthermore, $\OML/cmm/m/it/10.95 f[] \U/MnSymbolC/m/n/10.95 ^^B \OML/cmm/m/it/10.95 B \U/MnSymbolA/m/n/10.95 ^^@ \OML/cmm/m/it/10.95 A$ \OT1/cmr/m/n/10.95 (-20) is bi-jec-tive and thus in-jec-tive $\U/MnSymbolA/m/n/10.95 ^^H[] \OMX/MnSymbolE/m/n/10.95 S\OML/cmm/m/it/10.95 B\OMX/MnSymbolE/m/n/10.95 S \U/MnSymbolD/m/n/10.95 B \OMX/MnSymbolE/m/n/10.95 S\OML/cmm/m/it/10.95 A\OMX/MnSymbolE/m/n/10.95 S \U/MnSymbolA/m/n/10.95 ^^H[]
  []
 
-[5]
+
 Overfull \hbox (17.75002pt too wide) in paragraph at lines 106--107
 [][] 
  []
 
-
+[5]
 Overfull \hbox (6.79999pt too wide) in paragraph at lines 159--160
 [] 
  []
 
-[6]
+
 Overfull \hbox (17.75002pt too wide) in paragraph at lines 183--184
 [][] 
  []
@@ -1954,7 +2134,7 @@ Overfull \hbox (6.79999pt too wide) in paragraph at lines 53--54
 [] 
  []
 
-[7]
+[6]
 Overfull \hbox (17.75002pt too wide) in paragraph at lines 81--82
 [][] 
  []
@@ -1969,20 +2149,20 @@ Overfull \hbox (17.75002pt too wide) in paragraph at lines 109--110
 [][] 
  []
 
-[8]) (./lectures/10-02.tex
+[7]) (./lectures/10-02.tex
 Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 18.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 23.
 Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 23.
- [9]
+ [8]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 45.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 60.
- [10]
+ [9]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 94.
@@ -1993,7 +2173,7 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 107.
- [11]
+ [10]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 119.
@@ -2021,7 +2201,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--26
 
  []
 
-[12]
+[11]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 45.
@@ -2054,7 +2234,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--84
 
  []
 
-[13]
+[12]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 90.
@@ -2081,7 +2261,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-[14]
+[13]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 130.
@@ -2089,12 +2269,12 @@ Package hyperref Info: bookmark level for unknown note defaults to 0 on input li
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 141.
- [15]
+ [14]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 148.
 
-Overfull \hbox (69.23946pt too wide) detected at line 152
+Overfull \hbox (48.84904pt too wide) detected at line 152
 []
  []
 
@@ -2110,7 +2290,7 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 180.
 ) (./lectures/10-23.tex
 Package hyperref Info: bookmark level for unknown recall defaults to 0 on input line 11.
- [16]
+ [15]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 14.
@@ -2157,7 +2337,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--50
 
  []
 
-[17]
+[16]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 63.
@@ -2171,14 +2351,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 68--72
 
  []
 
-[18]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 102--106
 
- []
-
-
-Overfull \hbox (5.75516pt too wide) in paragraph at lines 117--118
-[]\OT1/cmr/bx/n/10.95 Definition 7.7. []\OT1/cmr/m/n/10.95 (-20) Let $\OML/cmm/m/it/10.95 n[] < n[] < n[] < [] $ \OT1/cmr/m/n/10.95 (-20) be nat-u-ral num-bers and let $(\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 (-20) ) = (\OML/cmm/m/it/10.95 x[]; x[]; x[]; [] \OT1/cmr/m/n/10.95 (-20) )$
  []
 
 Package mdframed Info: mdframed detected package amsthm 
@@ -2189,7 +2364,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--123
 
  []
 
-[19]
+[18]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 126.
@@ -2233,7 +2408,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--32
 
  []
 
-[20]
+[19]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 37.
@@ -2258,7 +2433,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--59
 
  []
 
-[21]
+[20]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 62.
@@ -2318,7 +2493,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--112
 
  []
 
-[22]
+[21]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 125.
@@ -2338,7 +2513,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--148
 
  []
 
-[23]) (./lectures/10-30-tut.tex
+[22]) (./lectures/10-30-tut.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 14.
@@ -2347,7 +2522,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 32--35
 
  []
 
-) (./lectures/10-30.tex [24]
+) (./lectures/10-30.tex [23]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 11.
@@ -2394,7 +2569,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--59
 
  []
 
-[25]
+[24]
 Underfull \hbox (badness 10000) in paragraph at lines 62--66
 
  []
@@ -2402,7 +2577,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--66
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 78.
-[26]
+[25]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 101.
@@ -2431,7 +2606,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 134--140
 
  []
 
-[27]
+[26]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 149.
@@ -2490,10 +2665,10 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 149.
 
-[28]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 151.
+[27]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 158.
@@ -2517,7 +2692,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--22
 
  []
 
-[29]
+[28]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 30.
@@ -2552,7 +2727,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--83
 
  []
 
-[30]
+[29]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 86.
@@ -2593,7 +2768,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--129
 
  []
 
-[31]
+[30]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 141.
@@ -2623,7 +2798,7 @@ Package mdframed Info: mdframed detected package amsthm
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 169.
-[32]
+[31]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 184.
@@ -2675,7 +2850,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--76
 
  []
 
-[33]
+[32]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 80.
@@ -2694,7 +2869,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 97--101
 
  []
 
-[34]
+[33]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 112.
@@ -2708,7 +2883,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--132
 
  []
 
-[35]
+[34]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 155.
@@ -2717,12 +2892,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--159
 
  []
 
-[36]
+[35]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 175.
 
-Overfull \hbox (9.98656pt too wide) detected at line 184
+Overfull \hbox (6.75958pt too wide) detected at line 184
 []
  []
 
@@ -2734,7 +2909,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 185--187
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 198.
-[37]) (./lectures/11-13.tex
+[36]) (./lectures/11-13.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 17.
@@ -2761,7 +2936,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 46--49
 
  []
 
-[38]
+[37]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 60.
@@ -2770,7 +2945,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 70--73
 
  []
 
-[39]
+[38]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 84.
@@ -2787,7 +2962,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--93
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 100.
-[40]
+[39]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 107.
@@ -2809,7 +2984,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 126--129
 
  []
 
-[41]
+[40]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 151.
@@ -2817,68 +2992,68 @@ Package mdframed Info: mdframed detected package amsthm
  changed the theorem header of amsthm
 (mdframed)              on input line 158.
 ) (./lectures/11-18.tex
-Underfull \hbox (badness 10000) in paragraph at lines 21--24
+Underfull \hbox (badness 10000) in paragraph at lines 18--21
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 27.
+(mdframed)              on input line 24.
 
-Underfull \hbox (badness 10000) in paragraph at lines 43--48
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 43--48
+Underfull \hbox (badness 10000) in paragraph at lines 40--45
 
  []
 
-[42]
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--45
+
+ []
+
+[41]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 74.
+(mdframed)              on input line 71.
 
-Underfull \hbox (badness 10000) in paragraph at lines 80--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 98--103
+Underfull \hbox (badness 10000) in paragraph at lines 77--80
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 98--103
+Underfull \hbox (badness 10000) in paragraph at lines 95--100
 
  []
 
-[43] [44]
+
+Underfull \hbox (badness 10000) in paragraph at lines 95--100
+
+ []
+
+[42] [43]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 116.
+(mdframed)              on input line 113.
 
-Underfull \hbox (badness 10000) in paragraph at lines 121--125
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 136.
+(mdframed)              on input line 133.
 
-Overfull \hbox (9.94363pt too wide) in paragraph at lines 140--140
+Overfull \hbox (9.94363pt too wide) in paragraph at lines 137--137
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--140
+Underfull \hbox (badness 10000) in paragraph at lines 137--137
 
  []
 
-./lectures/11-18.tex:147: Undefined control sequence.
+./lectures/11-18.tex:144: Undefined control sequence.
 <argument>  \sgn 
                  (x) \coloneqq \begin {cases} 1, &x > 0 \\ 0, &x = 0 \\ -1, ...
-l.147     \end{gather*}
+l.144     \end{gather*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2886,10 +3061,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./lectures/11-18.tex:147: Undefined control sequence.
+./lectures/11-18.tex:144: Undefined control sequence.
 <argument>  \sgn 
                  (x) \coloneqq \begin {cases} 1, &x > 0 \\ 0, &x = 0 \\ -1, ...
-l.147     \end{gather*}
+l.144     \end{gather*}
                        
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2897,495 +3072,21 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-
-./lectures/11-18.tex:151: LaTeX Error: Environment axis undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.151       \begin{axis}
-                        [
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no = in font nullfont!
-./lectures/11-18.tex:154: Undefined control sequence.
-<recently read> \sgn 
-                     
-l.154         ylabel={$\sgn
-                           (x)$},
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no , in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no 5 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no x in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 3 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 2 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no * in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no / in font nullfont!
-Missing character: There is no . in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no * in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no b in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no k in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no ] in font nullfont!
-./lectures/11-18.tex:178: Undefined control sequence.
-l.178         \addplot
-                      [function line, domain=\pgfkeysvalueof{/pgfplots/xmin}...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no : in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no ; in font nullfont!
 ./lectures/11-18.tex:179: Undefined control sequence.
-l.179         \addplot
-                      [function line, domain=0:\pgfkeysvalueof{/pgfplots/xma...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no : in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no ; in font nullfont!
-./lectures/11-18.tex:180: Undefined control sequence.
-l.180         \addplot
-                      [single dot] coordinates {(0, 0)};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no g in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-./lectures/11-18.tex:181: Undefined control sequence.
-l.181         \addplot
-                      [empty point] coordinates {(0, -1) (0, 1)};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no [ in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no y in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no - in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no ; in font nullfont!
-
-./lectures/11-18.tex:182: LaTeX Error: \begin{tikzpicture} on input line 150 ended by \end{axis}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.182       \end{axis}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./lectures/11-18.tex:185: Undefined control sequence.
 <recently read> \sgn 
                      
-l.185 ...x_n) = 0$ (e.g. $x_n = 1 / n$. Then $\sgn
+l.179       \end{axis}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./lectures/11-18.tex:182: Undefined control sequence.
+<recently read> \sgn 
+                     
+l.182 ...x_n) = 0$ (e.g. $x_n = 1 / n$. Then $\sgn
                                                   (x_n) = 1$ for all $n \in ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3393,8 +3094,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./lectures/11-18.tex:185: Undefined control sequence.
-l.185 ..._n) = 1$ for all $n \in \NN$. Thus $(\sgn
+./lectures/11-18.tex:182: Undefined control sequence.
+l.182 ..._n) = 1$ for all $n \in \NN$. Thus $(\sgn
                                                   (x_n))$ converges to 1.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3402,10 +3103,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./lectures/11-18.tex:187: Undefined control sequence.
+./lectures/11-18.tex:184: Undefined control sequence.
 <recently read> \sgn 
                      
-l.187     But! $\sgn
+l.184     But! $\sgn
                     (0) = 0 \neq 1 = \lim(\sgn(x_n))$. Thus $\sgn$ is discon...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3413,8 +3114,8 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./lectures/11-18.tex:187: Undefined control sequence.
-l.187     But! $\sgn(0) = 0 \neq 1 = \lim(\sgn
+./lectures/11-18.tex:184: Undefined control sequence.
+l.184     But! $\sgn(0) = 0 \neq 1 = \lim(\sgn
                                               (x_n))$. Thus $\sgn$ is discon...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3422,10 +3123,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-./lectures/11-18.tex:187: Undefined control sequence.
+./lectures/11-18.tex:184: Undefined control sequence.
 <recently read> \sgn 
                      
-l.187 ...= 0 \neq 1 = \lim(\sgn(x_n))$. Thus $\sgn
+l.184 ...= 0 \neq 1 = \lim(\sgn(x_n))$. Thus $\sgn
                                                   $ is discontinuous at 0.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3434,23 +3135,26 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--189
+Underfull \hbox (badness 10000) in paragraph at lines 182--186
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--206
+Underfull \hbox (badness 10000) in paragraph at lines 199--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
+Underfull \hbox (badness 10000) in paragraph at lines 203--205
 
  []
 
-[45]
-Package hyperref Info: bookmark level for unknown exercise* defaults to 0 on input line 226.
- [46]) (./lectures/11-20.tex) (./lectures/11-25.tex
+[44]
+Overfull \vbox (22.21426pt too high) has occurred while \output is active []
+
+ [45]
+Package hyperref Info: bookmark level for unknown exercise* defaults to 0 on input line 223.
+) (./lectures/11-20.tex) (./lectures/11-25.tex
 Underfull \hbox (badness 10000) in paragraph at lines 14--17
 
  []
@@ -3511,10 +3215,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--63
 
  []
 
-[47] [48]
-Overfull \vbox (17.85126pt too high) has occurred while \output is active []
+[46] [47]
+Overfull \vbox (18.62607pt too high) has occurred while \output is active []
 
- [49]
+ [48]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 78.
@@ -3559,297 +3263,201 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--130
 
  []
 
-[50]) (./lectures/11-27.tex
+[49]) (./lectures/11-27.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 17.
+(mdframed)              on input line 16.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--25
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 31--35
+Underfull \hbox (badness 10000) in paragraph at lines 22--24
 
  []
 
-./lectures/11-27.tex:45: Undefined control sequence.
-<argument> \lightning 
-                      
-l.45     \end{gather*}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./lectures/11-27.tex:45: Undefined control sequence.
-<argument> \firstchoice@false \lightning 
-                                         
-l.45     \end{gather*}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 30--34
 
-./lectures/11-27.tex:45: Undefined control sequence.
-<argument> \firstchoice@false \lightning 
-                                         
-l.45     \end{gather*}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+ []
 
-./lectures/11-27.tex:45: Undefined control sequence.
-<argument> \firstchoice@false \lightning 
-                                         
-l.45     \end{gather*}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 56--59
 
-./lectures/11-27.tex:45: Undefined control sequence.
-<argument> \lightning 
-                      
-l.45     \end{gather*}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+ []
 
-./lectures/11-27.tex:45: Undefined control sequence.
-<argument> \firstchoice@false \lightning 
-                                         
-l.45     \end{gather*}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-./lectures/11-27.tex:45: Undefined control sequence.
-<argument> \firstchoice@false \lightning 
-                                         
-l.45     \end{gather*}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 65--69
 
-./lectures/11-27.tex:45: Undefined control sequence.
-<argument> \firstchoice@false \lightning 
-                                         
-l.45     \end{gather*}
-                      
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+ []
 
 [51]
-Underfull \hbox (badness 10000) in paragraph at lines 57--60
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 75.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 83.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 100.
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--70
+Underfull \hbox (badness 10000) in paragraph at lines 111--115
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 121--124
 
  []
 
 [52]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 76.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 84.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 101.
+(mdframed)              on input line 136.
 
-Underfull \hbox (badness 10000) in paragraph at lines 103--106
+Underfull \hbox (badness 10000) in paragraph at lines 139--146
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 112--116
+Underfull \hbox (badness 10000) in paragraph at lines 139--146
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 139--146
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 150.
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--161
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--161
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 164.
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--177
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 164--177
 
  []
 
 [53]
-Underfull \hbox (badness 10000) in paragraph at lines 122--125
-
- []
-
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 137.
-./lectures/11-27.tex:144: Undefined control sequence.
-l.144 ...x_N) - f(\mu_N)| < \epsilon_0$ \lightning
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+(mdframed)              on input line 180.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 140--147
+Underfull \hbox (badness 10000) in paragraph at lines 182--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--147
+Underfull \hbox (badness 10000) in paragraph at lines 182--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 140--147
-
- []
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 151.
-
-Underfull \hbox (badness 10000) in paragraph at lines 151--162
+Underfull \hbox (badness 10000) in paragraph at lines 182--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--162
+Underfull \hbox (badness 10000) in paragraph at lines 182--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--162
+Underfull \hbox (badness 10000) in paragraph at lines 182--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--162
+Underfull \hbox (badness 10000) in paragraph at lines 182--201
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--162
+Underfull \hbox (badness 10000) in paragraph at lines 182--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--212
 
  []
 
 [54]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 165.
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--178
-
- []
-
+(mdframed)              on input line 216.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 181.
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--202
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 209--213
-
- []
-
-[55]
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 217.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 220.
+(mdframed)              on input line 219.
 ) (./lectures/12-02.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -3869,7 +3477,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--23
 
  []
 
-[56]
+[55]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 31.
@@ -3917,7 +3525,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 62--69
 
  []
 
-[57]
+[56]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 73.
@@ -3947,7 +3555,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--41
 
  []
 
-[58]
+[57]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 49.
@@ -3995,7 +3603,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--66
 
  []
 
-[59]
+[58]
 Underfull \hbox (badness 10000) in paragraph at lines 96--99
 
  []
@@ -4008,7 +3616,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--140
 
  []
 
-[60]
+[59]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 149.
@@ -4025,7 +3633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--183
 
  []
 
-[61]
+[60]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 203.
@@ -4039,11 +3647,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 223--228
 
  []
 
-[62]) (./lectures/tut-10-23.tex
+[61]) (./lectures/tut-10-23.tex
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 16.
- [63]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 29.
@@ -4052,6 +3659,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--39
 
  []
 
+[62]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 44.
@@ -4082,7 +3690,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 81--85
 
  []
 
-[64]
+[63]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 93.
@@ -4096,7 +3704,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--123
 
  []
 
-[65]
+[64]
 Underfull \hbox (badness 10000) in paragraph at lines 131--138
 
  []
@@ -4114,32 +3722,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 131--138
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 140.
-) [66]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 52.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 52.
- (./main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 52.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 52.
-Package rerunfilecheck Info: File `main.out' has not changed.
+) [65]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 54.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 54.
+ (./254math.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 54.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 54.
+Package rerunfilecheck Info: File `254math.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 54194 strings out of 492167
- 1158064 string characters out of 6131557
- 1415747 words of memory out of 5000000
- 57173 multiletter control sequences out of 15000+600000
- 547253 words of font info for 121 fonts, out of 8000000 for 9000
+ 67122 strings out of 492167
+ 1531911 string characters out of 6131559
+ 1892577 words of memory out of 5000000
+ 69927 multiletter control sequences out of 15000+600000
+ 555528 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 100i,21n,111p,10086b,1391s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on main.pdf (66 pages, 477324 bytes).
+ 100i,21n,144p,10089b,2644s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/share/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol12.pfb></usr/share/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol6.pfb></usr/share/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
+Output written on 254math.pdf (65 pages, 525727 bytes).
 PDF statistics:
- 1171 PDF objects out of 1200 (max. 8388607)
- 1052 compressed objects within 11 object streams
+ 1199 PDF objects out of 1200 (max. 8388607)
+ 1080 compressed objects within 11 object streams
  506 named destinations out of 1000 (max. 500000)
- 20493 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 20501 words of extra memory for PDF output out of 20736 (max. 10000000)
 

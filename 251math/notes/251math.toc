@@ -1,4 +1,55 @@
 \contentsline {section}{\numberline {1}01-06}{2}{section.1}% 
-\contentsline {subsection}{\numberline {1.1}Abstractions}{2}{subsection.1.1}% 
+\contentsline {subsection}{\numberline {1.1}Abstractions}{3}{subsection.1.1}% 
 \contentsline {subsection}{\numberline {1.2}Consequences of these axioms}{4}{subsection.1.2}% 
-\contentsline {subsection}{\numberline {1.3}Linear Differential Equations}{4}{subsection.1.3}% 
+\contentsline {subsection}{\numberline {1.3}Linear Differential Equations}{5}{subsection.1.3}% 
+\contentsline {section}{\numberline {2}Lecture 01-08}{5}{section.2}% 
+\contentsline {subsection}{\numberline {2.1}Codes}{5}{subsection.2.1}% 
+\contentsline {subsection}{\numberline {2.2}Function Spaces}{6}{subsection.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.1}Linear subspaces of function spaces}{6}{subsubsection.2.2.1}% 
+\contentsline {subsection}{\numberline {2.3}Linear Transformations}{6}{subsection.2.3}% 
+\contentsline {section}{\numberline {3}Lecture 01-13}{7}{section.3}% 
+\contentsline {subsection}{\numberline {3.1}Bases}{7}{subsection.3.1}% 
+\contentsline {section}{\numberline {4}Lecture 01-15}{9}{section.4}% 
+\contentsline {subsection}{\numberline {4.1}The Dimension}{10}{subsection.4.1}% 
+\contentsline {subsection}{\numberline {4.2}Completing to a basis}{11}{subsection.4.2}% 
+\contentsline {subsection}{\numberline {4.3}Basic Constructions}{12}{subsection.4.3}% 
+\contentsline {section}{\numberline {5}Lecture 01-17}{12}{section.5}% 
+\contentsline {subsection}{\numberline {5.1}Constructions of Vector Spaces}{12}{subsection.5.1}% 
+\contentsline {subsection}{\numberline {5.2}Isomorphism Theorem}{13}{subsection.5.2}% 
+\contentsline {section}{\numberline {6}Lecture 01-20}{14}{section.6}% 
+\contentsline {subsection}{\numberline {6.1}Quotients of Vector Spaces}{14}{subsection.6.1}% 
+\contentsline {section}{\numberline {7}Lecture 01-22}{16}{section.7}% 
+\contentsline {subsection}{\numberline {7.1}Finite Dimensional}{16}{subsection.7.1}% 
+\contentsline {subsection}{\numberline {7.2}Important Special Case of Transformation to itself}{17}{subsection.7.2}% 
+\contentsline {section}{\numberline {8}Lecture 01-24}{19}{section.8}% 
+\contentsline {subsection}{\numberline {8.1}Determinant}{19}{subsection.8.1}% 
+\contentsline {subsection}{\numberline {8.2}Proof of existence and uniqueness}{19}{subsection.8.2}% 
+\contentsline {section}{\numberline {9}Lecture 01-27}{21}{section.9}% 
+\contentsline {subsection}{\numberline {9.1}Determinants}{21}{subsection.9.1}% 
+\contentsline {subsection}{\numberline {9.2}Alternating forms}{22}{subsection.9.2}% 
+\contentsline {section}{\numberline {10}Lecture 01-29}{22}{section.10}% 
+\contentsline {subsection}{\numberline {10.1}Multilinear functions or forms}{22}{subsection.10.1}% 
+\contentsline {subsection}{\numberline {10.2}Determinent of $T: V \to V$}{24}{subsection.10.2}% 
+\contentsline {subsection}{\numberline {10.3}Next week}{25}{subsection.10.3}% 
+\contentsline {section}{\numberline {11}Lecture 01-31}{25}{section.11}% 
+\contentsline {section}{\numberline {12}Lecture 02-03}{26}{section.12}% 
+\contentsline {section}{\numberline {13}Lecture 02-05}{28}{section.13}% 
+\contentsline {section}{\numberline {14}Lecture 02-07}{30}{section.14}% 
+\contentsline {subsection}{\numberline {14.1}Voting with vectors}{32}{subsection.14.1}% 
+\contentsline {section}{\numberline {15}Lecture 02-10}{32}{section.15}% 
+\contentsline {section}{\numberline {16}Lecture 02-14}{34}{section.16}% 
+\contentsline {section}{\numberline {17}Lecture 02-17}{35}{section.17}% 
+\contentsline {subsection}{\numberline {17.1}Dunford Decomposition}{35}{subsection.17.1}% 
+\contentsline {section}{\numberline {18}Lecture 02-19}{37}{section.18}% 
+\contentsline {section}{\numberline {19}Lecture 02-21}{38}{section.19}% 
+\contentsline {subsection}{\numberline {19.1}Duality}{38}{subsection.19.1}% 
+\contentsline {subsection}{\numberline {19.2}Rank-nullity Theorem}{40}{subsection.19.2}% 
+\contentsline {section}{\numberline {20}Lecture 02-24}{40}{section.20}% 
+\contentsline {subsection}{\numberline {20.1}Change of Basis}{42}{subsection.20.1}% 
+\contentsline {section}{\numberline {21}Lecture 02-26}{43}{section.21}% 
+\contentsline {subsection}{\numberline {21.1}Group Actions on Sets}{43}{subsection.21.1}% 
+\contentsline {section}{\numberline {22}Lecture 02-28}{43}{section.22}% 
+\contentsline {section}{\numberline {23}Lecture 03-09}{46}{section.23}% 
+\contentsline {section}{\numberline {24}Lecture 03-11}{49}{section.24}% 
+\contentsline {subsection}{\numberline {24.1}Inner product spaces}{49}{subsection.24.1}% 
+\contentsline {subsection}{\numberline {24.2}Properties of $||v||$}{50}{subsection.24.2}% 

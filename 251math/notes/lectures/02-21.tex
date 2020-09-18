@@ -1,0 +1,103 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-21}
+
+
+\begin{document}
+
+\section{Lecture 02-21}
+
+\begin{theorem}
+  If $M$ is a symmetric $n \times n$ matrix with real entries, then $M$ is diagonalizable. 
+\end{theorem} 
+
+If $M$ is symmetric, then $M = (a_{ij})_{i, j = 1, \dots, n}, \quad a_{ij} = a_{ji}$.
+
+Language for approaching this result: self adjoint operators on inner product spaces.
+
+\subsection{Duality}
+$V$ vector space. $V^*$ is the space of linear functionals $V \to F$.
+\\\\
+If $T: V_1 \to V_2$ is a linear transformation, then it induces 
+\begin{gather*}
+  T^*: V_2^* \to V_1^* \\
+  T^*(l) = l \circ T \\\\
+  V_1 \to_{T_1} V_2 \to_{T_2} V_3 \\
+  (T_2 \circ T_1)^* : V_3^* \to V_1^* \\
+  (T_2 \circ T_1)^* = T_1^* \circ T_2^* \\\\
+  l \in V_3^* \\
+  (T_2 \circ T_1)^*(l) = l \circ (T_2 \circ T_1) = (l \circ T_2) \circ T_1 \\
+  = [T_2^*(l)] \circ T_1 = T_1^*(T_2^*(l)) = T_1^* \circ T_2^*(l)
+\end{gather*} 
+
+\begin{lemma}
+  \begin{enumerate}
+    \ii[]
+    \ii
+    If $T: W \to V$ is injective, then $T^*: V^* \to W^*$ is surjective.
+    \ii
+    If $T: V \to W$ is surjective, then $T^*$ is injective.
+  \end{enumerate} 
+  \leavevmode
+  \begin{proof}
+    \begin{enumerate}
+      \ii[]
+      \ii
+      If $T$ is injective, then it realises co inclusion of $W$ into $V$ and 
+      \begin{gather*}
+        T^*(l) = l|_{\Ima(T) = W}
+      \end{gather*} 
+      Surjectivity of $T^*$ means that given $l_0: \Ima(T) \to F$, $\exists$ an extension $l: V \to F$ such that $l|_W = l_0$. After choosing a complementary $W'$ such that $W \oplus W' = V$, we let $l(w + w') = l_0(w)$.
+      \ii
+      If $T: V \to W$ is surjective, then $\ker(T^*) = \{l: W \to F \ \text{such that} \ l \circ T = 0\}$ 
+      \begin{align*}
+        l \circ T = 0 & \Leftrightarrow l \circ T(v) = 0 \quad & \forall v \in V \\
+                      & \Leftrightarrow l(T(v)) = 0 \quad & \forall v \in V \\
+        & \Leftrightarrow l(w) = 0 \quad    & \forall w \in \Ima(T) \\
+        & \Leftrightarrow l(w) = 0 \quad    & \forall w \in W
+      \end{align*} 
+      So $\ker(T^*) = 0 \Rightarrow T^*$ is injective.
+    \end{enumerate} 
+    \leavevmode \\
+    If $W$ is a subspace of $V$, then $W^*$ is a quotient of $V^*$. If $W$ is a quotient of $V$, then $W^*$ is a subspace of $V^*$.
+    \begin{gather*}
+      W^* = \{l: V \to F \ \text{such that} \ l|_{\ker(V \to W) = 0}\}
+    \end{gather*} 
+  \end{proof} 
+\end{lemma} 
+
+GIven a $W \subseteq V$, there is a canonical subspace of $V^*$ attached to $W$, 
+\begin{gather*}
+  W^{\perp} = \ker(V^* \to W^*) \\
+  W^{\perp} = \{l: V \to F \ \text{such that} \ l(W) = 0\}
+\end{gather*} 
+The assignment $W \mapsto W^{\perp}$ sets up an inclusion reversion bijection between subspaces of $V$ and subspaces of $V^*$.
+\begin{gather*}
+  W \Leftrightarrow W^{\perp} \\
+  0 \Leftrightarrow V^* \\
+  V \Leftrightarrow 0
+\end{gather*} 
+
+Claim: $\dim(W) + \dim(W^{\perp}) = \dim(V) = \dim(V^*)$.
+
+Caveat: $W \oplus W^{\perp}$ does not make sense.
+\begin{proof}
+  \begin{gather*}
+    i: V \hookrightarrow V \\
+    i^* : V^* \to W^* \\
+    W^{\perp} = \ker(i^*: V^* \to W^*)
+  \end{gather*} 
+\end{proof} 
+
+\subsection{Rank-nullity Theorem}
+\begin{gather*}
+  \dim(W^\perp) + \dim(W^*) = \dim(V^*) \\
+  \dim(W^\perp) + \dim(W) = \dim(V)
+\end{gather*} 
+If $W \subseteq V^*$, then $W^\perp \subseteq V$. $W^\perp = \{v \in V \ \text{such that} \ l(v) = 0, \quad \forall l \in W\}$.
+
+\end{document}

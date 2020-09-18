@@ -1,0 +1,66 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-14}
+
+
+\begin{document}
+
+\section{Lecture 02-14}
+
+\begin{gather*}
+  T: V \to V
+\end{gather*} 
+
+If $p_T(x)$ factors into linear factors, (for example if the field $F$ is algebraically closed, then every irreducible polynomial is linear), then 
+\begin{gather*}
+  V = \oplus_{\lambda \in spec(T)}V_{[\lambda]} \\
+  \ \text{Generalized eigenspace for $\lambda$: } \ V_{[\lambda]} = \{v : (T - \lambda)^j(v) = 0\} \\
+  \ \text{Eigenspace for $\lambda$: } \ V_\lambda = \{v : (T - \lambda)(v) = 0\}
+\end{gather*}  
+$V_\lambda = V_{[\lambda]} \Leftrightarrow (x - \lambda) | p_T(x)$  but $(x - \lambda)^2 \not| p_1(x)$
+\\\\
+$T$ is diagonalizable $\Leftrightarrow$ $p_T(x)$ factors into distinct linear factors.
+\begin{theorem}
+  $T$ diagonalizable $\Leftrightarrow$ $p_T(x)$ factors into distinct linear factors.
+\end{theorem} 
+\begin{example}
+  $F = \ZZ / p\ZZ$. $T$ satisfies $T^p = T$ $\Rightarrow$ $T$ satisfies $x^p - x \Rightarrow p_T(x)$ divides $x^p - x$.
+  \\\\
+  This implies $p_T(x) = (x - \lambda_1)(\cdots)(x - \lambda_r), \ \lambda_1 \neq \lambda_2 \neq \cdots \neq \lambda_r$. Therefore $T$ is diagonalizable.
+\end{example} 
+\begin{example}
+  $T^n = 1 \Rightarrow p_T(x)$ divides $x^n - 1$.
+  \\\\
+  If $x^n - 1$ factors into distinct linear factors in $F$, then $T$ is diagonalizable. 
+  \\\\
+  Conversely, if all $T$ satisfying $T^n = 1$ are diagonalizable, then $x^n - 1$ factors into distinct linear factors.
+  \\\\
+  In order to prove the converse, we need to show that $\exists T$ such that $p_T(x) = x^n - 1$.
+  \begin{gather*}
+    V = F^n = Fe_1 \oplus \cdots \oplus Fe_n
+    \\
+    T(e_j) = e_{j + 1} \quad (j = 1, \dots, n -1) \\
+    T_(e_n) = e_1
+  \end{gather*} 
+  \begin{proposition}
+    If $p(x) \in F[x]$, then $\exists $ a vector space $V$ over $F$, and $T: V \to V$ such that $p_T(x) = p(x)$.
+    \begin{proof}
+      Let  $V = F[x] / (p(x))$. $\dim V = n$.
+      \begin{gather*}
+        T(g(x) + (p(x)) = xg(x) + (p(x)) \\
+        f(T)(g(x) + (p(x)) = f(x)g(x) + (p(x))
+      \end{gather*} 
+      If we want $f(T) = 0$ then $f(T)(1 + (p(x)) = 0 \Rightarrow f(x) + (p(x)) \Rightarrow p(x) | f(x) \Rightarrow p(x) = p_T(x)$
+    \end{proof} 
+  \end{proposition} 
+\end{example} 
+\begin{example}
+  When is it possible to factor $x^n - 1$ in the following fields?
+  $F = \QQ$.Then $n \leq 2$. $F = \RR$, then $n \leq 2$. $F = \CC$, then any $n$. $F = \FF_p = \ZZ / p\ZZ$.
+\end{example} 
+
+\end{document}

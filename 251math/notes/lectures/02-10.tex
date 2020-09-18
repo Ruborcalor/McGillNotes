@@ -1,0 +1,106 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-10}
+
+
+\begin{document}
+
+\section{Lecture 02-10}
+
+$T: V \to V$. $T \in \End_F(V)$. 
+\\\\
+\ul{Key Invariants}
+\begin{enumerate}
+  \ii
+  Minimal polynomial $p_T(x)$. \ul{Defining property}: for all $g(x) \in F[x]$, $g(T) = 0 \Rightarrow p_T(x) | g(x)$.
+  \ii
+  Characteristic polynomial $f_T(x) = \det(x I_V - T)$. $f_T(x)$ is a monic polynomial of $d = n = \dim V$.
+\end{enumerate} 
+$spec(T) = \{eigenvalues\}$. $\lambda \in spec(T), 0 \neq V_\lambda \subseteq V$
+\\\\
+\ul{Eigenvalue decomposition}
+\begin{gather*}
+  \oplus_{\lambda \in spec(T)}V_\lambda \subseteq V
+\end{gather*} 
+If $\oplus_{\lambda \in spec(T)}V_\lambda = V$, we say that T is \ul{diagonalizable}.
+
+\begin{theorem}
+  The spectrum of $T$ is exactly the set of roots of the characteristic polynomial or of the minimal polynomial of $T$. This means that the characteristic and minimal polynomial have the same roots.
+\end{theorem} 
+
+\begin{note}
+  Very often, polynomials need not have root in $F$.
+  \begin{example}
+    \begin{enumerate}
+      \ii
+      $F = \RR$. $p(x) = x^2 + 1$
+      \ii
+      $F = \QQ$. $p(x) = x^2 - 2$.
+    \end{enumerate} 
+  \end{example} 
+\end{note} \leavevmode \\
+In $F[x]$, every polynomial can be written uniquely as $p(x) = p_1(x)^{e_1}p_2(x)^{e_2}\cdots p_r(x)$, where $p_j(x)$ distinct, monic, irreducible polynomials.
+\begin{exercise}
+  \begin{enumerate}
+    \ii
+    Given $(T, V),$ can $\ol{V}$ be broken into a direct sum of (proper) $T$-stable subspaces.
+    \ii
+    Give simple criteria for $T$ to be diagonalizable.
+  \end{enumerate} 
+\end{exercise} 
+
+\begin{proposition}
+  Suppose that $p_T(x) = p_{1}(x)p_2(x)$ with $\gcd(p_1(x), p_2(x)) = 1$. Then $V = V_1 \oplus V_2$ where $V_1$ and $V_2$ are preserved by $T$, and $T_j = T|V_j$ has minimal polynomial $p_j(x)$.
+  \begin{proof}
+    $P_T(x) = p_1(x)p_2(x)$. $0 = p_1(T) \circ p_2(T)$. Define
+    \begin{gather*}
+      V_1 = \ker(p_1(T)) \\
+      V_2 = \ker(p_2(T))
+    \end{gather*} 
+    Now to show that $T(V_1) \subseteq V_1$. Let $w \in V_1$. We want to check if $T(w) \in ker(p_1(T)) \Rightarrow p_1(T)(T(w)) = 0$
+    \begin{gather*}
+      p_1(T)(T(w)) = p_1(T) \circ T(w) = T \circ p_1(T) (w) = T(p_1(T)(w)) = T(0)
+    \end{gather*} 
+    We can do this because $T$ commutes with itself, and $p_1(T)(w) = 0$.
+  \end{proof} 
+  \begin{gather*}
+    \{a(x)p_1(x) + b(x)p_2(x), \ a, b \in F[x]\} = F[x] \\ % why is this true?
+    \Rightarrow \exists a(x), b(x) \in F[x] \ \text{such that} \ a(x)p_1(x) + b(x)p_2(x) = 1 \\
+    \Rightarrow a(T) \circ p_1(T) + b(T)p_2(T) = 1_V \ \text{the identity from $V$ to $V$} \ \\
+    \ \text{Evaluating at $w \in V$} \ 
+    p_1(T)(a(T)(w)) + p_2(T)(b(T)(w)) = w \\
+    w_2 + w_1 = w \\
+    w_1 \in \Ima(p_2(T)) \subseteq \ker(p_1(T)) = V_1 \\ % why is this?
+    w_2 \in \Ima(p_1(T)) \subseteq \ker(p_2(T)) = V_2 \\
+    \Rightarrow \spn(V_1, V_2) = V
+  \end{gather*} 
+  Remains to show that $V_1 \cap V_2 = \{0\}$. Suppose we have $\ker(p_1(T)) \cap \ker(p_2(T))$. Evaluating $(*)$ at $w_1$ we get $0 + 0 = w \Rightarrow w = 0$.
+\end{proposition} 
+
+\begin{theorem}
+  If $p_T(v) = p_1(x)p_2(x)\cdots p_r(x)$, where $\gcd(p_1(x), p_j(x)) = 1$ $\forall i \neq j$, then $\exists \ V_1, \dots, V_r$ such that 
+  \begin{gather*}
+    V = V_1 \oplus V_2 \oplus \cdots \oplus V_r
+  \end{gather*}  where
+  \begin{gather*}
+    V_j = \ker(p_j(T))
+  \end{gather*} 
+  i.e. $T | V_j$ has minimal polynomial $p_j(x)$.
+  \begin{proof}
+    Induction on $r$.
+  \end{proof} 
+\end{theorem} 
+So we can write $p_T(x) = p_1(x)^{e_1} \cdots p_r(x)^{e_r}$, $e_j \geq 1$, $p_1(x), \dots, p_r(x)$ are irreducible and distinct. We get
+\begin{gather*}
+  V = V_1 \oplus \cdots \oplus V_r,
+\end{gather*}
+where, if $T_j = T|_{V_j}$, $p_{T_j}(x) = p_j(x)^{e_j}$.
+\\\\
+This direct sum decomposition is called the \ul{primary decomposition} attached to $T$. 
+\end{document}
+
+

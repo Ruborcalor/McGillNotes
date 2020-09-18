@@ -1,0 +1,14 @@
+A quadratic space is a pair $V, <, >)$ where $V$ is a vector space, and $<, >: V \times V \to F$ which is bilinear.
+
+The pairing $(<, >)$ is non-degenerate if it induces an injection
+
+V \to V^*
+v \mapsto (w \mapsto <v, w>)
+
+(when dim V < \infty, then V \simeq V^*)
+
+The adjoint of T: V \to V
+
+is the map T*: V \to V satisfying
+
+<v, Tw> = <T^*(v), w>

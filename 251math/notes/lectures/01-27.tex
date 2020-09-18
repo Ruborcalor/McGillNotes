@@ -1,0 +1,133 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-01-27}
+
+
+\begin{document}
+
+\section{Lecture 01-27}
+
+% Homework Advice. Compute the number of subpsaces of dimension $k$ in $n$ dimensional vector space. Quotient. . Question 2 Assignment 3. Given a vector space $V$, $k \geq $ an integer.
+
+\begin{definition}[Grassmannian]
+  The Grassmannian of $k$-dimensional subspace of $V$ is the collection of $k$-dimensional supspaces of $V$.
+  \begin{note}
+    $\Gr(V, k)$. If $\dim(V) = n$, then $\Gr(n, k)$
+    \\\\
+    If  $F$ is a finite field, then $\Gr(n, k)$ is a finite set. $\#F = q$. 
+    \\\\
+    Question: What is \#$\Gr(n, k)$. Strategy is to fix $V \simeq F^n$.
+    \\\\
+    Each subspace could have multiple basis so you might over count. Let $W < V$ be a subspace of $\dim(k)$. Orbit. 
+    \begin{gather*}
+      G = \Aut_F(V). G acts transitively on \Gr(V, k). \\
+      \#\Gr(V, k) = \#G / stab_G(W)
+    \end{gather*} 
+  \end{note} 
+\end{definition} 
+
+\begin{definition}[Action of a group $G$ ]
+  An action of a group $G$. 
+\end{definition} 
+
+Combinatorics is usually concerned with counting the cardinality of finite sets.
+\\\\
+Finite sets of cardinality $n$ seem to resonate with a vector space of dimension $n$.
+\begin{gather*}
+  S \mapsto F(S, F) = functions S \to F
+\end{gather*} 
+"How many sets of size $k$ are there in a set of size $n$?" resonates with "How many spaces of dimension $k$ are there in a space of $\dim$ n where $\#F = q$.
+\begin{gather*}
+  \begin{pmatrix}
+    n \\
+    k
+  \end{pmatrix} 
+  \\
+  \begin{pmatrix}
+    n \\
+    k
+  \end{pmatrix}_q
+\end{gather*} 
+
+\subsection{Determinants}
+
+\begin{definition}[Linear functional]
+  A linear form (or linear functional) is a linear transfromation 
+  \begin{gather*}
+    l: V \to F
+  \end{gather*} 
+\end{definition} 
+
+\begin{definition}[Bilinear Form]
+  A bilinear form is a function $f: V \times V \to F$ such that $f(v, w)$ is linear in $v$ when $w$ is fixed, and linear in $w$ when $v$ is fixed.
+  \begin{gather*}
+    f(v_1\lambda_1w_1 + \lambda_2w_2) = \lambda_1f(v_1w_1) + \lambda_2f(v_1w_2) \\
+    f(\lambda_1v_1 + \lambda_2v_2, w) = \lambda_1f(v_1, w) + \lambda_2f(v_2, w)
+  \end{gather*} 
+  An example of such a form is the dot product.
+\end{definition} 
+
+\begin{definition}[k-linear form]
+  A k-linear form is a function
+  \begin{gather*}
+    f: V \times V \times \cdots \times V \to F
+  \end{gather*} 
+  which is linear in each argument, while others are fixed.
+\end{definition} 
+
+\begin{definition}
+  A $k$-multilinear form on  $V$ is \ul{symmetric}, (resp \ul{alternating}).
+  \\\\
+  If $f(v_{\sigma 1}, v_{\sigma 2}, \dots, v_{\sigma k}) = f(v_1, \dots, v_k)$ where $\sigma \in S_k$. 
+\end{definition} 
+
+\begin{example}
+  Dot product $\RR^n \times \RR^n \to \RR$ is a symmetric bilinear form. $F^n \times F^n \to F$.
+\end{example} 
+\begin{example}
+  Cross product $\RR^2 \times \RR^2 \to \RR$. 
+  \begin{gather*}
+    (x_1, y_1, 0) \times (x_2, y_2, 0) = (0, 0, x_1y_2 - y_1x_2) \\
+    (x_1, y_1) \times(x_2, y_2) = x_1y_2 - y_1x_2
+  \end{gather*} 
+\end{example} 
+
+The collection of all (symmetric or alternating) k-multiliear functions on $V$ is an $F$ vector space. 
+\begin{lemma}
+  Suppose $V$ has basis $(e_1, \dots, e_n)$. Then a bilinear form is completely determined by $f(e_i, e_j)$
+  \begin{gather*}
+    M_f = (f(e_i, e_j))
+  \end{gather*} 
+  A k-multilinear form is specified by 
+  \begin{gather*}
+    (f(e_{i_1}, e_{i_2}, \dots, e_{i_k}))_{1 \leq i_1, \dots, i_k \leq n}
+  \end{gather*} 
+\end{lemma} 
+
+\subsection{Alternating forms}
+
+Easy properties of alternating forms. 
+\begin{gather*}
+  f(v_1, \dots, v_k) = 0
+\end{gather*} 
+if $v_i = v_j$ where  $i \neq j$ because $f(\cdots) = -f(\cdots)$. We're using that $\lambda = -\lambda \Rightarrow \lambda = 0$.
+
+\begin{gather*}
+  f(v_1, \dots, v_{j - 1}, v_j + \sum_{i \neq j}\lambda_iv_i, v_{j + 1}, \dots, v_k) \\
+  = f(v_1, \dots, v_j, \cdots, v_k)
+\end{gather*} 
+
+\begin{proposition}
+  A k-multilinear form is completely determined by its values
+  \begin{gather*}
+    \{
+      f(e{i_1}, e_{i_2}, \dots, e_{i_j})
+    \}_{1 \leq i_1 < i_2 < \dots < i_k \leq n}
+  \end{gather*} 
+\end{proposition} 
+
+\end{document}

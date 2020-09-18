@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.12.19)  5 JAN 2020 18:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2020.2.7)  10 FEB 2020 09:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -126,7 +126,7 @@ Package tocbasic Info: omitting babel extension for `lot'
 \c@table=\count91
 Class scrartcl Info: Redefining `\numberline' on input line 6145.
 \bibindent=\dimen102
-)) (/home/gautierk/.texmf/tex/latex/gautierk/evan.sty
+)) (/home/gautierk/.texmf/evan.sty
 Package: evan 
  (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2019/04/01 v2.17c AMS math features
@@ -861,20 +861,22 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 Package thmtools Info: Key `mdframed' (with value `style=mdbluebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmbluebox' on input line 291.
+(thmtools)             that uses `style=thmbluebox' on input line 292.
 Package thmtools Info: Key `mdframed' (with value `style=mdrecbox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thmrecbox' on input line 309.
+(thmtools)             that uses `style=thmrecbox' on input line 310.
 Package thmtools Info: Key `mdframed' (with value `style=mdinlinebox')
 (thmtools)             is not a known style key.
 (thmtools)             Will pass this to every \declaretheorem
-(thmtools)             that uses `style=thminlinebox' on input line 327.
-Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 339.
+(thmtools)             that uses `style=thminlinebox' on input line 328.
+Package thmtools Info: Automatically pulling in `thmdef-mdframed' on input line 340.
  (/usr/share/texmf-dist/tex/latex/thmtools/thmdef-mdframed.sty
 Package: thmdef-mdframed 2019/07/31 v67
 )
 \c@theorem=\count303
+\c@hwexercise=\count304
+\c@hwproblem=\count305
  (/usr/share/texmf-dist/tex/latex/koma-script/tocstyle.sty
 Package: tocstyle 2019/10/09 v0.2j-alpha deprecated package (versatile toc styles)
 
@@ -887,7 +889,7 @@ Package tocstyle Warning: THIS IS A DEPRECATED ALPHA VERSION!
 (tocstyle)                THERE IS NO SUPPORT, IF YOU USE THIS PACKAGE!
 (tocstyle)                Maybe it would be better, not to load this package.
 
-\tocstyle@indentstyle=\count304
+\tocstyle@indentstyle=\count306
 Package tocstyle Info: no tocstyle.cfg found on input line 951.
 )
 exclude: 
@@ -904,22 +906,22 @@ exclude:
 exclude: 
 exclude: 
 (/usr/share/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count305
+\lst@mode=\count307
 \lst@gtempboxa=\box67
 \lst@token=\toks42
-\lst@length=\count306
+\lst@length=\count308
 \lst@currlwidth=\dimen257
-\lst@column=\count307
-\lst@pos=\count308
+\lst@column=\count309
+\lst@pos=\count310
 \lst@lostspace=\dimen258
 \lst@width=\dimen259
-\lst@newlines=\count309
-\lst@lineno=\count310
+\lst@newlines=\count311
+\lst@lineno=\count312
 \lst@maxwidth=\dimen260
  (/usr/share/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
-\c@lstnumber=\count311
-\lst@skipnumbers=\count312
+\c@lstnumber=\count313
+\lst@skipnumbers=\count314
 \lst@framebox=\box68
 ) (/usr/share/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2019/09/10 1.8c listings configuration
@@ -1090,13 +1092,13 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@outerparindent=\dimen261
 \enit@toks=\toks44
 \enit@inbox=\box69
-\enit@count@id=\count313
-\enitdp@description=\count314
+\enit@count@id=\count315
+\enitdp@description=\count316
 )
-\c@walki=\count315
-\c@walkii=\count316
-\c@walkiii=\count317
-\enitdp@walk=\count318
+\c@walki=\count317
+\c@walkii=\count318
+\c@walkiii=\count319
+\enitdp@walk=\count320
  (/usr/share/texmf-dist/tex/latex/todonotes/todonotes.sty
 Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
 Package: todonotes 2018/11/22
@@ -1110,18 +1112,18 @@ File: tikzlibraryfadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 File: pgflibraryfadings.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ))) (/usr/share/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count319
-\calc@Bcount=\count320
+\calc@Acount=\count321
+\calc@Bcount=\count322
 \calc@Adimen=\dimen262
 \calc@Bdimen=\dimen263
 \calc@Askip=\skip138
 \calc@Bskip=\skip139
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count321
+\calc@Ccount=\count323
 \calc@Cskip=\skip140
 )
-\c@@todonotes@numberoftodonotes=\count322
+\c@@todonotes@numberoftodonotes=\count324
 ) (/usr/share/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2019/07/31 v1.22 mathematical typesetting tools
  (/usr/share/texmf-dist/tex/latex/mathtools/mhsetup.sty
@@ -1131,7 +1133,7 @@ LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count323
+\g_MT_multlinerow_int=\count325
 \l_MT_multwidth_dim=\dimen264
 \origjot=\skip141
 \l_MT_shortvdotswithinadjustabove_dim=\dimen265
@@ -1143,11 +1145,11 @@ LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 ) (/usr/share/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2019/10/10 v2.7c Micro-typographical refinements (RS)
 \MT@toks=\toks45
-\MT@count=\count324
+\MT@count=\count326
 LaTeX Info: Redefining \textls on input line 790.
 \MT@outer@kern=\dimen271
 LaTeX Info: Redefining \textmicrotypecontext on input line 1347.
-\MT@listname@count=\count325
+\MT@listname@count=\count327
  (/usr/share/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2019/10/10 v2.7c Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 914.
@@ -1182,7 +1184,7 @@ Package scrlayer-scrpage Info: deactivating warning for font element
 Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
 
 1: section
-) (/home/gautierk/.texmf/tex/latex/gautierk/cole.sty
+) (/home/gautierk/.texmf/cole.sty
 Package: cole 
  (/usr/share/texmf-dist/tex/latex/tools/array.sty
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
@@ -1251,7 +1253,7 @@ File: tikzlibraryfit.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
 File: tikzlibrarycalc.code.tex 2019/08/03 v3.1.4b (3.1.4b)
 ) (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryintersections.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex)
-\pgf@intersect@solutions=\count326
+\pgf@intersect@solutions=\count328
 ) (/usr/share/texmf-dist/tex/latex/pgfopts/pgfopts.sty
 Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 \pgfopts@list@add@a@toks=\toks47
@@ -1266,38 +1268,38 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )) (/usr/share/texmf-dist/tex/latex/inlinedef/inlinedef.sty
 Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \ID@toks=\toks49
-\ID@count=\count327
+\ID@count=\count329
 )
 \ID@usercommands=\toks50
-\safeloop@depth=\count328
-\safeRKloop@depth=\count329
+\safeloop@depth=\count330
+\safeRKloop@depth=\count331
 \forest@temp@dimen=\dimen274
-\forest@temp@count=\count330
-\forest@n=\count331
-\forest@temp@global@count=\count332
+\forest@temp@count=\count332
+\forest@n=\count333
+\forest@temp@global@count=\count334
 \forest@temp@toks=\toks51
-\forest@temparray@M=\count333
-\forest@temparray@N=\count334
-\forest@global@temparray@M=\count335
-\forest@global@temparray@N=\count336
-\forest@isnum@count=\count337
-\forest@isdim@nonintpart=\count338
+\forest@temparray@M=\count335
+\forest@temparray@N=\count336
+\forest@global@temparray@M=\count337
+\forest@global@temparray@N=\count338
+\forest@isnum@count=\count339
+\forest@isdim@nonintpart=\count340
 \forest@isdim@dimen=\dimen275
-\forest@sort@m=\count339
-\forest@sort@k=\count340
-\forest@sort@p=\count341
+\forest@sort@m=\count341
+\forest@sort@k=\count342
+\forest@sort@p=\count343
 \bracket@content=\toks52
 \bracket@afterthought=\toks53
-\forest@node@maxid=\count342
-\forest@process@left@M=\count343
-\forest@process@left@N=\count344
-\forest@process@right@M=\count345
-\forest@process@right@N=\count346
-\forest@process@saved@M=\count347
-\forest@process@saved@N=\count348
-\forest@process@result@M=\count349
-\forest@process@result@N=\count350
-\forest@process@n=\count351
+\forest@node@maxid=\count344
+\forest@process@left@M=\count345
+\forest@process@left@N=\count346
+\forest@process@right@M=\count347
+\forest@process@right@N=\count348
+\forest@process@saved@M=\count349
+\forest@process@saved@N=\count350
+\forest@process@result@M=\count351
+\forest@process@result@N=\count352
+\forest@process@n=\count353
 \forest@nodewalk@branch@toks=\toks54
 \forest@nodewalk@shortsteps@resolution=\toks55
 \forest@do@dynamics=\toks56
@@ -1312,8 +1314,8 @@ Package: inlinedef 2008/07/10 v1.0 Inlined expansions within definitions
 \forest@PIii@toks=\toks60
 \forest@copy@in=\read3
 \forest@copy@out=\write6
-\forest@externalize@max@outer@n=\count352
-\forest@externalize@inner@n=\count353
+\forest@externalize@max@outer@n=\count354
+\forest@externalize@inner@n=\count355
 ) (/usr/share/texmf-dist/tex/latex/forest/forest-lib-linguistics.sty
 Package: forest-lib-linguistics 2017/07/14 v0.1.2
 \standardnodestrutbox=\box93
@@ -1321,29 +1323,199 @@ Package: forest-lib-linguistics 2017/07/14 v0.1.2
 Package: l3keys2e 2019-10-11 LaTeX2e option processing using LaTeX3 keys
 )
 Package: nicematrix 2019/10/29 v3.6 Several features to improve the typesetting of mathematical matrices with TikZ
-\g__nm_env_int=\count354
-\g__nm_NiceMatrixBlock_int=\count355
+\g__nm_env_int=\count356
+\g__nm_NiceMatrixBlock_int=\count357
 \l__nm_columns_width_dim=\dimen280
 \l__nm_inter_dots_dim=\dimen281
 \l__nm_radius_dim=\dimen282
-\l__nm_save_iRow_int=\count356
-\l__nm_save_jCol_int=\count357
-\l__nm_first_row_int=\count358
-\l__nm_first_col_int=\count359
-\l__nm_last_row_int=\count360
-\l__nm_last_col_int=\count361
+\l__nm_save_iRow_int=\count358
+\l__nm_save_jCol_int=\count359
+\l__nm_first_row_int=\count360
+\l__nm_first_col_int=\count361
+\l__nm_last_row_int=\count362
+\l__nm_last_col_int=\count363
 \l__nm_left_margin_dim=\dimen283
 \l__nm_right_margin_dim=\dimen284
 \g__nm_width_last_col_dim=\dimen285
 \g__nm_width_first_col_dim=\dimen286
 \l__nm_extra_left_margin_dim=\dimen287
 \l__nm_extra_right_margin_dim=\dimen288
+) (/usr/share/texmf-dist/tex/latex/mnsymbol/MnSymbol.sty
+Package: MnSymbol 2007/01/21 v1.4 support for the MnSymbol font
+LaTeX Info: Redefining \dagger on input line 84.
+LaTeX Info: Redefining \ddagger on input line 84.
+LaTeX Info: Redefining \mathparagraph on input line 84.
+LaTeX Info: Redefining \mathsection on input line 84.
+LaTeX Info: Redefining \mathdollar on input line 84.
+LaTeX Info: Redefining \mathsterling on input line 84.
+LaTeX Info: Redefining \yen on input line 84.
+LaTeX Info: Redefining \circledR on input line 84.
+LaTeX Info: Redefining \circledS on input line 84.
+LaTeX Info: Redefining \Re on input line 84.
+LaTeX Info: Redefining \Im on input line 84.
+LaTeX Info: Redefining \dotplus on input line 84.
+LaTeX Info: Redefining \thicksim on input line 84.
+LaTeX Info: Redefining \thickapprox on input line 84.
+LaTeX Info: Redefining \veebar on input line 84.
+LaTeX Info: Redefining \barwedge on input line 84.
+LaTeX Info: Redefining \doublebarwedge on input line 84.
+LaTeX Info: Redefining \centerdot on input line 84.
+LaTeX Info: Redefining \divideontimes on input line 84.
+\symMnSyA=\mathgroup7
+\symMnSyB=\mathgroup8
+\symMnSyC=\mathgroup9
+\symMnSyD=\mathgroup10
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/MnSymbolE/m/n on input line 119.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Encoding `OMS' has changed to `U' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 120.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> U/MnSymbolF/m/n on input line 120.
+LaTeX Font Info:    Overwriting symbol font `MnSyA' in version `bold'
+(Font)                  U/MnSymbolA/m/n --> U/MnSymbolA/b/n on input line 121.
+LaTeX Font Info:    Overwriting symbol font `MnSyB' in version `bold'
+(Font)                  U/MnSymbolB/m/n --> U/MnSymbolB/b/n on input line 122.
+LaTeX Font Info:    Overwriting symbol font `MnSyC' in version `bold'
+(Font)                  U/MnSymbolC/m/n --> U/MnSymbolC/b/n on input line 123.
+LaTeX Font Info:    Overwriting symbol font `MnSyD' in version `bold'
+(Font)                  U/MnSymbolD/m/n --> U/MnSymbolD/b/n on input line 124.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/MnSymbolE/m/n --> OMX/MnSymbolE/b/n on input line 125.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  U/MnSymbolF/m/n --> U/MnSymbolF/b/n on input line 126.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 241.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `bold'
+(Font)                  OMS/MnSymbolS/m/n --> OMS/MnSymbolS/b/n on input line 241.
+LaTeX Info: Redefining \longrightarrow on input line 548.
+LaTeX Info: Redefining \longleftarrow on input line 549.
+LaTeX Info: Redefining \longleftrightarrow on input line 550.
+LaTeX Info: Redefining \Longrightarrow on input line 551.
+LaTeX Info: Redefining \Longleftarrow on input line 552.
+LaTeX Info: Redefining \Longleftrightarrow on input line 553.
+LaTeX Info: Redefining \longmapsto on input line 554.
+LaTeX Info: Redefining \vdots on input line 868.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 1660.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 1661.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 1662.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 1663.
+LaTeX Font Info:    Redeclaring math delimiter \ulcorner on input line 1664.
+LaTeX Font Info:    Redeclaring math delimiter \urcorner on input line 1665.
+LaTeX Font Info:    Redeclaring math delimiter \llcorner on input line 1666.
+LaTeX Font Info:    Redeclaring math delimiter \lrcorner on input line 1667.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 1673.
+LaTeX Font Info:    Redeclaring math delimiter \lvert on input line 1676.
+LaTeX Font Info:    Redeclaring math delimiter \rvert on input line 1677.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 1678.
+LaTeX Font Info:    Redeclaring math delimiter \lVert on input line 1681.
+LaTeX Font Info:    Redeclaring math delimiter \rVert on input line 1682.
+LaTeX Font Info:    Redeclaring math delimiter \arrowvert on input line 1683.
+LaTeX Font Info:    Redeclaring math delimiter \Arrowvert on input line 1684.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 1692.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 1693.
+LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 1699.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 1704.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 1705.
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 1706.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 1707.
+LaTeX Font Info:    Redeclaring math delimiter \rmoustache on input line 1708.
+LaTeX Font Info:    Redeclaring math delimiter \lmoustache on input line 1709.
+LaTeX Font Info:    Redeclaring math delimiter \bracevert on input line 1710.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 1721.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 1722.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 1723.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 1724.
+LaTeX Info: Redefining \downbracefill on input line 1799.
+LaTeX Info: Redefining \upbracefill on input line 1800.
+LaTeX Info: Redefining \overbrace on input line 1819.
+LaTeX Info: Redefining \underbrace on input line 1820.
+LaTeX Info: Redefining \surd on input line 1843.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 1845.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 1846.
+LaTeX Font Info:    Redeclaring math accent \vec on input line 1848.
 ) (/usr/share/texmf-dist/tex/generic/listofitems/listofitems.sty (/usr/share/texmf-dist/tex/generic/listofitems/listofitems.tex
-\loi_cnt_foreach_nest=\count362
-\loi_nestcnt=\count363
+\loi_cnt_foreach_nest=\count364
+\loi_nestcnt=\count365
 )
 Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified sep char (CT)
-)) (./09-09.aux)
+) (/usr/share/texmf-dist/tex/generic/xlop/xlop.sty
+Package: xlop 2009/12/02 package wrapper for xlop.tex
+ (/usr/share/texmf-dist/tex/generic/xlop/xlop.tex
+\op@count@z=\count366
+\op@count@i=\count367
+\op@count@ii=\count368
+\op@count@iii=\count369
+\op@count@iv=\count370
+\op@count@v=\count371
+\op@count@vi=\count372
+\op@currentstyle=\toks61
+
+`xlop' v0.26  <2017/01/07> (jcc)
+\opcolumnwidth=\dimen289
+\oplineheight=\dimen290
+\op@strutbox=\box94
+\op@decimalsepwidth=\dimen291
+\op@decimalsepoffset=\dimen292
+\op@hrulewidth=\dimen293
+\op@vrulewidth=\dimen294
+\op@parenthesis=\count373
+\op@token=\count374
+\op@stack=\count375
+\op@stackb=\count376
+)) (/usr/share/texmf-dist/tex/latex/pgfplots/pgfplots.sty (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2018/03/28 v1.16 Data Visualization (1.16)
+ (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks62
+\t@pgfplots@tokb=\toks63
+\t@pgfplots@tokc=\toks64
+\pgfplots@tmpa=\dimen295
+\c@pgfplots@coordindex=\count377
+\c@pgfplots@scanlineindex=\count378
+ (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgfplotslibrary.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/oldpgfcompatib/pgfplotsoldpgfsupp_loader.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructure.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsliststructureext.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray.code.tex
+\c@pgfplotsarray@tmp=\count379
+) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatrix.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshared.code.tex
+\c@pgfplotstable@counta=\count380
+\t@pgfplotstable@a=\toks65
+) (/usr/share/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsbinary.data.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotsutil.verb.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count381
+ (/usr/share/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surfshading.pgfsys-pdftex.def))) (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolormap.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/util/pgfplotscolor.code.tex)) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsstackedplots.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsplothandlers.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplothandler.code.tex (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsmeshplotimage.code.tex)))
+(/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.scaling.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotscoordprocessing.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.errorbars.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.markers.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplotsticks.code.tex) (/usr/share/texmf-dist/tex/generic/pgfplots/pgfplots.paths.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen296
+\pgfdecoratedremainingdistance=\dimen297
+\pgfdecoratedinputsegmentcompleteddistance=\dimen298
+\pgfdecoratedinputsegmentremainingdistance=\dimen299
+\pgf@decorate@distancetomove=\dimen300
+\pgf@decorate@repeatstate=\count382
+\pgfdecorationsegmentamplitude=\dimen301
+\pgfdecorationsegmentlength=\dimen302
+)
+\tikz@lib@dec@box=\box95
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/share/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex))
+\pgfplots@numplots=\count383
+\pgfplots@xmin@reg=\dimen303
+\pgfplots@xmax@reg=\dimen304
+\pgfplots@ymin@reg=\dimen305
+\pgfplots@ymax@reg=\dimen306
+\pgfplots@zmin@reg=\dimen307
+\pgfplots@zmax@reg=\dimen308
+) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+ (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplotmarks.code.tex
+File: pgflibraryplotmarks.code.tex 2019/08/03 v3.1.4b (3.1.4b)
+)))) (/usr/share/texmf-dist/tex/latex/wasysym/wasysym.sty
+Package: wasysym 2003/10/30 v2.0 Wasy-2 symbol support package
+\symwasy=\mathgroup11
+LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
+(Font)                  U/wasy/m/n --> U/wasy/b/n on input line 90.
+LaTeX Font Info:    Redeclaring math symbol \invneg on input line 239.
+) (./09-09.aux)
 \openout1 = `09-09.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
@@ -1371,17 +1543,17 @@ Package scrbase Info: activating english \listfigurename on input line 22.
 Package scrbase Info: activating english \listtablename on input line 22.
  (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count364
-\scratchdimen=\dimen289
-\scratchbox=\box94
-\nofMPsegments=\count365
-\nofMParguments=\count366
-\everyMPshowfont=\toks61
-\MPscratchCnt=\count367
-\MPscratchDim=\dimen290
-\MPnumerator=\count368
-\makeMPintoPDFobject=\count369
-\everyMPtoPDFconversion=\toks62
+\scratchcounter=\count384
+\scratchdimen=\dimen309
+\scratchbox=\box96
+\nofMPsegments=\count385
+\nofMParguments=\count386
+\everyMPshowfont=\toks66
+\MPscratchCnt=\count387
+\MPscratchDim=\dimen310
+\MPnumerator=\count388
+\makeMPintoPDFobject=\count389
+\everyMPtoPDFconversion=\toks67
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
  (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -1394,14 +1566,14 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\AtBeginShipoutBox=\box95
+\AtBeginShipoutBox=\box97
 Package hyperref Info: Link coloring ON on input line 22.
  (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count370
+\c@section@level=\count390
 )
 LaTeX Info: Redefining \ref on input line 22.
 LaTeX Info: Redefining \pageref on input line 22.
@@ -1424,7 +1596,7 @@ Package: bookmark 2019/06/04 v1.27 PDF bookmarks (HO)
 File: bkm-pdftex.def 2019/06/04 v1.27 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input line 164.
-\BKM@id=\count371
+\BKM@id=\count391
 )) ABD: EveryShipout initializing macros
 
 Package tocstyle Warning: Usage of `tocstyle' with new `tocbasic' detected.
@@ -1452,10 +1624,14 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 22.
  (/usr/share/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 22.
+ (/usr/share/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
+)
 Package tocstyle Info: prepare \l@subsubsection for redefinition on input line 22.
 Package tocstyle Info: prepare \l@table for redefinition on input line 22.
 Package tocstyle Info: prepare \l@figure for redefinition on input line 22.
-\c@lstlisting=\count372
+\c@lstlisting=\count392
 LaTeX Info: Redefining \microtypecontext on input line 22.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
@@ -1470,89 +1646,104 @@ Package microtype Info: No adjustment of character kerning.
  (/usr/share/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 30--33
-[][]
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
+
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 27.
+(/usr/share/texmf-dist/tex/latex/base/ts1cmss.fd
+File: ts1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmss' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Overfull \hbox (6.79999pt too wide) in paragraph at lines 32--35
+[]
  []
 
 
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 36--37
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 38--39
 [][] 
  []
 
-\g__nm_max_cell_width_dim=\dimen291
-\c@iRow=\count373
-\c@jCol=\count374
-\g__nm_row_total_int=\count375
-\g__nm_col_total_int=\count376
-\g__nm_last_vdotted_col_int=\count377
-\g__nm_left_delim_dim=\dimen292
-\g__nm_right_delim_dim=\dimen293
-\l__nm_the_array_box=\box96
-\g__nm_dp_row_zero_dim=\dimen294
-\g__nm_ht_row_zero_dim=\dimen295
-\g__nm_ht_row_one_dim=\dimen296
-\g__nm_dp_ante_last_row_dim=\dimen297
-\g__nm_ht_last_row_dim=\dimen298
-\g__nm_dp_last_row_dim=\dimen299
-\l__nm_ddots_int=\count378
-\l__nm_iddots_int=\count379
-\l__nm_delta_x_one_dim=\dimen300
-\l__nm_delta_y_one_dim=\dimen301
-\l__nm_delta_x_two_dim=\dimen302
-\l__nm_delta_y_two_dim=\dimen303
-\l__nm_initial_i_int=\count380
-\l__nm_initial_j_int=\count381
-\l__nm_final_i_int=\count382
-\l__nm_final_j_int=\count383
+\g__nm_max_cell_width_dim=\dimen311
+\c@iRow=\count393
+\c@jCol=\count394
+\g__nm_row_total_int=\count395
+\g__nm_col_total_int=\count396
+\g__nm_last_vdotted_col_int=\count397
+\g__nm_left_delim_dim=\dimen312
+\g__nm_right_delim_dim=\dimen313
+\l__nm_the_array_box=\box98
+\g__nm_dp_row_zero_dim=\dimen314
+\g__nm_ht_row_zero_dim=\dimen315
+\g__nm_ht_row_one_dim=\dimen316
+\g__nm_dp_ante_last_row_dim=\dimen317
+\g__nm_ht_last_row_dim=\dimen318
+\g__nm_dp_last_row_dim=\dimen319
+\l__nm_ddots_int=\count398
+\l__nm_iddots_int=\count399
+\l__nm_delta_x_one_dim=\dimen320
+\l__nm_delta_y_one_dim=\dimen321
+\l__nm_delta_x_two_dim=\dimen322
+\l__nm_delta_y_two_dim=\dimen323
+\l__nm_initial_i_int=\count400
+\l__nm_initial_j_int=\count401
+\l__nm_final_i_int=\count402
+\l__nm_final_j_int=\count403
 
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 82--83
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 84--85
 [][] 
  []
 
 
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 86--87
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 88--89
 [][] 
  []
 
 
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 90--91
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 92--93
 [][] 
  []
 
 
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 97--98
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 99--100
 [][] 
  []
 
 
-Overfull \hbox (17.75002pt too wide) in paragraph at lines 133--134
+Overfull \hbox (17.75002pt too wide) in paragraph at lines 135--136
 [][] 
  []
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 161.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 161.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 163.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 163.
  (./09-09.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 161.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 161.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 163.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 163.
 Package rerunfilecheck Info: File `09-09.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 51391 strings out of 492167
- 1108906 string characters out of 6131557
- 1379641 words of memory out of 5000000
- 55102 multiletter control sequences out of 15000+600000
- 540529 words of font info for 64 fonts, out of 8000000 for 9000
+ 63922 strings out of 492167
+ 1471150 string characters out of 6131559
+ 1870182 words of memory out of 5000000
+ 67467 multiletter control sequences out of 15000+600000
+ 545903 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 92i,21n,117p,10081b,862s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on 09-09.pdf (2 pages, 94395 bytes).
+ 92i,21n,145p,10081b,874s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{/usr/share/texmf-dist/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol10.pfb></usr/share/texmf-dist/fonts/type1/public/mnsymbol/MnSymbol8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb>
+Output written on 09-09.pdf (2 pages, 116336 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
- 50 compressed objects within 1 object stream
- 3 named destinations out of 1000 (max. 500000)
- 5741 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 96 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
+ 9333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

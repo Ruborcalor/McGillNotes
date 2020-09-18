@@ -1,0 +1,121 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-01-20}
+
+
+\begin{document}
+
+\section{Lecture 01-20}
+
+Textbook Correction. Zorn's Lemma. It doesn't imply "the maximal" element, but rather "a maximal" element. This translates over to its application of proving that every vector space has a basis, not "the" basis (Multiple vs. Single).
+
+\subsection{Quotients of Vector Spaces}
+
+$W \subset V$. $W$ a subspace. 
+\begin{gather*}
+  V / W = \{v + w : v \in V\} \\
+  \lambda \in F, \quad \lambda(v + W) = \lambda v + W
+\end{gather*} 
+
+If $v_1 + W = v_2 + W$, then $\lambda v_1 + W = \lambda v_2 + W \ \forall \lambda \in F$. This implies that $(v_1 - v_2) \in W \Rightarrow \lambda(v_1 - v_2) \in W \Rightarrow \lambda v_1 - \lambda v_2 \in W$.
+\begin{theorem}
+  If $V$ is finite dimensional and $W \subseteq V$ is a subspace, then $W$ and $V / W$ are both finite dimensional.
+  \begin{gather*}
+    \dim(V) = \dim(W) + \dim(V / W)
+  \end{gather*} 
+  This makes sense, because $(V / W)$ reduces the dimension by $W$, because suddenly all elements in $W$ are considered equal to one another.
+  So the dimension behaves like a logarithm in a sense.
+\end{theorem} 
+
+\begin{proof}[Proof: Subspace of finite dimensional vector space is finite dimensional.]
+  \leavevmode
+  \\\\
+  Let $d = \dim(W)$. Let $(v_1, \dots, v_d)$ be a basis for $W$. Therefore $(v_1, \dots, v_d)$ is linearly independent in $V$. We can complete it to a basis for $V$, $(v_1, \dots, v_d, v_{d + 1} + \cdots + v_n$. Where $n = \dim(V)$.
+  \\\\
+  Basis for $V / W$. There are associated cosets for $v_{d + 1}, \dots, v_n$. It would be incorrect to say that the basis is $v_{d + 1}, \dots, v_n$, because these elements don't live in the quotient. Claim: The $(n - d)$-tuple $(v_{d + 1} + W, \dots, v_n + W)$ is a basis for  $V / W$.
+  \begin{proof}[Proof of linear independence]
+    Let $(\lambda_{d + 1}, \dots, \lambda_n) \in F^{n - d}$. 
+    \begin{gather*}
+      \lambda_{d + 1}\ol{v_{d + 1}} + \cdots + \lambda_n \ol{v_n} = 0 \ \text{in} \  (V / W). \\
+      \Rightarrow
+      \lambda_{d + 1}{v_{d + 1}} + \cdots + \lambda_n {v_n} \in W \\\\
+      \ \text{Hence} \ \exists (\lambda_1, \dots, \lambda_d) \in F^d \ \text{s.t.} \ 
+      \lambda_{d + 1}v_{d + 1} \cdots + \lambda_n v_n = \lambda_1 v_1 + \cdots + \lambda_d v_d \\
+      \ \text{This works because $(v_1, \dots, v_n)$ span $W$.} \ 
+      \\
+      \ \text{Because} \ (v_1, \dots, v_n) \ \text{are linearly independent} \  \\
+      \Rightarrow
+      \lambda_1 = \lambda_2 = \cdots = \lambda_n = 0 \\
+      \Rightarrow
+      \lambda_{d + 1} = \cdots = \lambda_n = 0
+    \end{gather*} 
+  \end{proof} 
+\end{proof} 
+
+\begin{proof}
+  $(\ol{ v_{d + 1}}, \dots, \ol{v_n})$ spans $V / W$.
+  \\\\
+  Let $v + W \in V / W$. Because $v \in V$, $\exists (\lambda_1, \dots, \lambda_n) \in F^n$ such that $v = \lambda_1v_1 + \cdots + \lambda_dv_d + \cdots + \lambda_nv_n$.
+  \\\\
+  In $V / W$. 
+  \begin{gather*}
+    \ol{v} = \lambda_1\ol{v_1} + \cdots + \lambda_d\ol{v_d} + \cdots + \lambda_n \ol{v_n} \\
+    \Rightarrow \ol{v} = \lambda_{d + 1}\ol{v_{d + 1}} + \cdots + \lambda_n\ol{v_n}
+  \end{gather*} 
+  because the other vectors are all in $W$.
+\end{proof} 
+
+\begin{note}
+  \begin{gather*}
+    \ol{v} = v + W
+  \end{gather*} 
+  $v \in V, \ \ol{v} \in V / W.$
+\end{note} 
+
+
+\begin{theorem}[Isomorphism Theorem]
+  If $T: V \to W$ is a linear transformation, then $T$ induces an \ul{injective} linear transformation
+  \begin{gather*}
+    \ol{T}: V / \ker{T} \hookrightarrow W
+  \end{gather*} 
+  In particular, $V / \ker(T) \simeq \Ima(T)$.
+  \\\\
+  \begin{gather*}
+    \ol{T}(v + \ker(T)) = T(v)
+  \end{gather*} 
+  $\ol{T}$ is injective.
+  \begin{gather*}
+    \ol{T}(v + W) \Leftrightarrow T(v) = 0 \Leftrightarrow v \in \ker(T) \\
+    \Leftrightarrow v + \ker(T) = 0 \ \text{in} \ V / \ker(T)
+  \end{gather*} 
+\end{theorem} 
+
+\begin{theorem}[Rank-nullity theorem]
+  Let $T: V \to W$ be a linear transofmration with $\dim(V) < \infty$. Then $\dim\ker(T) + \dim\Ima(T) = \dim(V)$.
+  \begin{proof}
+    \begin{gather*}
+      V / \ker(T) \simeq \Ima(T) \\
+      \dim(V / \ker(T)) = \dim\Ima(T) \\
+      \dim(V) - \dim\ker(T) = \dim\Ima(T)
+    \end{gather*} 
+  \end{proof} 
+  \begin{remark}
+    If $H \subset G$ is a group, \# $G < \infty$, then $\#(G / H) = \# G / \#H$ % revisit why this remarK?
+  \end{remark} 
+\end{theorem} 
+
+A vector space $V$ is finite as a set $\Leftrightarrow \# F < \infty$ and $\dim_F(V) < \infty$. Let $q = \# F$ and $n = \dim_F(V)$. Then $\# V = q^n$. $\dim(V) = \log_q(\# V)$. $V \simeq F^n$.
+
+\begin{theorem}[Counting Principle]
+  If $A$ and $B$ are finite sets of the same cardinality, and $f: A \to B$ is an injective function, then $f$ is surjective.
+  \\\\
+  Linear algebra. Let $V$ and $W$ be finite dimensional vector spaces of the same dimension and let $T: V \to W$ be an injective linear transformation. Then $T$ is surjective.
+\end{theorem} 
+
+
+
+\end{document}

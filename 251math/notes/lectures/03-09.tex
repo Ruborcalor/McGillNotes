@@ -1,0 +1,187 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-03-09}
+
+
+\begin{document}
+
+\section{Lecture 03-09}
+
+A quadratic space is a pair $(V, <, >)$ where $V$ is a vector space, and $<, >: V \times V \to F$ which is bilinear.
+
+The pairing $(<, >)$ is non-degenerate if it induces an injection
+
+\begin{gather*}
+  V \to V^* \\
+  v \mapsto (w \mapsto <v, w>) \\
+  (\text{when dim V } < \infty, \ \text{then} \  V \simeq V^*)
+\end{gather*} 
+
+The adjoint of $T: V \to V$ is the map satisfying
+\begin{gather*}
+  T*: V \to V  \\
+  <v, Tw> = <T^*(v), w>
+\end{gather*} 
+
+Question: Where do non-degenerate bilinear forms arise "in nature"?
+
+Answer: Geometry, distance.
+
+From now on, $F = \RR$ or $\CC$.
+
+\begin{definition}
+  A \ul{real inner product} on $V$ is a bilinear form satisfying:
+  \begin{enumerate}
+    \ii
+    \begin{gather*}
+      <v, w> = <w, v>, \quad \forall v, w \in V
+    \end{gather*} 
+    \ii
+    \begin{gather*}
+      <v, v> \geq 0, \quad <v, v> = 0 \ \text{iff} \ v = 0
+    \end{gather*} 
+  \end{enumerate} 
+\end{definition} 
+
+\begin{example}
+  \begin{enumerate}
+    \ii
+    $V = \RR^n$
+     \begin{gather*}
+      <(x_1, \dots, x_n), (y_1, \dots, y_n)> = x_1y_1 + x_2y_2 + \cdots + x_ny_n \\
+      <(x_1, \dots, x_n), (x_1, \dots, x_n)> = x_1^2 + x_2^2 + \cdots + x_n^2 \\
+    \end{gather*} 
+    \ii
+    $V = e([0, 1])$ represents continuous real-valued functions on $[0, 1]$.
+    \begin{gather*}
+      <f, g> = \int_0^1f(t)g(t)dt, \quad <f, f> = \int_0^1f(t)^2dt
+    \end{gather*} 
+  \end{enumerate} 
+\end{example} 
+
+\begin{definition}[Complex Inner Product]
+  A \ul{complex inner product} on $V$ is a hermition-bilinear form satisfying
+  \begin{note}
+    It would become problamatic to try and declare it as a standard bilinear form
+  \end{note} 
+  \begin{enumerate}
+    \ii
+    \begin{gather*}
+      <v, \lambda w_1 + w_2> = \ol{\lambda}<v, w_1> + <v, w_2>
+    \end{gather*} 
+    \ii
+    \begin{gather*}
+      <v, w> = \ol{<w, v>}
+    \end{gather*} 
+    \ii
+    \begin{gather*}
+      <v, v> \in \RR \geq 0, \quad <v, v> = 0 \Leftrightarrow v = 0
+    \end{gather*} 
+  \end{enumerate} 
+  
+\end{definition} 
+
+\begin{example}
+  Reviewing the previous examples with the new complex inner product
+  \begin{enumerate}
+    \ii
+    $V = \CC^n$
+    \begin{gather*}
+      <(x_1, \dots, x_n), (y_1, \dots, y_n)> = x_1\ol{y_1} + x_2\ol{y_2} + \cdots + x_n\ol{y_n} \\
+      <(x_1, \dots, x_n), (x_1, \dots, x_n)> = |x_1|^2 + |x_2|^2 + \cdots + |x_n|^2 \\
+    \end{gather*} 
+    \ii
+    $V = e([0, 1])$ represents continuous complex-valued functions on $[0, 1]$.
+    \begin{gather*}
+      <f, g> = \int_0^1f(t)\ol{g(t)}dt, \quad <f, f> = \int_0^1|f(t)|^2dt
+    \end{gather*} 
+  \end{enumerate} 
+\end{example} 
+
+\begin{note}
+  Caveat: A complex inner product space is not (quite) a quadratic space as defined before.
+
+  We define the norm of $v$ to be $||v|| = \sqrt{<v, v>}$. "Length of $v$".
+\end{note} 
+
+\begin{example}
+  \begin{enumerate}
+    \ii
+    $V = \RR^n$.
+    \begin{gather*}
+      ||(x_1, \dots, x_n)|| = \sqrt{x_1^2 + \cdots + x_n^2}
+    \end{gather*} 
+    \ii
+    $V = \CC^n$.
+    \begin{gather*}
+      |(z_1, \dots, z_n)|| = \sqrt{|z_1|^2 + |z_2|^2 + \cdots + |z_n|^2}
+    \end{gather*} 
+  \end{enumerate} 
+\end{example} 
+
+\begin{definition}[Properties of $||\ ||$]
+  Always easier to think about the square of the norm.
+  \begin{enumerate}
+    \ii
+    \begin{gather*}
+      ||v + w||^2 = <v + w, v + w> = <v, v> + <v, w> + <w, v> + <w, w> \\
+      = ||v||^2 + 2 \ \text{Real part of} \ <v, w> + ||w||^2
+    \end{gather*} 
+  \end{enumerate} 
+\end{definition} 
+
+\begin{definition}
+  Two vectors $v, w$ are \ul{orthogonal} if $<v, w> = 0$.
+\end{definition}
+
+\begin{theorem}[Pythagorean Theorem]
+  \begin{gather*}
+    ||v + w||^2 + ||v||^2 + ||w||^2
+  \end{gather*} 
+\end{theorem} 
+
+
+\begin{theorem}[Parallelogram Law]
+  \begin{gather*}
+    ||v + w||^2 + ||v - w||^2 = 2(||v||^2 + ||w||^2) \\
+  \end{gather*} 
+  \begin{proof}
+    \begin{gather*}
+      ||v + w||^2 + ||v - w||^2 = ||v||^2 + 2Re<v, w> + ||w||^2 + ||v||^2 - 2Re(<v, w>) + ||w||^2 \\
+      = 2(||v||^2 + ||w||^2)
+    \end{gather*} 
+  \end{proof} 
+\end{theorem} 
+
+\begin{theorem}[Polarization Formula]
+  The function $v \mapsto <v, v>$ is enough to recover $(v, w) \mapsto <v, w>$.
+  \begin{enumerate}
+    \ii
+    If $F = \RR$
+    \begin{gather*}
+      <v, w> = 1/2(<v + w, v + w> - <v, v> - <w, w>) \\
+      <v, w> = \frac{1}{4}(<v + w, v + w> - <v - w, v - w>) % why is this true?
+    \end{gather*} 
+    \ii
+    If $F = \CC$ 
+    \begin{gather*}
+      <v, w> = <v + w, v + w> \\
+      + i<v + iw, v + iw> \\
+      + -1<v - w, v - w> \\
+      + -i<v - iw, v - iw>
+    \end{gather*} 
+  \end{enumerate} 
+\end{theorem} 
+
+\begin{theorem}[Cauchy Schwarz Inequality]
+  \begin{gather*}
+    |<v, w>|^2 \leq ||v||^2||w||^2
+  \end{gather*} 
+\end{theorem} 
+
+\end{document}
+

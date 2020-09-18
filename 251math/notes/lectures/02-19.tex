@@ -1,0 +1,68 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-19}
+
+
+\begin{document}
+
+\section{Lecture 02-19}
+
+Vector spaces. Basis. Let $V$ be a vector space over $F$. Then there exists a basis $B$ of $V$ such that all $v \in V$ can be written uniquely as a sum 
+\begin{gather*}
+  \sum_{w \in B}\lambda_w w \quad \lambda_w \in F
+\end{gather*} 
+$\lambda_w = 0$ for all but finitely many $w \in B$. % revisit why is this?
+Therefore
+\begin{gather*}
+  V = F_0(B, F) \\
+  v \mapsto (w \mapsto \lambda_w) \\
+  F_0(B, F) \subseteq F(B, F)
+\end{gather*} 
+
+\begin{exercise}
+  Show that there are vector spaces that are not isomorphic to $F(X, F)$ for any set $X$.
+  \\\\
+  Attempt 1:
+  \begin{gather*}
+    V = F[[x]] = \{a_0 + a_1x + a_2x^2 + \cdots\} \\
+    = \{(a_0, a_1, a_2, \dots) \quad a_j \in F\} \\
+    = \{a: \{0, 1, 2, \dots\} \to F \} \\
+    = Func(\NN, F)
+  \end{gather*} 
+  Attempt 2:
+  \begin{gather*}
+    F[x] = \{a_0 + a_1x + \cdots + a_n x^n \quad a_i \in F\} \\
+  \end{gather*} 
+  So $F[x]$ has a countable basis. 
+  \begin{enumerate}
+    \ii
+    If $X$ is finite, then $\dim(Func(X, F))$ is also finite.
+    \ii
+    If $X$ is infinite, then $Func(X, F)$ does not have a countable basis. % revisit. Would this imply that the basis for F[[x]] is uncountable?
+  \end{enumerate} 
+  If $F = \QQ$, we observe that $Func(X, \QQ)$ is uncountable.
+  \begin{gather*}
+    f_1 \quad f_1(x_1), f_1(x_2) \dots \\
+    f_2 \quad f_2(x_1), f_2(x_2) \dots \\
+    f_n \quad f_n(x_1), f_n(x_2) \dots \\
+  \end{gather*} 
+  Define $f(x_n) = f_n(x_n) + 1$ % what is the point of this?
+   \begin{enumerate}
+    \ii
+    TOH, $\QQ[x]$ is countable.
+    \ii
+    $F = \FF_2 = \ZZ / 2\ZZ$. $Func(X, \FF_2) = P(X) = \{A \subseteq X\}$.
+    \\\\
+    $Func(X, \FF_2)$ is either finite, or uncountable. $\FF_2[x]$ is countable.
+  \end{enumerate} 
+\end{exercise} 
+\begin{exercise}
+  Show that, for any $F$, that $Func(X, F)$ does not have a countable basis.
+\end{exercise} 
+
+
+\end{document}

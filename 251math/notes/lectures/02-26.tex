@@ -1,0 +1,36 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-26}
+
+
+\begin{document}
+
+\section{Lecture 02-26}
+
+\subsection{Group Actions on Sets}
+
+Let $G$ be a group. 
+
+\begin{definition}
+  An action $G$ on $X$ is a function 
+  \begin{gather*}
+    G \times X \to X  \\
+    (g, x) \mapsto gx
+  \end{gather*} 
+  satisfying 
+  \begin{gather*}
+    1_G x = x \quad \forall x \in X \\
+    g_2(g_1x) = (g_2g_1)x \quad \forall g_1g_2 \in G
+  \end{gather*} 
+  An action $G$ on $X$ gives rise to a homomorphism 
+  \begin{gather*}
+    \varphi: G \to S_x = \{ \ \text{bijections} \ X \to X\} \\
+    \varphi(g)(x) = gx
+  \end{gather*} 
+\end{definition} 
+
+\end{document}

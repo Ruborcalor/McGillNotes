@@ -1,0 +1,140 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-01-15}
+
+
+\begin{document}
+
+\section{Lecture 01-15}
+
+Assignment 1 due today. Burnside Hall 10th floor mail slot.
+
+Basis for a vector space. 
+
+\begin{theorem}
+  If $V$ is a vector space over $F$, then $V$ has a basis. i.e. $\exists B \subset V$ which is linearly independent and spans $V$.
+  \begin{proof}
+    Let $B$ be a maximal linearly independent subset of $V$. This ensures that is spans $V$.
+  \end{proof} 
+\end{theorem} 
+
+\begin{example}
+  $V = F[x]$. $B = \{1, x, x^2, x^3, \dots\}$. The fact that this is a basis is the statement that every polynomial can be written as a finite combination of powers of $x$.
+\end{example} 
+
+\begin{example}
+  $V = F[[x] = \{\sum_{i = 0}^{\infty}a_ix^i, \ a_i \in F$. Infinite linear combination of powers of $x$. No one has ever written down a basis for this vector space. Although there muts be one according to the theorem.
+\end{example} 
+
+\begin{example}
+  $V = \RR$ as a vector space over the rationals. $B$ is called a Hanel basis. Source of counter examples in measure theory. Gives rise to non measurable set. Pathalogical set.
+\end{example} 
+
+\begin{example}
+  Take $V = F^n = \{(a_1, \dots, a_n), \ a_i \in F\}$. You can take 
+  \begin{gather*}
+    B = \{(1, 0, \dots, 0), (0, 1, \dots, 0), \dots, (0, 0, \dots, 0, 1)\} = \{e_1, e_2, \dots, e_n\}
+  \end{gather*} 
+  The "standard basis". Bases are typically most useful when they are finite.
+\end{example} 
+
+\begin{definition}[Finite-dimensional]
+  A vector space which has a finite-basis is said to be \ul{finite-dimensional}.
+\end{definition} 
+
+\subsection{The Dimension}
+
+\begin{theorem}
+  If $V$ is a finite dimensional vector space, and $B_1, B_2$ are two basesfor $V$, then the conclusion is that $B_1$ and $B_2$ are both finite and have the same cardinality.
+\end{theorem} 
+
+\begin{recall}
+  If $B$ is a basis for $V$, then $V$ is isomorphic to the space of functions $F_0(B, F) = \{\text{Space of functions} \ f:B \to F$ such that $f(x) = 0 \ \forall$ but finitely many $x \in B$.
+    \begin{gather*}
+      \varphi: F_0(B, F) \to V \\
+      f \mapsto \sum_{x \in B}f(x) \cdot x
+    \end{gather*} 
+    If $\# B < \infty$, then $F_0(B, F) = F(B, F) = F^N, \ N = \#B$. (i.e., can assume $B = \{1, \dots, N\} \to \{v_1, \dots, v_N\}$.
+    \begin{gather*}
+      \varphi: F^n \to V \\
+      (a_1, \dots, a_n) \mapsto a_1v_1 + \cdots + a_Nv_N
+    \end{gather*} 
+\end{recall} 
+
+Reformulation of theorem.
+
+If $F^{n_1} isomorphic F^{n_2}$, then $n_1 = n_2$.
+
+\begin{lemma}
+  Let $v_1, \dots, v_m$ be a collection of linearly independent vectors in $F^n$. Then $m \leq n$.
+  \begin{proof}
+    If $v_1 = (a_{1_1} \ a_{1_2} \ \dots \ a_{1_n}) \ \dots \ v_m = (a_{m_1} \ a_{m_2} \ \dots \ a_{m_n})$ are linearly independent.
+    \begin{gather*}
+      x_1v_1 + \cdots + x_mv_m = 0 \Leftrightarrow (x_1, \dots, x_m) = 0
+    \end{gather*} 
+    Gives rise to homogenous system of linear equations. There are $n$ linearly equation with $m$ unknowns. % revisit homogenous
+    \\\\
+    The system must have a non-trivial solution if $n < m$. Since we are told that there is only a trivial solution, it must be that $m \leq n$.
+  \end{proof} 
+\end{lemma} 
+
+\begin{example}
+  If $F^{n_1} isomorphic F^{n_2}$. Let
+  \begin{gather*}
+    \varphi: F^{n_1} \to F^{n_2} \\
+    \text{Let} \ e_1, \dots, e_{n_1} \ \text{be the standard basis of} \ F^{n_1}. \\
+    \varphi(e_1), \dots, \varphi(e_{n_1}) \ \text{are linearly independent in} \ F^{n_2} \Rightarrow n_1 \leq n_2. \\
+    \ \text{By symmetry} \ n_2 \leq n_1 \\
+    \Rightarrow n_1 = n_2
+  \end{gather*} 
+\end{example} 
+
+\begin{definition}[Dimension]
+  The dimension of $V$ is the cardinality of a basis for $V$.
+  \\\\
+  \ul{Convention}: 
+  \begin{gather*}
+    \dim(V) \in \{0, 1, 2, 3, \dots, \} \cup \{\infty\}.
+  \end{gather*} 
+  $\dim(V) = \infty$ if $V$ contains an infinite collection of linearly independent vectors.
+\end{definition} 
+
+\subsection{Completing to a basis}
+
+\begin{proposition}
+  If $S_0$ is a collection of linearly independent vectors in $V$, then $\exists$ a basis such that $S \supseteq S_0$.
+  \begin{proof}
+    Let $L$ be the set of linearly independent subsets of $V$ containing $S_0$. iLet $B$ be a maximal element of $L$.
+  \end{proof} 
+\end{proposition} 
+
+\begin{example}
+  Let $X$ be a set.
+  \begin{enumerate}
+    \ii
+    $\dim_FF_0(X, F) = \#X$
+    \ii
+    $\dim_F(F^n) = n$. Dimension is kind of like the logarithm base $F$ of the cardinality.
+    \ii
+    $\dim(V_1 \times V_2) = \dim(V_1) + \dim(V_2)$
+  \end{enumerate} 
+\end{example} 
+
+\subsection{Basic Constructions}
+
+\begin{enumerate}
+  \ii
+  Cartesian product (direction)
+  \ii
+  Subspaces
+  \ii
+  Notion of Quotients
+  \ii
+  Rank Nullity Theorem.
+\end{enumerate} 
+
+\end{document}

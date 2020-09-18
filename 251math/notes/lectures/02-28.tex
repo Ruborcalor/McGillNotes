@@ -1,0 +1,127 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-28}
+
+
+\begin{document}
+
+\section{Lecture 02-28}
+
+An action of $G$ on $X$ is a function
+\begin{gather*}
+  G \times X \to X \\
+  (g, x) \mapsto gx
+\end{gather*} 
+satisfying $1_G \cdot x = x$ and $g_1(g_2x) = (g_1g_2)x$.
+\\\\
+Equivalently, an action of $G$ on $X$ is a homomorphism
+\begin{gather*}
+  \varphi: G \to S_x = perm(X) \\
+  \varphi \leadsto g \cdot x = \varphi(g)(x) \\
+  \ \text{Action} \ G \times X \to X \leadsto \varphi(g)(x) = gx
+\end{gather*} 
+
+Terminology: A set $X$ endowed with an action of $G$ is called a $G$-set.
+\\\\
+If $X_1$ and $X_2$ are two $G$-sets, a homomorphism $f: X_1 \to X_2$ is a function satisfying $f(gx_1) = g \cdot f(x_1)$
+\\\\
+If $X_1$ and $X_2$ are $G$-sets, so it $X_1 \sqcup X_2$.
+\begin{definition}[Transitive $G$-set]
+  A $G$-set $X$ is \ul{transitive} if it cannot be expressed as a disjoin union of non-empty $G$-sets. If $X$ is transitive, choose $x_0 \in X$.
+  \begin{gather*}
+    Gx_0 = \{gx_0, \ g \in G\}
+  \end{gather*} 
+  is called the \ul{orbit} of $x_0$ under actions of $G$. Then $X = Gx_0, \ \forall x_0 \in X$. More generally, 
+  \begin{gather*}
+    \exists x_i, \ (i \in I) \ X = \sqcup_{i \in I}G_{x_i}
+  \end{gather*} 
+\end{definition} 
+
+\begin{example}
+  $X = G$. $G \times X \to X$ is left multiplication. $X$ is transitive. 
+  % review cayley's theorem. Every $G$ is a subgroup of $S_n$ 
+  If $g \in G$, and $gx = x \forall x \in X \Rightarrow g = id$.
+  \begin{gather*}
+    \varphi: G \hookrightarrow S_G
+  \end{gather*} 
+  Cayley's theorem: Every $G$ is a subgroup of $S_n$. So $G = S_n$, $\varphi: G \hookrightarrow S_{S_n} = S_{n!}$
+\end{example} 
+\begin{example}
+  If $H$ is a subgroup of $G$, then $G / H$ is a $G$-set. 
+  \begin{gather*}
+    (g, aH) \leadsto gaH \\
+    \ker(G \to S_{G / H}) = \{g \in G \ \text{such that} \ gaH = aH\} \\\
+    gaH = aH, \ \forall a \in G \\
+    a^{-1}gaH = H, \ \forall a \in G \\
+    a^{-1}ga \in H, \ \forall a \in G \\
+    g \in aHa^{-1}, \ \forall a \in G \\
+    g \in \cup_{a \in G}aHa^{-1}
+  \end{gather*} 
+  $\ker(G \to S_{G / H})$ is the largest normal subgroup of $G$ conained in $H$. In particular, if $H$ contains no non-trivial normal subgroups, then $G \hookrightarrow S_{G / H}$ is injective.
+\end{example} 
+
+\begin{example}
+  \begin{gather*}
+    X = G, \ g * x = gxg^{-1}  \\
+    1_G * x = 1 x 1^{-1} = x \\
+    (g_1g_2)*x = g_1g_2x(g_1g_2)^{-1} = g_1(g_2xg_2^{-1})g_1^{-1} = g_1(g_2*x)g_1^{-1} \\
+    = g_1*(g_2*x)
+    \\\\
+    G = S_3 = \{1, \cycle{1, 2}, \cycle{1, 3}, \cycle{2, 3}, \cycle{1, 2, 3}, \cycle{1, 3, 2}\} \\
+    \ \text{Orbits:} \ \{1\}, \{\cycle{1, 2, 3}, \cycle{1, 3, 2}\}, \{\cycle{1, 2}, \cycle{1, 3}, \cycle{2, 3}\}
+  \end{gather*} 
+  
+\end{example} 
+\begin{example}
+  \begin{proposition}
+    If $X$ is a transitive $G$-set, then it is isomorphic to $G / H$ for some subgroup $H$.
+    \begin{proof}
+      Let $x_0 \in X$. We know that $Gx_0 = X$. Consider the function
+      \begin{gather*}
+        G \to X \\
+        g \mapsto gx_0
+      \end{gather*} 
+      This function is a homomorphism of $G$-sets. It is surjective, by transitivity.
+      \\\\
+      The map $\zeta$ is not injective in general. $\zeta^{-1}(x_0)$ = the preimage of $x_0$ is
+      \begin{gather*}
+        Stab_G(x_0) = G_{x_0} = \{g \in G \ \text{such that} \ gx_0 = x_0\}
+      \end{gather*} 
+      Set $H = G_{x_0}$. We defined $\ol{\zeta}: G / H \to X$ by $\ol{\zeta}(gH) = gx_0$. 
+      \\\\
+      Claim: $\ol{\zeta}$ is a bijection of $G$-sets.
+      \begin{enumerate}
+        \ii
+        $\ol{\zeta}$ is well-defined.
+        \\\\
+        If $g_1H = g_2H$, then $g_2 = g_1h, \ h \in H$. $g_2x_0 = (g_1h)x_0 = g_1(hx_0) = g_1x_0$
+        \ii
+        $\ol{\zeta}$ is surjective $\Leftarrow$ transitivity.
+        \ii
+        $\ol{\zeta}$ is injective.
+        \begin{gather*}
+          \ol{\zeta}(g_1 H) = \ol{\zeta}(g_2H) \Rightarrow g_1x_0 = g_2x_0 \Rightarrow g_2^{-1}g_1x_0 = x_0 \\
+          \Rightarrow g_2^{-1}g_1 \in H \Rightarrow g_1H = g_2H
+        \end{gather*} 
+      \end{enumerate} 
+    \end{proof} 
+  \end{proposition} 
+\end{example} 
+\begin{corollary}
+  If $G$ is finite, then any transitive $G$-set $X$ is also finite, and  
+  \begin{gather*}
+    \#X = \frac{\#G}{\#Stab_G(x_0)}
+  \end{gather*} 
+  Orbit stabiliser theorem.
+  \begin{proof}
+    $X \simeq G / Stab_G(x_0)$ as a $G$-set. Hence
+    \begin{gather*}
+      \#X = \#(G / Stab_G(x_0)) = \frac{\#G}{\#Stab_G(x_0)}
+    \end{gather*} 
+  \end{proof} 
+\end{corollary} 
+\end{document}

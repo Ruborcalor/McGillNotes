@@ -1,0 +1,115 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-01-17}
+
+
+\begin{document}
+
+\section{Lecture 01-17}
+
+\subsection{Constructions of Vector Spaces}
+
+Given vector spaces $V_1, V_2$, we can construct new vector spaces.
+\begin{enumerate}
+  \ii
+  Direct sum, or cartesian product. $V_1 \times V_2 = V_1 \oplus V_2 = \{(v_1, v_2) \ : \ v_1 \in V_1, v_2 \in V_2\}$.
+  \begin{gather*}
+    (v_1, v_2) + (v_1', v_2') = (v_1 + v_1', v_2 + v_2') \\
+    \lambda(v_1, v_2) = (\lambda v_1, \lambda v_2)
+  \end{gather*} 
+  Note that $\dim(V_1 \oplus V_2) = \dim(V_1) + \dim(V_2)$
+  \ii
+  Subspace. If $V$ is a vector space over $F$, then $W \subseteq V$ is a subspace if it is closed under addition and scalar multiplication.
+   \begin{gather*}
+    w_1, w_2 \in W \Rightarrow w_1 + w_2 \in W \\
+    \lambda \in F,\  w \in W \Rightarrow \lambda w \in W
+  \end{gather*} 
+  Conclusion is that $W$ is a vector space. Other properties are inherited from $V$.
+  \ii
+  Homs. $\hom_F(V_1, V_2)$ is a vector space. If $V_1$ and $V_2$ are finite dimensional, dimensions $n_1$ and $n_2$, then $\dim_F(\hom_F(V_1, V_2)) = n_1n_2$. % revisit better understand hom from one vector space to another.
+  \\\\
+  Let $(e_1, \dots, e_n)$ be a basis for $V_1$.
+  \\\\
+  Key remark: A linear transformation $T: V_1 \to V_2$ is completely determined by $(T(e_1), \dots, T(E_{n_1})$.
+  \\\\
+  Why? If $v \in V_1$, then $v = \lambda_1 e_1 + \cdots + \lambda_{n_1} e_{n_1}$. So $T(v) = T(\lambda_1 e_1 + \cdots + \lambda_{n_1}e_{n_1} = \lambda_1 T(e_1) + \cdots + \lambda_{n_1} T(e_{n_1})$
+  \\\\
+  \begin{gather*}
+    \hom(V_1, V_2) = \underbrace{V_2 \oplus \cdots \oplus V_2}_{n_1 \ \text{times} \ } % revisit what is the image and kernel?
+  \end{gather*} 
+  \ii
+  Dual space: $V^* = \hom_F(V, F)$. If $B$ is a basis for $V$, then $V \simeq F_0(B, F)$ . $V^* \simeq F(B, F)$.
+  \\\\
+  The choice of $B$ determines an injection $V \hookrightarrow V^*$. When $B$ is finite, i.e. $\dim(V) = n < \infty$, then $V \simeq V^*$.
+  \\\\
+  There is a canonical inclusion of $V \hookrightarrow V^{**}$.
+  \begin{gather*}
+    V \to V^{**} \\
+    v \mapsto v^{**}(l) = l(v) \\
+    l \in V^*, \ l: V \to F
+  \end{gather*} 
+  $v^{**}$ is a linear functional on $V^*$. I.e. a linear transformation from $F^* \to F$. The rule $v \mapsto v^{**}$ is itself linear. i.e. $(v_1 + v_2)^{**} = v_1^{**} + v_2^{**}$.
+  \ii
+  The tensor product of $V_1$ and $V_2$. $V_1 \otimes V_2 = \hom_F(V_1^*, V_2)$ % revisit. Homomorphism is a linear transformation? What is an isomorphism?
+  \\\\
+  If $V_1$ and $V_2$ are finite dimensional, then $\dim(V_1 \otimes V_2) = \dim(V_1)\dim(V_2)$.
+  \\\\
+  The dimension of the dual space.
+  \begin{gather*}
+    V \simeq F_0(B, F) \\
+    V^* \simeq F(B, F)
+  \end{gather*} 
+  If $\#B = n < \infty$, then $\dim(V^*) = n = \dim(V)$.
+  \ii
+  Quotients. If $W \subseteq V$ is a subspace, then $W$ is also a subgroup.
+  \begin{gather*}
+    V / W = \{v + W, v \in V\}
+  \end{gather*} 
+  $V / w$ has a natural scalor multiplication.
+  \begin{gather*}
+    \lambda \in F, \ \lambda(v + W) = \lambda v + W
+  \end{gather*} 
+  \begin{exercise}
+    With this definition of scalar multiplication, the group $V / W$ satisfies all the axioms of a vector space over $F$.
+  \end{exercise} 
+\end{enumerate} 
+
+\subsection{Isomorphism Theorem}
+
+If $T: V \to V'$ is a linear transformation.
+\begin{definition}[Kernel]
+  \begin{gather*}
+    \ker(T) \coloneqq \{v \in V \ \text{s.t.} \ T(v) = 0\}
+  \end{gather*} 
+\end{definition} 
+\begin{definition}[Image]
+  \begin{gather*}
+    \Ima(T) = \{v \in V' \ \text{s.t.} \ \exists \tilde{v} \in V \ : \ T(\tilde{v}) = v\}
+  \end{gather*} 
+\end{definition} 
+Claim: $\ker(T)$ and $\Ima(T)$ are vector spaces.
+
+\begin{proof}
+  Show $v \in \ker(T), \ \lambda \in F$, \ $\lambda w \in \ker(T)$. $T(\lambda v) = \lambda T(v) = \lambda \cdot 0 = 0$. Likewise for image.
+\end{proof}  % revisit canonical
+If $T: V \to V'$ is linear, $W = \ker(T)$, then $T$ induces an isomorphism $V / \ker(T)$ to $\Ima(T)$.
+\begin{gather*}
+  \varphi: V / \ker(T) \to \Ima(T) \\
+  v + \ker(T) \mapsto T(v)
+\end{gather*} 
+Need to check:
+\begin{enumerate}
+  \ii
+  That $\varphi$ is well-defined. $W = \ker(T)$. If $v + w = v' + W$, then $T(v) = T(v')$.
+  \ii
+  Injection
+  \ii
+  Surjection
+\end{enumerate} 
+
+
+\end{document}

@@ -1,0 +1,122 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-05}
+
+
+\begin{document}
+
+\section{Lecture 02-05}
+
+Minimal polynomial. If $T: V \to V$, $\dim V = n$, then there exists polynomial $p(x)$ such that 
+\begin{gather*}
+  p(T) = 0 \\
+  \deg(p(x)) \leq n
+\end{gather*} 
+Clear for $n = 1$.
+\\\\
+If $ \exists v \in V$ such that $(v, Tv, T^2v, \dots, T^{n - 1}v)$ are linearly independent, then it is fine.
+\begin{gather*}
+  \exists p(x) \ \text{such that} \ p(T)(v) = 0 \\
+  \Rightarrow p(T)(Tv) = 0 \\
+  p(T)(T^2v) = 0 \\
+  \vdots \\
+  p(T)(T^{n - 1}v) = 0 \\
+  \Rightarrow p(T) = 0
+\end{gather*} 
+
+Suppose that there is no cyclic vector. Let $v \neq 0$ in $V$. Then 
+\begin{gather*}
+  \spn(v, T(v), \dots, T^{n - 1}(v)) = W \subsetneq V
+\end{gather*} 
+$W$ is preserved by $T$. 
+\begin{gather*}
+  T_W: W \to W
+  \\
+  \dim W = d < n
+\end{gather*} 
+The induction hypothesis implies that there is a polynomial $p_W(x)$ such that $p_W(T_W) = 0$.
+\\\\
+It would be nice if we could write $V = W \oplus W'$. Problem is that there need not be a $T$-stable complementary space $W'$.
+\\\\
+Solution: Define $W' = V / W$. $W'$ is naturally equipped with
+\begin{gather*}
+  \ol{T}: W' \to W' \\
+  \ol{T}(v + W) = T(v) + W
+\end{gather*} 
+Checking well-defined:
+\begin{gather*}
+  v_1 + W = v_2 + W \Rightarrow v_1 - v_2 \in W \Rightarrow T(v_1 - v_2) \in T(W) \subseteq W \\
+  \Rightarrow T(v_1) - T(v_2) \in W
+\end{gather*} 
+There is a polynomial $p_{W'}(x)$ such that $p_{W'}(\ol{T}) = 0$ where $\deg p_{W'}(x) \leq n - d$.
+\\\\
+Claim: $p(x) \coloneqq p_W(x) \cdot p_{W'}(x)$ satisfies  $p(T) = 0$.
+\begin{proof}
+  $p_{W'}(\ol{T}) = 0$. Image $p_{W'}(T) \subseteq W$.
+  \begin{gather*}
+    p_{W'}(\ol{T}) = 0 \Rightarrow p_{W'}(\ol{T})(v + W) = 0 \\
+    \Rightarrow
+    p_{W'}(T)(v) + W = 0 + W \ \forall x \in V \\
+    \Rightarrow p_{W'}(T)(v) \in W \ \forall v \in V \\
+    p_W(T)(W) = 0 \\
+    p_W(T)p_{W'}(T) = p_W(T) \circ p_{W'}(T) = 0
+  \end{gather*} 
+\end{proof} 
+
+
+Goal of linear algebra:
+\begin{enumerate}
+  \ii
+  Given $T: V \to V$, classify all possible $T$.
+  \ii
+  Find bases for $V$ which are "convenient" to study $T$.
+\end{enumerate} 
+Structural invariants attached to $T$.
+\begin{enumerate}
+  \ii
+  Minimal polynomial $p_T(x)$ 
+  \ii
+  Characteristic polynomial $f_T(x) = \det(xI - T)$. $\deg(f_T(x)) = n = \dim V$.
+\end{enumerate} 
+
+\begin{definition}[Eigenvalue]
+  An element $\lambda \in F$ is an \ul{eigenvalue} for $T$ if $\exists$ a \ul{non-zero} $v \in V$ such that $T(v) = \lambda v$. A vector $v$ with this property is called an eigenvector of  $T$, with eigenvalue $\lambda$. Note that the zero vector is never considered an eigenvector.
+\end{definition} 
+
+\begin{definition}[Eigenspace]
+  The set $V_\lambda = \{v \in V$ such that $T(v) = \lambda v\}$ is called the eigenspace for $T$.
+\end{definition} 
+
+\begin{definition}[Spectrum]
+  The spectrum of $T$ is the collection of eigenvalues of $T$. $spec(T) \subseteq F$.
+\end{definition} 
+
+\begin{proposition}
+  If $\lambda_1 \neq \lambda_2 \in spec(T)$, then $V_{\lambda_1}$ and $V_{\lambda_2}$ are linearly disjoint, i.e. $V_{\lambda_1}\cap V_{\lambda_2} = (0)$.
+  \\
+  \begin{proof}
+    If $v \in V_{\lambda_1}\cap V_{\lambda_2}$, then $T(v) = \lambda_1v, T(v) = \lambda_2v \Rightarrow (\lambda_1 - \lambda_2)v = 0$. $\lambda_1 - \lambda_2 \neq 0 \Rightarrow v = 0$.
+  \end{proof} 
+\end{proposition} 
+
+\begin{definition}[Diagonalizable]
+  \begin{gather*}
+    \ \text{If} \ \oplus_{\lambda \in spec(T)}V_\lambda = V
+  \end{gather*} 
+  then $T$ is \ul{diagonalizable}.
+  \\\\
+  Equivalently, $T$ is diagonalizable if $V$ has a basis of eigenvectors for $T$.
+\end{definition} 
+
+\begin{example}
+  \begin{enumerate}
+    \ii
+    $V = \RR^2$, where $T$ is a rotation by $\pi / 2$.
+  \end{enumerate} 
+\end{example} 
+
+\end{document}

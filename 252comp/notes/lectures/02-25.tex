@@ -1,0 +1,76 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-25}
+
+
+\begin{document}
+
+\section{Augmented Data Structures}
+\begin{enumerate}
+  \ii
+  Red-black tree + Linked List
+  \ii
+  Order statistics.
+  \ii
+  Interval Trees
+  \ii
+  Fast browsing
+  \ii
+  K-d trees.
+\end{enumerate} 
+
+\subsection{Order Statistics ADT}
+
+Operations: 
+\begin{enumerate}
+  \ii 
+  Dictionary: 
+  \begin{enumerate}
+    \ii Insert
+    \ii Delete
+    \ii Search
+  \end{enumerate} 
+  \ii
+  Order: 
+  \begin{enumerate}
+    \ii
+    Select(k, D) Give you rank and ask for the element. 
+    \ii
+    Rank(x, D) returns the rank of item "x". The smallest has rank 1. The largest has rank $n$.
+  \end{enumerate} 
+\end{enumerate} 
+
+\subsection{Order Statistics Tree}
+
+A red black tree with cells with following attributes: Color, rank, key, left, right. And the addition of size.
+
+\subsection{Interval Trees}
+
+Operations:
+\begin{enumerate}
+  \ii
+  Insert, Delete.
+  \ii
+  Overlap. Returns true if there exists overlap between two intervals.
+\end{enumerate} 
+
+\subsection{Sweepline}
+
+A strategy that makes a $D$ dimensional problem into a $D - 1$ dimensional problem by converting one of the dimensions to time.
+\\\\
+Data structure for $y$-intervals. Birth: insert a new node. Death: Delete an interval.
+
+
+\subsection{Fast Browsing}
+
+Insert, Delete, Search, k-Next browset
+
+Implementation: Level-linked red-black trees.
+
+
+
+\end{document}

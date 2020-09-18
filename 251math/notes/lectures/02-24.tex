@@ -1,0 +1,174 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-02-24}
+
+
+\begin{document}
+
+\section{Lecture 02-24}
+
+\begin{definition}[Bilinear Forms]
+  A bilinear form $B: V \times V \to F$ is said to be \ul{left non degenerate} if $B(v, w) = 0, \ \forall w \in V \Rightarrow v = 0$.
+  \begin{note}
+    \begin{gather*}
+      B(v, w) = \langle v, w \rangle
+    \end{gather*} 
+  \end{note} 
+  Key remark: A non-degenerate bilinear form induces a linear injection
+  \begin{gather*}
+    l: V \to V^* \\
+    v \mapsto l_v \\
+    l_v(w) = \langle v, w \rangle
+  \end{gather*} 
+  Now to show the following:
+  \begin{enumerate}
+    \ii
+    $l_v$ is indeed a linear transformation (follows from the linearity of $\langle, \rangle$ in the second variable)
+    \ii
+    The assignment $v \mapsto lv$ is linear (follows from the linearity of $\langle , \rangle$ in the first variable.
+  \end{enumerate} 
+\end{definition} 
+
+\begin{lemma}
+  If $\dim V < \infty$, then $l$ is an isomorphism between $V$ and $V^*$. 
+  \begin{proof}
+    $\langle, \rangle$ is left-nondegenerate $\Rightarrow$ $l: V \hookrightarrow V^*$ is injective.
+    \\\\
+    The rank-nullity theorem implies that since $\dim V = \dim V^*$,  $l$ is also surjective.
+  \end{proof} 
+\end{lemma} 
+
+\begin{exercise}
+  Is it possible to classify all possible bilinear forms on $V$, up to isomorphism?
+  \\\\
+  If $V$ is finite dimensional, we can choose a basis $\sum = (e_1, \dots, e_n)$ for $V$ such that
+  \begin{gather*}
+    v = \sum_{i = 1}^{n}x_ie_i \\
+    w = \sum_{j = 1}^{n}y_je_j \\
+    \langle v , w \rangle = \langle \sum x_ie_i, \sum y_je_j \rangle \\
+    = \sum_{i, j = 1}^{n} x_i y_j \langle e_i, e_j \rangle
+  \end{gather*} 
+\end{exercise} 
+
+\begin{definition}
+  The pairing matrix associated to $B(v, w) = \langle v, w \rangle$, and the basis $\sum$.
+  \begin{gather*}
+    M_{B, \sum} = (\langle e_i, e_j \rangle)_{i, j = 1, \dots, n}  \\
+    \langle v, w \rangle = (x_1, \dots, x_n)M_{B, \sum}
+    \begin{pmatrix}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{pmatrix} 
+  \end{gather*} 
+  The most general bilinear form on $F^n$ is given by a matrix $M$, by 
+  \begin{gather*}
+    \langle (x_1, \dots, x_n), (y_1, \dots, y_n) \rangle = (x_1, \dots, x_n)M
+    \begin{pmatrix}
+      y_1 \\
+      \vdots \\
+      y_n
+    \end{pmatrix} 
+  \end{gather*} 
+\end{definition} 
+
+\begin{lemma}
+  $\langle, \rangle$ is left-nondegenerate $\Leftrightarrow M_{B, \sum}$ is invertible.
+  \begin{proof}
+    Left as exercise.
+  \end{proof} 
+\end{lemma} 
+
+\subsection{Change of Basis}
+Let $\sum = (e_1, \dots, e_n)$ and $\sum' = (e_1', \dots, e_n')$ be two bases for $V$. How are $M_{B, \sum}$ and $M_{B, \Sigma'}$ related?
+\begin{gather*}
+  \begin{pmatrix}
+    e_1' \\
+    \vdots \\
+    v_n'
+  \end{pmatrix} = 
+  P_i
+  \begin{pmatrix}
+    e_1 \\
+    \vdots \\
+    e_n 
+  \end{pmatrix} 
+  \\
+  p \in M_n(F), \ \text{invertible} \ \\
+  m_{B, \Sigma} = \langle 
+  \begin{pmatrix}
+    e_1 \\
+    \vdots \\
+    e_n
+  \end{pmatrix} ,
+  (e_1, \dots, e_n) \rangle \\
+  M_{B, \Sigma'} = \langle 
+  \begin{pmatrix}
+    e_1' \\
+    \vdots \\
+    e_n'
+  \end{pmatrix} ,
+  (e_1', \dots, e_n') \rangle \\\\
+  (e_1', \dots, e_n') = (e_1, \dots, e_n)P^t \\
+  P = (a_{ij}) \quad p^t = (a_{ji}) \\
+  M_{B, \Sigma'} = 
+  \\\\\\
+  M_{B, \Sigma'} = PM_{B, \Sigma}P^t
+\end{gather*} 
+
+\begin{corollary}
+  Two matrices $M_1$ and $M_2$ represent the same bilinear form $\Leftrightarrow$ there exists an invertible linear transformation $P$ such that $M_1 = PM_2P^t$ \\\\
+  Isomorphism classes of linear transformations on $F^n = M_n(F) / \GL_n(F)$ where the group $\GL_n(F)$  acts on the set $M_n(F)$ by conjugation $M^g = gMg^{-1}$. \\\\
+  Isomorphism classes of bilinear forms we likewise identified with 
+  \begin{gather*}
+    M_n(F) / \GL_n(F)
+  \end{gather*} ,
+  but where the action of $\text{Gl}_n(F)$ on  $M_n(F)$ is very different
+  \begin{gather*}
+    g * M = gMg^t
+  \end{gather*} 
+\end{corollary} 
+
+\begin{example}
+  \begin{enumerate}
+    \ii[]
+    \ii
+    Orbit of $I_n$ for the conjugation action = $\{I_n\}$.
+    \ii
+    Orbit of $I_n$ for the second action is the set of $\{pp^t, p \in \GL_n(F)\}$
+  \end{enumerate} 
+\end{example} 
+
+\begin{exercise}
+  There are no orbits of size 1 for the action $M \mapsto gMg^t$.
+\end{exercise} 
+
+\begin{definition}
+  A vector space equipped with a non-degenerate bilinear form $B$ is called a quadratic space $(V, B)$. \\\\
+  An isomorphism $T: (V_1, B_2) \to (V_2, B_2)$ is the natural notion. A linear isomorphism $T: V_1 \to V_2$, $\forall v, w \in V_1$,
+  \begin{gather*}
+    \langle v, w \rangle_{B_1} = \langle Tv, Tw \rangle_{B_2}
+  \end{gather*} 
+\end{definition} 
+
+The adjoint of a linear transformation $T: V \to V$ when $V$ is a quadratic space, endowed with a nondegerenate form.
+\begin{gather*}
+  T: V \to V \\
+  T^*: V^* \to V^* \\
+  T^*(l) = l \circ T
+\end{gather*} 
+
+The adjoint of $T$ on the quadratic space $V$ is the linear transformation defined by
+\begin{gather*}
+  T^*(lv) = l_{T^*(v)} \\
+  T^*(lv)(w) = l'_{T^*v}(w) \\
+  lv \circ T(w) = \langle T^*v, w \rangle \\
+  \langle v, T(w) \rangle \\\\
+  \langle v, Tw \rangle = \langle T^*v, w \rangle
+\end{gather*} 
+
+\end{document}

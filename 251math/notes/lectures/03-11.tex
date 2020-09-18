@@ -1,0 +1,187 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-03-11}
+
+
+\begin{document}
+
+\section{Lecture 03-11}
+
+\subsection{Inner product spaces}
+
+$V$ over $F = \RR, \CC$.
+
+\begin{enumerate}
+  \ii
+  Positivity:
+  \begin{gather*}
+    \lang v, v \rang \in \RR \geq 0 \\
+    \lang v, v \rang = 0 \Leftrightarrow v = 0
+  \end{gather*} 
+  \ii
+  Rather than imposing bilinearity, we were lead to impose hermition linearity.
+  \ii
+  Basic symmetry assumption requiring the $\lang v, w \rang = \ol{\lang w, v \rang}$.
+  \ii
+  We defined norm of $v$ as 
+\begin{gather*}
+  ||v|| = \sqrt{\lang, v, v \rang}
+\end{gather*} 
+\end{enumerate} 
+
+
+\begin{theorem}[Cauchy-Schwartz Inequality]
+  For all $v, w \in V$,
+  \begin{gather*}
+    |\lang v, w \rang | \leq ||v|| \cdot ||w||
+    \\
+    \ \text{With equal if } \ \spn(v, w) \ \text{is one dimensional} \ 
+  \end{gather*} 
+  \begin{proof}
+    We can assume without loss of generality that $v \neq 0$.
+    \\\\
+    Positivity implies that for all $\lambda \in F$,
+    \begin{gather*} % review these
+      \lang \lambda v + w, \lambda v + w \rang \in \RR \geq 0 \\
+      = |\lambda|^2\lang v, v \rang + \lambda \lang v, w \rang + \ol{\lambda}\lang w, v \rang + \lang w, w, \rang \geq 0 \\
+      |\lambda|^2 \lang v, v, \rang + 2 Re(\lambda \lang v, w \rang ) + \lang w, w, \rang \geq 0, \quad \forall \lambda \in F
+    \end{gather*} 
+    \begin{enumerate}
+      \ii
+      If $F = \RR$.
+      \begin{gather*}
+        f(\lambda) = \lambda^2 \lang v, v \rang + 2 \lang v, w \rang \lambda + \lang w, w \rang \geq 0, \quad \forall \lambda \in \RR \\
+        \ \text{This is a quadratic so either it has a root or it doesn't} \ 
+        \\
+        \Rightarrow (2 \lang v, w \rang )^2 - 4 \lang v, v, \rang \lang w, w, \rang \leq 0 \\
+        \ \text{with equal if there is a root} \ 
+        \\
+        \Rightarrow \lang v, w \rang ^2 \leq ||v||^2||w||^2 \\
+        \Rightarrow |\lang v, w \rang | \leq ||v||||w|| \\
+        \ \text{with equal if} \ \exists \lambda_0 \ \text{such that} \ f(\lambda) = 0 \\
+        i.e. \ \lang \lambda_0 v + w, \lambda_0v + w \rang = 0 \Rightarrow 
+        \lambda_0v + w = 0 \Rightarrow \spn(v, w) = \spn(v) \ \checkmark
+      \end{gather*} 
+      \ii
+      If $F = \CC$. Assume that $\lambda \lang v, w \rang \in \RR$.
+      \begin{gather*}
+        |\lambda|^2 \lang v, v \rang \pm 2 |\lambda|| \lang v, w \rang | + \lang w, w, \rang \geq 0
+        \\
+        \ \text{Doesn't matter on the sign because b term squared in discriminant} \ 
+        \\
+        4| \lang v, w \rang |^2 - 4 \lang v, v \rang \lang w, w \rang \leq 0 \\
+        \Rightarrow |\lang v, w \rang |^2 \leq ||v||^2||w||^2
+      \end{gather*} 
+      The rest follows like the real case.
+    \end{enumerate} 
+  \end{proof} 
+\end{theorem} 
+
+\subsection{Properties of $||v||$}
+\begin{enumerate}
+  \ii
+  \begin{gather*}
+    ||v|| \in \RR \geq 0
+  \end{gather*} 
+  \ii
+  \begin{gather*}
+    ||\lambda v|| = |\lambda| \cdot ||v||
+  \end{gather*} 
+  \ii
+  \begin{gather*}
+    ||v + w || \leq ||v|| + ||w|| \ \text{with equality if} \ (v, w) \ \text{are colinear.} \ 
+  \end{gather*} 
+\end{enumerate} 
+\begin{proof}
+  \begin{enumerate}
+    \ii[]
+    \ii
+    By definition
+    \ii
+    \begin{gather*}
+      ||\lambda v || = \sqrt{\lang \lambda v, \lambda v \rang} = \sqrt{\lambda \ol{\lambda}}\sqrt{\lang v, v \rang} = |\lambda| \cdot ||v||
+    \end{gather*} 
+    \ii % Review 2Re term
+    \begin{gather*}
+      ||v + w||^2 = \lang v + w, v + w \rang = ||v||^2 + 2Re \lang v, w \rang + ||w||^2 \\
+      \leq ||v||^2 + 2|\lang v, w \rang | + ||w||^2, \quad \ \text{because} \ Re(\lambda) \leq |\lambda| \\
+      \leq ||v||^2 + 2||v||||w|| + ||w||^2 = (||v|| + ||w||)^2 \\
+      \Rightarrow ||v + w|| \leq ||v|| + ||w||
+    \end{gather*} 
+  \end{enumerate} 
+\end{proof} 
+
+\begin{definition}[Orthogonality]
+  Two vectors are \ul{orthogonal} if $\lang v, w \rang = 0$.
+\end{definition} 
+
+\begin{definition}[Orthonormal Basis]
+  An orthonormal basis of $V$ is a basis $\Sigma$ of $V$ such that for all $v, w \in \Sigma$, 
+  \begin{gather*}
+    \lang v, w \rang = 
+    \begin{cases}
+      0, & \ \text{if} \ v \neq w \\
+      1, & \ \text{if} \ v = w
+    \end{cases} 
+  \end{gather*} 
+\end{definition}  
+\begin{example}
+  \begin{enumerate}
+    \ii[]
+    \ii
+    $V = \RR^n$ or $\CC^n$ with dot product. 
+    \begin{gather*}
+      e_1 = (1, 0, \dots, 0), \ e_2 = (0, 1, \dots, 0), \ e_n = (0, 0, \dots, 1)
+    \end{gather*} 
+    is an orthonormal basis.
+    \ii
+    $V = P_n([0, 1])$, the space of polynomials of degree $\leq n$ with 
+    \begin{gather*}
+      \lang f, g \rang = \int_0^1 f(t) \ol{g(t)} dt
+    \end{gather*} 
+    Then
+    \begin{gather*}
+      \Sigma = (1, x, x^2, \dots, x^n)
+    \end{gather*} 
+    is \ul{not} an orthonormal basis because inner product is not zero pairwise between these elements
+  \end{enumerate} 
+\end{example} 
+
+\begin{theorem}
+  If $V$ is a finite-dimensional inner product space over $\RR$ or $\CC$, then it has an orthonormal basis.
+  \begin{proof}
+    We will prove something more precise. Let $(v_1, \dots, v_n)$ be a basis for $V$, then there is $(e_1, \dots, e_n)$ orthonormal with 
+    \begin{gather*}
+      \spn(e_1, \dots, e_j) = \spn(v_1, \dots, v_j), \quad j = 1, \dots, n
+    \end{gather*} 
+    We will prove the existence of $(e_1, \dots, e_n)$ by induction on $j$.
+    \begin{enumerate}
+      \ii
+      Base case $j = 1$, let $ e_1 = v_1 / ||v_1||$.
+      \ii
+      Inductive step $j \to j + 1$. Assume that we have an orthonormal collection $ e_1, \dots, e_j$ with $\spn(e_1, \dots, e_j)$, with $\spn(e_1, \dots, e_j) = \spn(v_1, \dots, v_j)$. We then must define $e_{j + 1}$.
+      \begin{gather*}
+        \widetilde{e_{j + 1}} = \lambda_1e_1 + \lambda_2e_2 + \cdots + \lambda_ie_i + \lambda_{j + 1}v_{j + 1}
+      \end{gather*} 
+      Want $\widetilde{e_{j + 1}} \perp e_i, \quad i = 1, \dots, j$.
+      \begin{gather*}
+        0 = \lang \widetilde{e_{j + 1}}, e_i \rang = \lambda_i + \lambda_{j + 1}\lang v_{j + 1}, e_i \rang \\
+        \lambda_i = -\lambda_{j + 1} \lang v_{j + 1}, e_i \rang
+      \end{gather*} 
+      Set $\lambda_{j + 1} = 1$, then $\lambda_i = -\lang v_{j + 1}, e_i \rang$.
+      \begin{gather*}
+        \widetilde{e_{j + 1}} = v_{j+ 1} - \lang v_{j + 1}, e_1 \rang e_1 + \cdots + \lang v_{j + 1}, e_j \rang e_j
+      \end{gather*} 
+      is orthogonal to $e_1, \dots, e_j$ and hence $ v_1, \dots, v_j$.
+      \begin{gather*}
+        e_{j + 1} = \widetilde{e_{j + 1}} \frac{1}{||\widetilde{e_{j + 1}}}
+      \end{gather*} 
+    \end{enumerate} 
+  \end{proof} 
+\end{theorem} 
+
+\end{document}

@@ -1,0 +1,242 @@
+\documentclass[../598comp.tex]{subfiles}
+
+\graphicspath{ {./lectures/images/}{./images/} }
+
+\date{05-07}
+
+\begin{document}
+
+\section{05-07}
+
+\begin{lemma}[Pumping Lemma]
+  \begin{gather*}
+    L = \{a^nb^n \ | \ n \geq 0\}
+  \end{gather*}
+  Not possible to recognize this language with finite automaton because it would
+  require unbounded memory. Non regular languages could recognize this.
+  \\\\
+  Suppose we have putative (generally considered or reputed to be) DFA that recognizes $L$. Then we can pick a word
+  with a block of $a$ with length greater that the number of states in the
+  machine. This means that the machine will have to repeat a state. This rests
+  on the pigeon hole principle.
+  \\\\
+  The idea is that now you can exploit this loop as many times as you'd like by
+  inserting the string that brings you about the loop.
+  \\\\
+  Now for the lemma. Let $L$ be a regular language. Then
+  \begin{gather*}
+    \exists p > 0 \ \text{such that} \ \forall w \in \Sigma^* \ | \ w \in L
+    \wedge |w| \geq p \\
+    \exists x, y, z \in \Sigma^* \ \text{such that} \ w = xyz, \ |xy| \leq p, \
+    |y| > 0 \\
+    \forall i \in \NN, \ xy^iz \in L
+  \end{gather*}
+  An intuition for this is that $y$ is the word that takes you through the loop,
+  so you can repeat it as many times as you'd like.
+  \begin{proof}
+    Given a DFA for $L$ choose $p$ to be strictly greater than the number of
+    states in the DFA. If $|w| \geq p \wedge w \in L$ then as the automaton
+    changes state it must hit the same state twice while reading the first $p$
+    letters, when $p$ is greater than the number of states in the machine.
+  \end{proof}
+\end{lemma}
+
+\begin{definition}[Finite Language]
+  A \ul{finite language} is one containing a finite number of words.
+\end{definition}
+
+\begin{fact}
+  Every finite language is regular. The $p$ that you choose is longer than any
+  word in the language. So then a finite language would have no words of length
+  greater than $p$.
+\end{fact}
+
+\begin{fact}
+  $L$ regular $\Rightarrow$ $L$ can be pumped. Contrapositive is that $L$ cannot
+  be pumped $\Rightarrow L$ not regular.
+  \\\\
+  Note that it is \ul{not} true that $L$ can be pumped $\Rightarrow L$ regular.
+\end{fact}
+
+\begin{lemma}[Pumping Lemma Contrapositive]
+  \begin{gather*}
+    L \subseteq \Sigma^* \ s.t. \ \forall p > 0 \\
+    \exists w \in L \ with \ |w| \geq p \ s.t. \\
+    \forall x, y, z \in \Sigma^* \ with \ w = xyz, \ |xy| \leq p \wedge |y| > 0
+    \\
+    \exists i \in \NN \ s.t. \ xy^iz \notin L \\
+    \Rightarrow L \ \text{is not regular}
+  \end{gather*}
+  Use games to deconstruct this statement. You and the devil. You play the
+  $\exists$ quantifiers, and the devil plays the $\forall$ quantifiers. You must
+  come up with a strategy to \ul{win every game}.
+  \\\\
+  The obvious first move is represented by a \ul{symbolic} $p$. Your first move
+  is \ul{explicit}. The devil's move in step 3 must be analyzed by an exhaustive
+  case analysis. Your last move must specify a response for \ul{all} cases.
+\end{lemma}
+
+\begin{example}
+  $L = \{a^nb^n \ | \ n \geq 0\}$
+  \begin{enumerate}
+  \item 
+    Demon choses $p > 0$
+  \item 
+    You chose $w = a^pb^p$
+  \item 
+    The devil is constrained by $|xy| \leq p$ to choose $y$ to consist
+    exlucisvely of a's. So $y = a^k$ for some $0 < k \leq p$.
+  \item 
+    I choose $i = 2$. Didn't quite catch the rest
+  \end{enumerate}
+  Thus $L$ is not regular.
+\end{example}
+
+\begin{example}
+  $L = \{a^q \ | q \ \text{a prime number}\}$
+  \\\\
+  Demon picks $p > 0$. I pick $a^n$ where $n > p$, $n$ is a prime. Demon has to
+  pick $y = a^k$ where $0 < k \leq p$. I pick $i > 1$, deferring the exact
+  choice. New string $xy^iz$ is $a^{n + (i - 1)k}$. Choose $i = n + 1$. Then $a^{n + nk} =
+  a^{n(1 + k)}$ which is not a prime number so $L$ is not regular.
+\end{example}
+
+\begin{example}
+  $L = \{a^nb^m \ | \ n \neq m\}$  % review
+  \\\\
+  Wants you have a stock of languages that you know are not regular, you don't
+  always have to do pumping. This example is hard to do \ul{directly} with the
+  pumping lemma.
+  \\\\
+  $\ol{L}$ (L complement) is a big mess. But $\ol{L} \cap a^*b^* = \{a^nb^n \ |
+  \ n \geq 0\}$. This is not a regular language to $L$ is not regular.
+\end{example}
+
+\begin{example}
+  $L = \{a^ib^i \ | i > j\}$.
+\end{example}
+
+\begin{example}
+  $L = \{x + y = z \ | xyz \in \{0, 1\}^* \wedge \text{the equation is valid} \}$
+  \\\\
+  Demon picks $p$. I pick
+  \begin{gather*} % review
+    \underbrace{111 \cdots 1}_p
+  \end{gather*}
+\end{example}
+
+\begin{definition}
+  If $S \subseteq \NN$, define $unary(S) = \{1^n \ | n \in S\}$. $binary(S) = \{w \in \{0, 1\}^* \ | \
+  w \text{read as a binary number is in} S\}\}$
+  \\\\
+  If $binary(S)$ is regular does that mean $unary(S)$ is regular? No. Consider
+  $S = \{2^n \ | \ n \geq 1\}$. Then binary is regular because $100^*$ is
+  clearly regular. $unary(S) = \{1^{2^p}\}$ is not regular because you can pump
+  to a non power of 2.
+\end{definition}
+
+\subsection{Kleene Algebras}
+
+\begin{definition}[Semi-ring]
+  A set with 2 operations. $S$: the carrier of the semi-ring. $+: S \times S \to
+  S$. $\times: S \times S \to S$. $0: S, \ 1:S$. $(S, +, 0)$ forms a commutative
+  monoid. $(S, x, 1)$ forms a monoid. $\times$ distributes over $+$. 0
+  annihilates with $x$ i.e. $a \times 0 = 0 \times a = 0$.
+  \\\\
+  Semi-ring is similar to a ring, but doesn't require that each element has an
+  additive inverse. i.e. if $(S, +, 0)$ forms a group then it produces a ring
+  instead of a semi-ring.
+  \begin{example}
+    $(\NN, 0, 1, +, \times)$. This forms a semi ring, because we don't have the
+    negative integers for the additive inverses. $(\ZZ, 0, 1, +, \times)$ would
+    form a ring.
+    \\\\
+    $\ZZ + i\ZZ = \{a + ib \ | \ a, b \in \ZZ, \ i^2 = -1\}$ is the ring of
+    Gaussian integers.
+  \end{example}
+  \begin{example}
+    $n \times n$ matrices over $\NN$. Multiply by matrix multiplication and add componentwise.
+  \end{example}
+  \begin{example}
+    An \ul{idempotent semiring} $J$ is a semi ring such that $\forall x \in J, x^2 =
+    x$. $(T, F, \vee, \wedge)$.
+    \\\\
+    idempotent is an element which is unchanged in value when multiplied or
+    otherwise operated on by itself.
+  \end{example}
+  \begin{example}
+    If we have any semiring, the set of $n \times n$ matrices with entries in this
+    semiring form a semi-ring.
+  \end{example}
+
+\end{definition}
+\begin{definition}[Kleene Algebras]
+  $K = (S, +, \cdot, 0, 1, *)$.
+  \begin{enumerate}
+  \item 
+    $(S, +, 0)$: commutative monoid
+  \item 
+    $(S, \cdot, 1)$: monoid
+  \item 
+    $(S, +, \cdot, 0, 1)$ forms an idempotent semiring.
+  \item 
+    \begin{gather*}
+      1 + aa^* = a^* \\
+      a + a^*a = a^*
+    \end{gather*}
+  \item 
+    We introduce a partial order $a \leq b \coloneqq a + b = b$ (check that this
+    is really a partial order). 2 rules.
+    \begin{gather*}
+      b + ac \leq c \Rightarrow a*b \leq c \\
+      b + ca \leq c \Rightarrow ba^* \leq c
+    \end{gather*}
+  \end{enumerate}
+\end{definition}
+
+\begin{example}
+  Let $\Sigma$ be a finite alphabet $S = \text{regular languages} \subseteq
+  \Sigma^*$. $+$ is union. $\cdot$ concatenation. $*$ is kleene star.
+\end{example}
+
+\begin{example}
+  $S$ any set and $R$ the collection of \ul{binary relations} on $S$. A binary
+  relation $r \subseteq S \times S$. $+$ is union. $\cdot$ is relational
+  composition. $x r y$ means $(x, y) \in r$. $x (r \cdot s) y = \exists z s.t. x
+  r z \wedge z s y$. $0 \coloneqq \varnothing$. $1 \coloneqq \{(s, s) \ | \ s
+  \in S\}$. $r^*$ is the reflexive, transitive closure of $r$.
+  \\\\
+  graphs are a nice way of picturing relations. $r^*$ is reflexive, transitive
+  closure of $r$. transitive closure let's you take the paths of the graph. And
+  everything is related to itself. Directed graph because not necessarily
+  symmetric. $x r^* y$ if $\exists n \in \NN, z_1, \cdots, z_n s.t. x r z_1
+  \wedge z_1 r z_2 \cdots z_n r y$ . i.e. there exists a path from x to y.
+  \\\\
+  Solving for x. $ax + b = x$. $a^*b$ is the smallest solution. $aa*b + b = (aa*
+  + 1)b = a^*b$. Smallest solution means that if $x$ is another solution, then
+  $a^*b \leq x$.
+\end{example}
+
+\begin{example}
+  If $K$ is any kleene algebra, $M_n(K)$ is $n \times n$ matrices with entries
+  in $K$. Do operations as you would expect about matrices. What the heck is
+  star though?
+  0 is 0. 1 is 1 along diagonal and 0 everywhere else.
+  \begin{gather*}
+    \begin{bmatrix}
+      a & b \\
+      c & d
+    \end{bmatrix}^*
+    \coloneqq
+    \begin{bmatrix}
+      (a + bd^*c)^* & (a + bd^*c)^*bd^* \\
+      (d + ca^*b)^*ca^* & (d + ca^*b)^*
+    \end{bmatrix}
+  \end{gather*}
+  Now we can solve matrix vector equations.
+\end{example}
+
+Dexter Kozen has developed and extended the theory tremendously including
+probabilistic extensions.
+
+\end{document}

@@ -1,0 +1,119 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-01-13}
+
+
+\begin{document}
+
+\section{Lecture 01-13}
+
+Linear transformation is an additive group homomorphism that preserves 
+
+an Algebra is a vector space and ring at the same time.
+
+\begin{gather*}
+  \End_F(V) = \hom_F(V, V)
+\end{gather*} 
+This is both a vector space over $F$ and a ring where multiplication is the composition of functions.
+
+\begin{definition}[Dual Space]
+  $V^* = \hom_F(V, F)$
+\end{definition} 
+
+\subsection{Bases}
+
+$\nabla$ = vector space
+
+\begin{definition}[Collection Linear Independence]
+  A collection $\Sigma \subset V$ is \ul{linearly independent} if, $\forall v_1, \dots, v_n \in \Sigma$ (distinct) satisfies  
+  \begin{gather*}
+    \lambda v_1 + \cdots + \lambda_n v_n = 0 \Rightarrow \lambda_1 = \lambda_2 = \cdots = \lambda_n = 0
+  \end{gather*} 
+  Can only talk about finite sums % revisit, why is this?
+\end{definition} 
+
+\begin{definition}[Spanning Set]
+  A collection $\Sigma$ spans $V$ if, 
+  \begin{gather*}
+    \forall v \in V, \quad \exists v_1, \dots, v_n \in \Sigma, \quad \lambda_1, \dots, \lambda_n \in F st v = \lambda_1 + v_1 + \cdots + \lambda_n + v_n % revisit such that sign
+  \end{gather*} 
+\end{definition} 
+
+\begin{definition}[Basis]
+  A basis is a set $\Sigma \subset V$ that is both linearly independent and spans $V$.
+\end{definition} 
+
+\begin{proposition}
+  If $\Sigma$ is a basis for $V$, then, for all $v \in V$, there is a \ul{unique} 
+  \begin{gather*}
+    v_1, \dots, v_n \in \Sigma, \quad \lambda_1, \dots, \lambda_n \in F \ \text{s.t.} \ v = \lambda_1 v_1 + \cdots + \lambda_n v_n
+  \end{gather*} 
+  \begin{proof}
+    Existence of $(v_1, \dots, v_n, \lambda_1, \dots, \lambda_n) \Leftarrow \Sigma$ spans $V$.
+    \\\\
+    Uniqueness $\Leftarrow$ linear independence of $\Sigma$.
+  \end{proof} 
+\end{proposition} 
+
+\begin{corollary}
+  The vector space $V$ is \ul{isomorphic} to $F^n$ or $F_0(\Sigma, F)$
+  \begin{proof}
+    We set up a linear transformation.
+    \begin{gather*}
+      \phi: F_0(\Sigma, F) \to V \\
+      f \to \sum_{v \in \Sigma}f(v) \cdot v % revisit arrow with vertical line on left side. Also what is f(v)
+    \end{gather*} 
+    Need to check
+    \begin{enumerate}
+      \ii
+      $\phi$ is linear
+      \ii
+      $\phi$ is injective
+      \ii
+      $\phi$ is surjective
+    \end{enumerate} 
+  \end{proof} 
+\end{corollary} 
+
+\begin{theorem}[Every vector space over $F$ has a basis]
+  \begin{proof}
+    Let $V$ be a vector space. Let $L$ be a collection of all subsets of $V$ that are linearly independent. Partial ordering on $L$ is given by inclusion.
+    \\\\
+    Completeness of ordering. If $\{A_{\alpha}\}_{\alpha \in I}$ is a chain,  $A = \sum_{\alpha}A_{\alpha}$. % revisit how is this a chain?
+    \\\\
+    Claim:  $A \in L$. If $v_1 \dots v_n \in A$, $v_j \in A_{\alpha}$. $\exists n$ such that $v_1, \dots, v_n \in A_{\alpha_N}$ and $v_1, \dots, v_n$ are linearly independent.
+    \\\\
+    Zorn's Lemma $\Rightarrow$ $\exists$ a maxmial element $\Sigma \in L$. Claim: $\Sigma$ spans $V$. Otherwise $\exists$ v which is not in span($\Sigma$).
+    \begin{gather*}
+      \Sigma \cup \{v\} \supsetneq \Sigma
+    \end{gather*} and is linearly independent. $\Sigma \cup \{v\} \in L$.
+  \end{proof} 
+  Not as useful as you might think at first because basis is obtained in a non constructive way. 
+\end{theorem} 
+
+\begin{definition}
+  A set endowed with a partial ordering satisfies the maximal chain condition if, for all subsets of $S$, for which the ordering is a total ordering (chain condition), every totally ordered subset $A \subseteq S$ has an upper bound, $\exists B \in S$ such that $a \leq B$ 
+  \\\\
+  A partially ordered set $S$ is \ul{complete} if, for all chains $A \subset S$, $\exists B \in S$ such that $a \leq B, \quad \forall a \in A$.
+  Partial ordering means a relation less than or equal. Anti symmetric, transitive. Think of it as a directed graph with no back tracking. Some elements are not ordered.
+  \\\\
+  Every complete partially ordered set has a maximal element. i.e. $\exists s \in S$ s.t. $s \leq a \Rightarrow a = s, \quad \forall a \in S$
+  \\\\
+  Chain stands for a totally ordered subset.
+\end{definition} 
+
+Axiom of choice. If you have an infinite collection of sets $\{S_\alpha\}_{\alpha \in I}$. Then there exists  $S'$ containing one $s_{\alpha} \in S_{\alpha}(\alpha \in I)$
+
+\begin{example}
+  $F[x]$ is the ring of polynomials with coefficients in $F$. Basis: $\Sigma = \{1, x, x^2, x^3, \dots, x^n, \dots\}$ % revisit, is F[x] a ring?
+\end{example} 
+\begin{example}
+  $F[[x]] = \{a_0 + a_1x + a_2x^2 + \dots, \quad a_i \in F$. The difference between $F[x]$ and $F[[x]$ is that  elements in $F[[x]]$ are infinite.
+\end{example} 
+
+Infinite sums don't make sense in algebra.
+\end{document}

@@ -1,0 +1,171 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-01-29}
+
+
+\begin{document}
+
+\section{Lecture 01-29}
+
+\subsection{Multilinear functions or forms}
+
+\begin{note}
+  A form is just another way of saying function.
+\end{note} 
+
+\begin{gather*}
+  f: \underbrace{V \times \cdots \times V}_{k} \to F
+\end{gather*} 
+
+
+Given a basis $e_1, \dots, e_n$ of $V$, the $k$-multilinear form $f$ is determined by 
+\begin{gather*}
+  (f(e_{i1}, \dots, e_{ik}))_{1 \leq i_1, \dots, i_k \leq n}
+\end{gather*} 
+
+\begin{definition}
+  $f$ is \ul{symmetric} if 
+  \begin{gather*}
+    f(v_{\sigma 1}, \dots, v_{\sigma k}) = f(v_1, \dots, v_k) \quad \forall \sigma \in S_k
+  \end{gather*} 
+\end{definition} 
+
+\begin{definition}
+  $f$ is \ul{alternating} if 
+  \begin{gather*}
+    f(v_{\sigma 1}, \dots, v_{\sigma k}) = \sign(\sigma) f(v_1, \dots, v_k) \quad \forall \sigma \in S_k
+  \end{gather*} 
+  Sign is defined as follows:
+  \begin{gather*}
+    S_k \to \{1, -1\} \\
+    \sigma \mapsto (-1)^{\text{number of transposition needed to write $\sigma$}}
+  \end{gather*} 
+\end{definition} 
+
+\begin{remark}
+  If $f$ is symmetric, then $f$ is determined by 
+  \begin{gather*}
+    (f(v_{i 1}, \dots, v_{i k}))_{1 \leq i_1 \leq i_2 \leq \cdots \leq i_k \leq n}
+  \end{gather*} 
+  If $f$ is alternating, then $f$ is determined by 
+  \begin{gather*}
+    (f(v_{i 1}, \dots, v_{i k}))_{1 < i_1 < i_2 < \cdots < i_k < n} % revisit
+  \end{gather*} 
+\end{remark} 
+
+\begin{theorem}
+  The set of alternating $n$-multilinear functions on a vector space of dimension $n$ is a one-dimensional vector space.
+  \begin{example}
+    $n = 2$. $V = Fe_1 \oplus Fe_2$.
+    \\\\
+    Two different approaches.
+    \begin{enumerate}
+      \ii
+      \begin{gather*}
+        f(a e_1 + b e_2, c e_1 + d e_2) = acf(e_1, e_1) + adf(e_1, e_2) + bcf(e_2, e_1) + bdf(e_2, e_2) \\
+        \text{If alternating:} \quad = (ad - bc)f(e_1, e_2)
+      \end{gather*} 
+      \ii
+      \begin{gather*}
+        f(ae_1 + be_2, ce_1 + de_2) = f(ae_1 + be_2, (-\frac{c}{a}b + d)e_2) \\
+        = (-\frac{bc}{a} + d)f(ae_1 + be_2, e_2) \\
+        = (-\frac{bc}{a} + d)f(ae_1, e_2) \\
+        = (-bc + ad)f(e_1, e_2)
+      \end{gather*} 
+    \end{enumerate} 
+  \end{example} 
+\end{theorem} 
+
+\begin{definition}
+  The unique $n$-multilinear alternating function $f$ satisfying $f(e_1, \dots, e_n) = 1$ is called the determinant relative to $(e_1, \dots, e_n)$.
+  \begin{gather*}
+    \det: V^n \to F
+  \end{gather*} 
+  \begin{note}
+    $\det_B(v_1, \dots, v_n)$ is the value of the determinant relative to $B$, at $(v_1, \dots, v_n)$.
+  \end{note} 
+  \ul{Properties:} $\det_B(v_1, \dots, v_n) = 0 \Leftrightarrow (v_1, \dots, v_n)$ are linearly dependent.
+  \begin{proof}
+    \begin{itemize}
+      \ii[$\Leftarrow$ ]
+      If $(v_1, \dots, v_n)$ are linearly dependent, then WLOF, $v_1 = \lambda_2 v_2 + \cdots + \lambda_n v_n$.
+      \begin{gather*}
+        \det(v_1, \dots, v_n) = \det(\lambda_2 v_2 + \cdots + \lambda_n v_n, v_2 \dots, v_n) \\
+        = \lambda_2\det(v_2, v_2, v_3, \dots, v_n) + \lambda_3\det(v_3, v_2, v_3, \dots, v_n) + \cdots + \lambda_n\det(v_n, v_2, v_3, \dots, v_n) \\
+        = \lambda_2 0 + \cdots + \lambda_n 0 = 0 % revisit why do they all go to zero. It's because determinent is alternating and so if two vectors are the same, it equals zero, because det = -det \Rightarrow det = 0
+      \end{gather*} 
+      \ii[$\Rightarrow$ ]
+      Left as an exercise
+    \end{itemize} 
+  \end{proof} 
+\end{definition} 
+
+\begin{proposition}
+  For $(v_1, \dots, v_n)$ in a vector space of $\dim$ n, the following are equivalent:
+  \begin{enumerate}
+    \ii
+    $\det_B(v_1, \dots, v_n) \neq 0$ 
+    \ii
+    $(v_1, \dots, v_n)$ are linearly independent
+    \ii
+    $(v_1, \dots, v_n)$ span $V$ 
+    \ii
+    $(v_1, \dots, v_n)$ form a basis.
+  \end{enumerate} 
+\end{proposition} 
+
+\subsection{Determinent of $T: V \to V$}
+
+\begin{proposition}
+  There is a unique scalar $d_T$ such that $\det_B(T(v_1), \dots, T(v_n)) = d_T\det_B(v_1, \dots, v_n)$.
+  \begin{proof}
+    The function
+    \begin{gather*}
+      (v_1, \dots, v_n) \mapsto \det_B(T(1), \dots, T(v_n))
+    \end{gather*} 
+    is a function $V^n \to F$ which is also $n$-multilinear and alternating.
+    \begin{gather*}
+      \det'(v_1, \dots, v_n) = \det(T(v_1), \dots, T(v_n)) \\
+      \det'(\lambda_1v_1 + \lambda_1'v_1', v_2, \dots, v_n) 
+      = \det(T(\lambda_1v_1 + \lambda_1'v_1'), T(v_2), \dots, T(v_n)) \\
+      = \det(\lambda_1T(v_1) + \lambda_1'T(v_1'), T(v_2), \dots, T(v_n)) \\
+      = \lambda_1\det(T(v_1), T(v_2), \dots, T(v_n)) + \lambda_1'\det(T(v_1'), T(v_2), \dots, T(v_n)) \\
+      = \lambda_1\det'(v_1, \dots, v_n) + \lambda_1'\det'(v_1', v_2, \dots, v_n)
+    \end{gather*} 
+    This proves that this function is still multi-linear. We know that it's a multiple because we showed that the set of alternating functions is one-dimensional. % revisit how do we know it is alternating?
+    \\\\
+    Therefore $\det_B(T(-), \dots, T(-))$ is a scalar multiple of $\det_B$.
+  \end{proof} 
+\end{proposition} 
+
+\begin{definition}
+  The determinent of $T$ is the unique scalar $\det(T)$ such that 
+  \begin{gather*}
+    \det_B(T(v_1), \dots, T(v_n)) = \det(T) \cdot \det_B(v_1, \dots, v_n)
+  \end{gather*} 
+  Note that this defining property is independent of $B$.
+\end{definition} 
+
+\subsection{Next week}
+
+Let $T: V \to V$. Then $T$ generates a subring of $\End_F(V)$. 
+\begin{gather*}
+  F[T] = \{a_0 I + a_1 T + a_2 T^2 + \cdots + a_kT^k\} \quad a_0, \dots, a_k \in F
+\end{gather*} 
+$F[T]$ is a quotient of $F[x]$. $F[x] \to F[T]$, $p(x) \mapsto p(T)$.
+\begin{gather*}
+  I_T = \{p(x) \in F[x] \ \text{such that} \ p(T) = 0_v\}
+\end{gather*} 
+$I_T$ is an ideal in $F[x]$. % revisit ideal. it's like a normal subgroup. Means that it's closed under operation from any element in the entire ring.
+\\\\
+$\exists ! P_T(x)$ monic such that $I_T = (p_T(x))$. $P_T(x)$ is the min poly.
+\\\\
+Characteristic Poly: $\det(xI - T)$.
+
+
+
+\end{document}

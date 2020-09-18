@@ -1,0 +1,142 @@
+\documentclass[class=scrartcl, crop=false]{standalone}
+
+\usepackage[sexy]{evan}
+\usepackage{cole}
+
+
+\date{2020-01-14}
+
+
+\begin{document}
+
+\section{Lecture 01-14}
+
+\subsection{Recurrences}
+
+Mergesort: $T_n = 2T_{n / 2} + n$. Roughly because emitting the floor function.
+
+Binary Search:  $T_n = 2T_{n / 2} + 1$. Roughly because emitting the floor function.
+
+Chip Testing: $T_n \leq T_{n / 2} + \frac{3n}{2}$.
+
+Karatsuba Multiplication: $T_n = 3T_{n / 2} + n$. % revisit \\
+
+Matrix Multiplication Strassen: $T_n = 7T_{n / 2} + n^2$
+
+Halfspace Counting: $T_n = 3T_{n / 4} + 1$
+
+\subsection{Solving Recurrences}
+
+Methods include: 
+\begin{enumerate}
+  \ii
+  Exact Methods
+  \begin{enumerate}
+    \ii
+    Substitution. Summing a series.
+    \ii
+    Induction. Assume $T_n = f(n)$.
+  \end{enumerate} 
+  \ii
+  Order of magnitude
+  \begin{enumerate}
+    \ii
+    Master theorem: Gives $O(), \Theta(), \Sigma()$ result. Order of magnitude.
+    \ii
+    Recursion tree: to get insight.
+  \end{enumerate} 
+\end{enumerate} 
+
+\begin{example}[Recursion Tree]
+  \begin{gather*}
+    T_n = 3T_{\frac{n}{4}} + n \\
+    T_1 = 1 \ \text{or} \ 0, T_0 = 0 \\
+    k \ \text{(height)} \ = \log_4(n) \\
+    \frac{n}{4^k} = 1 \\
+    n, \frac{3}{4}n, (\frac{3}{4})^2n, (\frac{3}{4})^3n, \dots
+    Sum = n(1 + \frac{3}{4} + (\frac{3}{4})^2 + \cdots + (\frac{3}{4})^k) \\
+    \approx = n(1 + \frac{3}{4} + (\frac{3}{4})^2 + \cdots) = \frac{1}{1 - \frac{3}{4}} = 4n \leq 4n \leq 4n + o(n) \\ %revisit + o(n)
+    \sum_{i = 0}^{\infty}x^i = \frac{1}{1 - x} \\
+    \Rightarrow T_n = \Theta(n)
+  \end{gather*} 
+  Most of the time is spent at the top level in this problem
+  \\\\
+  Changing the problem
+  \begin{gather*}
+    T_n = 4T_{\frac{n}{4}} + n \\
+    n, n, n, n, n, \dots \\
+    \Rightarrow T_n = \Theta(n\log n)
+  \end{gather*} 
+  The same amount of time is spent at each level in this problem \\\\
+  Changing one more time
+  \begin{gather*}
+    T_n = 5T_{\frac{n}{4}} + n \\
+    n, (\frac{5}{4})n, (\frac{5}{4})^2n, \dots \\
+    Sum = n(1 + \frac{5}{4} + (\frac{5}{4})^2 + \cdots + (\frac{5}{4})^k) \\
+    Sum = n(\frac{5}{4})^k(1 + \frac{4}{5} + (\frac{4}{5})^2 + \cdots + (\frac{4}{5})^k) \approx \frac{1}{(1 - \frac{4}{5})} = 5 \\
+    \approx n(\frac{5}{4})^k*5 = 5 * 5^k = 5 * 5^{\log_4(n)} = 5n^{\log_4(5)} % revisit how the swap
+  \end{gather*} 
+  More time is spent at the bottom level in this problem
+\end{example} 
+Note that the coefficient in front of n wouldn't affect the magnitude.
+
+\subsection{Master Theorem}
+\begin{gather*}
+  T_n = aT_{n / b} + f(n) \quad (T_n = constant, n \leq \square) \\
+\end{gather*} 
+
+Largest of $f(n), n^{\log_b(a)}$
+
+
+\begin{enumerate}
+  \ii
+  \begin{gather*}
+    \frac{n^{\log_b(a)}}{f(n)} \geq n^\epsilon \ \text{for some} \  \epsilon > 0 : T_n = \Theta(n^{\log_b(a)})
+  \end{gather*} 
+  \ii
+  \begin{gather*}
+    \frac{f(n)}{n^{\log_b(a)}} \geq n^\epsilon .... \quad T_n = \Theta(f(n))
+  \end{gather*} 
+  \ii
+  \begin{gather*}
+    f(n) = \Theta(n^{\log_b(a)}) : T_n = \Theta(f(n) \times \log(n))
+  \end{gather*} 
+\end{enumerate} 
+Technical Condition
+\begin{gather*}
+  \limsup_{n \to \infty}\frac{af(\frac{n}{b})}{f(n)} < 1
+\end{gather*} 
+
+If $ T_n \leq aT_{n / b} + f(n) \quad (T_n = constant, n \leq \square) $, then $O()$ instead of $\Theta()$. If $\geq$, $\Sigma()$.
+
+Other cases (exercises to think about):
+\begin{gather*}
+  T_n = T_{n / 2} + \log n \\
+  T_n = T_{n / 2} + T_{n / 3} + n
+\end{gather*} 
+
+\subsection{Strassen's Matrix Multiplication}
+
+For any $n$, there exists a power of 2 $\leq 2n$. So assume that $n$ is a power of 2 without loss of generality. Strassen gets rid of a multiplication.
+
+\begin{gather*}
+  T_n = 8T_{\frac{n}{2}} + n^2 = \Theta(n^3) \\
+  \ \text{Became} \ \\
+  T_n = 7T_{\frac{n}{2}} + n^2 = \Theta(n^{2.8})
+\end{gather*} 
+
+Best known to date: $\Theta(n^{2.374})$. Goal: $\Theta(n^2\log n)$.
+
+\subsection{Halfspace Counting}
+
+Given: $x_1, \dots, x_n \in \RR^2$. Users query: How many points on one side of $H$ (hyperplane).
+
+Fact: There exists a partition of $x_1, \dots, x_n$ into 4 equal sets, using only 2 lines.
+
+\begin{theorem}[Pancake Theorem]
+  Take a shape. There is always a cut that cuts the pancake into two equal sets.
+  \\\\
+  Also works with overlapping pancakes. Can cut both in have with a single line.
+\end{theorem} 
+
+\end{document}
